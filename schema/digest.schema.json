@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ryanran8787-a11y/the-stran/schema/digest.schema.json",
+  "title": "Security Daily Digest",
+  "description": "網安每日報的單日資料契約。Python 管線輸出、Next.js 前端讀取，兩端共用此檔作為唯一真實來源 (single source of truth)。",
+  "type": "object",
+  "required": ["schema_version", "date", "generated_at", "window", "stats", "sources", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "generated_at": { "type": "string" },
+    "generated_by": { "type": "string" },
+    "window": {
+      "type": "object",
+      "required": ["from", "to"],
+      "additionalProperties": false,
+      "properties": {
+        "from": { "type": "string" },
+        "to": { "type": "string" }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "required": ["scanned", "kept", "kev", "critical", "in_the_wild", "sources_ok", "sources_failed"],
+      "additionalProperties": false,
+      "properties": {
+        "scanned": { "type": "integer", "minimum": 0 },
+        "kept": { "type": "integer", "minimum": 0 },
+        "kev": { "type": "integer", "minimum": 0 },
+        "critical": { "type": "integer", "minimum": 0 },
+        "in_the_wild": { "type": "integer", "minimum": 0 },
+        "sources_ok": { "type": "integer", "minimum": 0 },
+        "sources_failed": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "ok", "items"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "label": { "type": "string" },
+          "ok": { "type": "boolean" },
+          "items": { "type": "integer", "minimum": 0 },
+          "error": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/item" }
+    },
+    "vendor_watch": {
+      "description": "廠商公告速覽：當日抓到的 RSS/Atom 公告（含提及的 CVE，可能尚未列入上方 items）。",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "label", "title", "url"],
+        "additionalProperties": false,
+        "properties": {
+          "source": { "type": "string" },
+          "label": { "type": "string" },
+          "title": { "type": "string" },
+          "url": { "type": "string" },
+          "date": { "type": ["string", "null"] },
+          "cves": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "required": [
+        "cve_id",
+        "title_short",
+        "title_full",
+        "vendor",
+        "product",
+        "severity",
+        "cvss",
+        "tags",
+        "in_the_wild",
+        "summary_zh",
+        "sources"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "cve_id": { "type": "string", "pattern": "^CVE-\\d{4}-\\d{4,}$" },
+        "title_short": {
+          "type": "string",
+          "description": "卡片主標題：{廠商} {產品} {CVE尾段序號}×{CVSS}{ 在野}，≤25 全形字"
+        },
+        "title_full": {
+          "type": "string",
+          "description": "完整標題：{廠商} {產品} {完整CVE-ID} · CVSS {分數}{ · 在野利用}"
+        },
+        "vendor": { "type": "string" },
+        "product": { "type": "string" },
+        "vendor_advisory_id": { "type": ["string", "null"] },
+        "severity": { "type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "UNKNOWN"] },
+        "cvss": {
+          "type": "object",
+          "required": ["score"],
+          "additionalProperties": false,
+          "properties": {
+            "version": { "type": ["string", "null"] },
+            "score": { "type": ["number", "null"] },
+            "vector": { "type": ["string", "null"] }
+          }
+        },
+        "epss": {
+          "type": ["object", "null"],
+          "required": ["score"],
+          "additionalProperties": false,
+          "properties": {
+            "score": { "type": ["number", "null"] },
+            "percentile": { "type": ["number", "null"] }
+          }
+        },
+        "cwe": { "type": "array", "items": { "type": "string" } },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "RCE",
+              "權限提升",
+              "認證繞過",
+              "資訊洩漏",
+              "阻斷服務",
+              "沙箱逃逸",
+              "接管",
+              "XSS",
+              "SQLi",
+              "SSRF",
+              "路徑穿越",
+              "供應鏈",
+              "反序列化",
+              "記憶體破壞",
+              "其他"
+            ]
+          }
+        },
+        "in_the_wild": { "type": "boolean" },
+        "kev": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "date_added": { "type": ["string", "null"] },
+            "due_date": { "type": ["string", "null"] },
+            "ransomware": { "type": ["string", "null"] },
+            "forensic_triage": { "type": ["string", "null"] },
+            "name_en": { "type": ["string", "null"] },
+            "required_action_en": { "type": ["string", "null"] }
+          }
+        },
+        "summary_zh": { "type": "string" },
+        "impact_zh": { "type": "string" },
+        "action_zh": { "type": "string" },
+        "description_en": { "type": "string" },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "url"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string" }
+            }
+          }
+        },
+        "affected_packages": { "type": "array", "items": { "type": "string" } },
+        "published": { "type": ["string", "null"] },
+        "modified": { "type": ["string", "null"] },
+        "sources": { "type": "array", "items": { "type": "string" } },
+        "rank": { "type": ["integer", "null"] },
+        "generated_by": { "type": "string" },
+        "risk_score": { "type": ["number", "null"] }
+      }
+    }
+  }
+}

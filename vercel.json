@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "headers": [
+    {
+      "source": "/feed.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/rss+xml; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/feed.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/feed+json; charset=utf-8" }
+      ]
+    }
+  ]
+}

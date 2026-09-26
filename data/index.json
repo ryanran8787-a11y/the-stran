@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-26T13:14:37Z",
+  "total": 1,
+  "reports": [
+    {
+      "date": "2026-09-26",
+      "kept": 81,
+      "kev": 9,
+      "critical": 74,
+      "in_the_wild": 9,
+      "generated_at": "2026-09-26T13:14:37Z",
+      "generated_by": "gemini",
+      "top": [
+        "Sangoma Freepbx 57819×10.0 在野",
+        "Asus Live Update 59374×9.3 在野",
+        "Microsoft SharePoint 65660×8.8 在野"
+      ]
+    }
+  ]
+}

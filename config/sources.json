@@ -1,0 +1,48 @@
+{
+  "$comment": "來源設定。enabled=false 即完全跳過；每個來源失敗都會被隔離，不影響整期產出。",
+  "kev": {
+    "enabled": true,
+    "label": "CISA KEV",
+    "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+    "homepage": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+  },
+  "nvd": {
+    "enabled": true,
+    "label": "NVD",
+    "api": "https://services.nvd.nist.gov/rest/json/cves/2.0",
+    "feed_base": "https://nvd.nist.gov/feeds/json/cve/2.0",
+    "prefer_feed": true,
+    "max_api_pages": 12,
+    "homepage": "https://nvd.nist.gov"
+  },
+  "github_advisories": {
+    "enabled": true,
+    "label": "GitHub Advisory",
+    "url": "https://api.github.com/advisories",
+    "homepage": "https://github.com/advisories"
+  },
+  "epss": {
+    "enabled": true,
+    "label": "EPSS",
+    "url": "https://api.first.org/data/v1/epss",
+    "homepage": "https://www.first.org/epss/",
+    "batch": 90
+  },
+  "osv": {
+    "enabled": false,
+    "$comment": "逐筆補查受影響版本範圍，成本較高，預設關閉。",
+    "url": "https://api.osv.dev/v1/vulns",
+    "max_lookups": 25
+  },
+  "vendors": {
+    "enabled": true,
+    "$comment": "廠商公告。優先使用 RSS/Atom；任一來源失敗只記錄不中斷。",
+    "feeds": [
+      { "name": "cisco", "label": "Cisco", "enabled": true, "type": "rss", "url": "https://sec.cloudapps.cisco.com/security/center/psirtrss20/CiscoSecurityAdvisory.xml" },
+      { "name": "fortinet", "label": "Fortinet", "enabled": true, "type": "rss", "url": "https://www.fortiguard.com/rss/ir.xml" },
+      { "name": "zdi", "label": "Zero Day Initiative", "enabled": true, "type": "rss", "url": "https://www.zerodayinitiative.com/rss/published/" },
+      { "name": "cisa_alerts", "label": "CISA Alerts", "enabled": false, "$comment": "akamai 會對無瀏覽器特徵的請求回 403，預設停用以免每次都產生雜訊", "type": "rss", "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml" },
+      { "name": "jenkins", "label": "Jenkins", "enabled": true, "type": "rss", "url": "https://www.jenkins.io/security/advisories/rss.xml" }
+    ]
+  }
+}

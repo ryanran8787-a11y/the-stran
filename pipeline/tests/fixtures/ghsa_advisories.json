@@ -1,0 +1,30 @@
+[
+  {
+    "ghsa_id": "GHSA-2rmr-xw8m-22q9",
+    "cve_id": "CVE-2026-89094",
+    "html_url": "https://github.com/advisories/GHSA-2rmr-xw8m-22q9",
+    "summary": "Forgejo allows sandbox escape through unbounded template evaluation",
+    "description": "Forgejo before 1.2.3 allows an authenticated user to escape the sandbox through unbounded template evaluation, resulting in remote code execution on the server.",
+    "severity": "critical",
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    },
+    "cwes": [{ "cwe_id": "CWE-94", "name": "Improper Control of Generation of Code" }],
+    "identifiers": [
+      { "type": "GHSA", "value": "GHSA-2rmr-xw8m-22q9" },
+      { "type": "CVE", "value": "CVE-2026-89094" }
+    ],
+    "references": ["https://forgejo.org/security/2026-09-25/"],
+    "published_at": "2026-09-25T10:00:00Z",
+    "updated_at": "2026-09-25T11:30:00Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": { "ecosystem": "go", "name": "code.gitea.io/gitea" },
+        "vulnerable_version_range": "< 1.2.3",
+        "patched_versions": "1.2.3"
+      }
+    ]
+  }
+]

@@ -1,0 +1,139 @@
+name: daily
+
+# 每天 UTC 22:00（台北時間 06:00）產生一期日報並自動部署。
+# 也可以從 Actions 頁面手動觸發來補跑指定日期。
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "報告日期 YYYY-MM-DD（留空 = today）"
+        required: false
+        default: ""
+      provider:
+        description: "LLM provider（gemini / openai / claude / none）"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Run pipeline tests (offline)
+        run: python -m unittest discover -s pipeline/tests -t .
+
+      - name: Collect, filter and enrich
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LLM_PROVIDER: ${{ inputs.provider != '' && inputs.provider || 'gemini' }}
+          # 內建 token：提高 GitHub Advisory API 速率上限（60/hr -> 5000/hr）
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python -m pipeline --date "${{ inputs.date != '' && inputs.date || 'today' }}"
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci --no-audit --no-fund
+          else
+            npm install --no-audit --no-fund
+          fi
+
+      - name: Build site (SSG)
+        run: npm run build
+
+      - name: Commit and push new report
+        id: commit
+        run: |
+          git config user.name "security-daily-bot"
+          git config user.email "security-daily-bot@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "沒有資料變更，略過 commit。"
+          else
+            REPORT_DATE=$(ls data/daily | sort | tail -n 1 | sed 's/\.json$//')
+            git commit -m "chore(data): daily digest ${REPORT_DATE}"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "REPORT_DATE=${REPORT_DATE}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 網安每日報"
+            echo ""
+            if [ -f data/index.json ]; then
+              python - <<'PY'
+          import json, pathlib
+          index = json.loads(pathlib.Path("data/index.json").read_text(encoding="utf-8"))
+          print(f"- 總期數：{index.get('total')}")
+          for entry in (index.get("reports") or [])[:1]:
+              print(f"- 最新：{entry['date']}（收錄 {entry['kept']} 筆／KEV {entry['kev']}／在野 {entry['in_the_wild']}）")
+              for title in entry.get("top") or []:
+                  print(f"  - {title}")
+          PY
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # 任何步驟失敗（包含「0 筆可發布」）就開 issue 告警，避免靜默失敗
+      - name: Open alert issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `[告警] 每日日報產生失敗 ${new Date().toISOString().slice(0, 10)}`;
+            const body = [
+              "每日管線執行失敗，請檢查：",
+              "",
+              `- Workflow run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              "- 常見原因：上游來源改版、API 金鑰失效／額度用盡、LLM 全部批次失敗、當日 0 筆通過篩選。",
+              "",
+              "備註：單一來源失敗會被隔離，**不會**讓整期失敗；會走到這裡通常代表整體性問題。",
+            ].join("\n");
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              labels: "daily-alert",
+            });
+            if (existing.data.length > 0) {
+              core.info("已有未結案的告警 issue，略過建立。");
+              return;
+            }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ["daily-alert"],
+            });

@@ -1,0 +1,9 @@
+# 本專案的資料管線刻意「零第三方依賴」：
+# 只用 Python 3.11+ 標準庫（urllib / gzip / json / xml.etree / dataclasses），
+# 因此在任何環境都能直接執行，不需要 pip install。
+#
+#   python -m pipeline --date today --llm gemini
+#
+# 若未來要加真 HTTP 連線池或更強解析力，再取消註解以下項目：
+# httpx>=0.27
+# pydantic>=2.7

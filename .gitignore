@@ -1,0 +1,36 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# vercel
+.vercel
+
+# env / secrets  (絕不進版控)
+.env
+.env.local
+.env.*.local
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+pipeline/.cache/
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+
+# 本機除錯輸出（管線與建置的暫存紀錄）
+_e*.txt
+_*.log
+_envcheck.txt
