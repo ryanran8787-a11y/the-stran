@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-09-26",
-  "generated_at": "2026-09-26T13:14:37Z",
+  "generated_at": "2026-09-26T13:31:06Z",
   "generated_by": "gemini",
   "window": {
     "from": "2026-09-25T22:00:00Z",
@@ -56,10 +56,10 @@
   "items": [
     {
       "cve_id": "CVE-2025-57819",
-      "title_short": "Sangoma Freepbx 57819×10.0 在野",
-      "title_full": "Sangoma Freepbx CVE-2025-57819 · CVSS 10.0 · 在野利用",
+      "title_short": "Sangoma FreePBX 57819×10.0 在野",
+      "title_full": "Sangoma FreePBX CVE-2025-57819 · CVSS 10.0 · 在野利用",
       "vendor": "Sangoma",
-      "product": "Freepbx",
+      "product": "FreePBX",
       "vendor_advisory_id": null,
       "severity": "CRITICAL",
       "cvss": {
@@ -88,9 +88,9 @@
         "name_en": "Sangoma FreePBX Authentication Bypass Vulnerability",
         "required_action_en": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable."
       },
-      "summary_zh": "Sangoma Freepbx 15, 16, 17 存在 SQL 注入與程式碼注入漏洞，未授權攻擊者可透過操縱資料庫執行任意程式碼，完全接管設備。",
-      "impact_zh": "未授權 SQL 注入與 RCE，可完全接管設備。",
-      "action_zh": "更新至 Freepbx 15.0.66, 16.0.89, 或 17.0.3 版本。",
+      "summary_zh": "Sangoma FreePBX 15-17 存在未授權存取漏洞，攻擊者可操縱資料庫並遠端執行程式碼。",
+      "impact_zh": "未授權存取，可任意操縱資料庫與遠端執行程式碼。",
+      "action_zh": "更新至 FreePBX 15.0.66、16.0.89 或 17.0.3 版本。",
       "description_en": "FreePBX is an open-source web-based graphical user interface. FreePBX 15, 16, and 17 endpoints are vulnerable due to insufficiently sanitized user-supplied data allowing unauthenticated access to FreePBX Administrator leading to arbitrary database manipulation and remote code execution. This issue has been patched in endpoint versions 15.0.66, 16.0.89, and 17.0.3.",
       "references": [
         {
@@ -123,9 +123,9 @@
     },
     {
       "cve_id": "CVE-2025-59374",
-      "title_short": "Asus Live Update 59374×9.3 在野",
-      "title_full": "Asus Live Update CVE-2025-59374 · CVSS 9.3 · 在野利用",
-      "vendor": "Asus",
+      "title_short": "ASUS Live Update 59374×9.3 在野",
+      "title_full": "ASUS Live Update CVE-2025-59374 · CVSS 9.3 · 在野利用",
+      "vendor": "ASUS",
       "product": "Live Update",
       "vendor_advisory_id": null,
       "severity": "CRITICAL",
@@ -154,9 +154,9 @@
         "name_en": "ASUS Live Update Embedded Malicious Code Vulnerability",
         "required_action_en": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable."
       },
-      "summary_zh": "Asus Live Update 客戶端遭供應鏈攻擊，部分版本遭竄改，可能導致特定條件下的設備執行非預期操作。",
+      "summary_zh": "ASUS Live Update 客戶端遭供應鏈攻擊，部分版本遭竄改，可能導致特定條件下的設備執行非預期操作。",
       "impact_zh": "供應鏈攻擊導致設備執行非預期操作。",
-      "action_zh": "Live Update 客戶端已於 2021 年 10 月終止支援，請評估移除或停用。",
+      "action_zh": "Live Update 客戶端已於 2021 年 10 月終止支援，請勿使用舊版本。",
       "description_en": "\"UNSUPPORTED WHEN ASSIGNED\" Certain versions of the ASUS Live Update client were distributed with unauthorized modifications introduced through a supply chain compromise. The modified builds could cause devices meeting specific targeting conditions to perform unintended actions. Only devices that met these conditions and installed the compromised versions were affected. The Live Update client has already reached End-of-Support (EOS) in October 2021, and no currently supported devices or products are affected by this issue.",
       "references": [
         {
@@ -281,9 +281,9 @@
         "name_en": "Cisco IOS and IOS XE Software SNMP Denial of Service and Remote Code Execution Vulnerability",
         "required_action_en": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable."
       },
-      "summary_zh": "Cisco IOS/IOS XE 的 SNMP 子系統存在堆疊溢位漏洞，授權攻擊者可透過 SNMP 封包導致設備重啟或遠端執行程式碼。",
-      "impact_zh": "授權遠端程式碼執行，或導致阻斷服務。",
-      "action_zh": "依廠商公告更新。",
+      "summary_zh": "Cisco IOS/IOS XE 的 SNMP 子系統存在堆疊溢位，低權限者可導致 DoS，高權限者可遠端執行程式碼。",
+      "impact_zh": "低權限者可導致 DoS，高權限者可遠端執行程式碼。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "A vulnerability in the Simple Network Management Protocol (SNMP) subsystem of Cisco IOS Software and Cisco IOS XE Software could allow the following:\r\n\r \r An authenticated, remote attacker with low privileges could cause a denial of service (DoS) condition on an affected device that is running Cisco IOS Software or Cisco IOS XE Software. To cause the DoS, the attacker must have the SNMPv2c or earlier read-only community string or valid SNMPv3 user credentials. \r An authenticated, remote attacker with high privileges could execute code as the root user on an affected device that is running Cisco IOS XE Software. To execute code as the root user, the attacker must have the SNMPv1 or v2c read-only community string or valid SNMPv3 user credentials and administrative or privilege 15 credentials on the affected device. \r \r An attacker could exploit this vulnerability by sending a crafted SNMP packet to an affected device over IPv4 or IPv6 networks. \r\n\r This vulnerability is due to a stack overflow condition in the SNMP subsystem of the affected software. A successful exploit could allow a low-privileged attacker to cause the affected system to reload, resulting in a DoS condition, or allow a high-privileged attacker to execute arbitrary code as the root user and obtain full control of the affected system.\r\n\r Note: This vulnerability affects all versions of SNMP.",
       "references": [
         {
@@ -338,8 +338,8 @@
         "name_en": "WordPress Core Remote File Inclusion Vulnerability",
         "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
       },
-      "summary_zh": "WordPress Core 存在漏洞，未授權攻擊者可透過解析頁面模板載入外部 PHP 檔案，在特定條件下導致遠端程式碼執行。",
-      "impact_zh": "未授權遠端程式碼執行。",
+      "summary_zh": "WordPress Core 存在漏洞，未授權攻擊者可透過特定條件讀取 PHP 檔案，進而導致遠端程式碼執行。",
+      "impact_zh": "未授權攻擊者可讀取 PHP 檔案，導致遠端程式碼執行。",
       "action_zh": "依廠商公告更新。",
       "description_en": "An unauthenticated attacker can make `get_page_template()` page-template resolution include a chosen readable local `.php` file outside the active theme directories. If relevant pre-conditions for both the server and the active theme are met, this can lead to RCE.",
       "references": [
@@ -407,9 +407,9 @@
         "name_en": "Microsoft Windows Use After Free Vulnerability",
         "required_action_en": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable."
       },
-      "summary_zh": "Windows Cloud Files Mini Filter Driver 存在 Use-after-free 漏洞，授權攻擊者可本地提升權限。",
-      "impact_zh": "授權本地權限提升。",
-      "action_zh": "依廠商公告更新。",
+      "summary_zh": "Windows Cloud Files Mini Filter Driver 的 Use after free 漏洞，允許本機授權攻擊者提升權限。",
+      "impact_zh": "本機授權攻擊者可提升權限。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Use after free in Windows Cloud Files Mini Filter Driver allows an authorized attacker to elevate privileges locally.",
       "references": [
         {
@@ -464,9 +464,9 @@
         "name_en": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
         "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
       },
-      "summary_zh": "MikroTik RouterOS SSH 在用戶認證前允許建立連線，未授權攻擊者可建立檔案、覆寫檔案，包含設定檔，潛在導致遠端程式碼執行。",
-      "impact_zh": "未授權檔案操作，潛在遠端程式碼執行。",
-      "action_zh": "更新至 RouterOS 6.49.21 (Long-term), 7.23.4 (Long-term) 或 7.24.2 (Stable)。",
+      "summary_zh": "RouterOS SSH 在用戶認證前允許建立連線，攻擊者可未授權建立、覆寫檔案，導致遠端程式碼執行。",
+      "impact_zh": "未授權攻擊者可建立、覆寫檔案，導致遠端程式碼執行。",
+      "action_zh": "更新至 6.49.21 (Long-term)、7.23.4 (Long-term) 或 7.24.2 (Stable)。",
       "description_en": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling unauthenticated creation, overwrite, and reconstruction of files in the RouterOS managed file namespace, including support files containing configuration and diagnostic data.This issue was fixed in versions: 6.49.21 (Long-term), 7.23.4 (Long-term) and 7.24.2 (Stable)",
       "references": [
         {
@@ -636,10 +636,10 @@
     },
     {
       "cve_id": "CVE-2025-13184",
-      "title_short": "Totolink X5000r Firmware 13184×9.8",
-      "title_full": "Totolink X5000r Firmware CVE-2025-13184 · CVSS 9.8",
-      "vendor": "Totolink",
-      "product": "X5000r Firmware",
+      "title_short": "TOTOLINK X5000R Firmware 13184×9.8",
+      "title_full": "TOTOLINK X5000R Firmware CVE-2025-13184 · CVSS 9.8",
+      "vendor": "TOTOLINK",
+      "product": "X5000R Firmware",
       "vendor_advisory_id": null,
       "severity": "CRITICAL",
       "cvss": {
@@ -659,8 +659,8 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Totolink X5000r Firmware 允許未授權的 Telnet 啟用，可繞過認證以 root 權限登入，執行任意命令。",
-      "impact_zh": "未授權遠端程式碼執行。",
+      "summary_zh": "TOTOLINK X5000R 韌體透過 Telnet 認證繞過漏洞，允許未授權者以 root 權限登入並執行任意命令。",
+      "impact_zh": "未授權者可取得 root 權限並執行任意命令。",
       "action_zh": "更新至 V9.1.0u.6369_B20230113 或更新版本。",
       "description_en": "Unauthenticated Telnet enablement via cstecgi.cgi (auth bypass) leading to unauthenticated root login with a blank password on factory/reset X5000R V9.1.0u.6369_B20230113 (arbitrary command execution). Earlier versions that share the same implementation, may also be affected.",
       "references": [
@@ -708,9 +708,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Adobe Campaign Classic (ACC) 存在程式碼注入漏洞，攻擊者可利用此漏洞執行任意程式碼，無需使用者互動。",
-      "impact_zh": "遠端程式碼執行。",
-      "action_zh": "依廠商公告更新。",
+      "summary_zh": "Adobe Campaign Classic 存在程式碼注入漏洞，攻擊者可利用此漏洞在目前使用者權限下執行任意程式碼。",
+      "impact_zh": "攻擊者可執行任意程式碼。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
       "references": [
         {
@@ -753,9 +753,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Adobe Experience Manager Forms JEE 存在授權不當漏洞，攻擊者可利用此漏洞執行任意程式碼，無需使用者互動。",
-      "impact_zh": "遠端程式碼執行。",
-      "action_zh": "依廠商公告更新。",
+      "summary_zh": "Adobe Experience Manager Forms JEE 存在授權錯誤漏洞，攻擊者可利用此漏洞在目前使用者權限下執行任意程式碼。",
+      "impact_zh": "攻擊者可執行任意程式碼。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Adobe Experience Manager Forms JEE is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
       "references": [
         {
@@ -798,9 +798,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Novakon P 系列存在緩衝區溢位漏洞，攻擊者無需認證即可獲得 root 權限。",
-      "impact_zh": "未授權取得 root 權限。",
-      "action_zh": "更新至 P-2.0.05 Build 2026.02.06 或更新版本。",
+      "summary_zh": "Novakon P 系列存在緩衝區溢位漏洞，允許攻擊者在未經認證下取得 root 權限。",
+      "impact_zh": "未經認證攻擊者可取得 root 權限。",
+      "action_zh": "更新至 P-2.0.05 Build 2026.02.06 (commit d0f97fd9) 或更新版本。",
       "description_en": "A buffer overflow vulnerability in Novakon P series allows attackers to gain root permission without prior authentication.This issue affects P series: P – V2001.A.C518o2 until P-2.0.05 Build\n                      2026.02.06 (commit d0f97fd9).",
       "references": [
         {
@@ -855,8 +855,8 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "TalentSys Consulting Information Technology Industry Inc. Inka.Net 存在不安全的檔案上傳漏洞，允許命令注入。",
-      "impact_zh": "命令注入。",
+      "summary_zh": "Inka.Net 存在不安全的檔案上傳漏洞，允許命令注入，導致遠端程式碼執行。",
+      "impact_zh": "允許命令注入，導致遠端程式碼執行。",
       "action_zh": "更新至 Inka.Net 6.7.1 或更新版本。",
       "description_en": "Unrestricted Upload of File with Dangerous Type vulnerability in TalentSys Consulting Information Technology Industry Inc. Inka.Net allows Command Injection.\n\nThis issue affects Inka.Net: before 6.7.1.",
       "references": [
@@ -904,9 +904,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Microsoft Container Registry 存在使用者控制金鑰的授權繞過漏洞，攻擊者可透過網路提升權限。",
-      "impact_zh": "遠端權限提升。",
-      "action_zh": "依廠商公告更新。",
+      "summary_zh": "Microsoft Container Registry 的使用者金鑰授權繞過漏洞，允許未授權攻擊者透過網路提升權限。",
+      "impact_zh": "未授權攻擊者可透過網路提升權限。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Authorization bypass through user-controlled key in Microsoft Container Registry allows an unauthorized attacker to elevate privileges over a network.",
       "references": [
         {
@@ -949,8 +949,8 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "CMSSuperHeroes Clanora 存在不安全的檔案上傳漏洞，允許使用惡意檔案。",
-      "impact_zh": "使用惡意檔案，潛在遠端程式碼執行。",
+      "summary_zh": "Clanora 存在不安全的檔案上傳漏洞，允許使用惡意檔案，導致遠端程式碼執行。",
+      "impact_zh": "允許使用惡意檔案，導致遠端程式碼執行。",
       "action_zh": "更新至 Clanora 1.3.1 或更新版本。",
       "description_en": "Unrestricted Upload of File with Dangerous Type vulnerability in CMSSuperHeroes Clanora clanora allows Using Malicious Files.This issue affects Clanora: from n/a through < 1.3.1.",
       "references": [
@@ -994,9 +994,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Esri ArcGIS Server 存在 SQL 注入漏洞，未授權攻擊者可透過特定 Feature Service 操作執行任意 SQL 命令，存取、修改或刪除資料。",
-      "impact_zh": "未授權 SQL 注入，可存取、修改或刪除資料。",
-      "action_zh": "更新至 ArcGIS Server 11.3, 11.4, 或 11.5。",
+      "summary_zh": "ArcGIS Server 存在 SQL 注入漏洞，未授權攻擊者可透過特定操作執行任意 SQL 命令，存取或修改資料。",
+      "impact_zh": "未授權攻擊者可存取、修改或刪除資料。",
+      "action_zh": "更新至 ArcGIS Server 11.3、11.4 或 11.5 版本。",
       "description_en": "A SQL Injection vulnerability exists in Esri ArcGIS Server versions 11.3, 11.4 and 11.5 on Windows, Linux and Kubernetes. This vulnerability allows a remote, unauthenticated attacker to execute arbitrary SQL commands via a specific ArcGIS Feature Service operation. Successful exploitation can potentially result in unauthorized access, modification, or deletion of data from the underlying Enterprise Geodatabase.",
       "references": [
         {
@@ -1039,8 +1039,8 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Beplusthemes Alone 存在程式碼注入漏洞，允許攻擊者注入程式碼。",
-      "impact_zh": "程式碼注入。",
+      "summary_zh": "Alone 存在程式碼注入漏洞，允許攻擊者注入任意程式碼。",
+      "impact_zh": "攻擊者可注入任意程式碼。",
       "action_zh": "更新至 Alone 7.8.3 或更新版本。",
       "description_en": "Improper Control of Generation of Code ('Code Injection') vulnerability in Beplusthemes Alone alone allows Code Injection.This issue affects Alone: from n/a through <= 7.8.3.",
       "references": [
@@ -1061,8 +1061,8 @@
     },
     {
       "cve_id": "CVE-2025-49060",
-      "title_short": "49060×10.0",
-      "title_full": "49060 · CVSS 10.0",
+      "title_short": "未標示產品 49060×10.0",
+      "title_full": "未標示產品 CVE-2025-49060 · CVSS 10.0",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1080,14 +1080,13 @@
         "CWE-434"
       ],
       "tags": [
-        "RCE",
-        "接管"
+        "RCE"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "CMSSuperHeroes Wastia 存在未授權檔案上傳漏洞，允許攻擊者上傳網頁 Shell，進而遠端執行程式碼。",
-      "impact_zh": "遠端程式碼執行（RCE），完全接管伺服器。",
-      "action_zh": "更新至 1.1.3 或以上版本。",
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 10.0，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
       "description_en": "Unrestricted Upload of File with Dangerous Type vulnerability in CMSSuperHeroes Wastia wastia allows Upload a Web Shell to a Web Server.This issue affects Wastia: from n/a through < 1.1.3.",
       "references": [
         {
@@ -1102,7 +1101,7 @@
         "nvd"
       ],
       "rank": 19,
-      "generated_by": "gemini",
+      "generated_by": "template",
       "risk_score": 10.009
     },
     {
@@ -1126,13 +1125,12 @@
         "CWE-918"
       ],
       "tags": [
-        "SSRF",
-        "權限提升"
+        "SSRF"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Adobe Campaign Classic (ACC) 存在 SSRF 漏洞，攻擊者無需使用者互動即可發起請求，導致權限提升。",
-      "impact_zh": "伺服器端請求偽造（SSRF），可能導致權限提升。",
+      "summary_zh": "Adobe Campaign Classic (ACC) 存在 SSRF 漏洞，攻擊者無需使用者互動即可利用，可能導致權限提升。",
+      "impact_zh": "伺服器端請求偽造，可能導致權限提升。",
       "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. Exploitation of this issue does not require user interaction. Scope is changed.",
       "references": [
@@ -1153,8 +1151,8 @@
     },
     {
       "cve_id": "CVE-2026-100382",
-      "title_short": "100382×10.0",
-      "title_full": "100382 · CVSS 10.0",
+      "title_short": "Mediawiki 100382×10.0",
+      "title_full": "Mediawiki 100382 · CVSS 10.0",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1173,9 +1171,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Mediawiki 的 ExternalData 擴充功能存在 OS 命令注入漏洞，允許攻擊者在伺服器上執行任意系統命令。",
-      "impact_zh": "作業系統命令注入，遠端程式碼執行（RCE）。",
-      "action_zh": "更新至 3.7 或以上版本。",
+      "summary_zh": "Mediawiki 的 ExternalData 擴充功能存在 OS 命令注入漏洞，允許攻擊者遠端執行任意系統命令。",
+      "impact_zh": "遠端程式碼執行，可完全控制伺服器。",
+      "action_zh": "更新至 3.7 或更高版本。",
       "description_en": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Wikimedia Foundation Mediawiki - ExternalData Extension allows OS Command Injection.\n\nThis issue affects Mediawiki - ExternalData Extension: from * before 3.7.",
       "references": [
         {
@@ -1199,8 +1197,8 @@
     },
     {
       "cve_id": "CVE-2025-58048",
-      "title_short": "58048×9.9",
-      "title_full": "58048 · CVSS 9.9",
+      "title_short": "Paymenter 58048×9.9",
+      "title_full": "Paymenter 58048 · CVSS 9.9",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1218,14 +1216,13 @@
         "CWE-434"
       ],
       "tags": [
-        "RCE",
-        "資訊洩漏"
+        "RCE"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Paymenter 附件功能允許已認證使用者上傳任意檔案，可能導致敏感資料洩漏、憑證讀取及執行系統命令。",
-      "impact_zh": "敏感資料洩漏、憑證竊取、遠端程式碼執行（RCE）。",
-      "action_zh": "更新至 1.2.11 或以上版本；或更新 nginx 設定檔以供下載附件而非執行，或使用 WAF 阻擋 /storage/。",
+      "summary_zh": "Paymenter 附件上傳功能允許已認證使用者上傳任意檔案，可能導致資料洩漏、憑證竊取或遠端命令執行。",
+      "impact_zh": "敏感資料洩漏、憑證竊取、遠端命令執行。",
+      "action_zh": "更新至 1.2.11 或更高版本；或透過 WAF 限制對 /storage/ 的存取。",
       "description_en": "Paymenter is a free and open-source webshop solution for hostings. Prior to version 1.2.11, the ticket attachments functionality in Paymenter allows a malicious authenticated user to upload arbitrary files. This could result in sensitive data extraction from the database, credentials being read from configuration files, and arbitrary system commands being run under the web server user context. This vulnerability was patched by commit 87c3db4 and was released under the version 1.2.11 tag without any other code modifications compared to version 1.2.10. If upgrading is not immediately possible, administrators can mitigate this vulnerability with one or more of the following measures: updating nginx config to download attachments instead of executing them or disallowing access to /storage/ fully using a WAF such as Cloudflare.",
       "references": [
         {
@@ -1254,7 +1251,7 @@
     {
       "cve_id": "CVE-2025-65294",
       "title_short": "Aqara Hub M2 65294×9.8",
-      "title_full": "Aqara Hub M2 Firmware 65294 · CVSS 9.8",
+      "title_full": "Aqara Hub M2 65294 · CVSS 9.8",
       "vendor": "Aqara",
       "product": "Hub M2 Firmware",
       "vendor_advisory_id": null,
@@ -1276,9 +1273,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Aqara Hub 裝置（包含 Camera Hub G3, Hub M2, Hub M3）存在未記錄的遠端存取機制，允許遠端執行任意命令。",
-      "impact_zh": "未授權遠端程式碼執行（RCE），完全接管設備。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "Aqara Hub M2 等設備韌體存在未公開的遠端存取機制，允許未授權的遠端命令執行。",
+      "impact_zh": "遠端程式碼執行，可完全接管設備。",
+      "action_zh": "更新至最新韌體版本。",
       "description_en": "Aqara Hub devices including Camera Hub G3 4.1.9_0027, Hub M2 4.3.6_0027, and Hub M3 4.3.6_0025 contain an undocumented remote access mechanism enabling unrestricted remote command execution.",
       "references": [
         {
@@ -1302,8 +1299,8 @@
     },
     {
       "cve_id": "CVE-2025-13313",
-      "title_short": "13313×9.8",
-      "title_full": "13313 · CVSS 9.8",
+      "title_short": "WordPress 13313×9.8",
+      "title_full": "WordPress 13313 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1327,7 +1324,7 @@
       "kev": null,
       "summary_zh": "WordPress CRM Memberships 外掛的密碼重設功能存在授權檢查缺失，允許未驗證攻擊者重設任意使用者密碼。",
       "impact_zh": "未授權的權限提升，可接管使用者帳號。",
-      "action_zh": "更新至 2.6.1 或以上版本。",
+      "action_zh": "更新至 2.6.1 或更高版本。",
       "description_en": "The CRM Memberships plugin for WordPress is vulnerable to privilege escalation via password reset in all versions up to, and including, 2.6. This is due to missing authorization and authentication checks on the `ntzcrm_changepassword` AJAX action. This makes it possible for unauthenticated attackers to reset arbitrary user passwords and gain unauthorized access to user accounts via the `ntzcrm_changepassword` endpoint, granted they can obtain or enumerate a target user's email address. The plugin also exposes the `ntzcrm_get_users` endpoint without authentication, allowing attackers to enumerate subscriber email addresses, facilitating the exploitation of the password reset vulnerability.",
       "references": [
         {
@@ -1367,8 +1364,8 @@
     },
     {
       "cve_id": "CVE-2025-9994",
-      "title_short": "9994×9.8",
-      "title_full": "9994 · CVSS 9.8",
+      "title_short": "Amp’ed RF 9994×9.8",
+      "title_full": "Amp’ed RF 9994 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1391,9 +1388,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Amp’ed RF BT-AP 111 藍牙基地台的 HTTP 管理介面缺乏驗證機制，允許任何有網路存取權限的攻擊者進行未授權存取。",
+      "summary_zh": "Amp’ed RF BT-AP 111 的 HTTP 管理介面缺乏驗證機制，允許任何有網路存取權限的攻擊者進行未授權存取。",
       "impact_zh": "未授權存取管理介面，可能導致設備被接管。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "action_zh": "依廠商公告更新或停用該服務。",
       "description_en": "The Amp’ed RF BT-AP 111 Bluetooth access point's HTTP admin interface does not have an authentication feature, allowing unauthorized access to anyone with network access.",
       "references": [
         {
@@ -1418,7 +1415,7 @@
     {
       "cve_id": "CVE-2025-36386",
       "title_short": "IBM Maximo 36386×9.8",
-      "title_full": "IBM Maximo Application Suite 36386 · CVSS 9.8",
+      "title_full": "IBM Maximo 36386 · CVSS 9.8",
       "vendor": "IBM",
       "product": "Maximo Application Suite",
       "vendor_advisory_id": null,
@@ -1436,13 +1433,13 @@
         "CWE-305"
       ],
       "tags": [
-        "接管"
+        "認證繞過"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "IBM Maximo Application Suite 存在繞過認證機制漏洞，允許遠端攻擊者在未授權情況下存取應用程式。",
-      "impact_zh": "未授權存取應用程式，可能導致敏感資料洩漏或設備被接管。",
-      "action_zh": "更新至 9.0.16 或 9.1.5 或以上版本。",
+      "summary_zh": "IBM Maximo Application Suite 存在繞過認證機制漏洞，允許遠端攻擊者未授權存取應用程式。",
+      "impact_zh": "未授權存取應用程式。",
+      "action_zh": "更新至 9.0.16 或 9.1.5 或更高版本。",
       "description_en": "IBM Maximo Application Suite 9.0.0 through 9.0.15 and 9.1.0 through 9.1.4 could allow a remote attacker to bypass authentication mechanisms and gain unauthorized access to the application.",
       "references": [
         {
@@ -1462,8 +1459,8 @@
     },
     {
       "cve_id": "CVE-2025-41715",
-      "title_short": "41715×9.8",
-      "title_full": "41715 · CVSS 9.8",
+      "title_short": "未標示產品 41715×9.8",
+      "title_full": "未標示產品 CVE-2025-41715 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1481,13 +1478,13 @@
         "CWE-306"
       ],
       "tags": [
-        "接管"
+        "認證繞過"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "網頁應用程式的資料庫暴露於未驗證狀態，允許未授權遠端攻擊者存取並可能危害資料庫。",
-      "impact_zh": "未授權存取資料庫，可能導致敏感資料洩漏或被竄改。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
       "description_en": "The database for the web application is exposed without authentication, allowing an unauthenticated remote attacker to gain unauthorized access and potentially compromise it.",
       "references": [
         {
@@ -1502,13 +1499,13 @@
         "nvd"
       ],
       "rank": 27,
-      "generated_by": "gemini",
+      "generated_by": "template",
       "risk_score": 9.81
     },
     {
       "cve_id": "CVE-2025-64055",
       "title_short": "Fanvil X210 64055×9.8",
-      "title_full": "Fanvil X210 Firmware 64055 · CVSS 9.8",
+      "title_full": "Fanvil X210 64055 · CVSS 9.8",
       "vendor": "Fanvil",
       "product": "X210 Firmware",
       "vendor_advisory_id": null,
@@ -1530,9 +1527,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Fanvil X210 V2 存在身分驗證繞過漏洞，允許本機網路上的未授權攻擊者存取管理功能，如檔案上傳和韌體更新。",
-      "impact_zh": "未授權存取管理功能，可能導致設備被接管。",
-      "action_zh": "更新至 2.12.21 或以上版本。",
+      "summary_zh": "Fanvil X210 韌體存在認證繞過漏洞，允許本機網路上的未授權攻擊者透過偽造請求存取管理功能。",
+      "impact_zh": "未授權存取管理功能，如檔案上傳、韌體更新。",
+      "action_zh": "依廠商公告更新至最新版本。",
       "description_en": "An issue was discovered in Fanvil x210 V2 2.12.20 allowing unauthenticated attackers on the local network to access administrative functions of the device (e.g. file upload, firmware update, reboot...) via a crafted authentication bypass.",
       "references": [
         {
@@ -1552,8 +1549,8 @@
     },
     {
       "cve_id": "CVE-2025-3500",
-      "title_short": "Avast Antivirus 3500×9.8",
-      "title_full": "Avast Antivirus 3500 · CVSS 9.8",
+      "title_short": "Avast 3500×9.8",
+      "title_full": "Avast 3500 · CVSS 9.8",
       "vendor": "Avast",
       "product": "Antivirus",
       "vendor_advisory_id": null,
@@ -1576,8 +1573,8 @@
       "in_the_wild": false,
       "kev": null,
       "summary_zh": "Avast Antivirus 在 Windows 上存在整數溢位漏洞，允許本地攻擊者提升權限。",
-      "impact_zh": "本地權限提升，可取得系統最高權限。",
-      "action_zh": "更新至 25.3 或以上版本。",
+      "impact_zh": "本地權限提升。",
+      "action_zh": "更新至 25.3 或更高版本。",
       "description_en": "Integer Overflow or Wraparound vulnerability in Avast Antivirus (25.1.981.6) on Windows allows Privilege Escalation.This issue affects Antivirus: from 25.1.981.6 before 25.3.",
       "references": [
         {
@@ -1598,7 +1595,7 @@
     {
       "cve_id": "CVE-2025-41730",
       "title_short": "Wago 41730×9.8",
-      "title_full": "Wago 0852 1328 Firmware 41730 · CVSS 9.8",
+      "title_full": "Wago 41730 · CVSS 9.8",
       "vendor": "Wago",
       "product": "0852 1328 Firmware",
       "vendor_advisory_id": null,
@@ -1617,14 +1614,13 @@
         "CWE-787"
       ],
       "tags": [
-        "RCE",
-        "接管"
+        "RCE"
       ],
       "in_the_wild": false,
       "kev": null,
       "summary_zh": "Wago 0852 1328 韌體中的 check_account() 函式存在不安全的 sscanf 呼叫，允許未授權遠端攻擊者寫入任意資料至堆疊緩衝區，導致設備被完全控制。",
-      "impact_zh": "遠端程式碼執行（RCE），完全接管設備。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "impact_zh": "遠端程式碼執行，可完全控制設備。",
+      "action_zh": "依廠商公告更新至最新版本。",
       "description_en": "An unauthenticated remote attacker can abuse unsafe sscanf calls within the check_account() function to write arbitrary data into fixed-size stack buffers which leads to full device compromise.",
       "references": [
         {
@@ -1645,7 +1641,7 @@
     {
       "cve_id": "CVE-2025-41732",
       "title_short": "Wago 41732×9.8",
-      "title_full": "Wago 0852 1328 Firmware 41732 · CVSS 9.8",
+      "title_full": "Wago 41732 · CVSS 9.8",
       "vendor": "Wago",
       "product": "0852 1328 Firmware",
       "vendor_advisory_id": null,
@@ -1664,14 +1660,13 @@
         "CWE-787"
       ],
       "tags": [
-        "RCE",
-        "接管"
+        "RCE"
       ],
       "in_the_wild": false,
       "kev": null,
       "summary_zh": "Wago 0852 1328 韌體中的 check_cookie() 函式存在不安全的 sscanf 呼叫，允許未授權遠端攻擊者寫入任意資料至堆疊緩衝區，導致設備被完全控制。",
-      "impact_zh": "遠端程式碼執行（RCE），完全接管設備。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "impact_zh": "遠端程式碼執行，可完全控制設備。",
+      "action_zh": "依廠商公告更新至最新版本。",
       "description_en": "An unauthenticated remote attacker can abuse unsafe sscanf calls within the check_cookie() function to write arbitrary data into fixed-size stack buffers which leads to full device compromise.",
       "references": [
         {
@@ -1692,7 +1687,7 @@
     {
       "cve_id": "CVE-2025-41742",
       "title_short": "Sprecher 41742×9.8",
-      "title_full": "Sprecher Automation SPRECON-E C Firmware 41742 · CVSS 9.8",
+      "title_full": "Sprecher 41742 · CVSS 9.8",
       "vendor": "Sprecher Automation",
       "product": "Sprecon E C Firmware",
       "vendor_advisory_id": null,
@@ -1710,14 +1705,13 @@
         "CWE-1394"
       ],
       "tags": [
-        "資訊洩漏",
         "接管"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Sprecher Automation 的 SPRECON-E 系列產品使用預設的加密金鑰，允許未授權遠端攻擊者讀取、修改、寫入專案與資料，或透過遠端維護存取設備。",
-      "impact_zh": "未授權存取與竄改資料，遠端維護存取。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "Sprecher Automation 的 SPRECON-E 系列設備使用預設加密金鑰，允許未授權遠端攻擊者讀取、修改專案與資料，或透過遠端維護存取設備。",
+      "impact_zh": "未授權存取與修改設備資料，可能導致設備被接管。",
+      "action_zh": "變更預設加密金鑰，並依廠商公告更新。",
       "description_en": "Sprecher Automations SPRECON-E-C,  SPRECON-E-P, SPRECON-E-T3 is vulnerable to attack by an unauthorized remote attacker via default cryptographic keys. The use of these keys allows the attacker to read, modify, and write projects and data, or to access any device via remote maintenance.",
       "references": [
         {
@@ -1737,8 +1731,8 @@
     },
     {
       "cve_id": "CVE-2025-64188",
-      "title_short": "64188×9.8",
-      "title_full": "64188 · CVSS 9.8",
+      "title_short": "Soledad 64188×9.8",
+      "title_full": "Soledad 64188 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1762,7 +1756,7 @@
       "kev": null,
       "summary_zh": "PenciDesign Soledad 主題存在權限分配錯誤漏洞，允許攻擊者提升權限。",
       "impact_zh": "未授權的權限提升。",
-      "action_zh": "更新至 8.6.10 或以上版本。",
+      "action_zh": "更新至 8.6.10 或更高版本。",
       "description_en": "Incorrect Privilege Assignment vulnerability in PenciDesign Soledad soledad allows Privilege Escalation.This issue affects Soledad: from n/a through <= 8.6.9.",
       "references": [
         {
@@ -1783,7 +1777,7 @@
     {
       "cve_id": "CVE-2025-65823",
       "title_short": "Meatmeet 65823×9.8",
-      "title_full": "Meatmeet Pro Wifi \\& Bluetooth Meat Thermometer Firmware 65823 · CVSS 9.8",
+      "title_full": "Meatmeet 65823 · CVSS 9.8",
       "vendor": "Meatmeet",
       "product": "Meatmeet Pro Wifi \\& Bluetooth Meat Thermometer Firmware",
       "vendor_advisory_id": null,
@@ -1805,9 +1799,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Meatmeet Pro 智慧溫度計韌體內嵌硬編碼的 Wi-Fi 憑證，攻擊者可利用此資訊存取 Wi-Fi 網路，或誘使設備連線至惡意熱點。",
-      "impact_zh": "未授權存取 Wi-Fi 網路，設備被接管。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "Meatmeet Pro 智慧肉品溫度計韌體內嵌硬編碼的 Wi-Fi 憑證，攻擊者可利用此憑證存取 Wi-Fi 網路，或透過惡意 AP 進行中間人攻擊。",
+      "impact_zh": "未授權存取 Wi-Fi 網路，可能被用於中間人攻擊。",
+      "action_zh": "依廠商公告更新韌體，並確保設備連線至可信任的 Wi-Fi 網路。",
       "description_en": "The Meatmeet Pro was found to be shipped with hardcoded Wi-Fi credentials in the firmware, for the test network it was developed on. If an attacker retrieved this, and found the physical location of the Wi-Fi network, they could gain unauthorized access to the Wi-Fi network of the vendor. Additionally, if an attacker were located in close physical proximity to the device when it was first set up, they may be able to force the device to auto-connect to an attacker-controlled access point by setting the SSID and password to the same as which was found in the firmware file.",
       "references": [
         {
@@ -1831,8 +1825,8 @@
     },
     {
       "cve_id": "CVE-2025-9967",
-      "title_short": "9967×9.8",
-      "title_full": "9967 · CVSS 9.8",
+      "title_short": "WordPress 9967×9.8",
+      "title_full": "WordPress 9967 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1854,9 +1848,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "WordPress Orion SMS OTP Verification 外掛未正確驗證使用者身份，允許未授權攻擊者在知道使用者手機號碼的情況下，將其密碼重設為一次性密碼。",
-      "impact_zh": "未授權的帳號接管。",
-      "action_zh": "更新至 1.1.8 或以上版本。",
+      "summary_zh": "WordPress Orion SMS OTP Verification 外掛未正確驗證使用者身份，允許未授權攻擊者透過知道使用者手機號碼來重設密碼，導致帳號被盜。",
+      "impact_zh": "帳號被盜，未授權的密碼變更。",
+      "action_zh": "更新至 1.1.8 或更高版本。",
       "description_en": "The Orion SMS OTP Verification plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 1.1.7. This is due to the plugin not properly validating a user's identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user's password to a one-time password if the attacker knows the user's phone number",
       "references": [
         {
@@ -1884,8 +1878,8 @@
     },
     {
       "cve_id": "CVE-2025-54725",
-      "title_short": "54725×9.8",
-      "title_full": "54725 · CVSS 9.8",
+      "title_short": "uxper Golo 54725×9.8",
+      "title_full": "uxper Golo 54725 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1903,13 +1897,13 @@
         "CWE-288"
       ],
       "tags": [
-        "接管"
+        "認證繞過"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "uxper Golo 存在身分驗證繞過漏洞，允許未授權遠端攻擊者繞過驗證機制。",
+      "summary_zh": "uxper Golo 存在身分驗證繞過漏洞，允許未授權的遠端攻擊者繞過身分驗證機制。",
       "impact_zh": "未授權存取，可能導致設備被接管。",
-      "action_zh": "更新至 1.7.1 或以上版本。",
+      "action_zh": "更新至 1.7.1 或更高版本。",
       "description_en": "Authentication Bypass Using an Alternate Path or Channel vulnerability in uxper Golo golo allows Authentication Abuse.This issue affects Golo: from n/a through <= 1.7.0.",
       "references": [
         {
@@ -1952,9 +1946,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "NooTheme Jobmonster 插件（<= 4.7.9）存在認證繞過漏洞，允許未授權用戶進行身份驗證濫用。",
-      "impact_zh": "未授權用戶可濫用身份驗證機制。",
-      "action_zh": "更新至 Jobmonster 4.7.9 或更高版本。",
+      "summary_zh": "NooTheme Jobmonster 插件（4.7.9 及以下版本）存在認證繞過漏洞，允許未授權使用者濫用權限。",
+      "impact_zh": "未授權使用者可濫用權限。",
+      "action_zh": "請更新至 Jobmonster 4.7.9 或更高版本。",
       "description_en": "Authentication Bypass Using an Alternate Path or Channel vulnerability in NooTheme Jobmonster noo-jobmonster allows Authentication Abuse.This issue affects Jobmonster: from n/a through <= 4.7.9.",
       "references": [
         {
@@ -1974,8 +1968,8 @@
     },
     {
       "cve_id": "CVE-2025-64227",
-      "title_short": "Client Invoicing by Sprout Invoices 64227×9.8",
-      "title_full": "Client Invoicing by Sprout Invoices CVE-2025-64227 · CVSS 9.8",
+      "title_short": "Sprout Invoices 64227×9.8",
+      "title_full": "Sprout Invoices CVE-2025-64227 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1997,9 +1991,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Sprout Invoices 插件（<= 20.8.7）存在不受信任數據反序列化漏洞，允許攻擊者注入惡意物件。",
-      "impact_zh": "允許攻擊者注入惡意物件，可能導致遠端程式碼執行。",
-      "action_zh": "更新至 Client Invoicing by Sprout Invoices 20.8.7 或更高版本。",
+      "summary_zh": "Sprout Invoices 外掛（20.8.7 及以下版本）存在不受信任資料反序列化漏洞，可能導致物件注入。",
+      "impact_zh": "遠端攻擊者可注入惡意物件。",
+      "action_zh": "請更新至 Sprout Invoices 20.8.7 或更高版本。",
       "description_en": "Deserialization of Untrusted Data vulnerability in BoldGrid Client Invoicing by Sprout Invoices sprout-invoices allows Object Injection.This issue affects Client Invoicing by Sprout Invoices: from n/a through <= 20.8.7.",
       "references": [
         {
@@ -2042,9 +2036,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Codiqa 插件（< 1.2.8）存在不受信任數據反序列化漏洞，允許攻擊者注入惡意物件。",
-      "impact_zh": "允許攻擊者注入惡意物件，可能導致遠端程式碼執行。",
-      "action_zh": "更新至 Codiqa 1.2.8 或更高版本。",
+      "summary_zh": "Codiqa 產品（1.2.8 及以下版本）存在不受信任資料反序列化漏洞，可能導致物件注入。",
+      "impact_zh": "遠端攻擊者可注入惡意物件。",
+      "action_zh": "請更新至 Codiqa 1.2.8 或更高版本。",
       "description_en": "Deserialization of Untrusted Data vulnerability in BoldThemes Codiqa codiqa allows Object Injection.This issue affects Codiqa: from n/a through < 1.2.8.",
       "references": [
         {
@@ -2083,13 +2077,13 @@
         "CWE-307"
       ],
       "tags": [
-        "其他"
+        "阻斷服務"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Medtronic Carelink Network 允許未授權遠端攻擊者透過暴力破解 API 端點，在特定情況下猜測出有效密碼。",
-      "impact_zh": "攻擊者可能猜測出有效密碼，導致帳戶存取。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "Medtronic Carelink Network API 端點存在暴力破解漏洞，允許未授權遠端攻擊者嘗試猜測密碼。",
+      "impact_zh": "未授權攻擊者可嘗試猜測密碼。",
+      "action_zh": "請依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Medtronic CareLink Network allows an unauthenticated remote attacker to perform a brute force attack on an API endpoint that could be used to determine a valid password under certain circumstances. This issue affects CareLink Network: before December 4, 2025.",
       "references": [
         {
@@ -2132,9 +2126,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "DriveLock (24.1.*, 24.2.*, 25.1.*) 存在不完整的代理程式身份驗證配置，允許攻擊者冒充任何 DriveLock 代理程式。",
-      "impact_zh": "攻擊者可冒充代理程式，繞過安全控制。",
-      "action_zh": "更新至 DriveLock 25.1.* 或更高版本。",
+      "summary_zh": "DriveLock 產品（24.1、24.2、25.1 系列）的代理程式認證配置不完整，允許攻擊者冒充其他代理程式。",
+      "impact_zh": "攻擊者可冒充其他代理程式。",
+      "action_zh": "請更新至 DriveLock 25.1 或更高版本。",
       "description_en": "An issue was discovered in DriveLock 24.1 through 24.1.*, 24.2 through 24.2.*, and 25.1 through 25.1.*. An incomplete configuration (agent authentication) in DriveLock tenant allows attackers to impersonate any DriveLock agent on the network against the DES (DriveLock Enterprise Service).",
       "references": [
         {
@@ -2154,8 +2148,8 @@
     },
     {
       "cve_id": "CVE-2025-14860",
-      "title_short": "Mozilla Firefox 14860×9.8",
-      "title_full": "Mozilla Firefox CVE-2025-14860 · CVSS 9.8",
+      "title_short": "Firefox 14860×9.8",
+      "title_full": "Firefox CVE-2025-14860 · CVSS 9.8",
       "vendor": "Mozilla",
       "product": "Firefox",
       "vendor_advisory_id": null,
@@ -2177,9 +2171,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Mozilla Firefox 的 Disability Access APIs 組件存在 Use-after-free 漏洞，可能導致程式崩潰或被利用。",
-      "impact_zh": "可能導致程式崩潰或被利用，影響系統穩定性。",
-      "action_zh": "更新至 Firefox 146.0.1 或更高版本。",
+      "summary_zh": "Mozilla Firefox 的 Disability Access APIs 元件存在 Use-after-free 漏洞。",
+      "impact_zh": "可能導致程式崩潰或被利用。",
+      "action_zh": "請更新至 Firefox 146.0.1 或更高版本。",
       "description_en": "Use-after-free in the Disability Access APIs component. This vulnerability was fixed in Firefox 146.0.1.",
       "references": [
         {
@@ -2226,9 +2220,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "MCMS (6.1.1 - 6.2.1) 的 PageAction.verify 端點存在 SQL 注入漏洞，允許攻擊者執行任意 SQL 命令。",
-      "impact_zh": "允許攻擊者執行任意 SQL 命令，可能導致數據洩漏或篡改。",
-      "action_zh": "更新至 MCMS 6.2.1 或更高版本。",
+      "summary_zh": "MCMS（6.1.1 至 6.2.1）的 PageAction.verify 端點存在 SQL 注入漏洞。",
+      "impact_zh": "遠端攻擊者可注入惡意 SQL 指令。",
+      "action_zh": "請更新至 MCMS 6.2.1 或更高版本。",
       "description_en": "MCMS 6.1.1 through 6.2.1 contains a SQL injection vulnerability in the PageAction.verify endpoint (GET /ms/mdiy/page/verify.do).",
       "references": [
         {
@@ -2248,8 +2242,8 @@
     },
     {
       "cve_id": "CVE-2026-18143",
-      "title_short": "Request a Quote for WooCommerce 18143×9.8",
-      "title_full": "Request a Quote for WooCommerce CVE-2026-18143 · CVSS 9.8",
+      "title_short": "WooCommerce 18143×9.8",
+      "title_full": "WooCommerce CVE-2026-18143 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": "GHSA-f78j-xwc8-gq3q",
@@ -2264,13 +2258,13 @@
         "CWE-434"
       ],
       "tags": [
-        "其他"
+        "接管"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "WordPress 的 Request a Quote for WooCommerce 插件（<= 2.9.2）存在任意文件上傳漏洞，允許未授權攻擊者上傳可執行文件。",
-      "impact_zh": "允許未授權攻擊者上傳可執行文件，可能導致遠端程式碼執行。",
-      "action_zh": "更新至 Request a Quote for WooCommerce 2.9.2 或更高版本。",
+      "summary_zh": "WordPress 的 Request a Quote for WooCommerce 外掛（2.9.2 及以下版本）允許未授權攻擊者上傳任意檔案，可能導致遠端程式碼執行。",
+      "impact_zh": "未授權攻擊者可上傳惡意檔案，執行遠端程式碼。",
+      "action_zh": "請更新至 Request a Quote for WooCommerce 2.9.2 或更高版本。",
       "description_en": "The Request a Quote for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.9.2 via the `afrfq_submit_quote_via_popup()` function. This is due to missing file extension and MIME type validation in the popup upload handler, which uses the raw attacker-supplied filename directly as the destination for `move_uploaded_file()`. This makes it possible for unauthenticated attackers to upload executable files, such as PHP files, to a web-accessible temporary RFQ upload directory when a public quote rule with the multi-page popup flow is enabled.",
       "references": [
         {
@@ -2307,8 +2301,8 @@
     },
     {
       "cve_id": "CVE-2026-93643",
-      "title_short": "OnlyOffice/Document Editing 93643×9.8",
-      "title_full": "OnlyOffice/Document Editing CVE-2026-93643 · CVSS 9.8",
+      "title_short": "OnlyOffice 93643×9.8",
+      "title_full": "OnlyOffice CVE-2026-93643 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -2325,13 +2319,13 @@
       ],
       "tags": [
         "路徑穿越",
-        "其他"
+        "接管"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "OnlyOffice/Document Editing 在啟用時，攻擊者可利用未簽名的儲存欄位進行路徑穿越寫入，以 Zimbra 用戶身份執行命令。",
-      "impact_zh": "攻擊者可執行命令，完全控制系統。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "OnlyOffice/Document Editing 允許未授權遠端攻擊者利用 unsigned save 欄位進行路徑穿越寫入，並以 zimbra 權限執行命令。",
+      "impact_zh": "未授權攻擊者可執行系統命令。",
+      "action_zh": "請依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "When OnlyOffice/Document Editing is available, an unauthenticated remote attacker with access to an existing supported public Briefcase document can abuse unsigned save fields to perform path-traversal writes and execute commands as zimbra.",
       "references": [
         {
@@ -2351,8 +2345,8 @@
     },
     {
       "cve_id": "CVE-2025-67787",
-      "title_short": "Drivelock Operations Center 67787×9.6",
-      "title_full": "Drivelock Operations Center CVE-2025-67787 · CVSS 9.6",
+      "title_short": "Drivelock 67787×9.6",
+      "title_full": "Drivelock CVE-2025-67787 · CVSS 9.6",
       "vendor": "Drivelock",
       "product": "Drivelock",
       "vendor_advisory_id": null,
@@ -2370,13 +2364,14 @@
         "CWE-79"
       ],
       "tags": [
-        "XSS"
+        "XSS",
+        "接管"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "DriveLock Operations Center (25.1.2 - 25.1.5) 存在跨站腳本（XSS）漏洞，允許攻擊者透過網路竊取用戶會話。",
-      "impact_zh": "攻擊者可竊取用戶會話，繞過身份驗證。",
-      "action_zh": "更新至 DriveLock Operations Center 25.1.5 或更高版本。",
+      "summary_zh": "DriveLock Operations Center（25.1.2 至 25.1.5 版本）存在跨網站指令碼（XSS）漏洞，可能導致會話劫持。",
+      "impact_zh": "攻擊者可透過 XSS 劫持使用者會話。",
+      "action_zh": "請更新至 DriveLock 25.1.5 或更高版本。",
       "description_en": "An issue was discovered in 25.1.2 before 25.1.5. A Cross Site Scripting (XSS) issue in DriveLock Operations Center allows for session takeover over a network.",
       "references": [
         {
@@ -2415,14 +2410,14 @@
         "CWE-266"
       ],
       "tags": [
-        "其他",
-        "供應鏈"
+        "供應鏈",
+        "接管"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Wondershare Repairit 存在 SAS Token 權限分配不當漏洞，允許遠端攻擊者繞過身份驗證，並可能發動供應鏈攻擊執行任意程式碼。",
-      "impact_zh": "允許繞過身份驗證，並可能執行任意程式碼。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "Wondershare Repairit 的 SAS Token 權限分配不當，允許遠端攻擊者繞過認證，並可能發動供應鏈攻擊執行任意程式碼。",
+      "impact_zh": "遠端攻擊者可繞過認證，執行任意程式碼。",
+      "action_zh": "請依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Wondershare Repairit SAS Token Incorrect Permission Assignment Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on Wondershare Repairit. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the permissions granted to an SAS token. An attacker can leverage this vulnerability to launch a supply-chain attack and execute arbitrary code on customers' endpoints. Was ZDI-CAN-26892.",
       "references": [
         {
@@ -2442,8 +2437,8 @@
     },
     {
       "cve_id": "CVE-2025-65008",
-      "title_short": "WODESYS WD-R608U router 65008×9.4",
-      "title_full": "WODESYS WD-R608U router CVE-2025-65008 · CVSS 9.4",
+      "title_short": "WODESYS WD-R608U 65008×9.4",
+      "title_full": "WODESYS WD-R608U CVE-2025-65008 · CVSS 9.4",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -2461,13 +2456,13 @@
         "CWE-78"
       ],
       "tags": [
-        "RCE"
+        "接管"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "WODESYS WD-R608U 路由器（WDR122B V2.0, WDR28）的 adm.cgi 端點缺乏對 langGet 參數的驗證，允許攻擊者執行系統命令。",
-      "impact_zh": "允許攻擊者執行任意系統命令，完全控制設備。",
-      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "WODESYS WD-R608U 路由器（WDR28 版本）的 adm.cgi 端點缺乏對 langGet 參數的驗證，允許攻擊者執行系統命令。",
+      "impact_zh": "遠端攻擊者可執行系統命令。",
+      "action_zh": "請依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "In WODESYS WD-R608U router (also known as WDR122B V2.0 and WDR28) due to lack of validation in the langGet parameter in the adm.cgi endpoint, the malicious attacker can execute system shell commands.\n\nThe vendor was notified early about this vulnerability, but didn't respond with the details of vulnerability or vulnerable version range. Only version WDR28081123OV1.01 was tested and confirmed as vulnerable, other versions were not tested and might also be vulnerable.",
       "references": [
         {
@@ -2514,13 +2509,13 @@
         "CWE-78"
       ],
       "tags": [
-        "RCE"
+        "接管"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Lantronix 設備（SLC8000, SLC9000, EMG8500/7500, SLB882/SLCx-03/SLCx-02）存在命令注入漏洞，允許已認證用戶執行 root 權限命令。",
-      "impact_zh": "已認證用戶可執行任意 root 命令，完全控制設備。",
-      "action_zh": "更新至 Lantronix 固件 v9.7.0.3 (SLC8000), v9.7.0.2 (SLC9000), v9.7.0.1 (EMG8500/7500) 或更高版本。",
+      "summary_zh": "Lantronix 設備（SLC8000/SLC9000/EMG8500/EMG7500/SLB882/SLCx-03/SLCx-02）的 set nfs download 命令存在命令注入漏洞，允許已認證攻擊者執行 root 命令。",
+      "impact_zh": "已認證攻擊者可執行 root 命令，完全控制設備。",
+      "action_zh": "請更新至 Lantronix SLC8000/SLC9000 v9.7.0.3, EMG8500/EMG7500 v9.7.0.1 或更高版本。",
       "description_en": "Lantronix SLC8000 before firmware v9.7.0.3, SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a command injection vulnerability that allows authenticated attackers with the services permission to execute arbitrary shell commands as root by exploiting the set nfs download command that passes unsanitized user input to a system() call. Attackers with the services permission can authenticate to the terminal or CLI interface and inject malicious commands through the unsanitized parameter to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-attached devices.",
       "references": [
         {
@@ -2560,10 +2555,10 @@
     },
     {
       "cve_id": "CVE-2025-11779",
-      "title_short": "Circutor Sge Plc1000 Firmware 11779×9.4",
-      "title_full": "Circutor Sge Plc1000 Firmware CVE-2025-11779 · CVSS 9.4",
+      "title_short": "Circutor SGE-PLC1000 11779×9.4",
+      "title_full": "Circutor SGE-PLC1000 CVE-2025-11779 · CVSS 9.4",
       "vendor": "Circutor",
-      "product": "Sge Plc1000 Firmware",
+      "product": "Sge PLC1000 Firmware",
       "vendor_advisory_id": null,
       "severity": "CRITICAL",
       "cvss": {
@@ -2579,13 +2574,13 @@
         "CWE-121"
       ],
       "tags": [
-        "RCE"
+        "接管"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Circutor SGE-PLC1000/SGE-PLC50 韌體 v9.0.2 的 SetLan 功能未對參數進行驗證，可能導致命令注入。",
-      "impact_zh": "允許攻擊者注入命令，可能導致遠端程式碼執行。",
-      "action_zh": "更新至 Circutor SGE-PLC1000/SGE-PLC50 韌體 v9.0.2 或更高版本。",
+      "summary_zh": "Circutor SGE-PLC1000/SGE-PLC50 韌體（v9.0.2）的 SetLan 函數未對參數進行驗證，可能導致命令注入。",
+      "impact_zh": "遠端攻擊者可注入命令。",
+      "action_zh": "請更新至 Circutor SGE-PLC1000/SGE-PLC50 v9.0.2 或更高版本。",
       "description_en": "Stack-based buffer overflow vulnerability in CircutorSGE-PLC1000/SGE-PLC50 v9.0.2. The 'SetLan' function is invoked when a new configuration is applied. This new configuration function is activated by a management web request, which can be invoked by a user when making changes to the 'index.cgi' web application. The parameters are not being sanitised, which could lead to command injection.",
       "references": [
         {
@@ -2624,13 +2619,13 @@
         "CWE-121"
       ],
       "tags": [
-        "記憶體破壞"
+        "接管"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Lantronix 設備（SLC8000/9000, EMG8500/7500, SLB882/SLCx-03/SLCx-02）存在堆疊緩衝區溢位漏洞，允許已認證用戶執行任意程式碼。",
-      "impact_zh": "已認證用戶可執行任意程式碼，完全控制設備。",
-      "action_zh": "更新至 Lantronix 固件 v9.7.0.2 (SLC8000/9000), v9.7.0.1 (EMG8500/7500) 或更高版本。",
+      "summary_zh": "Lantronix 設備（SLC8000/SLC9000/EMG8500/EMG7500/SLB882/SLCx-03/SLCx-02）的 mfc eeprom read 命令存在緩衝區溢位漏洞，允許已認證攻擊者執行任意程式碼。",
+      "impact_zh": "已認證攻擊者可執行任意程式碼，完全控制設備。",
+      "action_zh": "請更新至 Lantronix SLC8000/SLC9000 v9.7.0.2, EMG8500/EMG7500 v9.7.0.1 或更高版本。",
       "description_en": "Lantronix SLC8000/SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a stack-based buffer overflow vulnerability that allows authenticated attackers to potentially execute arbitrary code by exploiting an undocumented mfc eeprom read command that copies unbounded user input into a bounded stack buffer before passing it to a system() call. Attackers can authenticate as any user to the terminal or CLI interface and supply an oversized input to trigger the overflow, potentially achieving complete loss of confidentiality, integrity, and availability on the affected device and impacting downstream serial-attached devices.",
       "references": [
         {
@@ -2670,8 +2665,8 @@
     },
     {
       "cve_id": "CVE-2025-65950",
-      "title_short": "WBCE CMS 65950×9.4",
-      "title_full": "WBCE CMS CVE-2025-65950 · CVSS 9.4",
+      "title_short": "Wbce Cms 65950×9.4",
+      "title_full": "Wbce Cms CVE-2025-65950 · CVSS 9.4",
       "vendor": "Wbce",
       "product": "Wbce Cms",
       "vendor_advisory_id": null,
@@ -2693,9 +2688,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "WBCE CMS (<= 1.6.4) 的用戶管理模組允許低權限用戶執行任意 SQL 查詢，可能導致資料庫被完全攻破。",
-      "impact_zh": "允許低權限用戶執行任意 SQL 查詢，導致資料庫被攻破。",
-      "action_zh": "更新至 WBCE CMS 1.6.5 或更高版本。",
+      "summary_zh": "WBCE CMS（1.6.4 及以下版本）的使用者管理模組允許低權限使用者執行任意 SQL 查詢，可能導致資料庫被完全控制。",
+      "impact_zh": "低權限使用者可執行任意 SQL，導致資料庫被竊取。",
+      "action_zh": "請更新至 WBCE CMS 1.6.5 或更高版本。",
       "description_en": "WBCE CMS is a content management system. In versions 1.6.4 and below, the user management module allows a low-privileged authenticated user with permissions to modify users to execute arbitrary SQL queries. This can be escalated to a full database compromise, data exfiltration, effectively bypassing all security controls. The vulnerability exists in the admin/users/save.php script, which handles updates to user profiles. The script improperly processes the groups[] parameter sent from the user edit form. This issue is fixed in version 1.6.5.",
       "references": [
         {
@@ -2723,8 +2718,8 @@
     },
     {
       "cve_id": "CVE-2025-67510",
-      "title_short": "Neuron 67510×9.4",
-      "title_full": "Neuron CVE-2025-67510 · CVSS 9.4",
+      "title_short": "Neuron Ai 67510×9.4",
+      "title_full": "Neuron Ai CVE-2025-67510 · CVSS 9.4",
       "vendor": "Neuron Ai",
       "product": "Neuron",
       "vendor_advisory_id": null,
@@ -2747,9 +2742,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Neuron PHP 框架 (<= 2.8.11) 的 MySQLWriteTool 允許透過提示注入執行破壞性 SQL 查詢，如 DROP TABLE、DELETE 等。",
-      "impact_zh": "允許執行破壞性 SQL 查詢，導致數據損毀或洩漏。",
-      "action_zh": "更新至 Neuron 2.8.12 或更高版本。",
+      "summary_zh": "Neuron Ai 框架（2.8.11 及以下版本）的 MySQLWriteTool 允許執行任意 SQL，若暴露給不可信輸入或使用高權限 DB 使用者，可能導致破壞性操作。",
+      "impact_zh": "可執行破壞性 SQL 指令，如 DROP TABLE。",
+      "action_zh": "請更新至 Neuron Ai 2.8.12 或更高版本。",
       "description_en": "Neuron is a PHP framework for creating and orchestrating AI Agents. In versions 2.8.11 and below, the MySQLWriteTool executes arbitrary SQL provided by the caller using PDO::prepare() + execute() without semantic restrictions. This is consistent with the name (“write tool”), but in an LLM/agent context it becomes a high-risk capability: prompt injection or indirect prompt manipulation can cause execution of destructive queries such as DROP TABLE, TRUNCATE, DELETE, ALTER, or privilege-related statements (subject to DB permissions). Deployments that expose an agent with MySQLWriteTool enabled to untrusted input and/or run the tool with a DB user that has broad privileges are impacted. This issue is fixed in version 2.8.12.",
       "references": [
         {
@@ -2780,7 +2775,7 @@
       "title_short": "Sangoma FreePBX 66039×9.3",
       "title_full": "Sangoma FreePBX CVE-2025-66039 · CVSS 9.3",
       "vendor": "Sangoma",
-      "product": "Freepbx",
+      "product": "FreePBX",
       "vendor_advisory_id": null,
       "severity": "CRITICAL",
       "cvss": {
@@ -2800,9 +2795,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "FreePBX Endpoint Manager 在驗證類型設為 \"webserver\" 時，存在認證繞過漏洞，允許任意值通過 Authorization 標頭進行會話關聯。",
-      "impact_zh": "允許攻擊者繞過身份驗證，存取系統。",
-      "action_zh": "更新至 FreePBX 16.0.44 或 17.0.23 或更高版本。",
+      "summary_zh": "FreePBX Endpoint Manager 在驗證類型設為 \"webserver\" 時，存在認證繞過漏洞，允許任意授權標頭值來關聯目標使用者會話。",
+      "impact_zh": "攻擊者可繞過認證，劫持使用者會話。",
+      "action_zh": "請更新至 FreePBX 16.0.44 或 17.0.23 或更高版本。",
       "description_en": "FreePBX Endpoint Manager is a module for managing telephony endpoints in FreePBX systems. Versions are vulnerable to authentication bypass when the authentication type is set to \"webserver.\" When providing an Authorization header with an arbitrary value, a session is associated with the target user regardless of valid credentials. This issue is fixed in versions 16.0.44 and 17.0.23.",
       "references": [
         {
@@ -2830,9 +2825,9 @@
     },
     {
       "cve_id": "CVE-2025-10156",
-      "title_short": "Mmaitre314 Picklescan 10156×9.3",
-      "title_full": "Mmaitre314 Picklescan CVE-2025-10156 · CVSS 9.3",
-      "vendor": "Mmaitre314",
+      "title_short": "MMAITRE314 Picklescan 10156×9.3",
+      "title_full": "MMAITRE314 Picklescan CVE-2025-10156 · CVSS 9.3",
+      "vendor": "MMAITRE314",
       "product": "Picklescan",
       "vendor_advisory_id": null,
       "severity": "CRITICAL",
@@ -2853,7 +2848,7 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Mmaitre314 Picklescan 存在安全漏洞，CVSS 9.3，EPSS 0.01。",
+      "summary_zh": "MMAITRE314 Picklescan 存在安全漏洞，CVSS 9.3，EPSS 0.01。",
       "impact_zh": "系統可能遭未授權存取或控制。",
       "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "An Improper Handling of Exceptional Conditions vulnerability in the ZIP archive scanning component of mmaitre314 picklescan allows a remote attacker to bypass security scans. This is achieved by crafting a ZIP archive containing a file with a bad Cyclic Redundancy Check (CRC), which causes the scanner to halt and fail to analyze the contents for malicious pickle files. When the file incorrectly considered safe is loaded, it can lead to the execution of malicious code.",
@@ -2907,14 +2902,13 @@
         "CWE-73"
       ],
       "tags": [
-        "RCE",
-        "阻斷服務"
+        "RCE"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Vector 0.10.0 至 0.57.0 的檔案接收器，遠端攻擊者可利用事件欄位構造路徑穿越，在非預期位置創建或覆寫檔案，可能導致程式碼執行。",
-      "impact_zh": "遠端攻擊者可寫入任意檔案，可能導致程式碼執行。",
-      "action_zh": "更新至 Vector 0.57.0 或以上版本。",
+      "summary_zh": "Vector 0.10.0 至 0.57.0 的檔案接收器，可讓遠端攻擊者透過惡意構造的事件欄位，寫入任意檔案或覆寫現有檔案，可能導致程式碼執行。",
+      "impact_zh": "遠端攻擊者可寫入任意檔案或覆寫現有檔案，導致程式碼執行。",
+      "action_zh": "升級至 Vector 0.57.0 或更新版本。",
       "description_en": "Vector is a high-performance observability data pipeline. From 0.10.0 until 0.57.0, the file sink renders its templated path from event fields and opens the result without confining it to an intended directory. When an untrusted source supplies an event field used by the path template, the value can contain an absolute path or parent-directory traversal, causing Vector to create parent directories and create or overwrite files outside the intended location with the Vector process privileges. The resulting file write can modify sensitive files and can lead to code execution when a scheduled task, authorization file, or subsequently executed script is targeted. This issue is fixed in version 0.57.0.",
       "references": [
         {
@@ -3007,9 +3001,9 @@
     },
     {
       "cve_id": "CVE-2025-10155",
-      "title_short": "Mmaitre314 Picklescan 10155×9.3",
-      "title_full": "Mmaitre314 Picklescan CVE-2025-10155 · CVSS 9.3",
-      "vendor": "Mmaitre314",
+      "title_short": "MMAITRE314 Picklescan 10155×9.3",
+      "title_full": "MMAITRE314 Picklescan CVE-2025-10155 · CVSS 9.3",
+      "vendor": "MMAITRE314",
       "product": "Picklescan",
       "vendor_advisory_id": null,
       "severity": "CRITICAL",
@@ -3030,7 +3024,7 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Mmaitre314 Picklescan 存在安全漏洞，CVSS 9.3，EPSS 0.01。",
+      "summary_zh": "MMAITRE314 Picklescan 存在安全漏洞，CVSS 9.3，EPSS 0.01。",
       "impact_zh": "系統可能遭未授權存取或控制。",
       "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "An Improper Input Validation vulnerability in the scanning logic of mmaitre314 picklescan versions up to and including 0.0.30 allows a remote attacker to bypass pickle files security checks by supplying a standard pickle file with a PyTorch-related file extension. When the pickle file incorrectly considered safe is loaded, it can lead to the execution of malicious code.",
@@ -3056,9 +3050,9 @@
     },
     {
       "cve_id": "CVE-2025-10157",
-      "title_short": "Mmaitre314 Picklescan 10157×9.3",
-      "title_full": "Mmaitre314 Picklescan CVE-2025-10157 · CVSS 9.3",
-      "vendor": "Mmaitre314",
+      "title_short": "MMAITRE314 Picklescan 10157×9.3",
+      "title_full": "MMAITRE314 Picklescan CVE-2025-10157 · CVSS 9.3",
+      "vendor": "MMAITRE314",
       "product": "Picklescan",
       "vendor_advisory_id": null,
       "severity": "CRITICAL",
@@ -3079,7 +3073,7 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Mmaitre314 Picklescan 存在安全漏洞，CVSS 9.3，EPSS 0.01。",
+      "summary_zh": "MMAITRE314 Picklescan 存在安全漏洞，CVSS 9.3，EPSS 0.01。",
       "impact_zh": "系統可能遭未授權存取或控制。",
       "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "A Protection Mechanism Failure vulnerability in mmaitre314 picklescan versions up to and including 0.0.30 allows a remote attacker to bypass the unsafe globals check. This is possible because the scanner performs an exact match for module names, allowing malicious payloads to be loaded via submodules of dangerous packages (e.g., 'asyncio.unix_events' instead of 'asyncio'). \n\nWhen the incorrectly considered safe file is loaded after scan, it can lead to the execution of malicious code.",
@@ -3751,8 +3745,8 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Adobe ColdFusion 存在 Improper Access Control 漏洞，允許高權限攻擊者繞過安全措施，在使用者端執行任意程式碼，無需使用者互動。",
-      "impact_zh": "未授權遠端程式碼執行（RCE），可完全接管使用者端。",
+      "summary_zh": "Adobe ColdFusion 存在權限控管不當漏洞，高權限攻擊者可遠端執行任意程式碼，無需使用者互動。",
+      "impact_zh": "遠端程式碼執行（RCE），可完全接管。",
       "action_zh": "請依廠商公告更新至 Adobe ColdFusion 2025.4、2023.16、2021.22 或更新版本。",
       "description_en": "ColdFusion versions 2025.4, 2023.16, 2021.22 and earlier are affected by an Improper Access Control vulnerability that could result in arbitrary code execution in the context of the current user. A high privileged attacker could leverage this vulnerability to bypass security measures and execute malicious code. Exploitation of this issue does not require user interaction and scope is changed.",
       "references": [
@@ -3797,8 +3791,8 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Adobe Campaign Classic (ACC) 存在 SQL Injection 漏洞，高權限攻擊者可利用此漏洞執行任意 SQL 指令，進而達成遠端程式碼執行。",
-      "impact_zh": "未授權遠端程式碼執行（RCE），可完全接管使用者端。",
+      "summary_zh": "Adobe Campaign Classic 存在 SQL 注入漏洞，高權限攻擊者可遠端執行任意 SQL 指令，進而執行任意程式碼。",
+      "impact_zh": "遠端程式碼執行（RCE），可完全接管。",
       "action_zh": "請依廠商公告更新至 Adobe Campaign Classic 最新版本。",
       "description_en": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker with high privileges could exploit this vulnerability to execute arbitrary SQL commands. Exploitation of this issue does not require user interaction. Scope is changed.",
       "references": [
@@ -3838,11 +3832,11 @@
         "CWE-20"
       ],
       "tags": [
-        "認證繞過"
+        "權限提升"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Adobe ColdFusion 存在 Improper Input Validation 漏洞，允許攻擊者繞過安全防護，取得未授權的讀寫權限，無需使用者互動。",
+      "summary_zh": "Adobe ColdFusion 存在輸入驗證不當漏洞，攻擊者可繞過安全機制，取得未授權的讀寫權限。",
       "impact_zh": "未授權存取，可讀寫敏感資料。",
       "action_zh": "請依廠商公告更新至 Adobe ColdFusion 2025.4、2023.16、2021.22 或更新版本。",
       "description_en": "ColdFusion versions 2025.4, 2023.16, 2021.22 and earlier are affected by an Improper Input Validation vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized read and write access. Exploitation of this issue does not require user interaction and scope is unchanged.",
@@ -3887,9 +3881,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "OpenVPN 2.7_alpha1 至 2.7_rc1 的參數驗證不足，允許攻擊者在解析 IP 位址時觸發堆積緩衝區溢讀。",
-      "impact_zh": "堆積緩衝區溢讀，可能導致阻斷服務或資訊洩漏。",
-      "action_zh": "請依廠商公告更新至 OpenVPN 2.7_rc2 或更新版本。",
+      "summary_zh": "OpenVPN 在解析 IP 位址時，參數驗證不足可能導致堆積緩衝區讀取越界。",
+      "impact_zh": "記憶體破壞，可能導致服務中斷或資訊洩漏。",
+      "action_zh": "請依廠商公告更新至 OpenVPN 2.7_rc1 或更新版本。",
       "description_en": "Insufficient argument validation in OpenVPN 2.7_alpha1 through 2.7_rc1 allows an attacker to trigger a heap buffer over-read when parsing IP addresses",
       "references": [
         {
@@ -3937,9 +3931,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Sprecher Automation SPRECON-E 系列使用預設的加密金鑰，允許未授權遠端攻擊者存取所有加密通訊，破壞機密性與完整性。",
-      "impact_zh": "未授權存取加密通訊，可竊取或竄改資料。",
-      "action_zh": "請依廠商公告更新韌體並變更預設金鑰。",
+      "summary_zh": "Sprecher Automation SPRECON-E 系列使用預設加密金鑰，允許未授權遠端攻擊者存取所有加密通訊。",
+      "impact_zh": "機密性與完整性遭破壞，可能導致設備被接管。",
+      "action_zh": "請依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Sprecher Automations SPRECON-E series uses default cryptographic keys that allow an unprivileged remote attacker to access all encrypted communications, thereby compromising confidentiality and integrity.",
       "references": [
         {
@@ -3983,8 +3977,8 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Shibboleth Service Provider (SP) 的 SAML 回應中，當使用 SQL 資料庫作為儲存服務時，存在 SQL Injection 漏洞，允許未驗證攻擊者竊取資料庫中的任意資料。",
-      "impact_zh": "未授權資料竊取，可讀取資料庫敏感資訊。",
+      "summary_zh": "Shibboleth Service Provider 的 SAML 回應 \"ID\" 屬性存在 SQL 注入漏洞，未驗證攻擊者可竊取資料庫中的任意資料。",
+      "impact_zh": "資訊洩漏，可竊取敏感資料。",
       "action_zh": "請依廠商公告更新至 Shibboleth Service Provider 3.5.0 或更新版本。",
       "description_en": "An SQL injection vulnerability has been identified in the \"ID\" attribute of the SAML response when the replay cache of the Shibboleth Service Provider (SP) is configured to use an SQL database as storage service. An unauthenticated attacker can exploit this issue via blind SQL injection, allowing for the extraction of arbitrary data from the database, if the database connection is configured to use the ODBC plugin. The vulnerability arises from insufficient escaping of single quotes in the class SQLString (file odbc-store.cpp, lines 253-271).\n\nThis issue affects Shibboleth Service Provider through 3.5.0.",
       "references": [
@@ -4045,8 +4039,8 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Google Chrome 的 V8 引擎存在側通道資訊洩漏漏洞，遠端攻擊者可透過惡意網頁竊取跨來源資料。",
-      "impact_zh": "跨來源資訊洩漏，可能導致敏感資料外洩。",
+      "summary_zh": "Google Chrome V8 引擎存在側通道資訊洩漏漏洞，遠端攻擊者可透過惡意網頁竊取跨來源資料。",
+      "impact_zh": "資訊洩漏，可能竊取敏感資訊。",
       "action_zh": "請依廠商公告更新至 Google Chrome 140.0.7339.207 或更新版本。",
       "description_en": "Side-channel information leakage in V8 in Google Chrome prior to 140.0.7339.207 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: High)",
       "references": [
@@ -4094,8 +4088,8 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "3DEXPERIENCE platform 的 Station Launcher App 存在 OS Command Injection 漏洞，允許攻擊者在使用者端執行任意程式碼。",
-      "impact_zh": "未授權遠端程式碼執行（RCE），可完全接管使用者端。",
+      "summary_zh": "3DEXPERIENCE platform 的 Station Launcher App 存在 OS 命令注入漏洞，攻擊者可執行任意程式碼。",
+      "impact_zh": "遠端程式碼執行（RCE），可完全接管。",
       "action_zh": "請依廠商公告更新至 3DEXPERIENCE R2025x 或更新版本。",
       "description_en": "An OS Command Injection vulnerability affecting Station Launcher App in 3DEXPERIENCE platform from Release 3DEXPERIENCE R2022x through Release 3DEXPERIENCE R2025x could allow an attacker to execute arbitrary code on the user's machine.",
       "references": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "date": "2026-09-27",
-  "generated_at": "2026-09-27T00:21:18Z",
-  "generated_by": "template",
+  "generated_at": "2026-09-27T06:33:00Z",
+  "generated_by": "gemini",
   "window": {
     "from": "2026-09-26T22:00:00Z",
     "to": "2026-09-27T22:00:00Z"
   },
   "stats": {
-    "scanned": 120,
-    "kept": 26,
+    "scanned": 509,
+    "kept": 29,
     "kev": 5,
-    "critical": 21,
+    "critical": 26,
     "in_the_wild": 5,
     "sources_ok": 5,
     "sources_failed": 0
@@ -28,14 +28,14 @@
       "name": "nvd",
       "label": "NVD",
       "ok": true,
-      "items": 111,
+      "items": 165,
       "error": null
     },
     {
       "name": "ghsa",
       "label": "GitHub Advisory",
       "ok": true,
-      "items": 0,
+      "items": 335,
       "error": null
     },
     {
@@ -56,16 +56,16 @@
   "items": [
     {
       "cve_id": "CVE-2026-71362",
-      "title_short": "Adobe Commerce and Magento 71362 在野",
-      "title_full": "Adobe Commerce and Magento CVE-2026-71362 · 在野利用",
+      "title_short": "Adobe Commerce 71362×9.1 在野",
+      "title_full": "Adobe Commerce and Magento CVE-2026-71362 · CVSS 9.1 · 在野利用",
       "vendor": "Adobe",
       "product": "Commerce and Magento",
       "vendor_advisory_id": null,
-      "severity": "UNKNOWN",
+      "severity": "CRITICAL",
       "cvss": {
-        "version": null,
-        "score": null,
-        "vector": null
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
       },
       "epss": {
         "score": 0.87507,
@@ -75,7 +75,8 @@
         "CWE-863"
       ],
       "tags": [
-        "其他"
+        "認證繞過",
+        "權限提升"
       ],
       "in_the_wild": true,
       "kev": {
@@ -86,9 +87,9 @@
         "name_en": "Adobe Commerce and Magento Incorrect Authorization Vulnerability ",
         "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
       },
-      "summary_zh": "Adobe Commerce and Magento 存在安全漏洞，已列入 CISA KEV 已知在野利用清單，EPSS 0.88。",
-      "impact_zh": "系統可能遭未授權存取或控制。",
-      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "Adobe Commerce 和 Magento 存在不正確授權漏洞，攻擊者無需使用者互動，即可取得敏感資源的提升權限。",
+      "impact_zh": "未經授權的權限提升，可存取敏感資源。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction.",
       "references": [
         {
@@ -102,30 +103,170 @@
         {
           "name": "廠商公告",
           "url": "https://helpx.adobe.com/security/products/magento/apsb26-92.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-71362"
         }
       ],
       "affected_packages": [],
       "published": "2026-09-24",
       "modified": "2026-09-24",
       "sources": [
-        "cisa_kev"
+        "cisa_kev",
+        "nvd"
       ],
       "rank": 1,
-      "generated_by": "template",
-      "risk_score": 4.75
+      "generated_by": "gemini",
+      "risk_score": 13.85
+    },
+    {
+      "cve_id": "CVE-2026-5430",
+      "title_short": "WSO2 Multiple Products 5430×10.0 在野",
+      "title_full": "WSO2 Multiple Products CVE-2026-5430 · CVSS 10.0 · 在野利用",
+      "vendor": "WSO2",
+      "product": "Multiple Products",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00588,
+        "percentile": 0.45955
+      },
+      "cwe": [
+        "CWE-347"
+      ],
+      "tags": [
+        "路徑穿越",
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-24",
+        "due_date": "2026-09-27",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "WSO2 Multiple Products Path Traversal Vulnerability ",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "WSO2 多項產品存在路徑穿越漏洞，攻擊者可藉此上傳任意檔案，進而遠端執行程式碼。",
+      "impact_zh": "未經授權的遠端程式碼執行，可完全接管設備。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5430"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5328/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-5430"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-24",
+      "modified": "2026-09-24",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "gemini",
+      "risk_score": 13.012
+    },
+    {
+      "cve_id": "CVE-2026-65660",
+      "title_short": "Microsoft SharePoint 65660×8.8 在野",
+      "title_full": "Microsoft SharePoint CVE-2026-65660 · CVSS 8.8 · 在野利用",
+      "vendor": "Microsoft",
+      "product": "SharePoint",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.02101,
+        "percentile": 0.80962
+      },
+      "cwe": [
+        "CWE-94"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-25",
+        "due_date": "2026-09-28",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Microsoft SharePoint Code Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Microsoft SharePoint 存在程式碼注入漏洞，已授權的攻擊者可透過網路執行任意程式碼。",
+      "impact_zh": "已授權的遠端程式碼執行。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65660"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660"
+        },
+        {
+          "name": "第三方",
+          "url": "https://blog.previdian.com/cve-2026-65660-previdian-observes-two-stage-sharepoint-exploitation-attempts/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-65660"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-25",
+      "modified": "2026-09-25",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "gemini",
+      "risk_score": 11.842
     },
     {
       "cve_id": "CVE-2026-87902",
-      "title_short": "WordPress Core 87902 在野",
-      "title_full": "WordPress Core CVE-2026-87902 · 在野利用",
+      "title_short": "WordPress Core 87902×8.1 在野",
+      "title_full": "WordPress Core CVE-2026-87902 · CVSS 8.1 · 在野利用",
       "vendor": "WordPress",
       "product": "Core",
       "vendor_advisory_id": null,
-      "severity": "UNKNOWN",
+      "severity": "HIGH",
       "cvss": {
-        "version": null,
-        "score": null,
-        "vector": null
+        "version": "3.1",
+        "score": 8.1,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
       },
       "epss": {
         "score": 0.18166,
@@ -146,9 +287,9 @@
         "name_en": "WordPress Core Remote File Inclusion Vulnerability",
         "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
       },
-      "summary_zh": "WordPress Core 存在RCE漏洞，已列入 CISA KEV 已知在野利用清單，EPSS 0.18。",
-      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
-      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "summary_zh": "WordPress Core 存在遠端檔案包含漏洞，未經身份驗證的攻擊者可包含任意 PHP 檔案，導致遠端程式碼執行。",
+      "impact_zh": "未經授權的遠端程式碼執行，可接管網站。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remote code execution.",
       "references": [
         {
@@ -162,90 +303,39 @@
         {
           "name": "廠商公告",
           "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp"
+        },
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/articles/cve-2026-87902-attackers-started-probing-wordpress-sites-hours-after-the-patch/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87902"
         }
       ],
       "affected_packages": [],
       "published": "2026-09-25",
       "modified": "2026-09-25",
       "sources": [
-        "cisa_kev"
+        "cisa_kev",
+        "nvd"
       ],
-      "rank": 2,
-      "generated_by": "template",
-      "risk_score": 3.363
-    },
-    {
-      "cve_id": "CVE-2026-65660",
-      "title_short": "Microsoft SharePoint 65660 在野",
-      "title_full": "Microsoft SharePoint CVE-2026-65660 · 在野利用",
-      "vendor": "Microsoft",
-      "product": "SharePoint",
-      "vendor_advisory_id": null,
-      "severity": "UNKNOWN",
-      "cvss": {
-        "version": null,
-        "score": null,
-        "vector": null
-      },
-      "epss": {
-        "score": 0.02101,
-        "percentile": 0.80962
-      },
-      "cwe": [
-        "CWE-94"
-      ],
-      "tags": [
-        "其他"
-      ],
-      "in_the_wild": true,
-      "kev": {
-        "date_added": "2026-09-25",
-        "due_date": "2026-09-28",
-        "ransomware": "Unknown",
-        "forensic_triage": "Yes",
-        "name_en": "Microsoft SharePoint Code Injection Vulnerability",
-        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
-      },
-      "summary_zh": "Microsoft SharePoint 存在安全漏洞，已列入 CISA KEV 已知在野利用清單，EPSS 0.02。",
-      "impact_zh": "系統可能遭未授權存取或控制。",
-      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
-      "description_en": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
-      "references": [
-        {
-          "name": "CISA KEV",
-          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
-        },
-        {
-          "name": "NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65660"
-        },
-        {
-          "name": "廠商公告",
-          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660"
-        }
-      ],
-      "affected_packages": [],
-      "published": "2026-09-25",
-      "modified": "2026-09-25",
-      "sources": [
-        "cisa_kev"
-      ],
-      "rank": 3,
-      "generated_by": "template",
-      "risk_score": 3.042
+      "rank": 4,
+      "generated_by": "gemini",
+      "risk_score": 11.463
     },
     {
       "cve_id": "CVE-2026-67279",
-      "title_short": "MikroTik RouterOS 67279 在野",
-      "title_full": "MikroTik RouterOS CVE-2026-67279 · 在野利用",
+      "title_short": "MikroTik RouterOS 67279×6.9 在野",
+      "title_full": "MikroTik RouterOS CVE-2026-67279 · CVSS 6.9 · 在野利用",
       "vendor": "MikroTik",
       "product": "RouterOS",
       "vendor_advisory_id": null,
-      "severity": "UNKNOWN",
+      "severity": "MEDIUM",
       "cvss": {
-        "version": null,
-        "score": null,
-        "vector": null
+        "version": "4.0",
+        "score": 6.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
       },
       "epss": {
         "score": 0.01027,
@@ -266,9 +356,9 @@
         "name_en": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
         "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
       },
-      "summary_zh": "MikroTik RouterOS 存在安全漏洞，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
-      "impact_zh": "系統可能遭未授權存取或控制。",
-      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "MikroTik RouterOS 存在行為工作流程執行不當漏洞，未經身份驗證的客戶端可開啟會話並發送執行請求，可串聯其他漏洞利用。",
+      "impact_zh": "未經身份驗證的遠端利用，可導致設備受控。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthenticated exploitation of CVE-2026-86060.",
       "references": [
         {
@@ -282,78 +372,38 @@
         {
           "name": "廠商公告",
           "url": "https://mikrotik.com/supportsec/september-2026-vulnerability/?utm_source=chatgpt.com"
+        },
+        {
+          "name": "第三方",
+          "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve"
+        },
+        {
+          "name": "第三方",
+          "url": "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/"
+        },
+        {
+          "name": "參考",
+          "url": "https://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802"
+        },
+        {
+          "name": "參考",
+          "url": "https://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801"
+        },
+        {
+          "name": "參考",
+          "url": "https://forum.mikrotik.com/t/7-24-2-stable-is-released/272800"
         }
       ],
       "affected_packages": [],
       "published": "2026-09-25",
       "modified": "2026-09-25",
       "sources": [
-        "cisa_kev"
-      ],
-      "rank": 4,
-      "generated_by": "template",
-      "risk_score": 3.021
-    },
-    {
-      "cve_id": "CVE-2026-5430",
-      "title_short": "WSO2 Multiple Products 5430 在野",
-      "title_full": "WSO2 Multiple Products CVE-2026-5430 · 在野利用",
-      "vendor": "WSO2",
-      "product": "Multiple Products",
-      "vendor_advisory_id": null,
-      "severity": "UNKNOWN",
-      "cvss": {
-        "version": null,
-        "score": null,
-        "vector": null
-      },
-      "epss": {
-        "score": 0.00588,
-        "percentile": 0.45955
-      },
-      "cwe": [
-        "CWE-347"
-      ],
-      "tags": [
-        "RCE",
-        "路徑穿越"
-      ],
-      "in_the_wild": true,
-      "kev": {
-        "date_added": "2026-09-24",
-        "due_date": "2026-09-27",
-        "ransomware": "Unknown",
-        "forensic_triage": "Yes",
-        "name_en": "WSO2 Multiple Products Path Traversal Vulnerability ",
-        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
-      },
-      "summary_zh": "WSO2 Multiple Products 存在RCE、路徑穿越漏洞，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
-      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
-      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
-      "description_en": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution.",
-      "references": [
-        {
-          "name": "CISA KEV",
-          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
-        },
-        {
-          "name": "NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5430"
-        },
-        {
-          "name": "廠商公告",
-          "url": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5328/"
-        }
-      ],
-      "affected_packages": [],
-      "published": "2026-09-24",
-      "modified": "2026-09-24",
-      "sources": [
-        "cisa_kev"
+        "cisa_kev",
+        "nvd"
       ],
       "rank": 5,
-      "generated_by": "template",
-      "risk_score": 3.012
+      "generated_by": "gemini",
+      "risk_score": 9.921
     },
     {
       "cve_id": "CVE-2026-75699",
@@ -380,9 +430,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Adobe Campaign 存在RCE漏洞，CVSS 10.0，EPSS 0.01。",
-      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
-      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "summary_zh": "Adobe Campaign Classic 存在程式碼注入漏洞，攻擊者無需使用者互動，即可執行任意程式碼。",
+      "impact_zh": "未經授權的遠端程式碼執行，可完全接管系統。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
       "references": [
         {
@@ -397,13 +447,13 @@
         "nvd"
       ],
       "rank": 6,
-      "generated_by": "template",
+      "generated_by": "gemini",
       "risk_score": 10.025
     },
     {
       "cve_id": "CVE-2026-100382",
-      "title_short": "未標示產品 100382×10.0",
-      "title_full": "未標示產品 CVE-2026-100382 · CVSS 10.0",
+      "title_short": "Mediawiki ExternalData 100382×10.0",
+      "title_full": "Wikimedia Foundation Mediawiki - ExternalData Extension CVE-2026-100382 · CVSS 10.0",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -425,9 +475,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 10.0，EPSS 0.01。",
-      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
-      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "summary_zh": "Wikimedia Foundation Mediawiki ExternalData 擴充功能存在 OS 命令注入漏洞，攻擊者可執行任意系統命令。",
+      "impact_zh": "未經授權的遠端程式碼執行，可完全接管系統。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Wikimedia Foundation Mediawiki - ExternalData Extension allows OS Command Injection.\n\nThis issue affects Mediawiki - ExternalData Extension: from * before 3.7.",
       "references": [
         {
@@ -446,13 +496,13 @@
         "nvd"
       ],
       "rank": 7,
-      "generated_by": "template",
+      "generated_by": "gemini",
       "risk_score": 10.019
     },
     {
       "cve_id": "CVE-2026-97163",
-      "title_short": "未標示產品 97163×10.0",
-      "title_full": "未標示產品 CVE-2026-97163 · CVSS 10.0",
+      "title_short": "Joomla UP plugin 97163×10.0",
+      "title_full": "Joomla Extension - UP plugin CVE-2026-97163 · CVSS 10.0",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -468,14 +518,13 @@
         "CWE-284"
       ],
       "tags": [
-        "路徑穿越",
-        "權限提升"
+        "RCE"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在路徑穿越、權限提升漏洞，CVSS 10.0。",
-      "impact_zh": "可讀取權限範圍外的檔案。",
-      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "summary_zh": "Joomla UP 插件擴充功能存在未經身份驗證的遠端程式碼安裝漏洞，攻擊者可遠端執行程式碼。",
+      "impact_zh": "未經授權的遠端程式碼執行，可完全接管系統。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Joomla Extension - lomart.fr - Unauthenticated remote code installation in UP plugin extension 5.0.0-5.2.0, 6.0.0-6.0.29",
       "references": [
         {
@@ -490,7 +539,7 @@
         "nvd"
       ],
       "rank": 8,
-      "generated_by": "template",
+      "generated_by": "gemini",
       "risk_score": 10.0
     },
     {
@@ -519,9 +568,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Adobe Campaign 存在SSRF、權限提升漏洞，CVSS 9.9，EPSS 0.01。",
-      "impact_zh": "可誘使伺服器發送任意請求，觸及內網。",
-      "action_zh": "更新至修補版本，並限制服務的對外與內網連線。",
+      "summary_zh": "Adobe Campaign Classic 存在伺服器端請求偽造 (SSRF) 漏洞，低權限攻擊者可藉此提升權限，存取內部資源。",
+      "impact_zh": "低權限使用者可提升權限，存取內部資源。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. A low-privileged attacker could exploit this vulnerability to gain elevated access to internal resources. Exploitation of this issue does not require user interaction. Scope is changed.",
       "references": [
         {
@@ -536,7 +585,7 @@
         "nvd"
       ],
       "rank": 9,
-      "generated_by": "template",
+      "generated_by": "gemini",
       "risk_score": 9.916
     },
     {
@@ -564,9 +613,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Adobe Campaign 存在RCE漏洞，CVSS 9.9，EPSS 0.01。",
-      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
-      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "summary_zh": "Adobe Campaign Classic 存在程式碼注入漏洞，低權限攻擊者無需使用者互動，即可執行任意程式碼。",
+      "impact_zh": "低權限使用者可遠端程式碼執行，接管系統。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
       "references": [
         {
@@ -581,13 +630,13 @@
         "nvd"
       ],
       "rank": 10,
-      "generated_by": "template",
+      "generated_by": "gemini",
       "risk_score": 9.911
     },
     {
       "cve_id": "CVE-2023-49900",
-      "title_short": "未標示產品 49900×9.8",
-      "title_full": "未標示產品 CVE-2023-49900 · CVSS 9.8",
+      "title_short": "SetParameter 49900×9.8",
+      "title_full": "SetParameter command CVE-2023-49900 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -609,9 +658,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.8，EPSS 0.01。",
-      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
-      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "summary_zh": "SetParameter 命令因使用者輸入未正確清理，導致未經身份驗證的遠端攻擊者可執行任意程式碼。",
+      "impact_zh": "未經授權的遠端程式碼執行，可完全接管設備。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "An unauthenticated remote attacker is able to perform remote code execution due to incorrectly sanitized user input in the SetParameter command.",
       "references": [
         {
@@ -626,13 +675,13 @@
         "nvd"
       ],
       "rank": 11,
-      "generated_by": "template",
+      "generated_by": "gemini",
       "risk_score": 9.819
     },
     {
       "cve_id": "CVE-2026-18143",
-      "title_short": "未標示產品 18143×9.8",
-      "title_full": "未標示產品 CVE-2026-18143 · CVSS 9.8",
+      "title_short": "WooCommerce Quote 18143×9.8",
+      "title_full": "Request a Quote for WooCommerce plugin CVE-2026-18143 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -654,9 +703,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.8，EPSS 0.00。",
-      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
-      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "summary_zh": "WordPress 的 WooCommerce 報價外掛存在任意檔案上傳漏洞，未經身份驗證的攻擊者可上傳可執行檔案，導致遠端程式碼執行。",
+      "impact_zh": "未經授權的遠端程式碼執行，可接管網站。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "The Request a Quote for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.9.2 via the `afrfq_submit_quote_via_popup()` function. This is due to missing file extension and MIME type validation in the popup upload handler, which uses the raw attacker-supplied filename directly as the destination for `move_uploaded_file()`. This makes it possible for unauthenticated attackers to upload executable files, such as PHP files, to a web-accessible temporary RFQ upload directory when a public quote rule with the multi-page popup flow is enabled.",
       "references": [
         {
@@ -675,13 +724,13 @@
         "nvd"
       ],
       "rank": 12,
-      "generated_by": "template",
+      "generated_by": "gemini",
       "risk_score": 9.808
     },
     {
       "cve_id": "CVE-2023-49899",
-      "title_short": "未標示產品 49899×9.8",
-      "title_full": "未標示產品 CVE-2023-49899 · CVSS 9.8",
+      "title_short": "通訊通道 49899×9.8",
+      "title_full": "Communication Channel CVE-2023-49899 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -699,13 +748,13 @@
         "CWE-346"
       ],
       "tags": [
-        "其他"
+        "RCE"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.8，EPSS 0.00。",
-      "impact_zh": "系統可能遭未授權存取或控制。",
-      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "某設備因未正確驗證通訊通道來源，導致未經身份驗證的遠端攻擊者可執行任意命令。",
+      "impact_zh": "未經授權的遠端程式碼執行，可完全接管設備。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "An unauthenticated remote attacker can execute any command on the affected device due to not correctly verifying the origin of a communication channel.",
       "references": [
         {
@@ -720,13 +769,13 @@
         "nvd"
       ],
       "rank": 13,
-      "generated_by": "template",
+      "generated_by": "gemini",
       "risk_score": 9.806
     },
     {
       "cve_id": "CVE-2026-82901",
-      "title_short": "未標示產品 82901×9.8",
-      "title_full": "未標示產品 CVE-2026-82901 · CVSS 9.8",
+      "title_short": "Contact Form 7 Addons 82901×9.8",
+      "title_full": "Ultra Addons for Contact Form 7 plugin CVE-2026-82901 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -745,9 +794,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.8。",
-      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
-      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "summary_zh": "WordPress 的 Contact Form 7 外掛存在任意檔案上傳漏洞，未經身份驗證的攻擊者可上傳任意檔案，導致遠端程式碼執行。",
+      "impact_zh": "未經授權的遠端程式碼執行，可接管網站。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "The Ultra Addons for Contact Form 7 plugin for WordPress is vulnerable to Arbitrary File Upload due to insufficient file type validation in the 'uacf7_wpcf7_mail_components' function in all versions up to, and including, 3.5.50. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: This is only exploitable when the plugin's PDF Generator module is enabled, which is disabled by default.",
       "references": [
         {
@@ -782,13 +831,13 @@
         "nvd"
       ],
       "rank": 14,
-      "generated_by": "template",
+      "generated_by": "gemini",
       "risk_score": 9.8
     },
     {
       "cve_id": "CVE-2026-85984",
-      "title_short": "未標示產品 85984×9.8",
-      "title_full": "未標示產品 CVE-2026-85984 · CVSS 9.8",
+      "title_short": "miniOrange OTP Login 85984×9.8",
+      "title_full": "miniOrange OTP Login, Verification and SMS Notifications plugin CVE-2026-85984 · CVSS 9.8",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -807,9 +856,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.8。",
-      "impact_zh": "可繞過身分驗證直接存取系統。",
-      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "summary_zh": "WordPress 的 miniOrange OTP Login 外掛存在認證繞過漏洞，未經身份驗證的攻擊者可登入任意管理員帳戶。",
+      "impact_zh": "未經授權的認證繞過，可完全接管網站。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "The miniOrange OTP Login, Verification and SMS Notifications plugin for WordPress is vulnerable to Authentication Bypass via the mo_wp_login_intent parameter in all versions up to, and including, 5.5.5. This is due to a missing password-intent guard in the skip_pass_fallback-enabled configuration branch of the mo_by_pass_login() function, which treats administrator role membership alone as sufficient authentication whenever the unauthenticated, unverified POST parameter mo_wp_login_intent is submitted with the value otp, causing mo_get_user() to skip wp_authenticate_username_password() and resolve a WP_User purely from a username lookup. This makes it possible for unauthenticated attackers to log in as any existing administrator account by supplying only a known username and an empty password alongside mo_wp_login_intent=otp, with no password or OTP verification required. Exploitation is conditional on a site administrator having simultaneously enabled the following plugin options: WP Login OTP, Login with Only OTP, Allow Users to Login with Username and Password, and Admin OTP Bypass.",
       "references": [
         {
@@ -836,13 +885,127 @@
         "nvd"
       ],
       "rank": 15,
-      "generated_by": "template",
+      "generated_by": "gemini",
       "risk_score": 9.8
     },
     {
+      "cve_id": "CVE-2026-84388",
+      "title_short": "Fortinet FortiPAM Ext. 84388×9.6",
+      "title_full": "Fortinet FortiPAM Chrome Extension CVE-2026-84388 · CVSS 9.6",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L"
+      },
+      "epss": {
+        "score": 0.00377,
+        "percentile": 0.29069
+      },
+      "cwe": [
+        "CWE-1021"
+      ],
+      "tags": [
+        "資訊洩漏"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Fortinet FortiPAM Chrome 擴充功能存在 UI 層或框架限制不當漏洞，遠端未經身份驗證的攻擊者可導致資訊洩漏。",
+      "impact_zh": "未經授權的資訊洩漏。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "A improper restriction of rendered ui layers or frames vulnerability in Fortinet FortiPAM Chrome Extension 8.0 all versions, FortiPAM Chrome Extension 7.4 all versions may allow attacker to information disclosure via remote unauthenticated attack",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-168"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-22T15:17:18Z",
+      "modified": "2026-09-27T00:16:35Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 16,
+      "generated_by": "gemini",
+      "risk_score": 9.608
+    },
+    {
+      "cve_id": "CVE-2026-100721",
+      "title_short": "vm2 100721×9.5",
+      "title_full": "vm2 CVE-2026-100721 · CVSS 9.5",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-c9wr-qm7p-p6vc",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-863"
+      ],
+      "tags": [
+        "沙箱逃逸",
+        "RCE",
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "vm2 存在 NodeVM 外部模組解析器中的授權繞過漏洞，未受信任的程式碼可逃逸沙箱並在主機環境中執行任意程式碼。",
+      "impact_zh": "未經授權的沙箱逃逸，可遠端程式碼執行。",
+      "action_zh": "更新 vm2 至 3.12.2 或更高版本。",
+      "description_en": "vm2 before 3.12.2 contains an authorization bypass in the NodeVM external-module resolver. When an embedder configures `require.external` with a custom resolver (and `context: 'host'`), `LegacyResolver.customResolve` in lib/resolver-compat.js records the resolved module directory in `this.externals` as `new RegExp('^' + escapeRegExp(resolvedPath))`, without requiring a path separator or end-of-string boundary. Untrusted guest code can therefore require the allowlisted module (e.g. `foo`) and then require the absolute path of a non-allowlisted sibling whose path merely shares the resolved prefix (e.g. `.../node_modules/foo2/index.js`); the sibling passes `isPathAllowedForModule` and is loaded through `hostRequire`, so its top-level code runs in the host process before the exports are wrapped with `vm.readonly`, resulting in a sandbox escape and arbitrary code execution in the host context.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/commit/6ac3916da84e060c403e407b6b6318fcc66b0e72"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/commit/91034466bfb7f56b95fd48083ec6ca36d058f164"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/commit/ab4ee7d803e8c80155e9eb3672226bddbca4aa9c"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-5h3f-q97h-ccvc"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/vm2-before-3.12.2-authorization-bypass-via-custom-resolver"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-c9wr-qm7p-p6vc"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100721"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-27T02:17:17Z",
+      "modified": "2026-09-27T03:31:12Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 17,
+      "generated_by": "gemini",
+      "risk_score": 9.5
+    },
+    {
       "cve_id": "CVE-2026-94132",
-      "title_short": "未標示產品 94132×9.5",
-      "title_full": "未標示產品 CVE-2026-94132 · CVSS 9.5",
+      "title_short": "Joomla AcyMailing 94132×9.5",
+      "title_full": "Joomla AcyMailing Enterprise extension CVE-2026-94132 · CVSS 9.5",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -861,9 +1024,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.5。",
-      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
-      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "summary_zh": "Joomla AcyMailing Enterprise 擴充功能存在遠端程式碼執行漏洞，攻擊者可透過電子郵件上傳 PHP 檔案至網站根目錄。",
+      "impact_zh": "未經授權的遠端程式碼執行，可完全接管網站。",
+      "action_zh": "更新 AcyMailing Enterprise 擴充功能至 11.1.0 或更高版本。",
       "description_en": "Joomla Extension - acymailing.com - Remote Code Execution vulnerability in mailbox action feature in AcyMailing Enterprise extension < 11.1.0 - MIME parts of incoming emails were saved to media/com_acym/upload/ with no extension check, so anyone who could email the monitored mailbox could write a PHP file into the web root.",
       "references": [
         {
@@ -877,14 +1040,14 @@
       "sources": [
         "nvd"
       ],
-      "rank": 16,
-      "generated_by": "template",
+      "rank": 18,
+      "generated_by": "gemini",
       "risk_score": 9.5
     },
     {
       "cve_id": "CVE-2026-100706",
-      "title_short": "未標示產品 100706×9.4",
-      "title_full": "未標示產品 CVE-2026-100706 · CVSS 9.4",
+      "title_short": "kyverno 100706×9.4",
+      "title_full": "kyverno kyverno CVE-2026-100706 · CVSS 9.4",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -899,14 +1062,14 @@
         "CWE-441"
       ],
       "tags": [
-        "權限提升",
-        "路徑穿越"
+        "路徑穿越",
+        "權限提升"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在權限提升、路徑穿越漏洞，CVSS 9.4。",
-      "impact_zh": "攻擊者可將權限提升至更高層級。",
-      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "summary_zh": "kyverno 1.19.1 之前版本因 URL 編碼路徑段驗證不當，允許租戶繞過命名空間限制，以 admission-controller 服務帳戶在其他命名空間建立物件。",
+      "impact_zh": "攻擊者可利用路徑穿越，提升權限至叢集管理員。",
+      "action_zh": "升級 kyverno 至 1.19.1 或更高版本。",
       "description_en": "kyverno before 1.19.1 fails to properly validate URL-encoded path segments in Policy apiCall urlPath, allowing namespace tenants to bypass the per-namespace clamp and create objects in other namespaces as the admission-controller ServiceAccount. Attackers can exploit this by using percent-encoded directory traversal sequences to create MutatingWebhookConfiguration objects cluster-wide or PolicyException objects in the kyverno namespace, enabling privilege escalation to cluster admin.",
       "references": [
         {
@@ -924,14 +1087,14 @@
       "sources": [
         "nvd"
       ],
-      "rank": 17,
-      "generated_by": "template",
+      "rank": 19,
+      "generated_by": "gemini",
       "risk_score": 9.4
     },
     {
       "cve_id": "CVE-2026-100714",
-      "title_short": "未標示產品 100714×9.4",
-      "title_full": "未標示產品 CVE-2026-100714 · CVSS 9.4",
+      "title_short": "Froxlor 100714×9.4",
+      "title_full": "Froxlor Froxlor CVE-2026-100714 · CVSS 9.4",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -946,13 +1109,14 @@
         "CWE-88"
       ],
       "tags": [
-        "其他"
+        "RCE",
+        "權限提升"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.4。",
-      "impact_zh": "系統可能遭未授權存取或控制。",
-      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "Froxlor 2.3.12 之前版本未正確限制或逸出 letsencryptchallengepath 設定，允許管理員或具寫入設定權限者注入 acme.sh 選項。",
+      "impact_zh": "可導致以 root 權限執行任意指令，完全接管伺服器。",
+      "action_zh": "升級 Froxlor 至 2.3.12 或更高版本。",
       "description_en": "Froxlor before 2.3.12 does not restrict or escape the system.letsencryptchallengepath setting: unlike sibling settings hardened in GHSA-33mp, the field has no string_regexp or required_otp guard, and its value is concatenated unescaped into the acme.sh command line built in lib/Froxlor/Cron/Http/LetsEncrypt/AcmeSh.php and executed by the root cron via FileDir::safe_exec. Because safe_exec only blacklists shell metacharacters such as ; | & > < \\ $ ~ ?, spaces and quotes survive and the value is word-split into additional acme.sh arguments. An administrator, or any actor able to write settings (for example through the settings-import API), can therefore inject acme.sh options such as --renew-hook, --pre-hook or --post-hook to obtain arbitrary command execution as root at the next Let's Encrypt cron run, or use --config-home/--cert-home for arbitrary file writes. Versions up to and including 2.3.10 are affected; the issue is fixed in 2.3.12.",
       "references": [
         {
@@ -970,14 +1134,14 @@
       "sources": [
         "nvd"
       ],
-      "rank": 18,
-      "generated_by": "template",
+      "rank": 20,
+      "generated_by": "gemini",
       "risk_score": 9.4
     },
     {
       "cve_id": "CVE-2026-97160",
-      "title_short": "未標示產品 97160×9.4",
-      "title_full": "未標示產品 CVE-2026-97160 · CVSS 9.4",
+      "title_short": "Joomla UP plugin 97160×9.4",
+      "title_full": "Joomla UP plugin CVE-2026-97160 · CVSS 9.4",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -996,9 +1160,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.4。",
-      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
-      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "summary_zh": "Joomla UP plugin 5.0.0-5.2.0 及 6.0.0-6.0.29 版本存在已驗證的 PHP 指令注入漏洞。",
+      "impact_zh": "具權限的攻擊者可執行任意 PHP 指令。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Joomla Extension - lomart.fr - Authenticated, privileged PHP command injection in UP plugin extension 5.0.0-5.2.0, 6.0.0-6.0.29",
       "references": [
         {
@@ -1012,8 +1176,8 @@
       "sources": [
         "nvd"
       ],
-      "rank": 19,
-      "generated_by": "template",
+      "rank": 21,
+      "generated_by": "gemini",
       "risk_score": 9.4
     },
     {
@@ -1041,9 +1205,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "Adobe Connect 存在XSS漏洞，CVSS 9.3，EPSS 0.00。",
-      "impact_zh": "可於受害者瀏覽器執行惡意腳本。",
-      "action_zh": "更新至修補版本，並確認輸入輸出過濾機制。",
+      "summary_zh": "Adobe Connect 存在儲存型跨站指令碼（XSS）漏洞，攻擊者可注入惡意指令碼至易受攻擊的表單欄位。",
+      "impact_zh": "受害者瀏覽頁面時，惡意 JavaScript 可能被執行。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Adobe Connect is affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by an attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim's browser when they browse to the page containing the vulnerable field, potentially gaining elevated access or control over the victim's account or session. Scope is changed.",
       "references": [
         {
@@ -1057,14 +1221,14 @@
       "sources": [
         "nvd"
       ],
-      "rank": 20,
-      "generated_by": "template",
+      "rank": 22,
+      "generated_by": "gemini",
       "risk_score": 9.306
     },
     {
       "cve_id": "CVE-2026-100720",
-      "title_short": "未標示產品 100720×9.3",
-      "title_full": "未標示產品 CVE-2026-100720 · CVSS 9.3",
+      "title_short": "Froxlor 100720×9.3",
+      "title_full": "Froxlor Froxlor CVE-2026-100720 · CVSS 9.3",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1080,13 +1244,15 @@
       ],
       "tags": [
         "XSS",
-        "接管"
+        "權限提升",
+        "接管",
+        "RCE"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在XSS、接管漏洞，CVSS 9.3。",
-      "impact_zh": "可於受害者瀏覽器執行惡意腳本。",
-      "action_zh": "更新至修補版本，並確認輸入輸出過濾機制。",
+      "summary_zh": "Froxlor 2.0.0 至 2.3.10 版本存在儲存型跨站指令碼漏洞，客戶上傳 SSL 憑證時，惡意組織名稱未經淨化。",
+      "impact_zh": "可導致客戶權限提升至管理員，甚至以 root 權限執行指令。",
+      "action_zh": "升級 Froxlor 至 2.3.12 或更高版本。",
       "description_en": "Froxlor 2.0.0 through 2.3.10 is vulnerable to stored cross-site scripting. When a customer (the lowest-privileged authenticated role) uploads an SSL certificate for one of their own domains, the Certificates API add()/update() methods parse it with openssl_x509_parse() and store the issuer organization (issuer['O']) value verbatim without sanitization. Froxlor's table-listing renderer then emits scalar cells through Twig's `raw` filter, disabling HTML auto-escaping, so when an administrator or reseller opens Domains > SSL certificates the attacker-supplied issuer value executes as script in the privileged user's session. This crosses a privilege boundary from customer to admin and can result in full administrator account takeover; because a Froxlor admin controls webserver, DNS, and PHP configuration applied by a cron job running as root, the issue can be further escalated to command execution as root on the managed server. The issue is fixed in Froxlor 2.3.12.",
       "references": [
         {
@@ -1104,14 +1270,14 @@
       "sources": [
         "nvd"
       ],
-      "rank": 21,
-      "generated_by": "template",
+      "rank": 23,
+      "generated_by": "gemini",
       "risk_score": 9.3
     },
     {
       "cve_id": "CVE-2026-94130",
-      "title_short": "未標示產品 94130×9.3",
-      "title_full": "未標示產品 CVE-2026-94130 · CVSS 9.3",
+      "title_short": "Joomla YouTube Gallery 94130×9.3",
+      "title_full": "Joomla YouTube Gallery CVE-2026-94130 · CVSS 9.3",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1130,9 +1296,9 @@
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.3。",
-      "impact_zh": "可讀寫後端資料庫內容。",
-      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "summary_zh": "Joomla YouTube Gallery 5.7.3 之前版本在影片搜尋與排序功能中存在未驗證的 SQL 注入漏洞。",
+      "impact_zh": "攻擊者可注入 SQL 指令，讀取或修改資料庫內容。",
+      "action_zh": "升級 YouTube Gallery 擴充功能至 5.7.3 或更高版本。",
       "description_en": "Joomla Extension - joomlaboat.com - Unauthenticated SQL injection in YouTube Gallery extension < 5.7.3 - An SQL injection vulnerability in video search functionality and sorting allowed attackers to inject SQL commands in read queries.",
       "references": [
         {
@@ -1146,14 +1312,14 @@
       "sources": [
         "nvd"
       ],
-      "rank": 22,
-      "generated_by": "template",
+      "rank": 24,
+      "generated_by": "gemini",
       "risk_score": 9.3
     },
     {
       "cve_id": "CVE-2026-97404",
-      "title_short": "未標示產品 97404×9.2",
-      "title_full": "未標示產品 CVE-2026-97404 · CVSS 9.2",
+      "title_short": "OpenStack Zaqar 97404×9.2",
+      "title_full": "OpenStack Zaqar CVE-2026-97404 · CVSS 9.2",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1171,13 +1337,14 @@
         "CWE-348"
       ],
       "tags": [
-        "其他"
+        "認證繞過",
+        "資訊洩漏"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.2，EPSS 0.00。",
-      "impact_zh": "系統可能遭未授權存取或控制。",
-      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "OpenStack Zaqar 22.0.2 之前版本在 WSGI 傳輸中錯誤處理 URL-Signature 標頭，導致未驗證的遠端攻擊者可繞過認證。",
+      "impact_zh": "攻擊者可讀取、列舉、建立及刪除目標專案的佇列與訊息。",
+      "action_zh": "升級 OpenStack Zaqar 至 22.0.2 或更高版本。",
       "description_en": "In OpenStack Zaqar before 22.0.2, WSGI transport mishandles the URL-Signature header. By sending a request with an empty URL-Signature header, an unauthenticated remote attacker who knows a target project's UUID may bypass both Keystone authentication and pre-signed URL verification, resulting in the ability to read, enumerate, create, and delete that project's queues, messages, claims, and subscriptions. By additionally claiming an administrative role, the attacker may also perform administrative operations, such as managing pools and flavors in admin_mode deployments. Only deployments using the WSGI transport with an authentication strategy configured are affected; the websocket transport is not affected.",
       "references": [
         {
@@ -1195,14 +1362,14 @@
       "sources": [
         "nvd"
       ],
-      "rank": 23,
-      "generated_by": "template",
+      "rank": 25,
+      "generated_by": "gemini",
       "risk_score": 9.205
     },
     {
       "cve_id": "CVE-2026-97161",
-      "title_short": "未標示產品 97161×9.2",
-      "title_full": "未標示產品 CVE-2026-97161 · CVSS 9.2",
+      "title_short": "Joomla UP plugin 97161×9.2",
+      "title_full": "Joomla UP plugin CVE-2026-97161 · CVSS 9.2",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1218,14 +1385,13 @@
         "CWE-284"
       ],
       "tags": [
-        "路徑穿越",
-        "權限提升"
+        "路徑穿越"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在路徑穿越、權限提升漏洞，CVSS 9.2。",
-      "impact_zh": "可讀取權限範圍外的檔案。",
-      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "summary_zh": "Joomla UP plugin 5.0.0-5.2.0 及 6.0.0-6.0.29 版本存在多種路徑穿越與檔案存取漏洞。",
+      "impact_zh": "攻擊者可未經授權存取或操作系統檔案。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
       "description_en": "Joomla Extension - lomart.fr - Various path traversal / file access vectors in UP plugin extension 5.0.0-5.2.0, 6.0.0-6.0.29",
       "references": [
         {
@@ -1239,14 +1405,14 @@
       "sources": [
         "nvd"
       ],
-      "rank": 24,
-      "generated_by": "template",
+      "rank": 26,
+      "generated_by": "gemini",
       "risk_score": 9.2
     },
     {
       "cve_id": "CVE-2026-93399",
-      "title_short": "未標示產品 93399×9.1",
-      "title_full": "未標示產品 CVE-2026-93399 · CVSS 9.1",
+      "title_short": "WordPress Bookly 93399×9.1",
+      "title_full": "WordPress Bookly CVE-2026-93399 · CVSS 9.1",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1264,13 +1430,14 @@
         "CWE-639"
       ],
       "tags": [
-        "其他"
+        "資訊洩漏",
+        "阻斷服務"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1，EPSS 0.00。",
-      "impact_zh": "系統可能遭未授權存取或控制。",
-      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "WordPress Bookly plugin 28.2 及更早版本存在不安全直接物件引用漏洞，允許未驗證攻擊者枚舉訂單 ID。",
+      "impact_zh": "可洩露客戶訂單憑證，並永久刪除任意未完成的預訂。",
+      "action_zh": "升級 WordPress Bookly plugin 至 28.3 或更高版本。",
       "description_en": "The Bookly plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 28.2 via the 'bookly_get_form_id', 'bookly_render_complete', 'bookly_add_to_calendar' and 'bookly_rollback_order' AJAX actions. This is due to the 'bookly_get_form_id' handler blindly storing the attacker-controlled 'order_id' from the submitted form_data into a new booking session, which the 'bookly_render_complete' handler then trusts to look up and return the corresponding Order's secret token without verifying that the current session created that order. This makes it possible for unauthenticated attackers to enumerate sequential order IDs, disclose other customers' order tokens, retrieve calendar/appointment information via 'bookly_add_to_calendar' and permanently delete arbitrary non-completed bookings via 'bookly_rollback_order', which cascade-deletes the customer_appointment and (when no other customers are attached) the underlying appointment.",
       "references": [
         {
@@ -1304,14 +1471,14 @@
       "sources": [
         "nvd"
       ],
-      "rank": 25,
-      "generated_by": "template",
+      "rank": 27,
+      "generated_by": "gemini",
       "risk_score": 9.107
     },
     {
       "cve_id": "CVE-2026-92289",
-      "title_short": "未標示產品 92289×9.1",
-      "title_full": "未標示產品 CVE-2026-92289 · CVSS 9.1",
+      "title_short": "Lemonldap::NG Portal 92289×9.1",
+      "title_full": "Lemonldap::NG Portal CVE-2026-92289 · CVSS 9.1",
       "vendor": "",
       "product": "",
       "vendor_advisory_id": null,
@@ -1329,13 +1496,13 @@
         "CWE-1390"
       ],
       "tags": [
-        "其他"
+        "認證繞過"
       ],
       "in_the_wild": false,
       "kev": null,
-      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1，EPSS 0.00。",
-      "impact_zh": "系統可能遭未授權存取或控制。",
-      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "summary_zh": "Lemonldap::NG::Portal 2.23.0 至 2.23.3 版本存在 PKCE 繞過漏洞，未驗證公開 Relying Parties 的客戶端密鑰。",
+      "impact_zh": "攻擊者可攔截授權碼，交換用戶的存取、ID 和刷新憑證。",
+      "action_zh": "升級 Lemonldap::NG::Portal 至 2.23.4 或更高版本。",
       "description_en": "Lemonldap::NG::Portal versions from 2.23.0 before 2.23.4 for Perl allow a PKCE bypass for public Relying Parties in \"PKCE or secret\" mode because checkEndPointAuthenticationCredentials does not verify the client secret.\n\nWith oidcRPMetaDataOptionsRequirePKCE set to 2, the authorization endpoint issues a code even when the request carries no code_challenge, and token() admits the exchange as long as a challenge was stored or an authentication method was returned for the caller. checkEndPointAuthenticationCredentials() skips the secret comparison for a Relying Party marked public and still returns the method deduced from the request, so any Basic or form credential satisfies the secret branch. validatePKCEChallenge() then passes, because neither a challenge nor a verifier is present.\n\nAn attacker who intercepts an authorization code issued to a public Relying Party can exchange it for the user's access, ID and refresh tokens by replaying the client_id with an arbitrary secret, which is the attack PKCE prevents. Dynamic client registration creates every Relying Party in this mode.",
       "references": [
         {
@@ -1357,9 +1524,65 @@
       "sources": [
         "nvd"
       ],
-      "rank": 26,
-      "generated_by": "template",
+      "rank": 28,
+      "generated_by": "gemini",
       "risk_score": 9.104
+    },
+    {
+      "cve_id": "CVE-2026-100835",
+      "title_short": "Contrast 100835×9.1",
+      "title_full": "Contrast Contrast CVE-2026-100835 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-jw33-f4wc-8736",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.1,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-295"
+      ],
+      "tags": [
+        "認證繞過",
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Contrast 1.16.0 之前版本易受遠端證明中繼攻擊，因其接受任何正確驗證的 TEE 證明報告。",
+      "impact_zh": "攻擊者可冒充 Contrast Coordinator 或工作負載，繞過身份驗證。",
+      "action_zh": "升級 Contrast 至 1.16.0 或更高版本。",
+      "description_en": "Contrast before 1.16.0 is susceptible to remote attestation relay attacks. Contrast accepted any TEE attestation report that verified correctly and contained the expected firmware patch levels and software measurements, regardless of which machine produced it, so attestation was not bound to specific, physically trusted hardware. An attacker who can both intercept network traffic between the CLI and the Coordinator (or between the Coordinator and an attested component) and forge reports or extract secrets from any single TEE machine under their physical control can relay such a report to impersonate a Contrast Coordinator or a Contrast workload, defeating identity verification in Contrast's attested TLS (aTLS).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/edgelesssys/contrast/security/advisories/GHSA-hjgc-jc5v-fw7h"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/contrast-before-1.16.0-remote-attestation-relay-attack"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-jw33-f4wc-8736"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100835"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-27T02:17:21Z",
+      "modified": "2026-09-27T03:31:12Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 29,
+      "generated_by": "gemini",
+      "risk_score": 9.1
     }
   ],
   "vendor_watch": [

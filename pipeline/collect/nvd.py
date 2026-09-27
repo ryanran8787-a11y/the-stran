@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from ..config import CACHE_DIR, Settings
-from ..models import VulnItem
+from ..models import VulnItem, severity_for
 from ..util import (
     RateLimiter,
     http_get,
@@ -116,6 +116,90 @@ def fetch_api(settings: Settings, window_from: datetime, window_to: datetime) ->
             break
     log.info("NVD API：取得 %s 筆", len(items))
     return items
+
+
+def fetch_by_cve(settings: Settings, cve_id: str) -> VulnItem | None:
+    """單筆 NVD API 查詢（cveId），用於補齊缺失欄位。"""
+    cfg = settings.source("nvd")
+    api = cfg.get("api") or DEFAULT_API
+    headers: dict[str, str] = {"Accept": "application/json"}
+    if settings.nvd_api_key:
+        headers["apiKey"] = settings.nvd_api_key
+    payload = http_json(f"{api}?cveId={cve_id}&resultsPerPage=1", headers=headers, timeout=60)
+    vulns = payload.get("vulnerabilities") if isinstance(payload, dict) else None
+    if not vulns:
+        return None
+    record = vulns[0].get("cve") if isinstance(vulns[0], dict) else None
+    return parse_cve_record(record) if isinstance(record, dict) else None
+
+
+def fill_missing(settings: Settings, items: list[VulnItem], cap: int | None = None) -> int:
+    """補齊「缺 CVSS / 缺廠商產品」的項目。
+
+    成因：KEV 項目若不在 NVD 的 modified 資料檔內（例如前兩天改的），
+    就只有 KEV 來源，沒有分數與產品資訊 → 日報會顯示「CVSS None」。
+    這裡用 NVD API 逐筆查詢補齊，並對節流與失敗做防護。
+    """
+    if not settings.source_enabled("nvd"):
+        return 0
+    targets = [
+        item
+        for item in items
+        if item.cvss_score is None or not item.vendor or not item.product
+    ]
+    if not targets:
+        return 0
+
+    if cap is None:
+        cap = 30 if settings.nvd_api_key else 8
+    targets = targets[:max(0, cap)]
+
+    limiter = RateLimiter(0.7 if settings.nvd_api_key else 6.5)
+    filled = 0
+    for item in targets:
+        limiter.wait()
+        try:
+            parsed = fetch_by_cve(settings, item.cve_id)
+        except Exception as exc:  # noqa: BLE001 - 補查失敗不影響日報
+            log.warning("NVD 補查失敗 %s：%s", item.cve_id, exc)
+            continue
+        if parsed is None:
+            continue
+
+        changed = False
+        if item.cvss_score is None and parsed.cvss_score is not None:
+            item.cvss_score = parsed.cvss_score
+            item.cvss_version = parsed.cvss_version
+            item.cvss_vector = parsed.cvss_vector
+            item.severity = severity_for(item.cvss_score, parsed.severity)
+            changed = True
+        if not item.vendor and parsed.vendor:
+            item.vendor = parsed.vendor
+            changed = True
+        if not item.product and parsed.product:
+            item.product = parsed.product
+            changed = True
+        if not item.description_en and parsed.description_en:
+            item.description_en = parsed.description_en
+            changed = True
+        if parsed.cwes:
+            before = len(item.cwes)
+            item.merge_cwes(parsed.cwes)
+            changed = changed or len(item.cwes) > before
+        if parsed.tags:
+            item.merge_tags(parsed.tags)
+        if not item.published and parsed.published:
+            item.published = parsed.published
+        if not item.modified and parsed.modified:
+            item.modified = parsed.modified
+        for ref in parsed.references:
+            item.add_reference(ref["name"], ref["url"])
+        item.add_source("nvd")
+        if changed:
+            filled += 1
+
+    log.info("NVD 補查：%s/%s 筆補齊缺失欄位", filled, len(targets))
+    return filled
 
 
 def collect(settings: Settings, window_from: datetime, window_to: datetime) -> CollectResult:

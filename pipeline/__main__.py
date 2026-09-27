@@ -88,6 +88,14 @@ def run(args: argparse.Namespace) -> int:
 
     items, norm_stats, warnings = normalize(results, kev_index, window_from, window_to)
 
+    # 補齊缺分數 / 缺廠商產品的項目（KEV-only 類最容易缺）
+    if settings.source_enabled("nvd") and (not wanted or "nvd" in wanted):
+        from .collect import nvd as nvd_source
+
+        filled = nvd_source.fill_missing(settings, items)
+        if filled:
+            norm_stats["filled"] = filled
+
     if settings.source_enabled("epss") and (not wanted or "epss" in wanted):
         results.append(epss_source.apply(settings, items))
     if settings.source_enabled("osv") and (not wanted or "osv" in wanted):

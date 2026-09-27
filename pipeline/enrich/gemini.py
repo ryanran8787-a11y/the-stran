@@ -1,4 +1,9 @@
-"""Gemini（Google AI Studio）結構化輸出 provider。"""
+"""Gemini（Google AI Studio）結構化輸出 provider。
+
+額度策略：免費層額度通常是「每模型每日」限制（例如 flash-lite 每日 20 次），
+等待無濟於事。因此這裡會準備一份候選模型清單，遇到「每日額度」型 429 就自動
+換下一個模型繼續，完全失敗才退回規則模板。
+"""
 
 from __future__ import annotations
 
@@ -6,16 +11,17 @@ import json
 from typing import Any
 
 from ..config import CACHE_DIR, Settings
-from ..util import http_get, http_post_json, log, read_json, write_json
+from ..util import HttpError, http_get, http_post_json, log, read_json, write_json
 from .jsonparse import parse_json_loose
 from .schemas import LLM_OUTPUT_SCHEMA, to_gemini_schema
 
 API_BASE = "https://generativelanguage.googleapis.com/v1beta"
-MODEL_CACHE = CACHE_DIR / "gemini-model.json"
+MODEL_CACHE = CACHE_DIR / "gemini-models.json"
+MAX_MODELS_TO_TRY = 4
 
-# 自動挑模型時的偏好排序（越前面越優先）
-MODEL_PREFERENCES = ("flash", "2.5", "3", "pro", "lite")
-MODEL_PENALTIES = ("embedding", "image", "tts", "audio", "vision-only", "veo", "lyria", "nano")
+# 分數越高越優先；刻意讓非 lite 版本排在前面（額度較寬）
+MODEL_BOOST = ("flash", "2.5", "3", "pro")
+MODEL_PENALTY = ("lite", "preview", "exp", "embedding", "image", "tts", "audio", "veo", "nano")
 
 
 class GeminiProvider:
@@ -23,7 +29,8 @@ class GeminiProvider:
 
     def __init__(self, settings: Settings) -> None:
         self.api_key = settings.gemini_api_key
-        self.model = (settings.gemini_model or "").strip()
+        self.forced_model = (settings.gemini_model or "").strip()
+        self.model = self.forced_model
         self.schema = to_gemini_schema(json.loads(json.dumps(LLM_OUTPUT_SCHEMA)))
 
     def available(self) -> bool:
@@ -35,34 +42,45 @@ class GeminiProvider:
 
     def _score_model(self, name: str) -> int:
         lowered = name.lower()
-        if any(bad in lowered for bad in MODEL_PENALTIES):
+        if any(bad in lowered for bad in MODEL_PENALTY if bad not in ("lite", "preview", "exp")):
             return -1
         score = 0
-        for index, keyword in enumerate(MODEL_PREFERENCES):
+        for index, keyword in enumerate(MODEL_BOOST):
             if keyword in lowered:
-                score += (len(MODEL_PREFERENCES) - index) * 2
+                score += (len(MODEL_BOOST) - index) * 2
+        for keyword in MODEL_PENALTY:
+            if keyword in lowered:
+                score -= 2
         if "latest" in lowered:
             score += 1
-        if "preview" in lowered or "exp" in lowered:
-            score -= 1
         return score
 
-    def resolve_model(self) -> str:
-        if self.model:
-            return self.model
+    def resolve_models(self) -> list[str]:
+        """回傳「由優到劣」的候選模型清單（自動偵測 + 快取）。"""
+        if self.forced_model:
+            return [self.forced_model]
+
         cached = read_json(MODEL_CACHE) if MODEL_CACHE.exists() else None
-        if isinstance(cached, dict) and cached.get("model"):
-            self.model = str(cached["model"])
-            return self.model
+        if isinstance(cached, dict) and isinstance(cached.get("models"), list):
+            models = [str(entry) for entry in cached["models"] if isinstance(entry, str) and entry]
+            if models:
+                self.model = models[0]
+                return models
+
         try:
-            payload = http_get_models(self.api_key)
+            payload = http_get(
+                f"{API_BASE}/models?pageSize=200",
+                headers={"x-goog-api-key": self.api_key, "Accept": "application/json"},
+                timeout=45,
+                retries=1,
+            )
+            data = json.loads(payload.decode("utf-8", "replace"))
         except Exception as exc:  # noqa: BLE001 - 列模型失敗就用保守預設
             log.warning("Gemini 列出模型失敗，改用預設名稱：%s", exc)
-            self.model = "gemini-2.5-flash"
-            return self.model
+            return ["gemini-2.5-flash"]
 
-        candidates: list[tuple[int, str]] = []
-        for entry in payload.get("models") or []:
+        scored: list[tuple[int, str]] = []
+        for entry in data.get("models") or []:
             if not isinstance(entry, dict):
                 continue
             name = str(entry.get("name") or "").removeprefix("models/")
@@ -71,45 +89,72 @@ class GeminiProvider:
                 continue
             score = self._score_model(name)
             if score >= 0:
-                candidates.append((score, name))
-        candidates.sort(key=lambda pair: (-pair[0], pair[1]))
-        self.model = candidates[0][1] if candidates else "gemini-2.5-flash"
-        log.info("Gemini 自動選擇模型：%s（候選 %s 個）", self.model, len(candidates))
+                scored.append((score, name))
+        scored.sort(key=lambda pair: (-pair[0], pair[1]))
+        models = [name for _, name in scored] or ["gemini-2.5-flash"]
+
+        log.info("Gemini 候選模型（由優到劣）：%s", " → ".join(models[:MAX_MODELS_TO_TRY]))
         try:
-            write_json(MODEL_CACHE, {"model": self.model})
+            write_json(MODEL_CACHE, {"models": models})
         except Exception:  # noqa: BLE001 - 快取失敗無妨
             pass
-        return self.model
+        self.model = models[0]
+        return models
 
-    def enrich(self, system_prompt: str, user_prompt: str) -> dict[str, Any]:
-        model = self.resolve_model()
-        url = f"{API_BASE}/models/{model}:generateContent"
-        body: dict[str, Any] = {
+    # ------------------------------------------------------------ 調用
+    def _build_body(self, system_prompt: str, user_prompt: str, with_schema: bool) -> dict[str, Any]:
+        generation: dict[str, Any] = {"temperature": 0.2, "responseMimeType": "application/json"}
+        if with_schema:
+            generation["responseSchema"] = self.schema
+        return {
             "systemInstruction": {"parts": [{"text": system_prompt}]},
             "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
-            "generationConfig": {
-                "temperature": 0.2,
-                "responseMimeType": "application/json",
-                "responseSchema": self.schema,
-            },
+            "generationConfig": generation,
         }
+
+    def _call(self, model: str, system_prompt: str, user_prompt: str) -> dict[str, Any]:
+        url = f"{API_BASE}/models/{model}:generateContent"
+        body = self._build_body(system_prompt, user_prompt, with_schema=True)
         try:
-            payload = http_post_json(url, body, headers=self._headers(), timeout=180, retries=2)
-        except Exception as exc:  # noqa: BLE001 - 退回無 schema 模式
-            log.warning("Gemini 帶 responseSchema 失敗，改以純 JSON 模式重試：%s", exc)
-            body["generationConfig"].pop("responseSchema", None)
+            payload = http_post_json(url, body, headers=self._headers(), timeout=180, retries=3)
+        except Exception as exc:  # noqa: BLE001 - 部分模型不支援 responseSchema
+            if _is_quota_error(exc):
+                raise  # 額度問題換 schema 沒意義
+            log.warning("Gemini %s 帶 responseSchema 失敗，改以純 JSON 模式重試：%s", model, exc)
+            body = self._build_body(system_prompt, user_prompt, with_schema=False)
             payload = http_post_json(url, body, headers=self._headers(), timeout=180, retries=2)
         return extract_json(payload)
 
+    def enrich(self, system_prompt: str, user_prompt: str) -> dict[str, Any]:
+        models = self.resolve_models()[:MAX_MODELS_TO_TRY]
+        last_error: Exception | None = None
 
-def http_get_models(api_key: str) -> dict[str, Any]:
-    payload = http_get(
-        f"{API_BASE}/models?pageSize=200",
-        headers={"x-goog-api-key": api_key, "Accept": "application/json"},
-        timeout=45,
-        retries=1,
-    )
-    return json.loads(payload.decode("utf-8", "replace"))
+        for index, model in enumerate(models):
+            try:
+                result = self._call(model, system_prompt, user_prompt)
+                self.model = model
+                if index > 0:
+                    log.info("已切換到模型 %s 完成提煉", model)
+                return result
+            except Exception as exc:  # noqa: BLE001 - 依錯誤類型決定是否換模型
+                last_error = exc
+                if _is_daily_quota_error(exc) and index < len(models) - 1:
+                    # 「每日額度」等也等不完 → 直接換下一個模型
+                    log.warning("模型 %s 每日額度已用盡，改用 %s", model, models[index + 1])
+                    continue
+                raise
+
+        raise last_error if last_error else RuntimeError("Gemini 無可用模型")
+
+
+def _is_quota_error(exc: BaseException) -> bool:
+    text = str(exc)
+    return "429" in text or "RESOURCE_EXHAUSTED" in text
+
+
+def _is_daily_quota_error(exc: BaseException) -> bool:
+    # 每日額度（PerDay）等也等不完；瞬時限流才由 util 內的退避處理
+    return "PerDay" in str(exc) or "per day" in str(exc).lower()
 
 
 def extract_json(payload: dict[str, Any]) -> dict[str, Any]:

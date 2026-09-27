@@ -6,6 +6,7 @@ import gzip
 import json
 import logging
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -119,6 +120,20 @@ def http_json(
         raise ValueError(f"回應不是 JSON（{exc.msg}）：{snippet}") from exc
 
 
+def _retry_after_seconds(detail: str) -> float | None:
+    """從 429 錯誤訊息中取出上游建議的等待秒數。
+
+    Gemini 會回 "Please retry in 52.29399154s."；其他 API 可能用 Retry-After 標頭。
+    """
+    match = re.search(r"retry in ([0-9]+(?:\.[0-9]+)?)\s*s", detail or "", re.IGNORECASE)
+    if match:
+        try:
+            return float(match.group(1))
+        except ValueError:
+            return None
+    return None
+
+
 def http_post_json(
     url: str,
     payload: dict[str, Any],
@@ -141,12 +156,19 @@ def http_post_json(
         except urllib.error.HTTPError as exc:
             detail = ""
             try:
-                detail = exc.read(1000).decode("utf-8", "replace")
+                detail = exc.read(2000).decode("utf-8", "replace")
             except Exception:  # noqa: BLE001
                 pass
             last = HttpError(url, exc.code, detail)
             if exc.code in (400, 401, 403, 404):
                 raise last from exc  # 參數或金鑰問題，重試無用
+            if exc.code == 429 and attempt < retries:
+                # 上游通常會告訴你要等多久（Gemini: "Please retry in 52.29s"）
+                suggested = _retry_after_seconds(detail)
+                delay = min(max(suggested if suggested else 5.0 * attempt, 1.0), 90.0)
+                log.warning("429 限流，%.0f 秒後重試（%s/%s）：%s", delay, attempt, retries, url)
+                time.sleep(delay)
+                continue
         except Exception as exc:  # noqa: BLE001
             last = exc
         if attempt < retries:

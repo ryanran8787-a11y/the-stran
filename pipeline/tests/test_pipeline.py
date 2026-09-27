@@ -301,6 +301,44 @@ class TestVerify(unittest.TestCase):
         self.assertEqual(verify_output(None, self.by_id)[1], ["output_not_object"])
         self.assertEqual(verify_output({}, self.by_id)[1], ["output_missing_items"])
 
+    def test_dangling_multiplication_sign_removed_when_score_is_null(self) -> None:
+        # 分數為 null 時 LLM 寫出「65660× 在野」→ 應移除孤懸的 ×
+        item = VulnItem(
+            cve_id="CVE-2026-65660",
+            vendor="Microsoft",
+            product="SharePoint",
+            in_the_wild=True,
+        )
+        entry = {
+            "cve_id": "CVE-2026-65660",
+            "title_short": "Microsoft SharePoint 65660× 在野",
+            "title_full": "Microsoft SharePoint CVE-2026-65660",
+            "tags": ["RCE"],
+            "summary_zh": "測試用摘要。",
+            "impact_zh": "測試用衝擊。",
+            "action_zh": "測試用處置。",
+        }
+        accepted, hard, _ = verify_output({"items": [entry]}, {"CVE-2026-65660": item})
+        self.assertEqual(hard, [])
+        self.assertEqual(accepted["CVE-2026-65660"]["title_short"], "Microsoft SharePoint 65660 在野")
+
+    def test_real_score_kept_after_cleanup(self) -> None:
+        item = VulnItem(
+            cve_id="CVE-2026-11111", vendor="Adobe", product="Campaign", cvss_score=10.0
+        )
+        entry = {
+            "cve_id": "CVE-2026-11111",
+            "title_short": "Adobe Campaign 11111×10.0",
+            "title_full": "Adobe Campaign CVE-2026-11111 · CVSS 10.0",
+            "tags": ["RCE"],
+            "summary_zh": "測試用摘要。",
+            "impact_zh": "測試用衝擊。",
+            "action_zh": "測試用處置。",
+        }
+        accepted, hard, _ = verify_output({"items": [entry]}, {"CVE-2026-11111": item})
+        self.assertEqual(hard, [])
+        self.assertEqual(accepted["CVE-2026-11111"]["title_short"], "Adobe Campaign 11111×10.0")
+
 
 class TestFallbackEnrichment(unittest.TestCase):
     def test_title_formats(self) -> None:
@@ -428,6 +466,88 @@ class TestLlmSchemas(unittest.TestCase):
         self.assertEqual(tags_from_cwes(["CWE-78"]), ["RCE"])
         self.assertEqual(tags_from_cwes(["CWE-918", "CWE-79"]), ["SSRF", "XSS"])
         self.assertEqual(tags_from_cwes(["CWE-9999"]), [])
+
+
+class TestModuleImports(unittest.TestCase):
+    """煙霧測試：確保每個模組都能匯入（抓語法錯誤、缺 import、循環依賴）。"""
+
+    MODULES = (
+        "pipeline.__main__",
+        "pipeline.collect",
+        "pipeline.collect.kev",
+        "pipeline.collect.nvd",
+        "pipeline.collect.github_advisories",
+        "pipeline.collect.epss",
+        "pipeline.collect.osv",
+        "pipeline.collect.vendors",
+        "pipeline.enrich",
+        "pipeline.enrich.gemini",
+        "pipeline.enrich.openai",
+        "pipeline.enrich.claude",
+        "pipeline.enrich.fallback",
+        "pipeline.enrich_llm",
+        "pipeline.normalize",
+        "pipeline.score",
+        "pipeline.verify",
+        "pipeline.writers.digest",
+    )
+
+    def test_every_module_imports(self) -> None:
+        import importlib
+
+        for name in self.MODULES:
+            with self.subTest(module=name):
+                importlib.import_module(name)
+
+    def test_llm_quota_helpers(self) -> None:
+        from pipeline.enrich.gemini import _is_daily_quota_error
+
+        self.assertTrue(_is_daily_quota_error("429 PerDay quotaValue 20"))
+        self.assertFalse(_is_daily_quota_error("429 RetryInfo retryDelay 54s"))
+
+
+class TestBrandCanonicalization(unittest.TestCase):
+    def test_restores_official_product_spelling(self) -> None:
+        from pipeline.verify import canonicalize_branding
+
+        item = VulnItem(
+            cve_id="CVE-2025-20352", vendor="Cisco", product="IOS XE SD-WAN", cvss_score=7.7
+        )
+        title, changed = canonicalize_branding("Cisco Ios Xe Sd Wan 20352×7.7 在野", item)
+        self.assertTrue(changed)
+        self.assertEqual(title, "Cisco IOS XE SD-WAN 20352×7.7 在野")
+
+    def test_leaves_unrelated_title_untouched(self) -> None:
+        from pipeline.verify import canonicalize_branding
+
+        item = VulnItem(cve_id="CVE-2026-1", vendor="Forgejo", product="Gitea")
+        title, changed = canonicalize_branding("Forgejo Gitea 1×9.9", item)
+        self.assertFalse(changed)
+        self.assertEqual(title, "Forgejo Gitea 1×9.9")
+
+    def test_verify_output_applies_normalization(self) -> None:
+        item = VulnItem(
+            cve_id="CVE-2025-20352",
+            vendor="Cisco",
+            product="IOS XE SD-WAN",
+            cvss_score=7.7,
+            in_the_wild=True,
+        )
+        entry = {
+            "cve_id": "CVE-2025-20352",
+            "title_short": "Cisco Ios Xe Sd Wan 20352×7.7 在野",
+            "title_full": "Cisco IOS XE SD-WAN CVE-2025-20352 · CVSS 7.7",
+            "tags": ["RCE"],
+            "summary_zh": "測試用摘要。",
+            "impact_zh": "測試用衝擊。",
+            "action_zh": "測試用處置。",
+        }
+        accepted, hard, soft = verify_output({"items": [entry]}, {"CVE-2025-20352": item})
+        self.assertEqual(hard, [])
+        self.assertTrue(any("branding_normalized" in reason for reason in soft))
+        self.assertEqual(
+            accepted["CVE-2025-20352"]["title_short"], "Cisco IOS XE SD-WAN 20352×7.7 在野"
+        )
 
 
 if __name__ == "__main__":

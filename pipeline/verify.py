@@ -10,6 +10,7 @@
 
 from __future__ import annotations
 
+import re
 from typing import Any
 
 from .enrich.fallback import apply_fallback, build_title_full
@@ -24,6 +25,38 @@ MAX_TITLE = 60
 
 def _score_text(item: VulnItem) -> str:
     return "" if item.cvss_score is None else f"{float(item.cvss_score):.1f}"
+
+
+def _brand_pattern(brand: str) -> re.Pattern[str] | None:
+    """建立「容忍大小寫與分隔符差異」的比對樣式。
+
+    例如 IOS XE SD-WAN 可匹配 LLM 寫的 "Ios Xe Sd Wan" / "ios_xe_sd-wan"。
+    """
+    if not brand or len(brand) < 3:
+        return None
+    escaped = re.escape(brand.strip())
+    flexible = escaped.replace(r"\-", r"[\s\-_]+").replace(r"\ ", r"[\s\-_]+")
+    try:
+        return re.compile(flexible, re.IGNORECASE)
+    except re.error:
+        return None
+
+
+def canonicalize_branding(title: str, item: VulnItem) -> tuple[str, bool]:
+    """把標題中的廠商／產品寫法還原成資料中的正式名稱。
+
+    只調整「已存在字串」的大小寫與分隔符，不新增、不刪除任何事實資訊。
+    """
+    changed = False
+    for brand in (item.vendor, item.product):
+        pattern = _brand_pattern(brand)
+        if pattern is None or not pattern.search(title):
+            continue
+        replaced = pattern.sub(lambda _match, value=brand: value, title, count=1)
+        if replaced != title:
+            title = replaced
+            changed = True
+    return title, changed
 
 
 def verify_entry(entry: Any, item: VulnItem) -> tuple[dict[str, Any] | None, list[str], list[str]]:
@@ -53,6 +86,10 @@ def verify_entry(entry: Any, item: VulnItem) -> tuple[dict[str, Any] | None, lis
             hard.append(f"title_score_mismatch:{expected_score}")
         if item.in_the_wild and "在野" not in title_short:
             hard.append("title_missing_in_the_wild")
+        # 分數為 null 時 LLM 常寫出孤懸的「×」（例如 "65660× 在野"），直接移除
+        title_short = " ".join(re.sub(r"×(?!\d)", "", title_short).split())
+        if not title_short or title_short in {"×", "在野"}:
+            hard.append("empty_title_short")
         if len(title_short) > MAX_TITLE:
             soft.append("title_too_long")
             title_short = truncate(title_short, MAX_TITLE)
@@ -84,6 +121,13 @@ def verify_entry(entry: Any, item: VulnItem) -> tuple[dict[str, Any] | None, lis
 
     if hard:
         return None, hard, soft
+
+    # 事實都對，只把廠商／產品寫法還原成資料中的正式名稱（例如 Ios Xe Sd Wan → IOS XE SD-WAN）
+    canonical, changed = canonicalize_branding(title_short, item)
+    if changed:
+        title_short = canonical
+        soft.append("branding_normalized")
+
     return (
         {
             "title_short": title_short,
