@@ -33,4 +33,5 @@ Thumbs.db
 # 本機除錯輸出（管線與建置的暫存紀錄）
 _e*.txt
 _*.log
+_*.txt
 _envcheck.txt
