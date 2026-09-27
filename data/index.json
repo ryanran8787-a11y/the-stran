@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-26T13:14:37Z",
-  "total": 1,
+  "updated_at": "2026-09-27T00:21:18Z",
+  "total": 2,
   "reports": [
+    {
+      "date": "2026-09-27",
+      "kept": 26,
+      "kev": 5,
+      "critical": 21,
+      "in_the_wild": 5,
+      "generated_at": "2026-09-27T00:21:18Z",
+      "generated_by": "template",
+      "top": [
+        "Adobe Commerce and Magento 71362 在野",
+        "WordPress Core 87902 在野",
+        "Microsoft SharePoint 65660 在野"
+      ]
+    },
     {
       "date": "2026-09-26",
       "kept": 81,
