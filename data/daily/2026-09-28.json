@@ -1,0 +1,504 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-28",
+  "generated_at": "2026-09-28T00:25:49Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-09-27T22:00:00Z",
+    "to": "2026-09-28T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 21,
+    "kept": 6,
+    "kev": 5,
+    "critical": 3,
+    "in_the_wild": 5,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 5,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 12,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-88771",
+      "title_short": "Citrix NetScaler 88771×9.5 在野",
+      "title_full": "Citrix NetScaler CVE-2026-88771 · CVSS 9.5 · 在野利用",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-119",
+        "CWE-20"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-27",
+        "due_date": "2026-09-30",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Citrix NetScaler Improper Input Validation Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Citrix NetScaler 存在安全漏洞，CVSS 9.5，已列入 CISA KEV 已知在野利用清單。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Improper input validation vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to an unauthenticated attacker to execute arbitrary commands.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
+        },
+        {
+          "name": "參考",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-27",
+      "modified": "2026-09-27T23:16:59Z",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 12.5
+    },
+    {
+      "cve_id": "CVE-2026-88772",
+      "title_short": "Citrix NetScaler 88772×9.5 在野",
+      "title_full": "Citrix NetScaler CVE-2026-88772 · CVSS 9.5 · 在野利用",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-119"
+      ],
+      "tags": [
+        "RCE",
+        "阻斷服務",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-27",
+        "due_date": "2026-09-30",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Citrix NetScaler 存在RCE、阻斷服務漏洞，CVSS 9.5，已列入 CISA KEV 已知在野利用清單。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to Remote Code Execution or Denial of Service",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88772"
+        },
+        {
+          "name": "參考",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88772"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-27",
+      "modified": "2026-09-27T23:17:00Z",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.5
+    },
+    {
+      "cve_id": "CVE-2026-65660",
+      "title_short": "Microsoft SharePoint 65660×8.8 在野",
+      "title_full": "Microsoft SharePoint CVE-2026-65660 · CVSS 8.8 · 在野利用",
+      "vendor": "Microsoft",
+      "product": "SharePoint",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.02101,
+        "percentile": 0.80969
+      },
+      "cwe": [
+        "CWE-94"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-25",
+        "due_date": "2026-09-28",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Microsoft SharePoint Code Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Microsoft SharePoint 存在RCE漏洞，CVSS 8.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.02。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65660"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660"
+        },
+        {
+          "name": "第三方",
+          "url": "https://blog.previdian.com/cve-2026-65660-previdian-observes-two-stage-sharepoint-exploitation-attempts/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-65660"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-25",
+      "modified": "2026-09-25",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 11.842
+    },
+    {
+      "cve_id": "CVE-2026-87902",
+      "title_short": "WordPress Core 87902×8.1 在野",
+      "title_full": "WordPress Core CVE-2026-87902 · CVSS 8.1 · 在野利用",
+      "vendor": "WordPress",
+      "product": "Core",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.1,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.18166,
+        "percentile": 0.97112
+      },
+      "cwe": [
+        "CWE-98"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-25",
+        "due_date": "2026-09-28",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "WordPress Core Remote File Inclusion Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "WordPress Core 存在RCE漏洞，CVSS 8.1，已列入 CISA KEV 已知在野利用清單，EPSS 0.18。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remote code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87902"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp"
+        },
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/articles/cve-2026-87902-attackers-started-probing-wordpress-sites-hours-after-the-patch/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87902"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-25",
+      "modified": "2026-09-25",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 11.463
+    },
+    {
+      "cve_id": "CVE-2026-67279",
+      "title_short": "MikroTik RouterOS 67279×6.9 在野",
+      "title_full": "MikroTik RouterOS CVE-2026-67279 · CVSS 6.9 · 在野利用",
+      "vendor": "MikroTik",
+      "product": "RouterOS",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "4.0",
+        "score": 6.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01027,
+        "percentile": 0.62194
+      },
+      "cwe": [
+        "CWE-841"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-25",
+        "due_date": "2026-09-28",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "MikroTik RouterOS 存在其他漏洞，CVSS 6.9，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthenticated exploitation of CVE-2026-86060.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67279"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://mikrotik.com/supportsec/september-2026-vulnerability/?utm_source=chatgpt.com"
+        },
+        {
+          "name": "第三方",
+          "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve"
+        },
+        {
+          "name": "第三方",
+          "url": "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/"
+        },
+        {
+          "name": "參考",
+          "url": "https://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802"
+        },
+        {
+          "name": "參考",
+          "url": "https://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801"
+        },
+        {
+          "name": "參考",
+          "url": "https://forum.mikrotik.com/t/7-24-2-stable-is-released/272800"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-25",
+      "modified": "2026-09-25",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 9.921
+    },
+    {
+      "cve_id": "CVE-2026-100886",
+      "title_short": "未標示產品 100886×9.3",
+      "title_full": "未標示產品 CVE-2026-100886 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-287"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.3。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "A vulnerability was identified in Seetong T8108, T8108P, T8116 and T8232 4.6.1.4-build202604241011. The affected element is an unknown function of the component Debug Service. Such manipulation leads to improper authentication. The attack may be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/heapframe/seetong-ts81xxd3x-rce"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/cve/CVE-2026-100886"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/submit/916434"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/410835"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/410835/cti"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-27T23:16:59Z",
+      "modified": "2026-09-27T23:16:59Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 9.3
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-747: Wireshark RF4CE Packet Parsing Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-747/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-96417"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-746: Foxit PDF Reader Annotation Use-After-Free Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-746/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-91818"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-745: Foxit PDF Reader AcroForm Out-of-Bounds Read Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-745/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-91817"
+      ]
+    }
+  ]
+}

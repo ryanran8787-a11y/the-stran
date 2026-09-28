@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-27T06:33:00Z",
-  "total": 2,
+  "updated_at": "2026-09-28T00:25:49Z",
+  "total": 3,
   "reports": [
+    {
+      "date": "2026-09-28",
+      "kept": 6,
+      "kev": 5,
+      "critical": 3,
+      "in_the_wild": 5,
+      "generated_at": "2026-09-28T00:25:49Z",
+      "generated_by": "template",
+      "top": [
+        "Citrix NetScaler 88771×9.5 在野",
+        "Citrix NetScaler 88772×9.5 在野",
+        "Microsoft SharePoint 65660×8.8 在野"
+      ]
+    },
     {
       "date": "2026-09-27",
       "kept": 29,
