@@ -1,0 +1,981 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29T01:37:12Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-09-28T22:00:00Z",
+    "to": "2026-09-29T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 288,
+    "kept": 17,
+    "kev": 2,
+    "critical": 17,
+    "in_the_wild": 2,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 2,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 137,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 145,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-88771",
+      "title_short": "Citrix NetScaler 88771×9.5 在野",
+      "title_full": "Citrix NetScaler CVE-2026-88771 · CVSS 9.5 · 在野利用",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-119",
+        "CWE-20"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-27",
+        "due_date": "2026-09-30",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Citrix NetScaler Improper Input Validation Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Citrix NetScaler 存在安全漏洞，CVSS 9.5，已列入 CISA KEV 已知在野利用清單。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-27",
+      "modified": "2026-09-27",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 12.5
+    },
+    {
+      "cve_id": "CVE-2026-88772",
+      "title_short": "Citrix NetScaler 88772×9.5 在野",
+      "title_full": "Citrix NetScaler CVE-2026-88772 · CVSS 9.5 · 在野利用",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-119"
+      ],
+      "tags": [
+        "RCE",
+        "阻斷服務",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-27",
+        "due_date": "2026-09-30",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Citrix NetScaler 存在RCE、阻斷服務漏洞，CVSS 9.5，已列入 CISA KEV 已知在野利用清單。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88772"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88772"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-27",
+      "modified": "2026-09-27",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.5
+    },
+    {
+      "cve_id": "CVE-2025-65823",
+      "title_short": "Meatmeet Pro Wifi \\& Bluetooth Meat Thermometer Firmware 65823×9.8",
+      "title_full": "Meatmeet Pro Wifi \\& Bluetooth Meat Thermometer Firmware CVE-2025-65823 · CVSS 9.8",
+      "vendor": "Meatmeet",
+      "product": "Meatmeet Pro Wifi \\& Bluetooth Meat Thermometer Firmware",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-798"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Meatmeet Pro Wifi \\& Bluetooth Meat Thermometer Firmware 存在認證繞過漏洞，CVSS 9.8。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "The Meatmeet Pro was found to be shipped with hardcoded Wi-Fi credentials in the firmware, for the test network it was developed on. If an attacker retrieved this, and found the physical location of the Wi-Fi network, they could gain unauthorized access to the Wi-Fi network of the vendor. Additionally, if an attacker were located in close physical proximity to the device when it was first set up, they may be able to force the device to auto-connect to an attacker-controlled access point by setting the SSID and password to the same as which was found in the firmware file.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://gist.github.com/dead1nfluence/4dffc239b4a460f41a03345fd8e5feb5#file-hardcoded-credentials-esp32-md"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/dead1nfluence/Meatmeet-Pro-Vulnerabilities/blob/main/Device/Hardcoded-Credentials.md"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-12-10T21:16:08Z",
+      "modified": "2026-09-28T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-13214",
+      "title_short": "未標示產品 13214×9.8",
+      "title_full": "未標示產品 CVE-2026-13214 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-787"
+      ],
+      "tags": [
+        "記憶體破壞",
+        "RCE",
+        "阻斷服務"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞、RCE漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "The OCPP 1.6 client in subsys/net/lib/ocpp/ocpp_j.c contains a stack buffer overflow in parse_getconfig_msg(). When handling a GetConfiguration request from the central system, the handler copied the attacker-controlled JSON \"key\" string into the caller's fixed 50-byte stack buffer (skey[CISTR50], declared in subsys/net/lib/ocpp/ocpp.c) using an unbounded strcpy(). The parsed key value points directly into the receive buffer, so its length is bounded only by the message size (CONFIG_OCPP_RECV_BUFFER_SIZE, default 2048).\n\nThe GetConfiguration message is delivered over the WebSocket connection that the charge point opens to its configured central system. The reader thread ocpp_wsreader() reads the message into ui->recv_buf and dispatches it to parse_getconfig_msg() via the PDU function table. An attacker who controls the central system endpoint, or a man-in-the-middle on an unencrypted connection, can send a GetConfiguration request whose \"key\" field exceeds 50 bytes and overflow the reader thread's stack with attacker-chosen bytes.\n\nThe consequence is a remotely triggerable stack smash on the OCPP reader thread: at minimum a denial of service, and plausibly remote code execution depending on build-time hardening such as stack canaries and MPU configuration. The fix replaces the strcpy() with a bounded strncpy(key, payload.key[0], CISTR50 - 1) followed by explicit NUL termination, matching the bounded copies already used by the sibling handlers.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/zephyrproject-rtos/zephyr/commit/afbf880b04188ae53451a0ade4ac62b654fdff34"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-fqhf-6v24-4px2"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-08-25T05:17:20Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-49845",
+      "title_short": "Apache Hive 49845×9.8",
+      "title_full": "Apache Hive CVE-2026-49845 · CVSS 9.8",
+      "vendor": "Apache",
+      "product": "Hive",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-94"
+      ],
+      "tags": [
+        "RCE",
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Apache Hive 存在RCE、SQLi漏洞，CVSS 9.8。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "SQL injection in Hive Metastore direct SQL partition-name resolution in Apache Hive before 4.2.1 on all platforms allows authenticated users with access to Hive Metastore APIs to read, modify, or affect unintended partition metadata (including statistics updates, truncation targets, and file-metadata cache operations) via crafted partition names in metastore RPC requests when direct SQL is enabled (the default). Users are recommended to upgrade to version 4.2.1, which fixes this issue.\n\nDetails about the issue:\nSeveral Hive Metastore RPCs resolve partitions by full partition name (PART_NAME) through direct-SQL helpers. In those paths, client-supplied partition names are embedded into SQL using string concatenation (DirectSqlUpdatePart.quoteString() → '...') instead of bind parameters. A partition name containing a single quote (and crafted SQL) can alter the generated WHERE clause so that lookups intended for one partition match additional rows. That can affect reads, stats updates, truncate targets, metadata-cache targets, and related operations when metastore.try.direct.sql is enabled (default: true). An authenticated or network-trusted caller with the ability to invoke Hive Metastore partition-name APIs against a target table (directly or via Hive/other clients), when direct SQL is enabled can perform this attack. Also, the impact is mainly within table & partition targeting (read/update/truncate/drop/cache the wrong partitions in a table they can reference), not arbitrary cross-database access via this bug alone.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/apache/hive"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/apache/hive/commit/ca64f08a8e43db9845b47d5fa2e96f7fdea7288e"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://issues.apache.org/jira/browse/HIVE-29622"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://lists.apache.org/thread/6d56mk501fp4f8cb5wvrpj2jwd9knt05"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-08-25T11:16:53Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-90048",
+      "title_short": "未標示產品 90048×9.8",
+      "title_full": "未標示產品 CVE-2026-90048 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.8。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "In the Linux kernel, the following vulnerability has been resolved:\n\nfs/ntfs3: fix slab-out-of-bounds write in ni_create_attr_list()\n\nni_create_attr_list() allocates a fixed buffer of al_aligned(record_size)\n(== record_size) bytes and then walks every attribute of the primary MFT\nrecord, writing one ATTR_LIST_ENTRY per attribute and advancing the cursor\nby le_size(name_len), with no check against the end of the buffer; the\ntotal size is only computed after the loop.\n\nA minimum-size resident attribute occupies SIZEOF_RESIDENT (0x18 = 24)\nbytes on disk, but an unnamed attribute expands to le_size(0) (0x20 = 32)\nbytes in the list.  Because the number of attributes in a record is not\nbounded (mi_enum_attr() accepts arbitrarily many equal-type, nameless\nminimum-size attributes), a crafted record packed with such attributes\nproduces a list larger than record_size and overflows the heap buffer.\n\nThis is reachable from a crafted, loop-mounted NTFS image: opening the file\nand adding an attribute (e.g. via setxattr) drives ntfs_set_ea() ->\nni_insert_resident() -> ni_insert_attr() -> ni_ins_attr_ext() ->\nni_create_attr_list().\n\n  BUG: KASAN: slab-out-of-bounds in ni_create_attr_list+0xc48/0x1058\n  Write of size 4 at addr ffff000008984c00 by task setfattr/345\n   ni_create_attr_list+0xc48/0x1058\n   ni_ins_attr_ext+0x510/0x7c0\n   ni_insert_attr+0x3f8/0x70c\n   ni_insert_resident+0xc8/0x3b0\n   ntfs_set_ea+0x66c/0xd28\n   ntfs_setxattr+0x4d8/0x5b0\n   __arm64_sys_setxattr+0xa4/0x124\n  Allocated by task 345:\n   ni_create_attr_list+0x188/0x1058\n  The buggy address belongs to the cache kmalloc-1k of size 1024\n  (the write lands at object+1024).\n\nSize the buffer from the actual attributes instead of assuming a single\nrecord_size is always enough.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/7c4841e2a62794a3bab7c1ff0540580f387e377f"
+        },
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/7e9aee7e4d9767cc3e423b3beecb01c7ebb6bbcd"
+        },
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/a84f3db72561c4d9281c5ff721ce46b9ffa7f30e"
+        },
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/d07e281f2a7710502985d6f80b95ddac8f4e81d5"
+        },
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/fa2215cf451414b0512cd6f7d37a057893811f4d"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-16T11:17:18Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-77136",
+      "title_short": "未標示產品 77136×9.5",
+      "title_full": "未標示產品 CVE-2026-77136 · CVSS 9.5",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-1336"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.5。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "The extension passes the raw value of a form field configured as \"This field contains the name of the sender\" directly into a Fluid View as template source, without any sanitization, and renders it. An anonymous, unauthenticated user can submit Fluid template syntax in that field to execute arbitrary Fluid ViewHelpers leading to disclosure of server configuration, environment variables and application source, and potentially remote code execution. Exploitation requires only that a form field is configured as the sender_name field, a common and default-adjacent Powermail configuration. No authentication or user interaction beyond a normal form submission is required. This vulnerability is reported to be actively exploited in the wild.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://typo3.org/security/advisory/typo3-ext-sa-2026-022"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-08-25T09:17:34Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 9.5
+    },
+    {
+      "cve_id": "CVE-2026-57909",
+      "title_short": "未標示產品 57909×9.4",
+      "title_full": "未標示產品 CVE-2026-57909 · CVSS 9.4",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-94",
+        "CWE-306"
+      ],
+      "tags": [
+        "RCE",
+        "認證繞過",
+        "路徑穿越"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE、認證繞過漏洞，CVSS 9.4。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "A path traversal vulnerability in WatchGuard Agent allows a remote, unauthenticated attacker on an adjacent network to execute arbitrary code on an affected system.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://psirt.watchguard.com/CVE-2026-57909"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-08-25T12:16:24Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 9.4
+    },
+    {
+      "cve_id": "CVE-2026-58146",
+      "title_short": "未標示產品 58146×9.4",
+      "title_full": "未標示產品 CVE-2026-58146 · CVSS 9.4",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.4。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "WNC T-Mobile 5G Box IDU router is vulnerable to OS command injection vulnerability. The vulnerability exists within the /cgi-bin/portal.cgi endpoint, specifically through the cli_cookie POST parameter. The cli_cookie parameter value is directly concatenated into a find command string without proper sanitization. This allows a remote, unauthenticated attacker to inject and execute arbitrary shell commands as root on the underlying operating system.\n\nThis issue has been fixed in firmware version 1.1.0.651412",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://cert.pl/posts/2026/09/CVE-2026-40854"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-16T12:17:04Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 9.4
+    },
+    {
+      "cve_id": "CVE-2026-102361",
+      "title_short": "未標示產品 102361×9.3",
+      "title_full": "未標示產品 CVE-2026-102361 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-97hh-9379-xqmm",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-306"
+      ],
+      "tags": [
+        "認證繞過",
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過、接管漏洞，CVSS 9.3。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "mall4j through 4.0 contains a missing authentication vulnerability in the PUT /user/updatePwd endpoint that allows unauthenticated attackers to reset any storefront account password. Attackers can supply a target username in the request body to overwrite passwords without verification, enabling account takeover and access to orders and personal data.",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-97hh-9379-xqmm"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102361"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/LinYuanyi1/cve-request-poc/blob/114b3f0d149e50a7678f591bf8043399fc9ac96c/mall4j/A01_updatepwd_account_takeover.py"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/gz-yami/mall4j"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/gz-yami/mall4j/blob/ffc672fc1aa4320ce02d0b93853bb456ae0a4dae/yami-shop-api/src/main/java/com/yami/shop/api/controller/UserRegisterController.java#L78-L100"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/mall4j-through-4.0-missing-authentication-in-password-update-endpoint"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29T00:31:38Z",
+      "modified": "2026-09-29T00:31:46Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-40855",
+      "title_short": "未標示產品 40855×9.3",
+      "title_full": "未標示產品 CVE-2026-40855 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.3。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "WNC T-Mobile 5G Box IDU router is vulnerable to a command injection. The vulnerability exists in the ping functionality within the /cgi-bin/portal.cgi endpoint, specifically affecting the ping_ip, ping_size, and ping_times POST parameters. The root cause is the failure to verify and sanitize user-supplied input before incorporating it into a system command. This allows an authenticated attacker to execute arbitrary commands on the shell and gain root access to the system.This issue has been fixed in firmware version 1.1.0.651412",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://cert.pl/posts/2026/09/CVE-2026-40854"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-16T12:17:03Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-57910",
+      "title_short": "未標示產品 57910×9.3",
+      "title_full": "未標示產品 CVE-2026-57910 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-306",
+        "CWE-347",
+        "CWE-494"
+      ],
+      "tags": [
+        "認證繞過",
+        "供應鏈"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過、供應鏈漏洞，CVSS 9.3。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Improper authentication in the WatchGuard Agent allows an unauthenticated attacker with network access to cause the agent to execute arbitrary code with elevated privileges.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://psirt.watchguard.com/CVE-2026-57910"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-08-25T12:16:24Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 12,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-58147",
+      "title_short": "未標示產品 58147×9.3",
+      "title_full": "未標示產品 CVE-2026-58147 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.3。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "WNC T-Mobile 5G Box IDU router contains an OS command injection vulnerability in the portal.cgi component's password change functionality. The application improperly neutralizes special elements in the http_passwd_hidden and http_passwdConfirm_hidden parameters, allowing an authenticated attacker to execute arbitrary commands on the underlying operating system with root privileges.This issue has been fixed in firmware version 1.1.0.651412",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://cert.pl/posts/2026/09/CVE-2026-40854"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-16T12:17:05Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 13,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-77138",
+      "title_short": "未標示產品 77138×9.3",
+      "title_full": "未標示產品 CVE-2026-77138 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化",
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化、RCE漏洞，CVSS 9.3。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "The extension fails to safely process untrusted client input of an attacker-controlled cookie directly to PHP's unserialize(). A remote, unauthenticated attacker can supply a crafted serialized payload to trigger PHP Object Injection, leading to Remote Code Execution on the TYPO3 server.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://typo3.org/security/advisory/typo3-ext-sa-2026-014"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-08-25T09:17:34Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 14,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-90049",
+      "title_short": "未標示產品 90049×9.3",
+      "title_full": "未標示產品 CVE-2026-90049 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: skbuff: don't skb_tx_error() the source skb in skb_zerocopy()\n\nskb_zerocopy() copies frags from @from into @to. On an\nskb_orphan_frags() failure it calls skb_tx_error(@from), a destructive\noperation on the source skb the copy helper does not own. That completes\n@from's zerocopy uarg and clears SKBFL_ALL_ZEROCOPY, including the\nSKBFL_SHARED_FRAG page-ownership marker.\n\nBoth callers already report the failure on their own drop path.\nnfnetlink_queue does it at nla_put_failure, and Open vSwitch does it in\nthe flow-miss drop arm of ovs_dp_process_packet(), so nothing is lost by\ndropping it here.\n\nOn Open vSwitch's OVS_ACTION_ATTR_USERSPACE path the skb is not freed on\nthis error: do_execute_actions() ignores output_userspace()'s return\nvalue and, unless the upcall was the last action, keeps forwarding the\nsame skb through the flow's remaining actions. The uarg is completed\nwhile that skb is still in flight, telling the producer its buffers are\nfree, and SKBFL_SHARED_FRAG is cleared on an skb the rest of the stack\nstill handles. That flag is what makes esp_input() call skb_cow_data()\ninstead of decrypting in place, so a later local ESP delivery can\ndecrypt over frags the skb does not own privately.\n\nLeave error reporting to the callers.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/04dd250a78e268af3e7124beb1dc10ec1dd88d60"
+        },
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/767ec2a65cc022d303b0c9c12811e7db22057341"
+        },
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/8069643ae64dfdf634b6c78c7f622e5323031436"
+        },
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/849bdb83123760a865bcb2970127f4c0b9423ba3"
+        },
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/8ece906150128d5ec2462aabcc978c568433eca4"
+        },
+        {
+          "name": "參考",
+          "url": "https://git.kernel.org/stable/c/a13b1e80e5015cd732440b475c0ef443dc4a2157"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-16T11:17:18Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 15,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-102334",
+      "title_short": "未標示產品 102334×9.1",
+      "title_full": "未標示產品 CVE-2026-102334 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-pm9h-p429-j8c5",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.1,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-307"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.1。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Nginx Proxy Manager through 2.16.0 lacks rate-limiting on authentication endpoints, allowing unauthenticated attackers to make unlimited password guesses against any account. Attackers can brute-force login credentials via POST /api/tokens and subsequently guess TOTP codes via POST /api/tokens/2fa to gain full session access and administrative control.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/NginxProxyManager/nginx-proxy-manager"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/NginxProxyManager/nginx-proxy-manager/blob/v2.16.0/backend/app.js#L15-L58"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/NginxProxyManager/nginx-proxy-manager/blob/v2.16.0/backend/internal/2fa.js#L196-L240"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/NginxProxyManager/nginx-proxy-manager/blob/v2.16.0/backend/internal/token.js#L154-L182"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/NginxProxyManager/nginx-proxy-manager/pull/5908"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/nginx-proxy-manager-through-2.16.0-missing-brute-force-protection"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-pm9h-p429-j8c5"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102334"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-28T23:17:01Z",
+      "modified": "2026-09-29T00:31:39Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 16,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-55976",
+      "title_short": "Apache Hive 55976×9.1",
+      "title_full": "Apache Hive CVE-2026-55976 · CVSS 9.1",
+      "vendor": "Apache",
+      "product": "Hive",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-918"
+      ],
+      "tags": [
+        "SSRF"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Apache Hive 存在SSRF漏洞，CVSS 9.1。",
+      "impact_zh": "可誘使伺服器發送任意請求，觸及內網。",
+      "action_zh": "更新至修補版本，並限制服務的對外與內網連線。",
+      "description_en": "Server-Side Request Forgery (SSRF) in Avro SerDe schema resolution in Apache Hive before 4.2.1 allows an authenticated remote attacker with CREATE TABLE privilege to cause the Hive server to fetch an attacker-controlled URL when resolving the avro.schema.url table property on an Avro table that is subsequently queried. This can expose cloud instance metadata, internal network services, or local server files to the Hive process identity. Users are recommended to upgrade to version 4.2.1, which fixes this issue.\n\n\n\nAttacker access requirements:\n\n  *  Network access to HiveServer2 / Metastore: required (remote attacker model).\n  *  Valid Hive authentication: required.\n  *  CREATE TABLE (or equivalent) privilege: required, so the attacker can set avro.schema.url in table properties.\n  *  SELECT privilege on the malicious table: not required for the creator, who can typically query their own table; any other user granted SELECT can also trigger the fetch.\n  *  Write access to the table LOCATION: not required; the attack uses the schema URL, not the data path.\n  *  Admin / superuser privileges: not required; an ordinary authenticated user with DDL rights is sufficient.\n  *  External tables enabled: typically required in practice, and enabled by default in most deployments.\n\n\n\n\nDetection guidance:\n\n  *  Inspect metastore / Hive table metadata for Avro tables whose avro.schema.url uses unexpected schemes such as http, https, file, or ftp, or points at link-local / cloud metadata addresses (for example 169.254.169.254) or other internal hosts.\n  *  Review HiveServer2 and Metastore logs around CREATE/ALTER TABLE and queries against Avro tables for schema-resolution failures or outbound fetches of avro.schema.url.\n  *  Correlate CREATE TABLE / ALTER TABLE activity that sets avro.schema.url with subsequent SELECT activity on the same table, especially when the URL target is unusual for schema distribution.\n  *  On cloud deployments, check instance / VPC flow logs and metadata service access logs for unexpected requests from Hive host identities shortly after Avro DDL or query activity.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/apache/hive"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/apache/hive/commit/45049202df35cea382616624de3fe8d252aa2d00"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://issues.apache.org/jira/browse/HIVE-29671"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://lists.apache.org/thread/6d56mk501fp4f8cb5wvrpj2jwd9knt05"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-08-25T11:16:53Z",
+      "modified": "2026-09-28T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 17,
+      "generated_by": "template",
+      "risk_score": 9.1
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-747: Wireshark RF4CE Packet Parsing Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-747/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-96417"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-746: Foxit PDF Reader Annotation Use-After-Free Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-746/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-91818"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-745: Foxit PDF Reader AcroForm Out-of-Bounds Read Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-745/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-91817"
+      ]
+    }
+  ]
+}

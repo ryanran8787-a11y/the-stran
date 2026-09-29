@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-28T00:25:49Z",
-  "total": 3,
+  "updated_at": "2026-09-29T01:37:12Z",
+  "total": 4,
   "reports": [
+    {
+      "date": "2026-09-29",
+      "kept": 17,
+      "kev": 2,
+      "critical": 17,
+      "in_the_wild": 2,
+      "generated_at": "2026-09-29T01:37:12Z",
+      "generated_by": "template",
+      "top": [
+        "Citrix NetScaler 88771×9.5 在野",
+        "Citrix NetScaler 88772×9.5 在野",
+        "Meatmeet Pro Wifi \\& Bluetooth Meat Thermometer Firmware 65823×9.8"
+      ]
+    },
     {
       "date": "2026-09-28",
       "kept": 6,
