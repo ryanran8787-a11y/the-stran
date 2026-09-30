@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-29T01:37:12Z",
-  "total": 4,
+  "updated_at": "2026-09-30T01:10:34Z",
+  "total": 5,
   "reports": [
+    {
+      "date": "2026-09-30",
+      "kept": 16,
+      "kev": 3,
+      "critical": 15,
+      "in_the_wild": 3,
+      "generated_at": "2026-09-30T01:10:34Z",
+      "generated_by": "template",
+      "top": [
+        "Citrix NetScaler 88772×9.5 在野",
+        "Citrix NetScaler 88771×9.5 在野",
+        "Apple Multiple Products 86950×8.8 在野"
+      ]
+    },
     {
       "date": "2026-09-29",
       "kept": 17,

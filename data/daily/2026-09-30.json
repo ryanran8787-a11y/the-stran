@@ -1,0 +1,994 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T01:10:34Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-09-29T22:00:00Z",
+    "to": "2026-09-30T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 462,
+    "kept": 16,
+    "kev": 3,
+    "critical": 15,
+    "in_the_wild": 3,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 3,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 90,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 365,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-88772",
+      "title_short": "Citrix NetScaler 88772×9.5 在野",
+      "title_full": "Citrix NetScaler CVE-2026-88772 · CVSS 9.5 · 在野利用",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01301,
+        "percentile": 0.6933
+      },
+      "cwe": [
+        "CWE-119"
+      ],
+      "tags": [
+        "RCE",
+        "阻斷服務",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-27",
+        "due_date": "2026-09-30",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Citrix NetScaler 存在RCE、阻斷服務漏洞，CVSS 9.5，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88772"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88772"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-27",
+      "modified": "2026-09-27",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 12.526
+    },
+    {
+      "cve_id": "CVE-2026-88771",
+      "title_short": "Citrix NetScaler 88771×9.5 在野",
+      "title_full": "Citrix NetScaler CVE-2026-88771 · CVSS 9.5 · 在野利用",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01063,
+        "percentile": 0.63292
+      },
+      "cwe": [
+        "CWE-119",
+        "CWE-20"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-27",
+        "due_date": "2026-09-30",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Citrix NetScaler Improper Input Validation Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Citrix NetScaler 存在安全漏洞，CVSS 9.5，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-27",
+      "modified": "2026-09-27",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.521
+    },
+    {
+      "cve_id": "CVE-2026-86950",
+      "title_short": "Apple Multiple Products 86950×8.8 在野",
+      "title_full": "Apple Multiple Products CVE-2026-86950 · CVSS 8.8 · 在野利用",
+      "vendor": "Apple",
+      "product": "Multiple Products",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00812,
+        "percentile": 0.55295
+      },
+      "cwe": [
+        "CWE-787"
+      ],
+      "tags": [
+        "RCE",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-29",
+        "due_date": "2026-10-02",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Apple Multiple Products 存在RCE、記憶體破壞漏洞，CVSS 8.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86950"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.apple.com/en-us/149226"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.apple.com/en-us/149228"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.apple.com/en-us/149229"
+        },
+        {
+          "name": "第三方",
+          "url": "http://seclists.org/fulldisclosure/2026/Sep/89"
+        },
+        {
+          "name": "第三方",
+          "url": "http://seclists.org/fulldisclosure/2026/Sep/90"
+        },
+        {
+          "name": "第三方",
+          "url": "http://seclists.org/fulldisclosure/2026/Sep/91"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29",
+      "modified": "2026-09-29",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 11.816
+    },
+    {
+      "cve_id": "CVE-2026-71379",
+      "title_short": "未標示產品 71379×10.0",
+      "title_full": "未標示產品 CVE-2026-71379 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-qxj4-w6f9-5q44",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 10.0,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-552"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 10.0。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "The file export endpoint allows any unauthenticated attacker to export arbitrary database tables by sending a crafted POST request.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-272-02.json"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.toptech.com/blog/tms7-version-7-8-strengthens-security"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-qxj4-w6f9-5q44"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71379"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29T22:18:21Z",
+      "modified": "2026-09-30T00:32:46Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-96587",
+      "title_short": "未標示產品 96587×10.0",
+      "title_full": "未標示產品 CVE-2026-96587 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 10.0,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-798"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 10.0。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "The Viidure Android application embeds permanent, plaintext cloud storage credentials within its compiled code. These credentials provide full access to critical platform storage, including the ability to read, modify, or delete operational files such as firmware and application binaries.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-272-07.json"
+        },
+        {
+          "name": "參考",
+          "url": "https://viidure.app/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29T21:19:39Z",
+      "modified": "2026-09-29T22:19:05Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-95281",
+      "title_short": "未標示產品 95281×9.6",
+      "title_full": "未標示產品 CVE-2026-95281 · CVSS 9.6",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.6。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Buffer overflow in ANGLE in Google Chrome on on Android prior to 154.0.8037.57 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0856730748.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://issues.chromium.org/issues/551708184"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29T18:17:19Z",
+      "modified": "2026-09-29T22:19:04Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 9.6
+    },
+    {
+      "cve_id": "CVE-2026-70356",
+      "title_short": "未標示產品 70356×9.4",
+      "title_full": "未標示產品 CVE-2026-70356 · CVSS 9.4",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-63hp-3v6g-vpmq",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.4。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "The TMS file upload endpoint fails to enforce server-side file type restrictions, allowing an attacker to upload and execute arbitrary PHP files on the web server.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-272-02.json"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.toptech.com/blog/tms7-version-7-8-strengthens-security"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-63hp-3v6g-vpmq"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70356"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29T22:18:16Z",
+      "modified": "2026-09-30T00:32:46Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 9.4
+    },
+    {
+      "cve_id": "CVE-2026-100291",
+      "title_short": "未標示產品 100291×9.3",
+      "title_full": "未標示產品 CVE-2026-100291 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-1188"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "In Anjvision YSSD‑RTMP‑H5 firmware version 3.3.2.4, several ONVIF service endpoints process management requests without enforcing required authentication. This could allow an unauthorized attacker to access sensitive device operations.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29T20:17:09Z",
+      "modified": "2026-09-29T22:17:04Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-103040",
+      "title_short": "未標示產品 103040×9.3",
+      "title_full": "未標示產品 CVE-2026-103040 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-c838-68vr-jxfw",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化",
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化、RCE漏洞，CVSS 9.3。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "LightLLM through 1.2.0 contains a remote code execution vulnerability in the router profiler service when started with --enable_profiling flag. The service exposes an unauthenticated RPyC server with pickle deserialization enabled, allowing attackers to execute arbitrary code by sending crafted serialized objects to the profiler command queue.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/ModelTC/LightLLM"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/ModelTC/LightLLM/issues/1597"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/router/profiler_service.py#L32-L34"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/router/profiler_service.py#L46-L50"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/lightllm-through-1.2.0-unauthenticated-remote-code-execution-via-router-profiler-rpyc-service"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-c838-68vr-jxfw"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103040"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29T23:17:21Z",
+      "modified": "2026-09-30T00:32:47Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-103041",
+      "title_short": "未標示產品 103041×9.3",
+      "title_full": "未標示產品 CVE-2026-103041 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-3cfg-rxhx-vc58",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化漏洞，CVSS 9.3。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "LightLLM through 1.2.0 multimodal deployments expose an unauthenticated RPyC cache service with pickle deserialization enabled on all interfaces. Attackers can send crafted serialized objects to exposed cache methods to execute arbitrary code with service privileges.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/ModelTC/LightLLM"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/ModelTC/LightLLM/issues/1596"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/embed_cache/manager.py#L29-L31"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/embed_cache/manager.py#L66"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/lightllm-through-1.2.0-unauthenticated-remote-code-execution-via-embed-cache-rpyc-service"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-3cfg-rxhx-vc58"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103041"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29T23:17:21Z",
+      "modified": "2026-09-30T00:32:30Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-88880",
+      "title_short": "未標示產品 88880×9.2",
+      "title_full": "未標示產品 CVE-2026-88880 · CVSS 9.2",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00504,
+        "percentile": 0.40661
+      },
+      "cwe": [
+        "CWE-601"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.2，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Renovate before 44.11.3 fails to validate Link header destinations when following GitLab server pagination, allowing malicious servers to redirect credential-bearing requests. Attackers controlling a compromised GitLab server can specify a Link header pointing to attacker-controlled infrastructure to exfiltrate authentication credentials.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/renovatebot/renovate/security/advisories/GHSA-9hmg-9h89-jhmx"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/renovate-before-44.11.3-credential-exfiltration-via-link-header"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-10T14:17:16Z",
+      "modified": "2026-09-29T23:17:23Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 9.21
+    },
+    {
+      "cve_id": "CVE-2026-88881",
+      "title_short": "未標示產品 88881×9.2",
+      "title_full": "未標示產品 CVE-2026-88881 · CVSS 9.2",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00409,
+        "percentile": 0.326
+      },
+      "cwe": [
+        "CWE-601"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.2，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Renovate, a dependency update tool, follows pagination links supplied by the GitHub server in the HTTP `Link` header when interacting with GitHub.com, GitHub Enterprise Cloud, or GitHub Enterprise Server, and sends the credentials configured for that host to the URL given as the 'next' page. Because the pagination URL is not validated against the host originally contacted, a malicious or compromised GitHub server can return a `Link` header pointing to an attacker-controlled host and cause Renovate to disclose those credentials to it. Exploitation requires that the GitHub server Renovate talks to (as the repository host or as a datasource such as github-releases, github-tags, or git-refs) is already malicious or compromised. The issue is fixed in renovate 44.11.3 (npm and renovate/renovate container images), Mend Renovate CE/EE images and the mend-renovate-ce helm chart 15.4.0, and the mend-renovate-enterprise-edition helm chart 10.4.0. There is no workaround; the pre-existing RENOVATE_X_REBASE_PAGINATION_LINKS option disables the new host check and should only be used with servers that intentionally use different pagination hosts.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/renovatebot/renovate/security/advisories/GHSA-w57v-h33h-835c"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/renovate-before-44.11.3-credential-exfiltration-via-link-header-2"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-10T14:17:16Z",
+      "modified": "2026-09-29T23:17:23Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 12,
+      "generated_by": "template",
+      "risk_score": 9.208
+    },
+    {
+      "cve_id": "CVE-2026-88882",
+      "title_short": "未標示產品 88882×9.2",
+      "title_full": "未標示產品 CVE-2026-88882 · CVSS 9.2",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00409,
+        "percentile": 0.326
+      },
+      "cwe": [
+        "CWE-601"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.2，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Renovate is a dependency update automation tool. In versions before 44.11.2 (and Mend Renovate CE/EE images and charts before 15.4.0, and mend-renovate-enterprise-edition helm chart before 10.4.0), when listing new package versions from a NuGet registry Renovate follows pagination URLs supplied by the registry in the HTTP `Link` header without verifying that the target has the same origin as the configured registry. Registry credentials are attached to the request for the 'next' page, so a malicious or compromised NuGet registry can return a `Link` header pointing at an attacker-controlled server and cause Renovate to send the registry credentials to that server. Exploitation requires the remote registry to be malicious or compromised; such a registry would normally already have received the credentials on the initial request, so the issue primarily allows the credentials to be delivered to an additional, attacker-chosen host. The fix restricts pagination to the same origin; the previous behaviour can be re-enabled with the RENOVATE_X_NUGET_PAGINATION_ALLOW_CROSS_ORIGIN option.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/renovatebot/renovate/security/advisories/GHSA-rh7w-ccch-gh49"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/renovate-before-44.11.2-credential-exfiltration-via-link-header"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-10T14:17:16Z",
+      "modified": "2026-09-29T23:17:23Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 13,
+      "generated_by": "template",
+      "risk_score": 9.208
+    },
+    {
+      "cve_id": "CVE-2026-88887",
+      "title_short": "未標示產品 88887×9.2",
+      "title_full": "未標示產品 CVE-2026-88887 · CVSS 9.2",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00409,
+        "percentile": 0.32601
+      },
+      "cwe": [
+        "CWE-601"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.2，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Renovate is a dependency update automation tool. When listing tags/digests for a container image, Renovate follows pagination links supplied by the remote registry in the HTTP Link header and attaches the registry credentials to the follow-up request without verifying that the pagination URL has the same origin as the original registry. A malicious or compromised container registry can therefore specify a Link header pointing to an attacker-controlled host and receive the credentials Renovate uses for that registry. Exploitation requires that the target has container (Docker) dependencies and is already interacting with the malicious or compromised registry. This is fixed in Renovate 44.11.2 (npm and renovate/renovate images), Mend Renovate CE/EE 15.4.0 and the mend-renovate-enterprise-edition Helm chart 10.4.0; the same-origin check can be disabled with RENOVATE_X_DOCKER_PAGINATION_ALLOW_CROSS_ORIGIN.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/renovatebot/renovate/security/advisories/GHSA-v73q-hvqx-hxwx"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/renovate-before-44.11.2-credential-exfiltration-via-link-header-2"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-10T14:17:17Z",
+      "modified": "2026-09-29T23:17:24Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 14,
+      "generated_by": "template",
+      "risk_score": 9.208
+    },
+    {
+      "cve_id": "CVE-2026-86131",
+      "title_short": "未標示產品 86131×9.2",
+      "title_full": "未標示產品 CVE-2026-86131 · CVSS 9.2",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-hrq5-fh6w-qjmh",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-94"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.2。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "A code injection vulnerability in WatchGuard Fireware OS's BOVPN Over TLS client configuration handling allows an attacker who controls the remote VPN server to execute arbitrary commands as root on the connecting Firebox.",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-hrq5-fh6w-qjmh"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86131"
+        },
+        {
+          "name": "參考",
+          "url": "https://psirt.watchguard.com/CVE-2026-86131"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-30T00:32:48Z",
+      "modified": "2026-09-30T00:32:48Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 15,
+      "generated_by": "template",
+      "risk_score": 9.2
+    },
+    {
+      "cve_id": "CVE-2026-84436",
+      "title_short": "未標示產品 84436×9.1",
+      "title_full": "未標示產品 CVE-2026-84436 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.1。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "IBM Guardium Data Protection 12.2 is vulnerable to command injection in the certificate export CLI functionality, allowing a privileged authenticated CLI user to execute arbitrary commands with root privileges.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.ibm.com/support/pages/node/7288040"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29T18:17:17Z",
+      "modified": "2026-09-29T22:19:01Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 16,
+      "generated_by": "template",
+      "risk_score": 9.1
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-747: Wireshark RF4CE Packet Parsing Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-747/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-96417"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-746: Foxit PDF Reader Annotation Use-After-Free Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-746/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-91818"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-745: Foxit PDF Reader AcroForm Out-of-Bounds Read Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-745/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-91817"
+      ]
+    }
+  ]
+}
