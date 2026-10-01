@@ -1,0 +1,4796 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-01",
+  "generated_at": "2026-10-01T01:10:01Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-09-30T22:00:00Z",
+    "to": "2026-10-01T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 1240,
+    "kept": 95,
+    "kev": 4,
+    "critical": 93,
+    "in_the_wild": 4,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 2,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 1034,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 200,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2025-21042",
+      "title_short": "Samsung Android 21042×9.8 在野",
+      "title_full": "Samsung Android CVE-2025-21042 · CVSS 9.8 · 在野利用",
+      "vendor": "Samsung",
+      "product": "Android",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.3317,
+        "percentile": 0.98316
+      },
+      "cwe": [
+        "CWE-787"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2025-11-10",
+        "due_date": "2025-12-01",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Samsung Mobile Devices Out-of-Bounds Write Vulnerability",
+        "required_action_en": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable."
+      },
+      "summary_zh": "Samsung Android 存在記憶體破壞漏洞，CVSS 9.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.33。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Out-of-bounds write in libimagecodec.quram.so prior to SMR Apr-2025 Release 1 allows remote attackers to execute arbitrary code.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://security.samsungmobile.com/securityUpdate.smsb?year=2025&month=04"
+        },
+        {
+          "name": "第三方",
+          "url": "https://unit42.paloaltonetworks.com/landfall-is-new-commercial-grade-android-spyware/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-21042"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-12T08:15:44Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd",
+        "cisa_kev"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 13.463
+    },
+    {
+      "cve_id": "CVE-2026-76504",
+      "title_short": "Cisco Catalyst SD-WAN Manager 76504×9.8 在野",
+      "title_full": "Cisco Catalyst SD-WAN Manager CVE-2026-76504 · CVSS 9.8 · 在野利用",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Manager",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-177"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-30",
+        "due_date": "2026-10-03",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Cisco Catalyst SD-WAN Manager 存在認證繞過漏洞，CVSS 9.8，已列入 CISA KEV 已知在野利用清單。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "A vulnerability in the API session-based authentication management of Cisco Catalyst SD-WAN Manager could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user.\r\n\r\nThis vulnerability is due to improper handling of URI encoding in an HTTP request, which allows the request to bypass an authentication rule that is intended to restrict access to a specific API endpoint. An attacker could exploit this vulnerability by sending a crafted HTTP request to the API of the affected system. A successful exploit could allow the attacker to bypass authentication and gain access to the API as the admin user.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76504"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-30",
+      "modified": "2026-09-30T22:28:51Z",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.8
+    },
+    {
+      "cve_id": "CVE-2026-86950",
+      "title_short": "Apple Multiple Products 86950×8.8 在野",
+      "title_full": "Apple Multiple Products CVE-2026-86950 · CVSS 8.8 · 在野利用",
+      "vendor": "Apple",
+      "product": "Multiple Products",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00812,
+        "percentile": 0.55295
+      },
+      "cwe": [
+        "CWE-787"
+      ],
+      "tags": [
+        "RCE",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-29",
+        "due_date": "2026-10-02",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Apple Multiple Products 存在RCE、記憶體破壞漏洞，CVSS 8.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86950"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.apple.com/en-us/149226"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.apple.com/en-us/149228"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.apple.com/en-us/149229"
+        },
+        {
+          "name": "第三方",
+          "url": "http://seclists.org/fulldisclosure/2026/Sep/89"
+        },
+        {
+          "name": "第三方",
+          "url": "http://seclists.org/fulldisclosure/2026/Sep/90"
+        },
+        {
+          "name": "第三方",
+          "url": "http://seclists.org/fulldisclosure/2026/Sep/91"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29",
+      "modified": "2026-09-29",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 11.816
+    },
+    {
+      "cve_id": "CVE-2025-66376",
+      "title_short": "Synacor Zimbra Collaboration Suite 66376×6.1 在野",
+      "title_full": "Synacor Zimbra Collaboration Suite CVE-2025-66376 · CVSS 6.1 · 在野利用",
+      "vendor": "Synacor",
+      "product": "Zimbra Collaboration Suite",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "3.1",
+        "score": 6.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+      },
+      "epss": {
+        "score": 0.19559,
+        "percentile": 0.97299
+      },
+      "cwe": [
+        "CWE-79"
+      ],
+      "tags": [
+        "XSS"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-03-18",
+        "due_date": "2026-04-01",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting Vulnerability",
+        "required_action_en": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable."
+      },
+      "summary_zh": "Synacor Zimbra Collaboration Suite 存在XSS漏洞，CVSS 6.1，已列入 CISA KEV 已知在野利用清單，EPSS 0.20。",
+      "impact_zh": "可於受害者瀏覽器執行惡意腳本。",
+      "action_zh": "更新至修補版本，並確認輸入輸出過濾機制。",
+      "description_en": "Zimbra Collaboration (ZCS) 10 before 10.0.18 and 10.1 before 10.1.13 allows Classic UI stored XSS via Cascading Style Sheets (CSS) @import directives in an HTML e-mail message.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://wiki.zimbra.com/wiki/Security_Center"
+        },
+        {
+          "name": "參考",
+          "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.0.18#Security_Fixes"
+        },
+        {
+          "name": "參考",
+          "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.1.13#Security_Fixes"
+        },
+        {
+          "name": "參考",
+          "url": "https://wiki.zimbra.com/wiki/Zimbra_Responsible_Disclosure_Policy"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-66376"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T15:15:44Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd",
+        "cisa_kev"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 9.491
+    },
+    {
+      "cve_id": "CVE-2025-15029",
+      "title_short": "Centreon Awie 15029×9.8",
+      "title_full": "Centreon Awie CVE-2025-15029 · CVSS 9.8",
+      "vendor": "Centreon",
+      "product": "Awie",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.12682,
+        "percentile": 0.96132
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Centreon Awie 存在SQLi漏洞，CVSS 9.8，EPSS 0.13。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Centreon Infra Monitoring (Awie export modules) allows SQL Injection to unauthenticated user.\n\nThis issue affects Infra Monitoring: from 25.10.0 before 25.10.2, from 24.10.0 before 24.10.3, from 24.04.0 before 24.04.3.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/centreon/centreon/releases"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://thewatch.centreon.com/latest-security-bulletins-64/cve-2025-15029-centreon-awie-critical-severity-5356"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T15:15:44Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 10.054
+    },
+    {
+      "cve_id": "CVE-2025-15638",
+      "title_short": "Atrodo Net\\ 15638×10.0",
+      "title_full": "Atrodo Net\\ CVE-2025-15638 · CVSS 10.0",
+      "vendor": "Atrodo",
+      "product": "Net\\",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.0057,
+        "percentile": 0.44998
+      },
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Atrodo Net\\ 存在安全漏洞，CVSS 10.0，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Net::Dropbear versions before 0.14 for Perl contains a vulnerable version of libtomcrypt.\n\nNet::Dropbear versions before 0.14 includes versions of Dropbear 2019.78 or earlier. These include versions of libtomcrypt v1.18.1 or earlier, which is affected by CVE-2016-6129 and CVE-2018-12437.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://metacpan.org/release/ATRODO/Net-Dropbear-0.14/source/dropbear/libtomcrypt/changes"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2016-6129"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2018-12437"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-21T16:16:19Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 10.011
+    },
+    {
+      "cve_id": "CVE-2025-60235",
+      "title_short": "未標示產品 60235×10.0",
+      "title_full": "未標示產品 CVE-2025-60235 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00425,
+        "percentile": 0.34307
+      },
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 10.0，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Unrestricted Upload of File with Dangerous Type vulnerability in Plugify Support Ticket System for WooCommerce (Premium) support-ticket-system-for-woocommerce allows Using Malicious Files.This issue affects Support Ticket System for WooCommerce (Premium): from n/a through <= 2.0.7.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Plugin/support-ticket-system-for-woocommerce/vulnerability/wordpress-helpdesk-support-ticket-system-for-woocommerce-plugin-2-0-7-arbitrary-file-upload-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-11-06T16:16:06Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 10.008
+    },
+    {
+      "cve_id": "CVE-2025-64121",
+      "title_short": "Nuvationenergy Nplatform 64121×10.0",
+      "title_full": "Nuvationenergy Nplatform CVE-2025-64121 · CVSS 10.0",
+      "vendor": "Nuvationenergy",
+      "product": "Nplatform",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 10.0,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00397,
+        "percentile": 0.31312
+      },
+      "cwe": [
+        "CWE-288"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Nuvationenergy Nplatform 存在認證繞過漏洞，CVSS 10.0，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Authentication Bypass Using an Alternate Path or Channel vulnerability in Nuvation Energy Multi-Stack Controller (MSC) allows Authentication Bypass.This issue affects Multi-Stack Controller (MSC): from 2.3.8 before 2.5.1.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://www.dragos.com/community/advisories/CVE-2025-64119"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-02T22:15:44Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 10.008
+    },
+    {
+      "cve_id": "CVE-2025-58371",
+      "title_short": "Roocode Roo Code 58371×9.9",
+      "title_full": "Roocode Roo Code CVE-2025-58371 · CVSS 9.9",
+      "vendor": "Roocode",
+      "product": "Roo Code",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00804,
+        "percentile": 0.55016
+      },
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Roocode Roo Code 存在RCE漏洞，CVSS 9.9，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Roo Code is an AI-powered autonomous coding agent that lives in users' editors. In versions 3.26.6 and below, a Github workflow used unsanitized pull request metadata in a privileged context, allowing an attacker to craft malicious input and achieve Remote Code Execution (RCE) on the Actions runner. The workflow runs with broad permissions and access to repository secrets. It is possible for an attacker to execute arbitrary commands on the runner, push or modify code in the repository, access secrets, and create malicious releases or packages, resulting in a complete compromise of the repository and its associated services. This is fixed in version 3.26.7.",
+      "references": [
+        {
+          "name": "修補",
+          "url": "https://github.com/RooCodeInc/Roo-Code/commit/a0384f35d5ae3b7f66506cc62dda25d9bb673f49"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/RooCodeInc/Roo-Code/security/advisories/GHSA-xr6r-vj48-29f6"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-05T23:15:30Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 9.916
+    },
+    {
+      "cve_id": "CVE-2025-67924",
+      "title_short": "未標示產品 67924×9.9",
+      "title_full": "未標示產品 CVE-2025-67924 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00378,
+        "percentile": 0.29217
+      },
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.9，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Unrestricted Upload of File with Dangerous Type vulnerability in zozothemes Corpkit corpkit allows Upload a Web Shell to a Web Server.This issue affects Corpkit: from n/a through <= 2.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Theme/corpkit/vulnerability/wordpress-corpkit-theme-2-0-arbitrary-file-upload-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T10:15:51Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 9.908
+    },
+    {
+      "cve_id": "CVE-2025-64374",
+      "title_short": "未標示產品 64374×9.9",
+      "title_full": "未標示產品 CVE-2025-64374 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00362,
+        "percentile": 0.27459
+      },
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.9，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Unrestricted Upload of File with Dangerous Type vulnerability in StylemixThemes Motors motors allows Using Malicious Files.This issue affects Motors: from n/a through <= 5.6.81.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Theme/motors/vulnerability/wordpress-motors-theme-5-6-80-arbitrary-file-upload-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-12-18T08:16:14Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 9.907
+    },
+    {
+      "cve_id": "CVE-2025-31048",
+      "title_short": "未標示產品 31048×9.9",
+      "title_full": "未標示產品 CVE-2025-31048 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.003,
+        "percentile": 0.20443
+      },
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.9，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Unrestricted Upload of File with Dangerous Type vulnerability in Themify Shopo allows Upload a Web Shell to a Web Server.This issue affects Shopo: from n/a through 1.1.4.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/wordpress/theme/shopo/vulnerability/wordpress-shopo-1-1-4-arbitrary-file-upload-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T11:17:40Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 12,
+      "generated_by": "template",
+      "risk_score": 9.906
+    },
+    {
+      "cve_id": "CVE-2025-69258",
+      "title_short": "Trend Micro Apex Central 69258×9.8",
+      "title_full": "Trend Micro Apex Central CVE-2025-69258 · CVSS 9.8",
+      "vendor": "Trend Micro",
+      "product": "Apex Central",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.03627,
+        "percentile": 0.89135
+      },
+      "cwe": [
+        "CWE-120",
+        "CWE-290",
+        "CWE-346"
+      ],
+      "tags": [
+        "記憶體破壞",
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Trend Micro Apex Central 存在記憶體破壞、認證繞過漏洞，CVSS 9.8，EPSS 0.04。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "A LoadLibraryEX vulnerability in Trend Micro Apex Central could allow an unauthenticated remote attacker to load an attacker-controlled DLL into a key executable, leading to execution of attacker-supplied code under the context of SYSTEM on affected installations.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://success.trendmicro.com/en-US/solution/KA-0022071"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://success.trendmicro.com/ja-JP/solution/KA-0022081"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.tenable.com/security/research/tra-2026-01"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T13:15:42Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 13,
+      "generated_by": "template",
+      "risk_score": 9.873
+    },
+    {
+      "cve_id": "CVE-2025-59834",
+      "title_short": "Srmorete Adb Mcp Server 59834×9.8",
+      "title_full": "Srmorete Adb Mcp Server CVE-2025-59834 · CVSS 9.8",
+      "vendor": "Srmorete",
+      "product": "Adb Mcp Server",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.02514,
+        "percentile": 0.84188
+      },
+      "cwe": [
+        "CWE-77",
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Srmorete Adb Mcp Server 存在RCE漏洞，CVSS 9.8，EPSS 0.03。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "ADB MCP Server is a MCP (Model Context Protocol) server for interacting with Android devices through ADB. In versions 0.1.0 and prior, the MCP Server is written in a way that is vulnerable to command injection vulnerability attacks as part of some of its MCP Server tool definition and implementation. This issue has been patched via commit 041729c.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/srmorete/adb-mcp/blob/master/src/index.ts#L334-L355"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/srmorete/adb-mcp/commit/041729c0b25432df3199ff71b3163a307cf4c28c"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/srmorete/adb-mcp/security/advisories/GHSA-54j7-grvr-9xwg"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-25T14:15:46Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 14,
+      "generated_by": "template",
+      "risk_score": 9.85
+    },
+    {
+      "cve_id": "CVE-2025-55125",
+      "title_short": "Veeam Backup \\& Replication 55125×9.8",
+      "title_full": "Veeam Backup \\& Replication CVE-2025-55125 · CVSS 9.8",
+      "vendor": "Veeam",
+      "product": "Veeam Backup \\& Replication",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00879,
+        "percentile": 0.57494
+      },
+      "cwe": [
+        "CWE-77"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Veeam Backup \\& Replication 存在RCE漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "This vulnerability allows a Backup or Tape Operator to perform remote code execution (RCE) as root by creating a malicious\r\nbackup configuration file.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://www.veeam.com/kb4792"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T17:15:47Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 15,
+      "generated_by": "template",
+      "risk_score": 9.818
+    },
+    {
+      "cve_id": "CVE-2025-43995",
+      "title_short": "Dell Storage Manager 43995×9.8",
+      "title_full": "Dell Storage Manager CVE-2025-43995 · CVSS 9.8",
+      "vendor": "Dell",
+      "product": "Storage Manager",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00844,
+        "percentile": 0.56326
+      },
+      "cwe": [
+        "CWE-287"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Dell Storage Manager 存在認證繞過漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Dell Storage Center - Dell Storage Manager, version(s) 20.1.21, contain(s) an Improper Authentication vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Protection mechanism bypass. Authentication Bypass in DSM Data Collector. An unauthenticated remote attacker can access APIs exposed by ApiProxy.war in DataCollectorEar.ear by using a special SessionKey and UserId. These userid are special users created in compellentservicesapi for special purposes.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://www.dell.com/support/kbdoc/en-us/000382899/dsa-2025-393-security-update-for-storage-center-dell-storage-manager-vulnerabilities"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-24T15:15:38Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 16,
+      "generated_by": "template",
+      "risk_score": 9.817
+    },
+    {
+      "cve_id": "CVE-2025-8570",
+      "title_short": "未標示產品 8570×9.8",
+      "title_full": "未標示產品 CVE-2025-8570 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00639,
+        "percentile": 0.48572
+      },
+      "cwe": [
+        "CWE-798"
+      ],
+      "tags": [
+        "認證繞過",
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過、權限提升漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "The BeyondCart Connector plugin for WordPress is vulnerable to Privilege Escalation due to improper JWT secret management and authorization within the determine_current_user filter in versions 1.4.2 through 3.0.1. This makes it possible for unauthenticated attackers to craft valid tokens and assume any user’s identity.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3365845%40beyondcart&new=3365845%40beyondcart&sfp_email=&sfph_mail="
+        },
+        {
+          "name": "參考",
+          "url": "https://wordpress.org/plugins/beyondcart/#developers"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/d0dd4fc0-1c6a-4556-b219-893563a27a69?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-11T08:15:35Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 17,
+      "generated_by": "template",
+      "risk_score": 9.813
+    },
+    {
+      "cve_id": "CVE-2025-60214",
+      "title_short": "未標示產品 60214×9.8",
+      "title_full": "未標示產品 CVE-2025-60214 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00593,
+        "percentile": 0.46221
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "Deserialization of Untrusted Data vulnerability in BoldThemes Goldenblatt goldenblatt allows Object Injection.This issue affects Goldenblatt: from n/a through < 1.3.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Theme/goldenblatt/vulnerability/wordpress-goldenblatt-theme-1-2-1-php-object-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-22T15:15:58Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 18,
+      "generated_by": "template",
+      "risk_score": 9.812
+    },
+    {
+      "cve_id": "CVE-2025-60039",
+      "title_short": "未標示產品 60039×9.8",
+      "title_full": "未標示產品 CVE-2025-60039 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00564,
+        "percentile": 0.44681
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "Deserialization of Untrusted Data vulnerability in rascals Noisa noisa allows Object Injection.This issue affects Noisa: from n/a through <= 2.6.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Theme/noisa/vulnerability/wordpress-noisa-theme-2-6-0-php-object-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-22T15:15:56Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 19,
+      "generated_by": "template",
+      "risk_score": 9.811
+    },
+    {
+      "cve_id": "CVE-2025-23504",
+      "title_short": "未標示產品 23504×9.8",
+      "title_full": "未標示產品 CVE-2025-23504 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00498,
+        "percentile": 0.4026
+      },
+      "cwe": [
+        "CWE-288"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Authentication Bypass Using an Alternate Path or Channel vulnerability in RiceTheme Felan Framework felan-framework allows Authentication Abuse.This issue affects Felan Framework: from n/a through <= 1.1.3.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Plugin/felan-framework/vulnerability/wordpress-felan-framework-plugin-1-1-3-account-takeover-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T10:15:48Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 20,
+      "generated_by": "template",
+      "risk_score": 9.81
+    },
+    {
+      "cve_id": "CVE-2025-27020",
+      "title_short": "Nokia Infinera Mtc 9 Firmware 27020×9.8",
+      "title_full": "Nokia Infinera Mtc 9 Firmware CVE-2025-27020 · CVSS 9.8",
+      "vendor": "Nokia",
+      "product": "Infinera Mtc 9 Firmware",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00502,
+        "percentile": 0.40547
+      },
+      "cwe": [
+        "CWE-306"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Nokia Infinera Mtc 9 Firmware 存在認證繞過漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Improper configuration of the SSH service in Infinera MTC-9 allows an unauthenticated attacker to execute arbitrary commands and access data on file system\n\n.\n\n\nThis issue affects MTC-9: from R22.1.1.0275 before R23.0.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://www.cvcn.gov.it/cvcn/cve/CVE-2025-27020"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-12-08T10:16:01Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 21,
+      "generated_by": "template",
+      "risk_score": 9.81
+    },
+    {
+      "cve_id": "CVE-2025-59007",
+      "title_short": "未標示產品 59007×9.8",
+      "title_full": "未標示產品 CVE-2025-59007 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00489,
+        "percentile": 0.39648
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "Deserialization of Untrusted Data vulnerability in themesflat TF Woo Product Grid Addon For Elementor tf-woo-product-grid allows Object Injection.This issue affects TF Woo Product Grid Addon For Elementor: from n/a through <= 1.0.1.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Plugin/tf-woo-product-grid/vulnerability/wordpress-tf-woo-product-grid-addon-for-elementor-plugin-1-0-1-deserialization-of-untrusted-data-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-22T15:15:53Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 22,
+      "generated_by": "template",
+      "risk_score": 9.81
+    },
+    {
+      "cve_id": "CVE-2025-62583",
+      "title_short": "Navercorp Whale 62583×9.8",
+      "title_full": "Navercorp Whale CVE-2025-62583 · CVSS 9.8",
+      "vendor": "Navercorp",
+      "product": "Whale",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00503,
+        "percentile": 0.40583
+      },
+      "cwe": [
+        "CWE-358"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Navercorp Whale 存在安全漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Whale Browser before 4.33.325.17 allows an attacker to escape the iframe sandbox in a dual-tab environment.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://cve.naver.com/detail/cve-2025-62583.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-16T07:15:33Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 23,
+      "generated_by": "template",
+      "risk_score": 9.81
+    },
+    {
+      "cve_id": "CVE-2025-62877",
+      "title_short": "未標示產品 62877×9.8",
+      "title_full": "未標示產品 CVE-2025-62877 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00521,
+        "percentile": 0.41987
+      },
+      "cwe": [
+        "CWE-1188"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Projects using the SUSE Virtualization (Harvester) environment may expose the OS default ssh login password  if they are using the 1.5.x or 1.6.x interactive installer to either create a new cluster or add new hosts to an existing cluster.  The environment is not affected if the PXE boot mechanism is utilized along with the Harvester configuration setup.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://bugzilla.suse.com/show_bug.cgi?id=CVE-2025-62877"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/harvester/harvester/security/advisories/GHSA-6g8q-hp2j-gvwv"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T13:15:41Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 24,
+      "generated_by": "template",
+      "risk_score": 9.81
+    },
+    {
+      "cve_id": "CVE-2025-11253",
+      "title_short": "未標示產品 11253×9.8",
+      "title_full": "未標示產品 CVE-2025-11253 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00437,
+        "percentile": 0.35524
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Aksis Technology Inc. Netty ERP allows SQL Injection.\n\nThis issue affects Netty ERP: before V.1.1000.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0359"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.usom.gov.tr/bildirim/tr-25-0359"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-24T09:15:42Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 25,
+      "generated_by": "template",
+      "risk_score": 9.809
+    },
+    {
+      "cve_id": "CVE-2025-67911",
+      "title_short": "未標示產品 67911×9.8",
+      "title_full": "未標示產品 CVE-2025-67911 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00446,
+        "percentile": 0.36285
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "Deserialization of Untrusted Data vulnerability in Tribulant Software Newsletters newsletters-lite allows Object Injection.This issue affects Newsletters: from n/a through <= 4.11.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Plugin/newsletters-lite/vulnerability/wordpress-newsletters-plugin-4-11-php-object-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T10:15:49Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 26,
+      "generated_by": "template",
+      "risk_score": 9.809
+    },
+    {
+      "cve_id": "CVE-2025-9286",
+      "title_short": "未標示產品 9286×9.8",
+      "title_full": "未標示產品 CVE-2025-9286 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00467,
+        "percentile": 0.38009
+      },
+      "cwe": [
+        "CWE-620"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在權限提升漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "The Appy Pie Connect for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation due to missing authorization within the reset_user_password() REST handler in all versions up to, and including, 1.1.2. This makes it possible for unauthenticated attackers to to reset the password of arbitrary users, including administrators, thereby gaining administrative access.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/browser/appy-pie-connect-for-woocommerce/trunk/connect-woocommerce-rest-api.php"
+        },
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/changeset/3385150/"
+        },
+        {
+          "name": "參考",
+          "url": "https://wordpress.org/plugins/appy-pie-connect-for-woocommerce/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/36fb5b8d-1ea4-45c2-8639-b229efdb57db?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-03T12:15:47Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 27,
+      "generated_by": "template",
+      "risk_score": 9.809
+    },
+    {
+      "cve_id": "CVE-2025-10738",
+      "title_short": "未標示產品 10738×9.8",
+      "title_full": "未標示產品 CVE-2025-10738 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00412,
+        "percentile": 0.32937
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi",
+        "資訊洩漏"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi、資訊洩漏漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "The URL Shortener Plugin For WordPress plugin for WordPress is vulnerable to SQL Injection via the ‘analytic_id’ parameter in all versions up to, and including, 3.0.7 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/browser/exact-links/trunk/app/Models/LinkAnalytics.php?rev=3210852"
+        },
+        {
+          "name": "參考",
+          "url": "https://wordpress.org/plugins/exact-links/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1b4acf11-114a-4e97-89cd-1d387f14a730?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-12-13T16:16:44Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 28,
+      "generated_by": "template",
+      "risk_score": 9.808
+    },
+    {
+      "cve_id": "CVE-2025-15001",
+      "title_short": "未標示產品 15001×9.8",
+      "title_full": "未標示產品 CVE-2025-15001 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00416,
+        "percentile": 0.33396
+      },
+      "cwe": [
+        "CWE-639"
+      ],
+      "tags": [
+        "權限提升",
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在權限提升、接管漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "The FS Registration Password plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 1.0.1. This is due to the plugin not properly validating a user's identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user's passwords, including administrators, and leverage that to gain access to their account.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/browser/registration-password/tags/1.0.1/src/WP/Auth.php"
+        },
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/changeset/3431651/registration-password"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/22351b90-fc34-44ce-9241-4a0f01eb7b1c?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-06T05:16:04Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 29,
+      "generated_by": "template",
+      "risk_score": 9.808
+    },
+    {
+      "cve_id": "CVE-2025-15026",
+      "title_short": "Centreon Awie 15026×9.8",
+      "title_full": "Centreon Awie CVE-2025-15026 · CVSS 9.8",
+      "vendor": "Centreon",
+      "product": "Awie",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00424,
+        "percentile": 0.34243
+      },
+      "cwe": [
+        "CWE-306"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Centreon Awie 存在認證繞過漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Missing Authentication for Critical Function vulnerability in Centreon Infra Monitoring centreon-awie (Awie import module) allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Infra Monitoring: from 25.10.0 before 25.10.2, from 24.10.0 before 24.10.3, from 24.04.0 before 24.04.3.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/centreon/centreon/releases"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://thewatch.centreon.com/latest-security-bulletins-64/cve-2025-15026-centreon-awie-critical-severity-5357"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T15:15:44Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 30,
+      "generated_by": "template",
+      "risk_score": 9.808
+    },
+    {
+      "cve_id": "CVE-2025-31998",
+      "title_short": "Hcltech Unica Centralized Offer Management 31998×9.8",
+      "title_full": "Hcltech Unica Centralized Offer Management CVE-2025-31998 · CVSS 9.8",
+      "vendor": "Hcltech",
+      "product": "Unica Centralized Offer Management",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00391,
+        "percentile": 0.30666
+      },
+      "cwe": [
+        "CWE-209",
+        "CWE-703"
+      ],
+      "tags": [
+        "RCE",
+        "阻斷服務",
+        "資訊洩漏"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Hcltech Unica Centralized Offer Management 存在RCE、阻斷服務漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "HCL Unica Centralized Offer Management is vulnerable to poor unhandled exceptions which exposes sensitive information.  An attacker can exploit use this information to exploit known vulnerabilities launch targeted attacks, such as remote code execution or denial of service.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0124422"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-12T03:15:34Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 31,
+      "generated_by": "template",
+      "risk_score": 9.808
+    },
+    {
+      "cve_id": "CVE-2025-11024",
+      "title_short": "未標示產品 11024×9.8",
+      "title_full": "未標示產品 CVE-2025-11024 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00358,
+        "percentile": 0.2706
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Akilli Commerce Software Technologies Ltd. Co. E-Commerce Website allows Blind SQL Injection.\n\nThis issue affects E-Commerce Website: before 4.5.001.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0222"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-05-14T10:16:17Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 32,
+      "generated_by": "template",
+      "risk_score": 9.807
+    },
+    {
+      "cve_id": "CVE-2025-13618",
+      "title_short": "未標示產品 13618×9.8",
+      "title_full": "未標示產品 CVE-2025-13618 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00336,
+        "percentile": 0.24453
+      },
+      "cwe": [
+        "CWE-269"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在權限提升漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "The Mentoring plugin for WordPress is vulnerable to privilege escalation in all versions up to, and including, 1.2.8. This is due to the plugin not properly restricting the roles that users can register with in the mentoring_process_registration() function. This makes it possible for unauthenticated attackers to register with administrator-level user accounts.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://mentoring-wp.dreamsmarketplace.com/documentation/changelog.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://themeforest.net/item/mentoring-education-wordpress-theme/36457081"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/7192fb4c-0434-4e11-a2a7-c205b8d6b68e?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-05-05T03:15:58Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 33,
+      "generated_by": "template",
+      "risk_score": 9.807
+    },
+    {
+      "cve_id": "CVE-2025-14320",
+      "title_short": "未標示產品 14320×9.8",
+      "title_full": "未標示產品 CVE-2025-14320 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00327,
+        "percentile": 0.23298
+      },
+      "cwe": [
+        "CWE-79"
+      ],
+      "tags": [
+        "XSS"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在XSS漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可於受害者瀏覽器執行惡意腳本。",
+      "action_zh": "更新至修補版本，並確認輸入輸出過濾機制。",
+      "description_en": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Tegsoft Management and Information Services Trade Limited Company Online Support Application allows Reflected XSS.\n\nThis issue affects Online Support Application: from V3 through 31122025.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0142"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.usom.gov.tr/bildirim/tr-26-0142"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-05-04T09:15:59Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 34,
+      "generated_by": "template",
+      "risk_score": 9.807
+    },
+    {
+      "cve_id": "CVE-2025-14996",
+      "title_short": "未標示產品 14996×9.8",
+      "title_full": "未標示產品 CVE-2025-14996 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.0036,
+        "percentile": 0.27327
+      },
+      "cwe": [
+        "CWE-639"
+      ],
+      "tags": [
+        "權限提升",
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在權限提升、接管漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "The AS Password Field In Default Registration Form plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 2.0.0. This is due to the plugin not properly validating a user's identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user's passwords, including administrators, and leverage that to gain access to their account.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/browser/as-password-field-in-default-registration-form/tags/2.0.0/as-password-field-default-registration.php"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/061f022b-b922-4499-bb34-8ea91ba5ace3?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-06T05:15:59Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 35,
+      "generated_by": "template",
+      "risk_score": 9.807
+    },
+    {
+      "cve_id": "CVE-2025-15018",
+      "title_short": "未標示產品 15018×9.8",
+      "title_full": "未標示產品 CVE-2025-15018 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00341,
+        "percentile": 0.25064
+      },
+      "cwe": [
+        "CWE-639"
+      ],
+      "tags": [
+        "權限提升",
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在權限提升、接管漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "The Optional Email plugin for WordPress is vulnerable to Privilege Escalation via Account Takeover in all versions up to, and including, 1.3.11. This is due to the plugin not restricting its 'random_password' filter to registration contexts, allowing the filter to affect password reset key generation. This makes it possible for unauthenticated attackers to set a known password reset key when initiating a password reset, reset the password of any user including administrators, and gain access to their accounts.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/browser/optional-email/tags/1.3.11/optional-email.php?marks=44,51#L44"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/ff4243e9-cf72-40d5-bc7d-204426024a1d?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-07T12:16:58Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 36,
+      "generated_by": "template",
+      "risk_score": 9.807
+    },
+    {
+      "cve_id": "CVE-2025-15103",
+      "title_short": "Deltaww Dvp 12SE11T Firmware 15103×9.8",
+      "title_full": "Deltaww Dvp 12SE11T Firmware CVE-2025-15103 · CVSS 9.8",
+      "vendor": "Deltaww",
+      "product": "Dvp 12SE11T Firmware",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00344,
+        "percentile": 0.25341
+      },
+      "cwe": [
+        "CWE-200"
+      ],
+      "tags": [
+        "資訊洩漏",
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Deltaww Dvp 12SE11T Firmware 存在資訊洩漏、認證繞過漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "敏感資料可能外洩。",
+      "action_zh": "更新至修補版本，並輪替可能受影響的憑證。",
+      "description_en": "DVP-12SE11T - Authentication Bypass via Partial Password Disclosure",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://filecenter.deltaww.com/news/download/doc/Delta-PCSA-2025-00022_DVP-12SE11T%20Multiple%20Vulnerabilities.pdf"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-12-30T09:15:52Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 37,
+      "generated_by": "template",
+      "risk_score": 9.807
+    },
+    {
+      "cve_id": "CVE-2025-39477",
+      "title_short": "未標示產品 39477×9.8",
+      "title_full": "未標示產品 CVE-2025-39477 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00339,
+        "percentile": 0.24795
+      },
+      "cwe": [
+        "CWE-862"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在權限提升漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "Missing Authorization vulnerability in Sfwebservice InWave Jobs allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects InWave Jobs: from n/a through 3.5.8.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/wordpress/plugin/iwjob/vulnerability/wordpress-inwave-jobs-plugin-3-5-8-broken-access-control-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-06T17:15:43Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 38,
+      "generated_by": "template",
+      "risk_score": 9.807
+    },
+    {
+      "cve_id": "CVE-2025-47552",
+      "title_short": "未標示產品 47552×9.8",
+      "title_full": "未標示產品 CVE-2025-47552 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00372,
+        "percentile": 0.28603
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "Deserialization of Untrusted Data vulnerability in Digital zoom studio DZS Video Gallery allows Object Injection.This issue affects DZS Video Gallery: from n/a through 12.37.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/wordpress/plugin/dzs-videogallery/vulnerability/wordpress-dzs-video-gallery-12-25-php-object-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-07T13:15:43Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 39,
+      "generated_by": "template",
+      "risk_score": 9.807
+    },
+    {
+      "cve_id": "CVE-2025-6520",
+      "title_short": "未標示產品 6520×9.8",
+      "title_full": "未標示產品 CVE-2025-6520 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00349,
+        "percentile": 0.26023
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Abis Technology BAPSIS allows Blind SQL Injection.\n\nThis issue affects BAPSIS: before 202510271606.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0365"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.usom.gov.tr/bildirim/tr-25-0365"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-31T08:15:36Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 40,
+      "generated_by": "template",
+      "risk_score": 9.807
+    },
+    {
+      "cve_id": "CVE-2025-15102",
+      "title_short": "Deltaww Dvp 12SE11T Firmware 15102×9.8",
+      "title_full": "Deltaww Dvp 12SE11T Firmware CVE-2025-15102 · CVSS 9.8",
+      "vendor": "Deltaww",
+      "product": "Dvp 12SE11T Firmware",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00317,
+        "percentile": 0.222
+      },
+      "cwe": [
+        "CWE-288"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Deltaww Dvp 12SE11T Firmware 存在認證繞過漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "DVP-12SE11T - Password Protection Bypass",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://filecenter.deltaww.com/news/download/doc/Delta-PCSA-2025-00022_DVP-12SE11T%20Multiple%20Vulnerabilities.pdf"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-12-30T09:15:52Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 41,
+      "generated_by": "template",
+      "risk_score": 9.806
+    },
+    {
+      "cve_id": "CVE-2025-15385",
+      "title_short": "Tecno Boomplay 15385×9.8",
+      "title_full": "Tecno Boomplay CVE-2025-15385 · CVSS 9.8",
+      "vendor": "Tecno",
+      "product": "Boomplay",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00232,
+        "percentile": 0.12704
+      },
+      "cwe": [
+        "CWE-345"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Tecno Boomplay 存在認證繞過漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Insufficient Verification of Data Authenticity vulnerability in TECNO Mobile com.Afmobi.Boomplayer allows Authentication Bypass.This issue affects com.Afmobi.Boomplayer: 7.4.63.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://security.tecno.com/SRC/securityUpdates"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-06T02:15:41Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 42,
+      "generated_by": "template",
+      "risk_score": 9.805
+    },
+    {
+      "cve_id": "CVE-2025-15444",
+      "title_short": "Iamb Crypt\\ 15444×9.8",
+      "title_full": "Iamb Crypt\\ CVE-2025-15444 · CVSS 9.8",
+      "vendor": "Iamb",
+      "product": "Crypt\\",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00266,
+        "percentile": 0.1688
+      },
+      "cwe": [
+        "CWE-347"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Iamb Crypt\\ 存在安全漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Crypt::Sodium::XS module versions prior to 0.000042, for Perl, include a vulnerable version of libsodium\n\nlibsodium <= 1.0.20 or a version of libsodium released before December 30, 2025 contains a vulnerability documented as CVE-2025-69277  https://www.cve.org/CVERecord?id=CVE-2025-69277 .\n\nThe libsodium vulnerability states:\n\nIn atypical use cases involving certain custom cryptography or untrusted data to crypto_core_ed25519_is_valid_point, mishandles checks for whether an elliptic curve point is valid because it sometimes allows points that aren't in the main cryptographic group.\n\n0.000042 includes a version of libsodium updated to 1.0.20-stable, released January 3, 2026, which includes a fix for the vulnerability.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://00f.net/2025/12/30/libsodium-vulnerability/"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/jedisct1/libsodium/commit/ad3004ec8731730e93fcfbbc824e67eadc1c1bae"
+        },
+        {
+          "name": "參考",
+          "url": "https://metacpan.org/dist/Crypt-Sodium-XS/changes"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-06T01:16:01Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 43,
+      "generated_by": "template",
+      "risk_score": 9.805
+    },
+    {
+      "cve_id": "CVE-2025-31991",
+      "title_short": "Hcltech Devops Velocity 31991×9.8",
+      "title_full": "Hcltech Devops Velocity CVE-2025-31991 · CVSS 9.8",
+      "vendor": "Hcltech",
+      "product": "Devops Velocity",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00228,
+        "percentile": 0.12185
+      },
+      "cwe": [
+        "CWE-307"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Hcltech Devops Velocity 存在認證繞過漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Rate Limiting for attempting a user login is not being properly enforced, making HCL DevOps Velocity susceptible to brute-force attacks past the unsuccessful login attempt limit.  This vulnerability is fixed in 5.1.7.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0130138"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-13T16:16:24Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 44,
+      "generated_by": "template",
+      "risk_score": 9.805
+    },
+    {
+      "cve_id": "CVE-2025-55058",
+      "title_short": "Maxum Rumpus 55058×9.8",
+      "title_full": "Maxum Rumpus CVE-2025-55058 · CVSS 9.8",
+      "vendor": "Maxum",
+      "product": "Rumpus",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00258,
+        "percentile": 0.15763
+      },
+      "cwe": [
+        "CWE-20"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Maxum Rumpus 存在安全漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "CWE-20 Improper Input Validation",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://www.gov.il/en/departments/dynamiccollectors/cve_advisories_listing?skip=0"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-11-17T18:15:57Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 45,
+      "generated_by": "template",
+      "risk_score": 9.805
+    },
+    {
+      "cve_id": "CVE-2025-6577",
+      "title_short": "未標示產品 6577×9.8",
+      "title_full": "未標示產品 CVE-2025-6577 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.0026,
+        "percentile": 0.15958
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Akilli Commerce Software Technologies Ltd. Co. E-Commerce Website allows SQL Injection.\n\nThis issue affects E-Commerce Website: before 4.5.001.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0222"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-05-12T10:16:43Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 46,
+      "generated_by": "template",
+      "risk_score": 9.805
+    },
+    {
+      "cve_id": "CVE-2025-59851",
+      "title_short": "Hcltech Dfxanalytics 59851×9.8",
+      "title_full": "Hcltech Dfxanalytics CVE-2025-59851 · CVSS 9.8",
+      "vendor": "Hcltech",
+      "product": "Dfxanalytics",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00206,
+        "percentile": 0.09488
+      },
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Hcltech Dfxanalytics 存在安全漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "HCL DFXAnalytics is affected by a Using Components with Known Vulnerabilities flaw where the application utilizes unpatched libraries or sub-components, which could allow an attacker to identify and exploit publicly known security vulnerabilities to gain unauthorized access or compromise the application.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0130569"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-05-06T11:16:04Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 47,
+      "generated_by": "template",
+      "risk_score": 9.804
+    },
+    {
+      "cve_id": "CVE-2025-55204",
+      "title_short": "Muffon 55204×9.6",
+      "title_full": "Muffon CVE-2025-55204 · CVSS 9.6",
+      "vendor": "Muffon",
+      "product": "Muffon",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00705,
+        "percentile": 0.51468
+      },
+      "cwe": [
+        "CWE-94",
+        "CWE-79"
+      ],
+      "tags": [
+        "RCE",
+        "XSS"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Muffon 存在RCE、XSS漏洞，CVSS 9.6，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "muffon is a cross-platform music streaming client for desktop. Versions prior to 2.3.0 have a one-click Remote Code Execution (RCE) vulnerability in. An attacker can exploit this issue by embedding a specially crafted `muffon://` link on any website they control. When a victim visits the site or clicks the link, the browser triggers Muffon’s custom URL handler, causing the application to launch and process the URL. This leads to RCE on the victim's machine without further interaction. Version 2.3.0 patches the issue.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://drive.google.com/file/d/1eCPCQ6leuVM_vecfofFv04c0t9isCBqR/view?usp=sharing"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/staniel359/muffon/releases/tag/v2.3.0"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/staniel359/muffon/security/advisories/GHSA-gc3f-gqph-522q"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T18:15:42Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 48,
+      "generated_by": "template",
+      "risk_score": 9.614
+    },
+    {
+      "cve_id": "CVE-2025-59467",
+      "title_short": "Ui Argentina Afip Invoices 59467×9.6",
+      "title_full": "Ui Argentina Afip Invoices CVE-2025-59467 · CVSS 9.6",
+      "vendor": "Ui",
+      "product": "Argentina Afip Invoices",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.0025,
+        "percentile": 0.14713
+      },
+      "cwe": [
+        "CWE-79"
+      ],
+      "tags": [
+        "XSS",
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Ui Argentina Afip Invoices 存在XSS、權限提升漏洞，CVSS 9.6，EPSS 0.00。",
+      "impact_zh": "可於受害者瀏覽器執行惡意腳本。",
+      "action_zh": "更新至修補版本，並確認輸入輸出過濾機制。",
+      "description_en": "A Cross-Site Scripting (XSS) vulnerability in the UCRM Argentina AFIP invoices Plugin (v1.2.0 and earlier) could allow privilege escalation if an Administrator is tricked into visiting a crafted malicious page. \n\nThis plugin is disabled by default.\n\n\nAffected Products:\nUCRM Argentina AFIP invoices Plugin (Version 1.2.0 and earlier)\n\n \n\nMitigation:\nUpdate UCRM Argentina AFIP invoices Plugin to Version 1.3.0 or later.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://community.ui.com/releases/Security-Advisory-Bulletin-057/6d3f2a51-22b8-47a1-9296-1e9dcd64e073"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T17:15:45Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 49,
+      "generated_by": "template",
+      "risk_score": 9.605
+    },
+    {
+      "cve_id": "CVE-2025-15625",
+      "title_short": "Sparxsystems Pro Cloud Server 15625×9.5",
+      "title_full": "Sparxsystems Pro Cloud Server CVE-2025-15625 · CVSS 9.5",
+      "vendor": "Sparxsystems",
+      "product": "Pro Cloud Server",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:I/V:C/RE:M/U:Red"
+      },
+      "epss": {
+        "score": 0.0042,
+        "percentile": 0.33875
+      },
+      "cwe": [
+        "CWE-89",
+        "CWE-200"
+      ],
+      "tags": [
+        "SQLi",
+        "資訊洩漏"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Sparxsystems Pro Cloud Server 存在SQLi、資訊洩漏漏洞，CVSS 9.5，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Unauthenticated user is able to execute arbitrary SQL commands in Sparx Pro Cloud Server database in certain cases.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://sparxsystems.com/products/procloudserver/6.1/history.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-17T09:16:04Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 50,
+      "generated_by": "template",
+      "risk_score": 9.508
+    },
+    {
+      "cve_id": "CVE-2025-64424",
+      "title_short": "Coollabs Coolify 64424×9.4",
+      "title_full": "Coollabs Coolify CVE-2025-64424 · CVSS 9.4",
+      "vendor": "Coollabs",
+      "product": "Coolify",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.02092,
+        "percentile": 0.80893
+      },
+      "cwe": [
+        "CWE-77"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Coollabs Coolify 存在RCE漏洞，CVSS 9.4，EPSS 0.02。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. In Coolify versions up to and including v4.0.0-beta.434, a command injection vulnerability exists in the git source input fields of a resource, allowing a low privileged user (member) to execute system commands as root on the Coolify instance. As of time of publication, it is unclear if a patch is available.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://drive.google.com/file/d/1rk7AYxNDkJUwo8uWbzX62PpBxpDYeyrZ/view?usp=drive_link"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/coollabsio/coolify/security/advisories/GHSA-qx24-jhwj-8w6x"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T21:16:12Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 51,
+      "generated_by": "template",
+      "risk_score": 9.442
+    },
+    {
+      "cve_id": "CVE-2025-59156",
+      "title_short": "Coollabs Coolify 59156×9.4",
+      "title_full": "Coollabs Coolify CVE-2025-59156 · CVSS 9.4",
+      "vendor": "Coollabs",
+      "product": "Coolify",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00976,
+        "percentile": 0.60625
+      },
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Coollabs Coolify 存在RCE漏洞，CVSS 9.4，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to version 4.0.0-beta.420.7, a Remote Code Execution (RCE)*vulnerability exists in Coolify's application deployment workflow. This flaw allows a low-privileged member to inject arbitrary Docker Compose directives during project creation or updates. By defining a malicious service that mounts the host filesystem, an attacker can achieve root-level command execution on the host OS, completely bypassing container isolation. Version 4.0.0-beta.420.7 contains a patch for the issue.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/coollabsio/coolify/security/advisories/GHSA-h5xw-7xvp-xrxr"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T18:15:43Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 52,
+      "generated_by": "template",
+      "risk_score": 9.42
+    },
+    {
+      "cve_id": "CVE-2025-64120",
+      "title_short": "Nuvationenergy Nplatform 64120×9.4",
+      "title_full": "Nuvationenergy Nplatform CVE-2025-64120 · CVSS 9.4",
+      "vendor": "Nuvationenergy",
+      "product": "Nplatform",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:I/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.0101,
+        "percentile": 0.61689
+      },
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Nuvationenergy Nplatform 存在RCE漏洞，CVSS 9.4，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Nuvation Energy Multi-Stack Controller (MSC) allows OS Command Injection.This issue affects Multi-Stack Controller (MSC): from 2.3.8 before 2.5.1.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://www.dragos.com/community/advisories/CVE-2025-64119"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-02T22:15:44Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 53,
+      "generated_by": "template",
+      "risk_score": 9.42
+    },
+    {
+      "cve_id": "CVE-2025-71284",
+      "title_short": "Synway Smg Gateway Management Software 71284×9.3",
+      "title_full": "Synway Smg Gateway Management Software CVE-2025-71284 · CVSS 9.3",
+      "vendor": "Synway",
+      "product": "Smg Gateway Management Software",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.05727,
+        "percentile": 0.92787
+      },
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Synway Smg Gateway Management Software 存在RCE漏洞，CVSS 9.3，EPSS 0.06。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Synway SMG Gateway Management Software contains an OS command injection vulnerability in the RADIUS configuration endpoint at /en/9-2radius.php where the radius_address POST parameter is split and interpolated directly into a sed command without sanitization. An unauthenticated remote attacker can inject arbitrary shell commands by submitting a POST request with crafted radius_address, radius_address2, shared_secret2, source_ip, timeout, or retry parameters along with save=1 and enable_radius=1 to achieve remote code execution. Exploitation evidence was first observed by the Shadowserver Foundation on 2025-07-11 (UTC).",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/synway/synwaysmg-radius-rce.yaml"
+        },
+        {
+          "name": "第三方",
+          "url": "https://mp.weixin.qq.com/s/PyepoFSuQ63E3RnpQa9nsA"
+        },
+        {
+          "name": "第三方",
+          "url": "https://mrxn.net/jswz/synway-9-2radius-rce.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.synway.net/"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.vulncheck.com/advisories/synway-smg-gateway-management-software-os-command-injection-via-radius-address"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-30T17:16:25Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 54,
+      "generated_by": "template",
+      "risk_score": 9.415
+    },
+    {
+      "cve_id": "CVE-2025-59158",
+      "title_short": "Coollabs Coolify 59158×9.4",
+      "title_full": "Coollabs Coolify CVE-2025-59158 · CVSS 9.4",
+      "vendor": "Coollabs",
+      "product": "Coolify",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00487,
+        "percentile": 0.39531
+      },
+      "cwe": [
+        "CWE-116",
+        "CWE-79"
+      ],
+      "tags": [
+        "XSS"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Coollabs Coolify 存在XSS漏洞，CVSS 9.4，EPSS 0.00。",
+      "impact_zh": "可於受害者瀏覽器執行惡意腳本。",
+      "action_zh": "更新至修補版本，並確認輸入輸出過濾機制。",
+      "description_en": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Coolify versions prior to and including v4.0.0-beta.420.6 are vulnerable to a stored cross-site scripting (XSS) attack in the project creation workflow. An authenticated user with low privileges (e.g., member role) can create a project with a maliciously crafted name containing embedded JavaScript. When an administrator later attempts to delete the project or its associated resource, the payload automatically executes in the admin’s browser context. Version 4.0.0-beta.420.7 contains a patch for the issue.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/coollabsio/coolify/security/advisories/GHSA-h52r-jxv9-9vhf"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T18:15:43Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 55,
+      "generated_by": "template",
+      "risk_score": 9.41
+    },
+    {
+      "cve_id": "CVE-2025-14942",
+      "title_short": "Wolfssh 14942×9.4",
+      "title_full": "Wolfssh CVE-2025-14942 · CVSS 9.4",
+      "vendor": "Wolfssh",
+      "product": "Wolfssh",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Red"
+      },
+      "epss": {
+        "score": 0.00398,
+        "percentile": 0.31394
+      },
+      "cwe": [
+        "CWE-287"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Wolfssh 存在認證繞過漏洞，CVSS 9.4，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "wolfSSH’s key exchange state machine can be manipulated to leak the client’s password in the clear, trick the client to send a bogus signature, or trick the client into skipping user authentication. This affects client applications with wolfSSH version 1.4.21 and earlier. Users of wolfSSH must update or apply the fix patch and it’s recommended to update credentials used. This fix is also recommended for wolfSSH server applications. While there aren’t any specific attacks on server applications, the same defect is present. Thanks to Aina Toky Rasoamanana of Valeo and Olivier Levillain of Telecom SudParis for the report.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/wolfSSL/wolfssh/pull/855"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-06T18:15:42Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 56,
+      "generated_by": "template",
+      "risk_score": 9.408
+    },
+    {
+      "cve_id": "CVE-2025-64125",
+      "title_short": "未標示產品 64125×9.4",
+      "title_full": "未標示產品 CVE-2025-64125 · CVSS 9.4",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.0026,
+        "percentile": 0.1593
+      },
+      "cwe": [
+        "CWE-441"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.4，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "A vulnerability in Nuvation Energy nCloud VPN Service allowed Network Boundary Bridging.This issue affected the nCloud VPN Service and was fixed on 2025-12-1 (December, 2025). End users do not have to take any action to mitigate the issue.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.dragos.com/community/advisories/CVE-2025-64119"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-03T01:15:42Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 57,
+      "generated_by": "template",
+      "risk_score": 9.405
+    },
+    {
+      "cve_id": "CVE-2025-10729",
+      "title_short": "未標示產品 10729×9.4",
+      "title_full": "未標示產品 CVE-2025-10729 · CVSS 9.4",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:X/R:X/V:X/RE:H/U:Red"
+      },
+      "epss": {
+        "score": 0.00219,
+        "percentile": 0.11071
+      },
+      "cwe": [
+        "CWE-416"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.4，EPSS 0.00。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "The module will parse a <pattern> node which is not a child of a structural node. The node will be deleted after creation but might be accessed later leading to a use after free.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://codereview.qt-project.org/c/qt/qtsvg/+/676473"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-03T16:16:16Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 58,
+      "generated_by": "template",
+      "risk_score": 9.404
+    },
+    {
+      "cve_id": "CVE-2025-55748",
+      "title_short": "Xwiki 55748×9.3",
+      "title_full": "Xwiki CVE-2025-55748 · CVSS 9.3",
+      "vendor": "Xwiki",
+      "product": "Xwiki",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01771,
+        "percentile": 0.77265
+      },
+      "cwe": [
+        "CWE-23"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Xwiki 存在路徑穿越漏洞，CVSS 9.3，EPSS 0.02。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. In versions 4.2-milestone-2 through 16.10.6, configuration files are accessible through jsx and sx endpoints. It's possible to access and read configuration files by using URLs such as `http://localhost:8080/bin/ssx/Main/WebHome?resource=../../WEB-INF/xwiki.cfg&minify=false`. This is fixed in version 16.10.7.",
+      "references": [
+        {
+          "name": "修補",
+          "url": "https://github.com/xwiki/xwiki-platform/commit/9e7b4c03f2143978d891109a17159f73d4cdd318#diff-ee78930a9ac5ea586179fe8ab88a5fd58e369d175927d1e88a0b4dbc3ebcbf1eR62"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-m63c-3rmg-r2cf"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://jira.xwiki.org/browse/XWIKI-23109"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-03T21:15:32Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 59,
+      "generated_by": "template",
+      "risk_score": 9.335
+    },
+    {
+      "cve_id": "CVE-2025-58462",
+      "title_short": "Opexustech Foiaxpress Public Access Link 58462×9.3",
+      "title_full": "Opexustech Foiaxpress Public Access Link CVE-2025-58462 · CVSS 9.3",
+      "vendor": "Opexustech",
+      "product": "Foiaxpress Public Access Link",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.0066,
+        "percentile": 0.49585
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Opexustech Foiaxpress Public Access Link 存在SQLi漏洞，CVSS 9.3，EPSS 0.01。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "OPEXUS FOIAXpress Public Access Link (PAL) before version 11.13.1.0 allows SQL injection via SearchPopularDocs.aspx. A remote, unauthenticated attacker could read, write, or delete any content in the underlying database.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://docs.opexustech.com/docs/foiaxpress/11.13.0/FOIAXpress_Release_Notes_11.13.1.0.pdf"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/IT/white/2025/va-25-252-01.json"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-58462"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-09T21:15:38Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 60,
+      "generated_by": "template",
+      "risk_score": 9.313
+    },
+    {
+      "cve_id": "CVE-2025-47569",
+      "title_short": "未標示產品 47569×9.3",
+      "title_full": "未標示產品 CVE-2025-47569 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L"
+      },
+      "epss": {
+        "score": 0.00621,
+        "percentile": 0.4768
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.3，EPSS 0.01。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in WPSwings WooCommerce Ultimate Gift Card woocommerce-ultimate-gift-card allows Blind SQL Injection.This issue affects WooCommerce Ultimate Gift Card: from n/a through <= 2.9.6.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Plugin/woocommerce-ultimate-gift-card/vulnerability/wordpress-woocommerce-ultimate-gift-card-plugin-2-8-10-sql-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-09T17:15:46Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 61,
+      "generated_by": "template",
+      "risk_score": 9.312
+    },
+    {
+      "cve_id": "CVE-2025-31342",
+      "title_short": "未標示產品 31342×9.3",
+      "title_full": "未標示產品 CVE-2025-31342 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00491,
+        "percentile": 0.39805
+      },
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "An unrestricted upload of file with dangerous type vulnerability in the upload file function of Galaxy Software Services Corporation Vitals ESP Forum Module through 1.3 version allows remote authenticated users to execute arbitrary system commands via a malicious file.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://zuso.ai/advisory/za-2025-15"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-20T08:15:32Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 62,
+      "generated_by": "template",
+      "risk_score": 9.31
+    },
+    {
+      "cve_id": "CVE-2025-13926",
+      "title_short": "未標示產品 13926×9.3",
+      "title_full": "未標示產品 CVE-2025-13926 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00443,
+        "percentile": 0.3608
+      },
+      "cwe": [
+        "CWE-807"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "An attacker could use data obtained by sniffing the network traffic to \nforge packets in order to make arbitrary requests to Contemporary \nControls BASC 20T.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-099-01.json"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.ccontrols.com/support/contacttech.htm"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-099-01"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-09T20:16:23Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 63,
+      "generated_by": "template",
+      "risk_score": 9.309
+    },
+    {
+      "cve_id": "CVE-2025-41018",
+      "title_short": "Sergestec Exito 41018×9.3",
+      "title_full": "Sergestec Exito CVE-2025-41018 · CVSS 9.3",
+      "vendor": "Sergestec",
+      "product": "Exito",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00456,
+        "percentile": 0.371
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Sergestec Exito 存在SQLi漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "SQL injection in Sergestec's Exito v8.0. This vulnerability allows an attacker to retrieve, create, update, and delete databases through the 'cat' parameter in '/public.php'.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-sergestec-products"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-16T08:15:34Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 64,
+      "generated_by": "template",
+      "risk_score": 9.309
+    },
+    {
+      "cve_id": "CVE-2025-64119",
+      "title_short": "未標示產品 64119×9.3",
+      "title_full": "未標示產品 CVE-2025-64119 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00457,
+        "percentile": 0.37177
+      },
+      "cwe": [
+        "CWE-603"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "A vulnerability in Nuvation Battery Management System allows Authentication Bypass.This issue affects Battery Management System: through 2.3.9.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.dragos.com/community/advisories/CVE-2025-64119"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-02T22:15:44Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 65,
+      "generated_by": "template",
+      "risk_score": 9.309
+    },
+    {
+      "cve_id": "CVE-2025-10910",
+      "title_short": "未標示產品 10910×9.3",
+      "title_full": "未標示產品 CVE-2025-10910 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00389,
+        "percentile": 0.30438
+      },
+      "cwe": [
+        "CWE-639"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "A flaw in the binding process of Govee’s cloud platform and devices allows a remote attacker to bind an existing, online Govee device to the attacker’s account, resulting in full control of the device and removal of the device from its legitimate owner’s account.\nThe server‑side API allows device association using a set of identifiers: \"device\", \"sku\", \"type\", and a client‑computed \"value\", that are not cryptographically bound to a secret originating from the device itself.\n\nThe vulnerability has been verified for the Govee H6056 - lamp device in firmware version 1.08.13, but may affect also other Govee cloud‑connected devices. The vendor is investigating other potentially affected models.\n\nThe vendor has deployed server-side security enhancements and automatic firmware updates for model H6056. Most of H6056 devices have been successfully patched through automatic updates. Remaining H6056 users with upgradeable hardware versions must manually update firmware through the Govee Home app while keeping their device WiFi-connected. Users should open the Govee Home app, tap their H6056 device card to enter the device details page, tap the settings icon in the upper right corner, navigate to Device Information section (Firmware Version), and tap the Update button to install the security patch immediately.\n \nGovee H6056 devices with hardware versions 1.00.10 or 1.00.11 cannot receive firmware update due to hardware limitations.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://cert.pl/en/posts/2025/12/CVE-2025-10910/"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-12-18T12:16:07Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 66,
+      "generated_by": "template",
+      "risk_score": 9.308
+    },
+    {
+      "cve_id": "CVE-2025-15624",
+      "title_short": "Sparxsystems Pro Cloud Server 15624×9.3",
+      "title_full": "Sparxsystems Pro Cloud Server CVE-2025-15624 · CVSS 9.3",
+      "vendor": "Sparxsystems",
+      "product": "Pro Cloud Server",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:X/V:C/RE:M/U:Red"
+      },
+      "epss": {
+        "score": 0.0038,
+        "percentile": 0.2942
+      },
+      "cwe": [
+        "CWE-256"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Sparxsystems Pro Cloud Server 存在安全漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Plaintext Storage of a Password vulnerability in Sparx Systems Pty Ltd. Sparx Pro Cloud Server. \nIn a setup where OpenID is used as the primary method of authentication to authenticate to Sparx EA, Pro Cloud Server creates local passwords to the users and stores them in plaintext.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://sparxsystems.com/products/procloudserver/6.1/history.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-17T09:16:04Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 67,
+      "generated_by": "template",
+      "risk_score": 9.308
+    },
+    {
+      "cve_id": "CVE-2025-23993",
+      "title_short": "未標示產品 23993×9.3",
+      "title_full": "未標示產品 CVE-2025-23993 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L"
+      },
+      "epss": {
+        "score": 0.00404,
+        "percentile": 0.3213
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in RiceTheme Felan Framework felan-framework allows SQL Injection.This issue affects Felan Framework: from n/a through <= 1.1.3.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Plugin/felan-framework/vulnerability/wordpress-felan-framework-plugin-1-1-3-sql-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T10:15:48Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 68,
+      "generated_by": "template",
+      "risk_score": 9.308
+    },
+    {
+      "cve_id": "CVE-2025-15346",
+      "title_short": "未標示產品 15346×9.3",
+      "title_full": "未標示產品 CVE-2025-15346 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00338,
+        "percentile": 0.24741
+      },
+      "cwe": [
+        "CWE-287",
+        "CWE-306"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "A vulnerability in the handling of verify_mode = CERT_REQUIRED in the wolfssl Python package (wolfssl-py) causes client certificate requirements to not be fully enforced. \n\nBecause the WOLFSSL_VERIFY_FAIL_IF_NO_PEER_CERT flag was not included, the behavior effectively matched CERT_OPTIONAL: a peer certificate was verified if presented, but connections were incorrectly authenticated when no client certificate was provided. \n\nThis results in improper authentication, allowing attackers to bypass mutual TLS (mTLS) client authentication by omitting a client certificate during the TLS handshake. \n\nThe issue affects versions up to and including 5.8.2.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/wolfSSL/wolfssl-py/commit/b4517dece79f682a8f453abce5cfc0b81bae769d"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/wolfSSL/wolfssl-py/pull/62"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/wolfSSL/wolfssl-py/releases/tag/v5.8.4-stable"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T00:15:59Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 69,
+      "generated_by": "template",
+      "risk_score": 9.307
+    },
+    {
+      "cve_id": "CVE-2025-40690",
+      "title_short": "Phpgurukul Online Fire Reporting System 40690×9.3",
+      "title_full": "Phpgurukul Online Fire Reporting System CVE-2025-40690 · CVSS 9.3",
+      "vendor": "Phpgurukul",
+      "product": "Online Fire Reporting System",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00331,
+        "percentile": 0.23806
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Phpgurukul Online Fire Reporting System 存在SQLi漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "SQL Injection in Online Fire Reporting System v1.2 by PHPGurukul. This vulnerability allows an attacker to retrieve, create, update and delete database via 'teamid' parameter in the endpoint '/ofrs/admin/edit-team.php'.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-phpgurukuls-online-fire-reporting-system"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-11T12:15:35Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 70,
+      "generated_by": "template",
+      "risk_score": 9.307
+    },
+    {
+      "cve_id": "CVE-2025-67928",
+      "title_short": "未標示產品 67928×9.3",
+      "title_full": "未標示產品 CVE-2025-67928 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L"
+      },
+      "epss": {
+        "score": 0.00329,
+        "percentile": 0.23469
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in themesuite Automotive Listings automotive allows Blind SQL Injection.This issue affects Automotive Listings: from n/a through <= 18.6.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Plugin/automotive/vulnerability/wordpress-automotive-listings-plugin-18-6-sql-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T10:15:51Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 71,
+      "generated_by": "template",
+      "risk_score": 9.307
+    },
+    {
+      "cve_id": "CVE-2025-14813",
+      "title_short": "未標示產品 14813×9.3",
+      "title_full": "未標示產品 CVE-2025-14813 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:M/U:Red"
+      },
+      "epss": {
+        "score": 0.0032,
+        "percentile": 0.22451
+      },
+      "cwe": [
+        "CWE-327"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": ": Use of a Broken or Risky Cryptographic Algorithm vulnerability in Legion of the Bouncy Castle Inc. BC-JAVA bcprov on all (core modules).\n\n This vulnerability is associated with program files G3413CTRBlockCipher.\n\n\n\nThis issue affects BC-JAVA: from 1.59 before 1.80.2, from 1.81 before 1.81.1, from 1.82 before 1.84.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/bcgit/bc-java/commit/701686cb0184cd9ae103c801b3581fdf95c6d4f3"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/bcgit/bc-java/commit/b42574345414e4b7c8051b16fa1fafe01c29871f"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902025%E2%80%9014813"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:11720"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:11721"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:13631"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-15T10:16:38Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 72,
+      "generated_by": "template",
+      "risk_score": 9.306
+    },
+    {
+      "cve_id": "CVE-2025-15610",
+      "title_short": "未標示產品 15610×9.3",
+      "title_full": "未標示產品 CVE-2025-15610 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.0031,
+        "percentile": 0.21411
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "The .NET Remoting framework used by OpenText Fax (RightFax) includes known security vulnerabilities that could be exploited if the service is exposed in environments where the remoting ports are accessible.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://support.opentext.com/csm?id=ot_kb_unauthenticated&sysparm_article=KB0861863"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-15T17:17:00Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 73,
+      "generated_by": "template",
+      "risk_score": 9.306
+    },
+    {
+      "cve_id": "CVE-2025-30633",
+      "title_short": "未標示產品 30633×9.3",
+      "title_full": "未標示產品 CVE-2025-30633 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L"
+      },
+      "epss": {
+        "score": 0.00275,
+        "percentile": 0.17943
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in AA-Team Amazon Native Shopping Recommendations allows SQL Injection.This issue affects Amazon Native Shopping Recommendations: from n/a through 1.3.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/wordpress/plugin/woozone-contextual/vulnerability/wordpress-amazon-native-shopping-recommendations-plugin-1-3-sql-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T11:17:40Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 74,
+      "generated_by": "template",
+      "risk_score": 9.306
+    },
+    {
+      "cve_id": "CVE-2026-101084",
+      "title_short": "未標示產品 101084×9.3",
+      "title_full": "未標示產品 CVE-2026-101084 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00279,
+        "percentile": 0.18293
+      },
+      "cwe": [
+        "CWE-639"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "obot versions before v0.21.1 fail to enforce Access Control Rules on the /mcp-connect endpoint, allowing any authenticated user to connect to restricted MCP servers if they possess the server ID. Attackers can bypass authorization checks to access and manipulate sensitive backend systems through MCP tool calls using stored OAuth credentials.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/obot-platform/obot/security/advisories/GHSA-vw82-7fv8-r6gp"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/obot-before-0.21.1-authorization-bypass-via-mcp-connect"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-27T21:17:02Z",
+      "modified": "2026-09-30T23:16:57Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 75,
+      "generated_by": "template",
+      "risk_score": 9.306
+    },
+    {
+      "cve_id": "CVE-2025-15623",
+      "title_short": "Sparxsystems Pro Cloud Server 15623×9.3",
+      "title_full": "Sparxsystems Pro Cloud Server CVE-2025-15623 · CVSS 9.3",
+      "vendor": "Sparxsystems",
+      "product": "Pro Cloud Server",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:X/V:C/RE:M/U:Red"
+      },
+      "epss": {
+        "score": 0.00261,
+        "percentile": 0.16094
+      },
+      "cwe": [
+        "CWE-359",
+        "CWE-497"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Sparxsystems Pro Cloud Server 存在安全漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Exposure of Private Personal Information to an Unauthorized Actor, : Exposure of Sensitive System Information to an Unauthorized Control Sphere vulnerability in Sparx Systems Pty Ltd. Sparx Pro Cloud Server.\n\nUnauthenticated user can retrieve database password in plaintext in certain situations",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://sparxsystems.com/products/procloudserver/6.1/history.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-17T09:16:04Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 76,
+      "generated_by": "template",
+      "risk_score": 9.305
+    },
+    {
+      "cve_id": "CVE-2025-32303",
+      "title_short": "未標示產品 32303×9.3",
+      "title_full": "未標示產品 CVE-2025-32303 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L"
+      },
+      "epss": {
+        "score": 0.00274,
+        "percentile": 0.17838
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Mojoomla WPCHURCH allows Blind SQL Injection.This issue affects WPCHURCH: from n/a through 2.7.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/wordpress/plugin/church-management/vulnerability/wordpress-wpchurch-2-7-0-sql-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-07T13:15:42Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 77,
+      "generated_by": "template",
+      "risk_score": 9.305
+    },
+    {
+      "cve_id": "CVE-2025-39484",
+      "title_short": "未標示產品 39484×9.3",
+      "title_full": "未標示產品 CVE-2025-39484 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L"
+      },
+      "epss": {
+        "score": 0.00274,
+        "percentile": 0.17838
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Waituk Entrada allows SQL Injection.This issue affects Entrada: from n/a through 5.7.7.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/wordpress/theme/entrada/vulnerability/wordpress-entrada-theme-5-7-7-sql-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T17:15:45Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 78,
+      "generated_by": "template",
+      "risk_score": 9.305
+    },
+    {
+      "cve_id": "CVE-2025-41029",
+      "title_short": "未標示產品 41029×9.3",
+      "title_full": "未標示產品 CVE-2025-41029 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00238,
+        "percentile": 0.13341
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "SQL injection vulnerability in Zeon Academy Pro by Zeon Global Tech. This vulnerability allows an attacker to retrieve, create, update, and delete databases by sending a POST request using the parameter 'phonenumber' in '/private/continue-upload.php'.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/sql-injection-zeon-academy-pro-zeon-global-tech"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-21T16:16:19Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 79,
+      "generated_by": "template",
+      "risk_score": 9.305
+    },
+    {
+      "cve_id": "CVE-2025-68865",
+      "title_short": "未標示產品 68865×9.3",
+      "title_full": "未標示產品 CVE-2025-68865 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L"
+      },
+      "epss": {
+        "score": 0.00267,
+        "percentile": 0.16888
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Infility Infility Global infility-global allows SQL Injection.This issue affects Infility Global: from n/a through <= 2.15.06.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://patchstack.com/database/Wordpress/Plugin/infility-global/vulnerability/wordpress-infility-global-plugin-2-14-38-sql-injection-vulnerability?_s_id=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T11:17:42Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 80,
+      "generated_by": "template",
+      "risk_score": 9.305
+    },
+    {
+      "cve_id": "CVE-2025-13605",
+      "title_short": "未標示產品 13605×9.3",
+      "title_full": "未標示產品 CVE-2025-13605 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00198,
+        "percentile": 0.08615
+      },
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "3onedata modbus gateway device model GW1101-1D(RS-485)-TB-P (hardware version V2.2.0) allows authenticated users to execute arbitrary shell commands in the context of the root user by providing payload in the \"IP address\" field of the diagnosis test tools.\nThis issue has been resolved in firmware version 3.0.59B2024080600R4353",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://cert.pl/en/posts/2026/05/CVE-2025-13605"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-05-04T15:16:02Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 81,
+      "generated_by": "template",
+      "risk_score": 9.304
+    },
+    {
+      "cve_id": "CVE-2025-68428",
+      "title_short": "Parall Jspdf 68428×9.2",
+      "title_full": "Parall Jspdf CVE-2025-68428 · CVSS 9.2",
+      "vendor": "Parall",
+      "product": "Jspdf",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.02177,
+        "percentile": 0.81622
+      },
+      "cwe": [
+        "CWE-35",
+        "CWE-73",
+        "CWE-22"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Parall Jspdf 存在路徑穿越漏洞，CVSS 9.2，EPSS 0.02。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "jsPDF is a library to generate PDFs in JavaScript. Prior to version 4.0.0, user control of the first argument of the loadFile method in the node.js build allows local file inclusion/path traversal. If given the possibility to pass unsanitized paths to the loadFile method, a user can retrieve file contents of arbitrary files in the local file system the node process is running in. The file contents are included verbatim in the generated PDFs. Other affected methods are `addImage`, `html`, and `addFont`. Only the node.js builds of the library are affected, namely the `dist/jspdf.node.js` and `dist/jspdf.node.min.js` files. The vulnerability has been fixed in jsPDF@4.0.0. This version restricts file system access per default. This semver-major update does not introduce other breaking changes. Some workarounds areavailable. With recent node versions, jsPDF recommends using the `--permission` flag in production. The feature was introduced experimentally in v20.0.0 and is stable since v22.13.0/v23.5.0/v24.0.0. For older node versions, sanitize user-provided paths before passing them to jsPDF.",
+      "references": [
+        {
+          "name": "修補",
+          "url": "https://github.com/parallax/jsPDF/commit/a688c8f479929b24a6543b1fa2d6364abb03066d"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/parallax/jsPDF/releases/tag/v4.0.0"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/parallax/jsPDF/security/advisories/GHSA-f8cm-6447-x5h2"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:1517"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:2350"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:2568"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-05T22:15:51Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 82,
+      "generated_by": "template",
+      "risk_score": 9.244
+    },
+    {
+      "cve_id": "CVE-2026-101283",
+      "title_short": "未標示產品 101283×9.2",
+      "title_full": "未標示產品 CVE-2026-101283 · CVSS 9.2",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-pwcx-5qh6-2pxc",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.2。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "iperf3 3.20–3.21 (esnet/iperf) has a pre-auth heap buffer overflow in decrypt_rsa_message(): a 256-byte RSA buffer is BIO_read with the attacker-controlled ciphertext length (guard warns only), so an unauthenticated client overflows the heap via an oversized authtoken; fixed in 3.22",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://newreleases.io/project/github/esnet/iperf/release/3.22"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-pwcx-5qh6-2pxc"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101283"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-30T22:16:33Z",
+      "modified": "2026-10-01T00:32:50Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 83,
+      "generated_by": "template",
+      "risk_score": 9.2
+    },
+    {
+      "cve_id": "CVE-2026-19445",
+      "title_short": "未標示產品 19445×9.2",
+      "title_full": "未標示產品 CVE-2026-19445 · CVSS 9.2",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-416"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.2。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "A remote, unauthenticated TLS client can make a server crash or call\nthrough a freed pointer if its sni_callback assigns a different context to\nSSLSocket.context (the documented way to select a certificate per server\nname) and nothing else keeps the original ssl.SSLContext alive. Typical\ncases are servers that create an SSLContext per connection or replace it\nwhile connections are open; servers that wrap their listening socket with\nit are not affected.\n\n\nMitigation: keep a reference to every SSLContext that sets sni_callback for\nthe lifetime of the server. TLS clients are not affected.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/python/cpython/commit/34a53dce8174da2fceb12fe084a4def02a10053d"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/python/cpython/commit/46133cd57d309652139ada74014aca7665ac552b"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/python/cpython/commit/63fab143d94cafae71850831acfb52041ba44af7"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/python/cpython/commit/cd7e51e7d4563866fbaa1e2521ae69b45daf3698"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/python/cpython/commit/d8717ed01717a9641686e6e6f83f0ab8af235e2c"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/python/cpython/issues/156293"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-30T17:16:45Z",
+      "modified": "2026-09-30T23:17:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 84,
+      "generated_by": "template",
+      "risk_score": 9.2
+    },
+    {
+      "cve_id": "CVE-2025-59468",
+      "title_short": "Veeam Backup \\& Replication 59468×9.1",
+      "title_full": "Veeam Backup \\& Replication CVE-2025-59468 · CVSS 9.1",
+      "vendor": "Veeam",
+      "product": "Veeam Backup \\& Replication",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.01192,
+        "percentile": 0.66791
+      },
+      "cwe": [
+        "CWE-77"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Veeam Backup \\& Replication 存在RCE漏洞，CVSS 9.1，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "This vulnerability allows a Backup Administrator to perform remote code execution (RCE) as the postgres user by sending a\r\nmalicious password parameter.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://www.veeam.com/kb4792"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T17:15:48Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 85,
+      "generated_by": "template",
+      "risk_score": 9.124
+    },
+    {
+      "cve_id": "CVE-2025-68398",
+      "title_short": "Weblate 68398×9.1",
+      "title_full": "Weblate CVE-2025-68398 · CVSS 9.1",
+      "vendor": "Weblate",
+      "product": "Weblate",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00792,
+        "percentile": 0.54604
+      },
+      "cwe": [
+        "CWE-20",
+        "CWE-22",
+        "CWE-434"
+      ],
+      "tags": [
+        "路徑穿越",
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Weblate 存在路徑穿越、RCE漏洞，CVSS 9.1，EPSS 0.01。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "Weblate is a web based localization tool. In versions prior to 5.15.1, it was possible to overwrite Git configuration remotely and override some of its behavior. Version 5.15.1 fixes the issue.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/WeblateOrg/weblate/commit/4837a4154390f7c1d03c0e398aa6439dcfa361b4"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/WeblateOrg/weblate/commit/dd8c9d7b00eebe28770fa0e2cd96126791765ea7"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/WeblateOrg/weblate/pull/17330"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/WeblateOrg/weblate/pull/17345"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/WeblateOrg/weblate/releases/tag/weblate-5.15.1"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/WeblateOrg/weblate/security/advisories/GHSA-8vcg-cfxj-p5m3"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-12-18T23:15:49Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 86,
+      "generated_by": "template",
+      "risk_score": 9.116
+    },
+    {
+      "cve_id": "CVE-2025-57735",
+      "title_short": "Apache Airflow 57735×9.1",
+      "title_full": "Apache Airflow CVE-2025-57735 · CVSS 9.1",
+      "vendor": "Apache",
+      "product": "Airflow",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.00667,
+        "percentile": 0.49919
+      },
+      "cwe": [
+        "CWE-613"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Apache Airflow 存在安全漏洞，CVSS 9.1，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "When user logged out, the JWT token the user had authtenticated with was not invalidated, which could lead to reuse of that token in case it was intercepted. In Airflow 3.2 we implemented the mechanism that implements token invalidation at logout. Users who are concerned about the logout scenario and possibility of intercepting the tokens, should upgrade to Airflow 3.2+\n\n\n\nUsers are recommended to upgrade to version 3.2.0, which fixes this issue.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/apache/airflow/pull/56633"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/apache/airflow/pull/61339"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://lists.apache.org/thread/ovn8mpd8zkc604hojt7x3wsw3kc60x98"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/04/09/16"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-09T11:16:20Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 87,
+      "generated_by": "template",
+      "risk_score": 9.113
+    },
+    {
+      "cve_id": "CVE-2025-41118",
+      "title_short": "Grafana Pyroscope 41118×9.1",
+      "title_full": "Grafana Pyroscope CVE-2025-41118 · CVSS 9.1",
+      "vendor": "Grafana",
+      "product": "Pyroscope",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.00407,
+        "percentile": 0.32375
+      },
+      "cwe": [
+        "CWE-732",
+        "CWE-201"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Grafana Pyroscope 存在權限提升漏洞，CVSS 9.1，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "Pyroscope is an open-source continuous profiling database. The database supports various storage backends, including Tencent Cloud Object Storage (COS).\n\nIf the database is configured to use Tencent COS as the storage backend, an attacker could extract the secret_key configuration value from the Pyroscope API.\n\nTo exploit this vulnerability, an attacker needs direct access to the Pyroscope API. We highly recommend limiting the public internet exposure of all our databases, such that they are only accessible by trusted users or internal systems.\n\nThis vulnerability is fixed in versions:\n\n1.15.x: 1.15.2 and above.\n1.16.x: 1.16.1 and above.\n1.17.x: 1.17.0 and above (i.e. all versions).\n\nThanks to Théo Cusnir for reporting this vulnerability to us via our bug bounty program.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://grafana.com/security/security-advisories/cve-2025-41118"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:24503"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-41118"
+        },
+        {
+          "name": "參考",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2458796"
+        },
+        {
+          "name": "參考",
+          "url": "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-41118.json"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-15T20:16:32Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 88,
+      "generated_by": "template",
+      "risk_score": 9.108
+    },
+    {
+      "cve_id": "CVE-2025-59683",
+      "title_short": "Pexip Infinity 59683×9.1",
+      "title_full": "Pexip Infinity CVE-2025-59683 · CVSS 9.1",
+      "vendor": "Pexip",
+      "product": "Pexip Infinity",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+      },
+      "epss": {
+        "score": 0.00331,
+        "percentile": 0.23782
+      },
+      "cwe": [
+        "CWE-863"
+      ],
+      "tags": [
+        "權限提升",
+        "阻斷服務"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Pexip Infinity 存在權限提升、阻斷服務漏洞，CVSS 9.1，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "Pexip Infinity 15.0 through 38.0 before 38.1 has Improper Access Control in the Secure Scheduler for Exchange service, when used with Office 365 Legacy Exchange Tokens. This allows a remote attacker to read potentially sensitive data and excessively consume resources, leading to a denial of service.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://docs.pexip.com/admin/security_bulletins.htm"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-12-25T05:16:07Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 89,
+      "generated_by": "template",
+      "risk_score": 9.107
+    },
+    {
+      "cve_id": "CVE-2025-15484",
+      "title_short": "未標示產品 15484×9.1",
+      "title_full": "未標示產品 CVE-2025-15484 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.00237,
+        "percentile": 0.13236
+      },
+      "cwe": [
+        "CWE-287"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.1，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "The Order Notification for WooCommerce  WordPress plugin before 3.6.3 overrides WooCommerce's permission checks to grant full access to all unauthenticated requests, enabling complete read/write access to store resources like products, coupons, and customers.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://wpscan.com/vulnerability/ee9f1c0c-86bb-4922-9eb5-8aae78003eff/"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-01T06:16:14Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 90,
+      "generated_by": "template",
+      "risk_score": 9.105
+    },
+    {
+      "cve_id": "CVE-2025-68637",
+      "title_short": "Apache Uniffle 68637×9.1",
+      "title_full": "Apache Uniffle CVE-2025-68637 · CVSS 9.1",
+      "vendor": "Apache",
+      "product": "Uniffle",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.00247,
+        "percentile": 0.14355
+      },
+      "cwe": [
+        "CWE-297"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Apache Uniffle 存在安全漏洞，CVSS 9.1，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "The Uniffle HTTP client is configured to trust all SSL certificates and\n\ndisables hostname verification by default. This insecure configuration\nexposes all REST API communication between the Uniffle CLI/client and the\nUniffle Coordinator service to potential Man-in-the-Middle (MITM) attacks.\n\n\nThis issue affects all versions from before 0.10.0.\n\nUsers are recommended to upgrade to version 0.10.0, which fixes the issue.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://lists.apache.org/thread/trvdd11hmpbjno3t8rc9okr4t036ox2v"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2025/12/27/2"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-07T12:17:05Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 91,
+      "generated_by": "template",
+      "risk_score": 9.105
+    },
+    {
+      "cve_id": "CVE-2025-8095",
+      "title_short": "未標示產品 8095×9.1",
+      "title_full": "未標示產品 CVE-2025-8095 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.1,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:D/RE:M/U:Red"
+      },
+      "epss": {
+        "score": 0.00216,
+        "percentile": 0.10809
+      },
+      "cwe": [
+        "CWE-257"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "The OECH1 prefix encoding is intended to obfuscate values across the OpenEdge platform.  It has been identified as cryptographically weak and unsuitable for stored encodings and enterprise applications.  OECH1 encodings should be considered exploitable and immediately replaced by any other supported prefix encoding, all of which are based on symmetric encryption.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://community.progress.com/s/article/Unintended-Use-of-OECH1-for-Password-Secrets-Protection"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-14T14:16:11Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 92,
+      "generated_by": "template",
+      "risk_score": 9.104
+    },
+    {
+      "cve_id": "CVE-2025-59852",
+      "title_short": "Hcltech Dfxanalytics 59852×9.1",
+      "title_full": "Hcltech Dfxanalytics CVE-2025-59852 · CVSS 9.1",
+      "vendor": "Hcltech",
+      "product": "Dfxanalytics",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.00088,
+        "percentile": 0.00359
+      },
+      "cwe": [
+        "CWE-319"
+      ],
+      "tags": [
+        "資訊洩漏"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Hcltech Dfxanalytics 存在資訊洩漏漏洞，CVSS 9.1，EPSS 0.00。",
+      "impact_zh": "敏感資料可能外洩。",
+      "action_zh": "更新至修補版本，並輪替可能受影響的憑證。",
+      "description_en": "HCL  DFXAnalytics  is affected by an Insufficient Transport Layer Protection vulnerability where data is transmitted over the network without encryption, which could allow an attacker to compromise the confidentiality, integrity, and authentication of sensitive information.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0130569"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-05-06T11:16:04Z",
+      "modified": "2026-09-30T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 93,
+      "generated_by": "template",
+      "risk_score": 9.102
+    },
+    {
+      "cve_id": "CVE-2025-59470",
+      "title_short": "Veeam Backup \\& Replication 59470×9.0",
+      "title_full": "Veeam Backup \\& Replication CVE-2025-59470 · CVSS 9.0",
+      "vendor": "Veeam",
+      "product": "Veeam Backup \\& Replication",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:L"
+      },
+      "epss": {
+        "score": 0.01568,
+        "percentile": 0.74366
+      },
+      "cwe": [
+        "CWE-77"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Veeam Backup \\& Replication 存在RCE漏洞，CVSS 9.0，EPSS 0.02。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "This vulnerability allows a Backup Operator to perform remote code execution (RCE) as the postgres user by sending a malicious interval or order parameter.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://www.veeam.com/kb4792"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T17:15:48Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 94,
+      "generated_by": "template",
+      "risk_score": 9.031
+    },
+    {
+      "cve_id": "CVE-2025-59469",
+      "title_short": "Veeam Backup \\& Replication 59469×9.0",
+      "title_full": "Veeam Backup \\& Replication CVE-2025-59469 · CVSS 9.0",
+      "vendor": "Veeam",
+      "product": "Veeam Backup \\& Replication",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:L"
+      },
+      "epss": {
+        "score": 0.00636,
+        "percentile": 0.48415
+      },
+      "cwe": [
+        "CWE-200"
+      ],
+      "tags": [
+        "資訊洩漏"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Veeam Backup \\& Replication 存在資訊洩漏漏洞，CVSS 9.0，EPSS 0.01。",
+      "impact_zh": "敏感資料可能外洩。",
+      "action_zh": "更新至修補版本，並輪替可能受影響的憑證。",
+      "description_en": "This vulnerability allows a Backup or Tape Operator to write files as root.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://www.veeam.com/kb4792"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-01-08T17:15:48Z",
+      "modified": "2026-09-30T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 95,
+      "generated_by": "template",
+      "risk_score": 9.013
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Advance Notification for Publication of October 7, 2026, Security Advisories",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-fBn58ELx?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Advance%20Notification%20for%20Publication%20of%20October%207,%202026,%20Security%20Advisories%26vs_k=1",
+      "date": "2026-09-30T16:00:00Z",
+      "cves": []
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-750: WatchGuard FireWare OS spamd statushdlr Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-750/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-18145"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-749: WatchGuard FireWare OS samld SAMLSession Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-749/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-13046"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-747: Wireshark RF4CE Packet Parsing Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-747/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-96417"
+      ]
+    }
+  ]
+}

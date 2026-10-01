@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-30T01:10:34Z",
-  "total": 5,
+  "updated_at": "2026-10-01T01:10:02Z",
+  "total": 6,
   "reports": [
+    {
+      "date": "2026-10-01",
+      "kept": 95,
+      "kev": 4,
+      "critical": 93,
+      "in_the_wild": 4,
+      "generated_at": "2026-10-01T01:10:01Z",
+      "generated_by": "template",
+      "top": [
+        "Samsung Android 21042×9.8 在野",
+        "Cisco Catalyst SD-WAN Manager 76504×9.8 在野",
+        "Apple Multiple Products 86950×8.8 在野"
+      ]
+    },
     {
       "date": "2026-09-30",
       "kept": 16,
