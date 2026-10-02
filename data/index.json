@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-01T01:10:02Z",
-  "total": 6,
+  "updated_at": "2026-10-02T01:26:08Z",
+  "total": 7,
   "reports": [
+    {
+      "date": "2026-10-02",
+      "kept": 17,
+      "kev": 3,
+      "critical": 16,
+      "in_the_wild": 3,
+      "generated_at": "2026-10-02T01:26:08Z",
+      "generated_by": "template",
+      "top": [
+        "Cisco Catalyst SD-WAN Manager 76504×9.8 在野",
+        "Fortinet FortiMail 104286×9.8 在野",
+        "Apple Multiple Products 86950×8.8 在野"
+      ]
+    },
     {
       "date": "2026-10-01",
       "kept": 95,

@@ -1,0 +1,1115 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "generated_at": "2026-10-02T01:26:08Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-01T22:00:00Z",
+    "to": "2026-10-02T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 323,
+    "kept": 17,
+    "kev": 3,
+    "critical": 16,
+    "in_the_wild": 3,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 3,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 66,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 250,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-76504",
+      "title_short": "Cisco Catalyst SD-WAN Manager 76504×9.8 在野",
+      "title_full": "Cisco Catalyst SD-WAN Manager CVE-2026-76504 · CVSS 9.8 · 在野利用",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Manager",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.01096,
+        "percentile": 0.64334
+      },
+      "cwe": [
+        "CWE-177"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-30",
+        "due_date": "2026-10-03",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Cisco Catalyst SD-WAN Manager 存在認證繞過漏洞，CVSS 9.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP request.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76504"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-30",
+      "modified": "2026-09-30",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 12.822
+    },
+    {
+      "cve_id": "CVE-2026-104286",
+      "title_short": "Fortinet FortiMail 104286×9.8 在野",
+      "title_full": "Fortinet FortiMail CVE-2026-104286 · CVSS 9.8 · 在野利用",
+      "vendor": "Fortinet",
+      "product": "FortiMail",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-22",
+        "CWE-158"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-01",
+        "due_date": "2026-10-04",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Fortinet FortiMail Path Traversal Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Fortinet FortiMail 存在路徑穿越漏洞，CVSS 9.8，已列入 CISA KEV 已知在野利用清單。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-175"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104286"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-01",
+      "modified": "2026-10-01",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.8
+    },
+    {
+      "cve_id": "CVE-2026-86950",
+      "title_short": "Apple Multiple Products 86950×8.8 在野",
+      "title_full": "Apple Multiple Products CVE-2026-86950 · CVSS 8.8 · 在野利用",
+      "vendor": "Apple",
+      "product": "Multiple Products",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.01242,
+        "percentile": 0.68097
+      },
+      "cwe": [
+        "CWE-787"
+      ],
+      "tags": [
+        "RCE",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-29",
+        "due_date": "2026-10-02",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Apple Multiple Products 存在RCE、記憶體破壞漏洞，CVSS 8.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86950"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.apple.com/en-us/149226"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.apple.com/en-us/149228"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.apple.com/en-us/149229"
+        },
+        {
+          "name": "第三方",
+          "url": "http://seclists.org/fulldisclosure/2026/Sep/89"
+        },
+        {
+          "name": "第三方",
+          "url": "http://seclists.org/fulldisclosure/2026/Sep/90"
+        },
+        {
+          "name": "第三方",
+          "url": "http://seclists.org/fulldisclosure/2026/Sep/91"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-29",
+      "modified": "2026-09-29",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 11.825
+    },
+    {
+      "cve_id": "CVE-2009-20011",
+      "title_short": "未標示產品 20011×10.0",
+      "title_full": "未標示產品 CVE-2009-20011 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-w8w9-prcc-w4vw",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 10.0,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01358,
+        "percentile": 0.70675
+      },
+      "cwe": [
+        "CWE-78",
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE",
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE、權限提升漏洞，CVSS 10.0，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "ContentKeeper Web Appliance (now maintained by Impero Software) versions prior to 125.10 are vulnerable to remote command execution due to insecure handling of file uploads via the mimencode CGI utility. The vulnerability allows unauthenticated attackers to upload and execute arbitrary scripts as the Apache user. Additionally, the exploit can optionally escalate privileges by abusing insecure PATH usage in the benetool binary, resulting in root-level access if successful.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "http://www.aushack.com/200904-contentkeeper.txt"
+        },
+        {
+          "name": "參考",
+          "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/unix/http/contentkeeperweb_mimencode.rb"
+        },
+        {
+          "name": "參考",
+          "url": "https://web.archive.org/web/20081220084819/http://www.contentkeeper.com/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.ativion.com/contentkeeper/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/contentkeeper-web-appliance-rce-via-mimencode"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-w8w9-prcc-w4vw"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-20011"
+        },
+        {
+          "name": "參考",
+          "url": "https://web.archive.org/web/20081220084819/http://www.contentkeeper.com"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-08-30T14:15:35Z",
+      "modified": "2026-10-02T00:31:28Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 10.027
+    },
+    {
+      "cve_id": "CVE-2024-13784",
+      "title_short": "未標示產品 13784×9.8",
+      "title_full": "未標示產品 CVE-2024-13784 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00757,
+        "percentile": 0.53525
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "The Contact Form, Survey, Quiz & Popup Form Builder – ARForms plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.8.5 via deserialization of untrusted input from form submissions. This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://wordpress.org/plugins/arforms-form-builder/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/5e0116d6-91c3-4212-9c68-6b706ab09768?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-08-16T09:16:19Z",
+      "modified": "2026-10-01T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 9.815
+    },
+    {
+      "cve_id": "CVE-2025-69934",
+      "title_short": "未標示產品 69934×9.8",
+      "title_full": "未標示產品 CVE-2025-69934 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00468,
+        "percentile": 0.38213
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in /delete_members.php?id=1.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-delete_members.php-id-sqli/20250811-membership-management-system-delete_members.php-id-sqli.md"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-07-30T21:16:52Z",
+      "modified": "2026-10-01T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 9.809
+    },
+    {
+      "cve_id": "CVE-2025-69936",
+      "title_short": "未標示產品 69936×9.8",
+      "title_full": "未標示產品 CVE-2025-69936 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00468,
+        "percentile": 0.38211
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in /edit_member.php?id=1.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/codeastro/20250811-membership-management-system-edit_member.php-id-sqli/20250811-membership-management-system-edit_member.php-id-sqli.md"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-07-30T21:16:52Z",
+      "modified": "2026-10-01T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 9.809
+    },
+    {
+      "cve_id": "CVE-2025-69941",
+      "title_short": "未標示產品 69941×9.8",
+      "title_full": "未標示產品 CVE-2025-69941 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00468,
+        "percentile": 0.3822
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "SourceCodester Tailor Management System 1.0 is vulnerable to SQL Injection in addmeasurement.php?id=1.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/tailor/20250811-tailor-ms-addmeasurement.php-id-sqli/20250811-tailor-ms-addmeasurement.php-id-sqli.md"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-07-30T21:16:52Z",
+      "modified": "2026-10-01T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 9.809
+    },
+    {
+      "cve_id": "CVE-2025-69947",
+      "title_short": "未標示產品 69947×9.8",
+      "title_full": "未標示產品 CVE-2025-69947 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00468,
+        "percentile": 0.38216
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "SourceCodester Tailor Management System 1.0 is vulnerable to SQL Injection in customeredit.php?id=1.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/um-dsp/TaintRadar/blob/main/sql_injection_cves/tailor/20250811-tailor-ms-customeredit.php-id-sqli/20250811-tailor-ms-customeredit.php-id-sqli.md"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-07-30T21:16:52Z",
+      "modified": "2026-10-01T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 9.809
+    },
+    {
+      "cve_id": "CVE-2026-18397",
+      "title_short": "未標示產品 18397×9.4",
+      "title_full": "未標示產品 CVE-2026-18397 · CVSS 9.4",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-cq27-3937-pqqv",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-130",
+        "CWE-252",
+        "CWE-347",
+        "CWE-457"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.4。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "This vulnerability enables unauthenticated remote code execution (RCE) on a victim's machine by exploiting a combination of cryptographic weaknesses and memory management issues in the SConnect native host component.\n\nThe attack leverages an unrestricted messaging interface between an attacker-controlled web page and the native host, allowing malicious input to bypass security checks.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.thalesgroup.com/en/product-security-incident-response"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-cq27-3937-pqqv"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18397"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-01T22:17:01Z",
+      "modified": "2026-10-02T00:31:33Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 9.4
+    },
+    {
+      "cve_id": "CVE-2009-20007",
+      "title_short": "未標示產品 20007×9.3",
+      "title_full": "未標示產品 CVE-2009-20007 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01398,
+        "percentile": 0.71441
+      },
+      "cwe": [
+        "CWE-121"
+      ],
+      "tags": [
+        "記憶體破壞",
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞、RCE漏洞，CVSS 9.3，EPSS 0.01。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Talkative IRC v0.4.4.16 is vulnerable to a stack-based buffer overflow when processing specially crafted response strings sent to a connected client. An attacker can exploit this flaw by sending an overly long message that overflows a fixed-length buffer, potentially leading to arbitrary code execution in the context of the vulnerable process. This vulnerability is exploitable remotely and does not require authentication.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/misc/talkative_response.rb"
+        },
+        {
+          "name": "參考",
+          "url": "https://web.archive.org/web/20090116203306/http://www.talkative-irc.com/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.exploit-db.com/exploits/16459"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.exploit-db.com/exploits/8227"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/talkative-irc-response-buffer-overflow"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2009-4909.php"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-16T15:15:42Z",
+      "modified": "2026-10-01T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 9.328
+    },
+    {
+      "cve_id": "CVE-2009-20005",
+      "title_short": "未標示產品 20005×9.3",
+      "title_full": "未標示產品 CVE-2009-20005 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01361,
+        "percentile": 0.7073
+      },
+      "cwe": [
+        "CWE-121"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.3，EPSS 0.01。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "A stack-based buffer overflow exists in the UtilConfigHome.csp endpoint of InterSystems Caché 2009.1. The vulnerability is triggered by sending a specially crafted HTTP GET request containing an oversized argument to the .csp handler. Due to insufficient bounds checking, the input overflows a stack buffer, allowing an attacker to overwrite control structures and execute arbitrary code. It is unknown if this vulnerability was patched and an affected version range remains undefined.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/http/intersystems_cache.rb"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.exploit-db.com/exploits/16807"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.intersystems.com/products/cache/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.juniper.net/us/en/threatlabs/ips-signatures/detail.APP:INTERSYSTEMS-CACHE-OF.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/intersystems-cache-stack-buffer-overflow"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-16T15:15:41Z",
+      "modified": "2026-10-01T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 12,
+      "generated_by": "template",
+      "risk_score": 9.327
+    },
+    {
+      "cve_id": "CVE-2009-20010",
+      "title_short": "未標示產品 20010×9.3",
+      "title_full": "未標示產品 CVE-2009-20010 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-c5g4-6hj2-c647",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01333,
+        "percentile": 0.7009
+      },
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.3，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Dogfood CRM version 2.0.10 contains a remote command execution vulnerability in the spell.php script used by its mail subsystem. The vulnerability arises from unsanitized user input passed via a POST request to the data parameter, which is processed by the underlying shell without adequate escaping. This allows attackers to inject arbitrary shell commands and execute them on the server. The flaw is exploitable without authentication and was discovered by researcher LSO.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/unix/webapp/dogfood_spell_exec.rb"
+        },
+        {
+          "name": "參考",
+          "url": "https://sourceforge.net/projects/dogfood/files/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.exploit-db.com/exploits/16917"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.fortiguard.com/encyclopedia/ips/28547/dogfood-crm-spell-remote-command-execution"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/dogfood-crm-rce"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-c5g4-6hj2-c647"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-20010"
+        },
+        {
+          "name": "參考",
+          "url": "https://sourceforge.net/projects/dogfood/files"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-08-30T14:15:34Z",
+      "modified": "2026-10-02T00:31:22Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 13,
+      "generated_by": "template",
+      "risk_score": 9.327
+    },
+    {
+      "cve_id": "CVE-2009-20006",
+      "title_short": "未標示產品 20006×9.3",
+      "title_full": "未標示產品 CVE-2009-20006 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01225,
+        "percentile": 0.67711
+      },
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.3，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "osCommerce versions up to and including 2.2 RC2a contain a vulnerability in its administrative file manager utility (admin/file_manager.php). The interface allows file uploads and edits without sufficient input validation or access control. An unauthenticated attacker can craft a POST request to upload a .php file containing arbitrary code, which is then executed by the server.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/unix/webapp/oscommerce_filemanager.rb"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.exploit-db.com/exploits/16899"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.exploit-db.com/exploits/9556"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.oscommerce.com/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/oscommerce-arbitrary-php-code-execution"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-09-16T15:15:41Z",
+      "modified": "2026-10-01T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 14,
+      "generated_by": "template",
+      "risk_score": 9.325
+    },
+    {
+      "cve_id": "CVE-2009-20009",
+      "title_short": "未標示產品 20009×9.3",
+      "title_full": "未標示產品 CVE-2009-20009 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-9gqw-88p3-59j6",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01262,
+        "percentile": 0.68584
+      },
+      "cwe": [
+        "CWE-121"
+      ],
+      "tags": [
+        "記憶體破壞",
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞、RCE漏洞，CVSS 9.3，EPSS 0.01。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Belkin Bulldog Plus version 4.0.2 build 1219 contains a stack-based buffer overflow vulnerability in its web service authentication handler. When a specially crafted HTTP request is sent with an oversized Authorization header, the application fails to properly validate the input length before copying it into a fixed-size buffer, resulting in memory corruption and potential remote code execution. Exploitation requires network access and does not require prior authentication.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/http/belkin_bulldog.rb"
+        },
+        {
+          "name": "參考",
+          "url": "https://s3.belkin.com/support/dl/bulldogwindows.pdf"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.exploit-db.com/exploits/8173"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.fortiguard.com/encyclopedia/ips/17325/belkin-bulldog-plus-web-services-buffer-overflow"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/belkin-bulldog-plus-web-service-buffer-overflow"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-9gqw-88p3-59j6"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-20009"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-08-30T14:15:34Z",
+      "modified": "2026-10-02T00:31:22Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 15,
+      "generated_by": "template",
+      "risk_score": 9.325
+    },
+    {
+      "cve_id": "CVE-2026-103764",
+      "title_short": "未標示產品 103764×9.3",
+      "title_full": "未標示產品 CVE-2026-103764 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-mp8g-r7h2-5x36",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-822"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Mooncake transfer engine before 0.3.13 contains an untrusted pointer dereference in ServerSession::readHeader that allows unauthenticated attackers to read and write arbitrary process memory via the TCP transport data port. Attackers can send a crafted SessionHeader with arbitrary addr and size values using READ or WRITE opcodes to disclose KV cache contents, prompts and secrets or corrupt memory toward code execution.",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-mp8g-r7h2-5x36"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103764"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/kvcache-ai/Mooncake/issues/4441"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/kvcache-ai/Mooncake/commit/a2933849417259e562fc9cbad63c618d464dfb2d"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/kvcache-ai/Mooncake"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/kvcache-ai/Mooncake/blob/6041a609a8c3af35e778f70db344f145c2914980/mooncake-transfer-engine/src/transport/tcp_transport/tcp_transport.cpp#L209"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-02T00:31:32Z",
+      "modified": "2026-10-02T00:31:39Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 16,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-71449",
+      "title_short": "未標示產品 71449×9.3",
+      "title_full": "未標示產品 CVE-2026-71449 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-w2h3-qvv9-248h",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-321"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": ": Use of Hard-coded Cryptographic Key vulnerability in Johnson Controls EasyIO FS32 allows : Retrieve Embedded Sensitive Data.\n\nThis issue affects EasyIO FS32: before 3.0b63.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.johnsoncontrols.com/trust-center/cybersecurity/security-advisories"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-w2h3-qvv9-248h"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71449"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-01T22:17:04Z",
+      "modified": "2026-10-02T00:31:39Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 17,
+      "generated_by": "template",
+      "risk_score": 9.3
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-751: Microsoft Windows dxgkrnl Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-751/",
+      "date": "Thu, 01 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-50375"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-750: WatchGuard FireWare OS spamd statushdlr Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-750/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-18145"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-749: WatchGuard FireWare OS samld SAMLSession Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-749/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-13046"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    }
+  ]
+}
