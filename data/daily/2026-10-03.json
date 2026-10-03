@@ -1,0 +1,574 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "generated_at": "2026-10-03T01:00:44Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-02T22:00:00Z",
+    "to": "2026-10-03T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 230,
+    "kept": 7,
+    "kev": 4,
+    "critical": 7,
+    "in_the_wild": 4,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 32,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 185,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 9,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-104286",
+      "title_short": "Fortinet FortiMail 104286×9.8 在野",
+      "title_full": "Fortinet FortiMail CVE-2026-104286 · CVSS 9.8 · 在野利用",
+      "vendor": "Fortinet",
+      "product": "FortiMail",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.01779,
+        "percentile": 0.77459
+      },
+      "cwe": [
+        "CWE-22",
+        "CWE-158"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-01",
+        "due_date": "2026-10-04",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Fortinet FortiMail Path Traversal Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Fortinet FortiMail 存在路徑穿越漏洞，CVSS 9.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.02。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-175"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104286"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-01",
+      "modified": "2026-10-01",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 12.836
+    },
+    {
+      "cve_id": "CVE-2026-76504",
+      "title_short": "Cisco Catalyst SD-WAN Manager 76504×9.8 在野",
+      "title_full": "Cisco Catalyst SD-WAN Manager CVE-2026-76504 · CVSS 9.8 · 在野利用",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Manager",
+      "vendor_advisory_id": "cisco-sa-sdwan-webauth-xr8beuuU",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.01575,
+        "percentile": 0.74572
+      },
+      "cwe": [
+        "CWE-177"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-09-30",
+        "due_date": "2026-10-03",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Cisco Catalyst SD-WAN Manager 存在認證繞過漏洞，CVSS 9.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.02。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP request.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU"
+        },
+        {
+          "name": "Cisco",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Catalyst%20SD-WAN%20Manager%20API%20Authentication%20Bypass%20Vulnerability%26vs_k=1"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76504"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-09-30",
+      "modified": "2026-10-02T23:18:42Z",
+      "sources": [
+        "cisa_kev",
+        "cisco",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.832
+    },
+    {
+      "cve_id": "CVE-2026-102489",
+      "title_short": "Zammad GmbH 102489×9.4 在野",
+      "title_full": "Zammad GmbH CVE-2026-102489 · CVSS 9.4 · 在野利用",
+      "vendor": "Zammad GmbH",
+      "product": "Zammad",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:C/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00582,
+        "percentile": 0.45835
+      },
+      "cwe": [
+        "CWE-384"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-02",
+        "due_date": "2026-10-05",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Zammad GmbH Zammad Session Fixation Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Zammad GmbH 存在RCE漏洞，CVSS 9.4，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102489"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://zammad.com/en/product/releases/"
+        },
+        {
+          "name": "第三方",
+          "url": "https://csirt.divd.nl/CVE-2026-102489"
+        },
+        {
+          "name": "第三方",
+          "url": "https://csirt.divd.nl/DIVD-2026-00015"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102489"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-02",
+      "modified": "2026-10-02",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 12.412
+    },
+    {
+      "cve_id": "CVE-2026-102490",
+      "title_short": "Zammad GmbH 102490×9.4 在野",
+      "title_full": "Zammad GmbH CVE-2026-102490 · CVSS 9.4 · 在野利用",
+      "vendor": "Zammad GmbH",
+      "product": "Zammad",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:C/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00262,
+        "percentile": 0.16336
+      },
+      "cwe": [
+        "CWE-269"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-02",
+        "due_date": "2026-10-05",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Zammad GmbH 存在權限提升漏洞，CVSS 9.4，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://zammad.com/en/product/releases/"
+        },
+        {
+          "name": "第三方",
+          "url": "https://csirt.divd.nl/CVE-2026-102490"
+        },
+        {
+          "name": "第三方",
+          "url": "https://csirt.divd.nl/DIVD-2026-00015"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-02",
+      "modified": "2026-10-02",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 12.405
+    },
+    {
+      "cve_id": "CVE-2026-103956",
+      "title_short": "未標示產品 103956×10.0",
+      "title_full": "未標示產品 CVE-2026-103956 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 10.0,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-306",
+        "CWE-1188"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 10.0。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Missing authentication for critical function in the authentication dependency in Loom for AWS before 1.6.1 allowed remote actors to obtain super-admin authority over the agent control plane, including registering tool servers, reading stored integration credentials, and rewriting the IAM role policies attached to managed agent roles, via any request to the application API in a deployment where no identity provider is configured.\n\n\n\nTo remediate this issue, users should upgrade to version 1.6.1 or later.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://aws.amazon.com/security/security-bulletins/2026-124-aws/"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/awslabs/loom/releases/tag/v1.6.1"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/awslabs/loom/security/advisories/GHSA-vgmj-998f-r8mp"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-02T19:16:39Z",
+      "modified": "2026-10-02T22:16:53Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-84411",
+      "title_short": "未標示產品 84411×9.3",
+      "title_full": "未標示產品 CVE-2026-84411 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-xj4h-hf2x-2q43",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-191"
+      ],
+      "tags": [
+        "RCE",
+        "阻斷服務"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE、阻斷服務漏洞，CVSS 9.3。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "The web management service in affected RouterOS versions contains an integer underflow in its HTTP request body handling that is reachable before authentication. This can be leveraged by an unauthenticated network attacker to achieve arbitrary code execution as root, or to cause a denial of service, using a single crafted request.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-272-06.json"
+        },
+        {
+          "name": "參考",
+          "url": "https://mikrotik.com/download"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-06"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-xj4h-hf2x-2q43"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84411"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-02T23:16:58Z",
+      "modified": "2026-10-03T00:31:21Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-95102",
+      "title_short": "未標示產品 95102×9.3",
+      "title_full": "未標示產品 CVE-2026-95102 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-jr23-ffqr-cj5j",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-306"
+      ],
+      "tags": [
+        "認證繞過",
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過、權限提升漏洞，CVSS 9.3。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "WebSocket endpoints lack proper authentication mechanisms, enabling attackers to impersonate charging stations. As a result, attackers can exploit this weakness to gain unauthorized access to sensitive data or perform unauthorized actions. Given that no authentication is required, this can lead to privilege escalation and potentially compromise the security of the entire system.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-274-02.json"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-jr23-ffqr-cj5j"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95102"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-02T22:16:56Z",
+      "modified": "2026-10-03T00:31:16Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 9.3
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Catalyst SD-WAN Manager API Authentication Bypass Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Catalyst%20SD-WAN%20Manager%20API%20Authentication%20Bypass%20Vulnerability%26vs_k=1",
+      "date": "2026-10-02T23:18:42Z",
+      "cves": [
+        "CVE-2026-76504"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco IOS XE Software Security Hardening Release: August 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-iosxe-V8NMuMZJ?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20IOS%20XE%20Software%20Security%20Hardening%20Release:%20August%202026%26vs_k=1",
+      "date": "2026-10-02T19:21:28Z",
+      "cves": [
+        "CVE-2026-20267",
+        "CVE-2026-20268",
+        "CVE-2026-20269",
+        "CVE-2026-20270",
+        "CVE-2026-20271",
+        "CVE-2026-20272"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-751: Microsoft Windows dxgkrnl Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-751/",
+      "date": "Thu, 01 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-50375"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-750: WatchGuard FireWare OS spamd statushdlr Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-750/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-18145"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-749: WatchGuard FireWare OS samld SAMLSession Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-749/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-13046"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    }
+  ]
+}

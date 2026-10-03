@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-02T01:26:08Z",
-  "total": 7,
+  "updated_at": "2026-10-03T01:00:44Z",
+  "total": 8,
   "reports": [
+    {
+      "date": "2026-10-03",
+      "kept": 7,
+      "kev": 4,
+      "critical": 7,
+      "in_the_wild": 4,
+      "generated_at": "2026-10-03T01:00:44Z",
+      "generated_by": "template",
+      "top": [
+        "Fortinet FortiMail 104286×9.8 在野",
+        "Cisco Catalyst SD-WAN Manager 76504×9.8 在野",
+        "Zammad GmbH 102489×9.4 在野"
+      ]
+    },
     {
       "date": "2026-10-02",
       "kept": 17,
