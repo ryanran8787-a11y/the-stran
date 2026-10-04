@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-03T01:00:44Z",
-  "total": 8,
+  "updated_at": "2026-10-04T00:24:43Z",
+  "total": 9,
   "reports": [
+    {
+      "date": "2026-10-04",
+      "kept": 3,
+      "kev": 3,
+      "critical": 3,
+      "in_the_wild": 3,
+      "generated_at": "2026-10-04T00:24:43Z",
+      "generated_by": "template",
+      "top": [
+        "Fortinet FortiMail 104286×9.8 在野",
+        "Zammad GmbH 102489×9.4 在野",
+        "Zammad GmbH 102490×9.4 在野"
+      ]
+    },
     {
       "date": "2026-10-03",
       "kept": 7,
