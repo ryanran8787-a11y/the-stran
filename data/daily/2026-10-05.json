@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "generated_at": "2026-10-05T00:34:29Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-04T22:00:00Z",
+    "to": "2026-10-05T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 75,
+    "kept": 5,
+    "kev": 3,
+    "critical": 4,
+    "in_the_wild": 3,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 3,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 8,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 60,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-102489",
+      "title_short": "Zammad GmbH 102489×9.4 在野",
+      "title_full": "Zammad GmbH CVE-2026-102489 · CVSS 9.4 · 在野利用",
+      "vendor": "Zammad GmbH",
+      "product": "Zammad",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:C/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01396,
+        "percentile": 0.71465
+      },
+      "cwe": [
+        "CWE-384"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-02",
+        "due_date": "2026-10-05",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Zammad GmbH Zammad Session Fixation Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Zammad GmbH 存在RCE漏洞，CVSS 9.4，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102489"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://zammad.com/en/product/releases/"
+        },
+        {
+          "name": "第三方",
+          "url": "https://csirt.divd.nl/CVE-2026-102489"
+        },
+        {
+          "name": "第三方",
+          "url": "https://csirt.divd.nl/DIVD-2026-00015"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102489"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-02",
+      "modified": "2026-10-02",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 12.428
+    },
+    {
+      "cve_id": "CVE-2026-102490",
+      "title_short": "Zammad GmbH 102490×9.4 在野",
+      "title_full": "Zammad GmbH CVE-2026-102490 · CVSS 9.4 · 在野利用",
+      "vendor": "Zammad GmbH",
+      "product": "Zammad",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:C/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00629,
+        "percentile": 0.48333
+      },
+      "cwe": [
+        "CWE-269"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-02",
+        "due_date": "2026-10-05",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Zammad GmbH 存在權限提升漏洞，CVSS 9.4，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://zammad.com/en/product/releases/"
+        },
+        {
+          "name": "第三方",
+          "url": "https://csirt.divd.nl/CVE-2026-102490"
+        },
+        {
+          "name": "第三方",
+          "url": "https://csirt.divd.nl/DIVD-2026-00015"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-02",
+      "modified": "2026-10-02",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.413
+    },
+    {
+      "cve_id": "CVE-2026-88779",
+      "title_short": "Citrix NetScaler 88779×8.7 在野",
+      "title_full": "Citrix NetScaler CVE-2026-88779 · CVSS 8.7 · 在野利用",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "4.0",
+        "score": 8.7,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00276,
+        "percentile": 0.18203
+      },
+      "cwe": [
+        "CWE-119"
+      ],
+      "tags": [
+        "阻斷服務",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-04",
+        "due_date": "2026-10-07",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Citrix NetScaler 存在阻斷服務、記憶體破壞漏洞，CVSS 8.7，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88779"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697174"
+        },
+        {
+          "name": "參考",
+          "url": "https://community.citrix.com/techzone-blogs/110_security-updates/understanding-and-addressing-cve-2026-88779-in-citrix-netscaler-adc-and-citrix-netscaler-gateway/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88779"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-04",
+      "modified": "2026-10-04",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 11.706
+    },
+    {
+      "cve_id": "CVE-2026-105221",
+      "title_short": "未標示產品 105221×9.1",
+      "title_full": "未標示產品 CVE-2026-105221 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-phqh-xp3p-h6mr",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.1,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-295"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.1。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "The gist RubyGem before 6.1.0 contains an improper certificate validation vulnerability that allows on-path attackers to intercept HTTPS traffic because http_connection in lib/gist.rb sets VERIFY_NONE. Attackers can present any certificate to read or modify GitHub API traffic, stealing OAuth tokens and login credentials to read and modify the victim's gists.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/defunkt/gist"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/defunkt/gist/blob/v6.0.0/lib/gist.rb#L466-L468"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/defunkt/gist/commit/07ccc1a6d46e9d36f0e85d0b1c5d795890ae6bcf"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/defunkt/gist/issues/373"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/gist-rubygem-before-6.1.0-disabled-tls-certificate-verification"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-phqh-xp3p-h6mr"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105221"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-04T23:16:59Z",
+      "modified": "2026-10-05T00:30:26Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-105222",
+      "title_short": "未標示產品 105222×9.1",
+      "title_full": "未標示產品 CVE-2026-105222 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-mpgp-p4pg-fp7c",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.1,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-295"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.1。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "The alexpechkarev/google-maps Laravel package through 12.16 disables TLS certificate verification by default because the bundled config sets ssl_verify_peer to FALSE, which is passed to CURLOPT_SSL_VERIFYPEER. On-path attackers can present any certificate to intercept Google Maps web-service requests, steal the API key from the query string, and tamper with responses.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/alexpechkarev/google-maps"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/alexpechkarev/google-maps/blob/v12.14/src/WebService.php#L267-L269"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/alexpechkarev/google-maps/blob/v12.16/src/config/googlemaps.php#L28"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/alexpechkarev/google-maps/issues/123"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/alexpechkarev-google-maps-through-12.16-disabled-tls-certificate-verification-via-ssl-verify-peer"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-mpgp-p4pg-fp7c"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105222"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-04T23:16:59Z",
+      "modified": "2026-10-05T00:30:26Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 9.1
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-751: Microsoft Windows dxgkrnl Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-751/",
+      "date": "Thu, 01 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-50375"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-750: WatchGuard FireWare OS spamd statushdlr Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-750/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-18145"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-749: WatchGuard FireWare OS samld SAMLSession Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-749/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-13046"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    }
+  ]
+}
