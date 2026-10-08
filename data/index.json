@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-07T01:16:57Z",
-  "total": 12,
+  "updated_at": "2026-10-08T01:38:55Z",
+  "total": 13,
   "reports": [
+    {
+      "date": "2026-10-08",
+      "kept": 6,
+      "kev": 0,
+      "critical": 6,
+      "in_the_wild": 0,
+      "generated_at": "2026-10-08T01:38:55Z",
+      "generated_by": "template",
+      "top": [
+        "Fasterxml Jackson Databind 9547×9.8",
+        "未標示產品 105636×9.9",
+        "未標示產品 105641×9.8"
+      ]
+    },
     {
       "date": "2026-10-07",
       "kept": 57,

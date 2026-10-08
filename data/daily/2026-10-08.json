@@ -1,0 +1,574 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T01:38:55Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-07T22:00:00Z",
+    "to": "2026-10-08T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 123,
+    "kept": 6,
+    "kev": 0,
+    "critical": 6,
+    "in_the_wild": 0,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 45,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 40,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 38,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2020-9547",
+      "title_short": "Fasterxml Jackson Databind 9547×9.8",
+      "title_full": "Fasterxml Jackson Databind CVE-2020-9547 · CVSS 9.8",
+      "vendor": "Fasterxml",
+      "product": "Jackson Databind",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.18383,
+        "percentile": 0.97163
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Fasterxml Jackson Databind 存在反序列化漏洞，CVSS 9.8，EPSS 0.18。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "FasterXML jackson-databind 2.x before 2.9.10.4 mishandles the interaction between serialization gadgets and typing, related to com.ibatis.sqlmap.engine.transaction.jta.JtaTransactionConfig (aka ibatis-sqlmap).",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://github.com/FasterXML/jackson-databind/issues/2634"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r35d30db00440ef63b791c4b7f7acb036e14d4a23afa2a249cb66c0fd%40%3Cissues.zookeeper.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r4accb2e0de9679174efd3d113a059bab71ff3ec53e882790d21c1cc1%40%3Cnotifications.zookeeper.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r742ef70d126548dcf7de5be5779355c9d76a9aec71d7a9ef02c6398a%40%3Cnotifications.zookeeper.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r893a0104e50c1c2559eb9a5812add28ae8c3e5f43712947a9847ec18%40%3Cnotifications.zookeeper.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r9464a40d25c3ba1a55622db72f113eb494a889656962d098c70c5bb1%40%3Cdev.zookeeper.apache.org%3E"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2020-03-02T04:15:11Z",
+      "modified": "2026-10-07T22:16:58Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 10.168
+    },
+    {
+      "cve_id": "CVE-2026-105636",
+      "title_short": "未標示產品 105636×9.9",
+      "title_full": "未標示產品 CVE-2026-105636 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.0035,
+        "percentile": 0.26472
+      },
+      "cwe": [
+        "CWE-918"
+      ],
+      "tags": [
+        "SSRF"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SSRF漏洞，CVSS 9.9，EPSS 0.00。",
+      "impact_zh": "可誘使伺服器發送任意請求，觸及內網。",
+      "action_zh": "更新至修補版本，並限制服務的對外與內網連線。",
+      "description_en": "Plane is an open-source project management tool. Prior to 1.4.0, the webhook delivery task in apps/api/plane/bgtasks/webhook_task.py calls requests.post() without allow_redirects=False and does not validate redirect targets. validate_url() blocks private, loopback, link-local, and reserved addresses in the original webhook URL, but the final URL reached after one or more redirects is not checked. A user who can create a workspace can register a webhook pointing to an attacker-controlled public endpoint that returns a 302 redirect to an internal address. The Plane worker then fetches internal resources, including cloud metadata, and stores the response body in webhook_logs, where the attacker can retrieve it through the workspace webhook-logs API. This issue is fixed in 1.4.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/makeplane/plane/commit/04622ce1188c4680951f0001e35efb342fe51615"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/makeplane/plane/pull/9163"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/makeplane/plane/releases/tag/v1.4.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/makeplane/plane/security/advisories/GHSA-mq87-52pf-hm3h"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-05T19:17:17Z",
+      "modified": "2026-10-07T22:17:02Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 9.907
+    },
+    {
+      "cve_id": "CVE-2026-105641",
+      "title_short": "未標示產品 105641×9.8",
+      "title_full": "未標示產品 CVE-2026-105641 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.0046,
+        "percentile": 0.37885
+      },
+      "cwe": [
+        "CWE-798"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Plane is an open-source project management tool. Prior to 1.4.0, the deployments/aio/community/ and deployments/cli/community/ manifests provide fixed, publicly known SECRET_KEY and LIVE_SERVER_SECRET_KEY defaults that remain active when operators do not override them. The top-level setup.sh randomizes secrets only for the development Docker Compose path, leaving unchanged aio and cli community deployments with shared production secrets. Knowledge of SECRET_KEY enables attackers to forge Django-signed values and compromise accounts or sessions. Knowledge of LIVE_SERVER_SECRET_KEY bypasses live-service authentication on unchanged community deployments. This issue is fixed in 1.4.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/makeplane/plane/commit/1acc69e816a9a8789032bf711aa9a3c12fcd285c"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/makeplane/plane/pull/9291"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/makeplane/plane/releases/tag/v1.4.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/makeplane/plane/security/advisories/GHSA-cmwv-pjmw-8483"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-05T19:17:18Z",
+      "modified": "2026-10-07T22:17:02Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 9.809
+    },
+    {
+      "cve_id": "CVE-2026-103877",
+      "title_short": "未標示產品 103877×9.8",
+      "title_full": "未標示產品 CVE-2026-103877 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00386,
+        "percentile": 0.30499
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "Deserialization of Untrusted Data vulnerability in Apache Directory LDAP API.\n\n\n\nA rogue/compromised LDAP server (or pre-TLS MITM) can answer a client's loadSchema() subschema search with a schema object that contains a serialized Java class, allowing some potential RCE. \n\n\n\nThis issue affects Apache Directory LDAP API: from 2.1.0 before 2.1.9.\n\n\n\nUsers are recommended to upgrade to version 2.1.9, which fixes the issue.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/sys8l881blqfgoc3o724jl32bmjl8pvw"
+        },
+        {
+          "name": "參考",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/02/5"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-02T10:17:06Z",
+      "modified": "2026-10-07T23:16:58Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 9.808
+    },
+    {
+      "cve_id": "CVE-2026-106016",
+      "title_short": "未標示產品 106016×9.8",
+      "title_full": "未標示產品 CVE-2026-106016 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00144,
+        "percentile": 0.03171
+      },
+      "cwe": [
+        "CWE-693"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Mitigation bypass in the File Handling component. This vulnerability was fixed in Firefox 157.0.1.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2067465"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.mozilla.org/security/advisories/mfsa2026-104/"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-06T13:16:47Z",
+      "modified": "2026-10-07T23:16:59Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 9.803
+    },
+    {
+      "cve_id": "CVE-2026-107282",
+      "title_short": "未標示產品 107282×9.4",
+      "title_full": "未標示產品 CVE-2026-107282 · CVSS 9.4",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-319",
+        "CWE-441",
+        "CWE-522"
+      ],
+      "tags": [
+        "資訊洩漏"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在資訊洩漏漏洞，CVSS 9.4。",
+      "impact_zh": "敏感資料可能外洩。",
+      "action_zh": "更新至修補版本，並輪替可能受影響的憑證。",
+      "description_en": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.13  and 2.16.1, cross-host request replay updates the current request but leaves the target request and related proxy context pointing at the original origin. Connection-pool selection, CONNECT handling, realm selection, and TLS setup can consequently send the original host's path, Host header, Authorization credentials, or plaintext request to the replay destination. Documented ResponseFilter failover and retry paths can trigger the replay. This issue is fixed in versions 3.0.13 and 2.16.1.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/AsyncHttpClient/async-http-client/commit/15b254514a411623e5f1d8c99ea79c0f82f8a466"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/AsyncHttpClient/async-http-client/commit/bbc31aed3b044f9f7a126cf689a8c8d7ad2ae1cb"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/AsyncHttpClient/async-http-client/releases/tag/async-http-client-project-2.16.1"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/AsyncHttpClient/async-http-client/releases/tag/async-http-client-project-3.0.13"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/AsyncHttpClient/async-http-client/security/advisories/GHSA-jmqq-x5g9-9p2w"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-07T22:17:04Z",
+      "modified": "2026-10-07T22:17:04Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 9.4
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Meraki Security Hardening Release: October 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-meraki-os-drbEX9GH?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Meraki%20Security%20Hardening%20Release:%20October%202026%26vs_k=1",
+      "date": "2026-10-08T00:18:38Z",
+      "cves": [
+        "CVE-2026-76463",
+        "CVE-2026-76464",
+        "CVE-2026-76467",
+        "CVE-2026-76468",
+        "CVE-2026-76469",
+        "CVE-2026-76470"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Advance Notification for Publication of October 7, 2026, Security Advisories",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-fBn58ELx?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Advance%20Notification%20for%20Publication%20of%20October%207,%202026,%20Security%20Advisories%26vs_k=1",
+      "date": "2026-10-07T16:00:41Z",
+      "cves": [
+        "CVE-2026-20032",
+        "CVE-2026-20038",
+        "CVE-2026-20173",
+        "CVE-2026-76453",
+        "CVE-2026-76455",
+        "CVE-2026-76456"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco NX-OS Software Python Sandbox Escape Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-mppe-dhKZAFgb?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20NX-OS%20Software%20Python%20Sandbox%20Escape%20Vulnerability%26vs_k=1",
+      "date": "2026-10-07T16:00:00Z",
+      "cves": [
+        "CVE-2026-20032"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Finesse Server-Side Request Forgery Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-finesse-ssrf-mmSuyugS?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Finesse%20Server-Side%20Request%20Forgery%20Vulnerability%26vs_k=1",
+      "date": "2026-10-07T16:00:00Z",
+      "cves": [
+        "CVE-2026-20362"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Nexus 3000 and 9000 Series Switches MPLS OAM Remote Code Execution Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-moam-rce-uBTzYV7?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Nexus%203000%20and%209000%20Series%20Switches%20MPLS%20OAM%20Remote%20Code%20Execution%20Vulnerability%26vs_k=1",
+      "date": "2026-10-07T16:00:00Z",
+      "cves": [
+        "CVE-2026-76465"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Application Policy Infrastructure Controller Unauthorized File Access Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-apic-info-priv-enAdB5vD?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Application%20Policy%20Infrastructure%20Controller%20Unauthorized%20File%20Access%20Vulnerability%26vs_k=1",
+      "date": "2026-10-07T16:00:00Z",
+      "cves": [
+        "CVE-2026-76488"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Application Policy Infrastructure Controller API Command Injection Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-apic-cmdinj-L6VR4E7?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Application%20Policy%20Infrastructure%20Controller%20API%20Command%20Injection%20Vulnerability%26vs_k=1",
+      "date": "2026-10-07T16:00:00Z",
+      "cves": [
+        "CVE-2026-20321"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco License (Smart Software Manager) On-Prem Security Hardening Release: October 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ssm-Ph77wdhf?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20License%20(Smart%20Software%20Manager)%20On-Prem%20Security%20Hardening%20Release:%20October%202026%26vs_k=1",
+      "date": "2026-10-07T16:00:00Z",
+      "cves": [
+        "CVE-2026-76480",
+        "CVE-2026-76482",
+        "CVE-2026-76483",
+        "CVE-2026-76484"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Nexus 9000 Series Fabric Switches in ACI Mode Endpoint Group Contract Bypass Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-aci-epgcbp-SfDU7NLf?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Nexus%209000%20Series%20Fabric%20Switches%20in%20ACI%20Mode%20Endpoint%20Group%20Contract%20Bypass%20Vulnerability%26vs_k=1",
+      "date": "2026-10-07T16:00:00Z",
+      "cves": [
+        "CVE-2026-20038"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Nexus 3000 and 9000 Series Switches NGOAM Remote Code Execution Vulnerabilities",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ngoam-rce-LWKQ4BU?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Nexus%203000%20and%209000%20Series%20Switches%20NGOAM%20Remote%20Code%20Execution%20Vulnerabilities%26vs_k=1",
+      "date": "2026-10-07T16:00:00Z",
+      "cves": [
+        "CVE-2026-76485",
+        "CVE-2026-76486",
+        "CVE-2026-76501"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Application Policy Infrastructure Controller Security Hardening Release: October 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-apic-UOXWtfh?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Application%20Policy%20Infrastructure%20Controller%20Security%20Hardening%20Release:%20October%202026%26vs_k=1",
+      "date": "2026-10-07T16:00:00Z",
+      "cves": [
+        "CVE-2026-76498",
+        "CVE-2026-76499",
+        "CVE-2026-76500"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco NX-OS Software NX-API Remote Code Execution Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-napi-rce-r2shwu2j?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20NX-OS%20Software%20NX-API%20Remote%20Code%20Execution%20Vulnerability%26vs_k=1",
+      "date": "2026-10-07T16:00:00Z",
+      "cves": [
+        "CVE-2026-76471"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-751: Microsoft Windows dxgkrnl Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-751/",
+      "date": "Thu, 01 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-50375"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-750: WatchGuard FireWare OS spamd statushdlr Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-750/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-18145"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-749: WatchGuard FireWare OS samld SAMLSession Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-749/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-13046"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    }
+  ]
+}
