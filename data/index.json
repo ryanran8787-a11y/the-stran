@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-08T01:38:55Z",
-  "total": 13,
+  "updated_at": "2026-10-09T01:52:42Z",
+  "total": 14,
   "reports": [
+    {
+      "date": "2026-10-09",
+      "kept": 59,
+      "kev": 6,
+      "critical": 53,
+      "in_the_wild": 6,
+      "generated_at": "2026-10-09T01:52:42Z",
+      "generated_by": "template",
+      "top": [
+        "ProFTPD 3306×10.0 在野",
+        "Apache Struts 3081×8.1 在野",
+        "ONLYOFFICE Docs 3199×9.8 在野"
+      ]
+    },
     {
       "date": "2026-10-08",
       "kept": 6,

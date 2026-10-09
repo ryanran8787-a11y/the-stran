@@ -1,0 +1,3546 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T01:52:42Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-08T22:00:00Z",
+    "to": "2026-10-09T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 959,
+    "kept": 59,
+    "kev": 6,
+    "critical": 53,
+    "in_the_wild": 6,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 5,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 555,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 395,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2015-3306",
+      "title_short": "ProFTPD 3306×10.0 在野",
+      "title_full": "ProFTPD CVE-2015-3306 · CVSS 10.0 · 在野利用",
+      "vendor": "ProFTPD",
+      "product": "ProFTPD",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.96752,
+        "percentile": 0.99887
+      },
+      "cwe": [
+        "CWE-284"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-08",
+        "due_date": "2026-10-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "ProFTPD Improper Access Control Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "ProFTPD 存在權限提升漏洞，CVSS 10.0，已列入 CISA KEV 已知在野利用清單，EPSS 0.97。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157053.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157054.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157581.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.opensuse.org/opensuse-updates/2015-06/msg00020.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://packetstormsecurity.com/files/131505/ProFTPd-1.3.5-File-Copy.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://packetstormsecurity.com/files/131555/ProFTPd-1.3.5-Remote-Command-Execution.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08",
+      "modified": "2026-10-08",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 14.935
+    },
+    {
+      "cve_id": "CVE-2016-3081",
+      "title_short": "Apache Struts 3081×8.1 在野",
+      "title_full": "Apache Struts CVE-2016-3081 · CVSS 8.1 · 在野利用",
+      "vendor": "Apache",
+      "product": "Struts",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.1,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.93352,
+        "percentile": 0.99838
+      },
+      "cwe": [
+        "CWE-77"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-08",
+        "due_date": "2026-10-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Apache Struts Command Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Apache Struts 存在RCE漏洞，CVSS 8.1，已列入 CISA KEV 已知在野利用清單，EPSS 0.93。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3081"
+        },
+        {
+          "name": "第三方",
+          "url": "http://packetstormsecurity.com/files/136856/Apache-Struts-2.3.28-Dynamic-Method-Invocation-Remote-Code-Execution.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://www.huawei.com/en/psirt/security-advisories/huawei-sa-20160527-01-struts2-en"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html"
+        },
+        {
+          "name": "廠商公告",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.rapid7.com/db/modules/exploit/linux/http/struts_dmi_exec"
+        },
+        {
+          "name": "參考",
+          "url": "http://www.rapid7.com/db/modules/exploit/multi/http/struts_dmi_exec"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08",
+      "modified": "2026-10-08",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.967
+    },
+    {
+      "cve_id": "CVE-2021-3199",
+      "title_short": "ONLYOFFICE Docs 3199×9.8 在野",
+      "title_full": "ONLYOFFICE Docs CVE-2021-3199 · CVSS 9.8 · 在野利用",
+      "vendor": "ONLYOFFICE",
+      "product": "Docs",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.08215,
+        "percentile": 0.9475
+      },
+      "cwe": [
+        "CWE-22"
+      ],
+      "tags": [
+        "RCE",
+        "路徑穿越"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-08",
+        "due_date": "2026-10-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "ONLYOFFICE Docs Server Path Traversal Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "ONLYOFFICE Docs 存在RCE、路徑穿越漏洞，CVSS 9.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.08。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3199"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/ONLYOFFICE/DocumentServer/blob/903fe5ab7a275bd69c3c3346af2d21cf87ebeabf/CHANGELOG.md#563"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/moehw/poc_exploits/tree/master/CVE-2021-3199/poc_uploadImageFile.py"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/nola-milkin/poc_exploits/blob/master/CVE-2021-3199/poc_uploadImageFile.py"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-3199"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08",
+      "modified": "2026-10-08",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 12.964
+    },
+    {
+      "cve_id": "CVE-2025-61932",
+      "title_short": "Motex Lanscope Endpoint Manager 61932×9.3 在野",
+      "title_full": "Motex Lanscope Endpoint Manager CVE-2025-61932 · CVSS 9.3 · 在野利用",
+      "vendor": "Motex",
+      "product": "Lanscope Endpoint Manager",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.02768,
+        "percentile": 0.85892
+      },
+      "cwe": [
+        "CWE-940"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2025-10-22",
+        "due_date": "2025-11-12",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Motex LANSCOPE Endpoint Manager Improper Verification of Source of a Communication Channel Vulnerability",
+        "required_action_en": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable."
+      },
+      "summary_zh": "Motex Lanscope Endpoint Manager 存在安全漏洞，CVSS 9.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.03。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Lanscope Endpoint Manager (On-Premises) (Client program (MR) and Detection agent (DA)) improperly verifies the origin of incoming requests, allowing an attacker to execute arbitrary code by sending specially crafted packets.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://jvn.jp/en/jp/JVN86318557/"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.motex.co.jp/news/notice/2025/release251020/"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61932"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-20T08:15:33Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd",
+        "cisa_kev"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 12.355
+    },
+    {
+      "cve_id": "CVE-2015-5477",
+      "title_short": "ISC BIND 5477×7.5 在野",
+      "title_full": "ISC BIND CVE-2015-5477 · CVSS 7.5 · 在野利用",
+      "vendor": "ISC",
+      "product": "BIND",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "epss": {
+        "score": 0.91284,
+        "percentile": 0.9981
+      },
+      "cwe": [
+        "CWE-19",
+        "CWE-617"
+      ],
+      "tags": [
+        "阻斷服務"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-08",
+        "due_date": "2026-10-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": " ISC BIND Data Processing Errors Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "ISC BIND 存在阻斷服務漏洞，CVSS 7.5，已列入 CISA KEV 已知在野利用清單，EPSS 0.91。",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477"
+        },
+        {
+          "name": "參考",
+          "url": "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10718"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163006.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163007.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163015.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00043.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00044.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08",
+      "modified": "2026-10-08",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 12.326
+    },
+    {
+      "cve_id": "CVE-2023-22894",
+      "title_short": "Strapi 22894×4.9 在野",
+      "title_full": "Strapi CVE-2023-22894 · CVSS 4.9 · 在野利用",
+      "vendor": "Strapi",
+      "product": "Strapi",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "3.1",
+        "score": 4.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+      },
+      "epss": {
+        "score": 0.01658,
+        "percentile": 0.7591
+      },
+      "cwe": [
+        "CWE-312"
+      ],
+      "tags": [
+        "RCE",
+        "資訊洩漏"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-08",
+        "due_date": "2026-10-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Strapi Cleartext Storage of Sensitive Information Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Strapi 存在RCE、資訊洩漏漏洞，CVSS 4.9，已列入 CISA KEV 已知在野利用清單，EPSS 0.02。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with CVE-2023-22621 to achieve remote code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22894"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/strapi/strapi/releases"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://strapi.io/blog/security-disclosure-of-vulnerabilities-cve"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.ghostccamm.com/blog/multi_strapi_vulns/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-22894"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08",
+      "modified": "2026-10-08",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 7.933
+    },
+    {
+      "cve_id": "CVE-2017-5645",
+      "title_short": "Apache LOG4J 5645×9.8",
+      "title_full": "Apache LOG4J CVE-2017-5645 · CVSS 9.8",
+      "vendor": "Apache",
+      "product": "LOG4J",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.89792,
+        "percentile": 0.9979
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Apache LOG4J 存在反序列化漏洞，CVSS 9.8，EPSS 0.90。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "In Apache Log4j 2.x before 2.8.2, when using the TCP socket server or UDP socket server to receive serialized log events from another application, a specially crafted binary payload can be sent that, when deserialized, can execute arbitrary code.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2019/12/19/2"
+        },
+        {
+          "name": "修補",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuapr2018-3678067.html"
+        },
+        {
+          "name": "修補",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpujan2018-3236628.html"
+        },
+        {
+          "name": "修補",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.securityfocus.com/bid/97702"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2017-04-17T21:59:00Z",
+      "modified": "2026-10-08T22:16:40Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 11.596
+    },
+    {
+      "cve_id": "CVE-2018-1270",
+      "title_short": "VMware Spring Framework 1270×9.8",
+      "title_full": "VMware Spring Framework CVE-2018-1270 · CVSS 9.8",
+      "vendor": "VMware",
+      "product": "Spring Framework",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.77476,
+        "percentile": 0.99551
+      },
+      "cwe": [
+        "CWE-94",
+        "CWE-358"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "VMware Spring Framework 存在RCE漏洞，CVSS 9.8，EPSS 0.77。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Spring Framework, versions 5.0 prior to 5.0.5 and versions 4.3 prior to 4.3.15 and older unsupported versions, allow applications to expose STOMP over WebSocket endpoints with a simple, in-memory STOMP broker through the spring-messaging module. A malicious user (or attacker) can craft a message to the broker that can lead to a remote code execution attack.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.securityfocus.com/bid/103696"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2018:2939"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/4ed49b103f64a0cecb38064f26cbf1389afc12124653da2d35166dbe%40%3Cissues.activemq.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/6d3d34adcf3dfc48e36342aa1f18ce3c20bb8e4c458a97508d5bfed1%40%3Cissues.activemq.apache.org%3E"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2018-04-06T13:29:00Z",
+      "modified": "2026-10-08T22:16:46Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 11.35
+    },
+    {
+      "cve_id": "CVE-2017-7525",
+      "title_short": "Fasterxml Jackson Databind 7525×9.8",
+      "title_full": "Fasterxml Jackson Databind CVE-2017-7525 · CVSS 9.8",
+      "vendor": "Fasterxml",
+      "product": "Jackson Databind",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.37721,
+        "percentile": 0.98509
+      },
+      "cwe": [
+        "CWE-184",
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Fasterxml Jackson Databind 存在反序列化漏洞，CVSS 9.8，EPSS 0.38。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "A deserialization flaw was discovered in the jackson-databind, versions before 2.6.7.1, 2.7.9.1 and 2.8.9, which could allow an unauthenticated user to perform code execution by sending the maliciously crafted input to the readValue method of the ObjectMapper.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuapr2018-3678067.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.securityfocus.com/bid/99623"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.securitytracker.com/id/1039744"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.securitytracker.com/id/1039947"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2018-02-06T15:29:00Z",
+      "modified": "2026-10-08T22:16:41Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 10.554
+    },
+    {
+      "cve_id": "CVE-2021-23450",
+      "title_short": "Linuxfoundation Dojo 23450×9.8",
+      "title_full": "Linuxfoundation Dojo CVE-2021-23450 · CVSS 9.8",
+      "vendor": "Linuxfoundation",
+      "product": "Dojo",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.30367,
+        "percentile": 0.98193
+      },
+      "cwe": [
+        "CWE-1321"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Linuxfoundation Dojo 存在安全漏洞，CVSS 9.8，EPSS 0.30。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "All versions of package dojo are vulnerable to Prototype Pollution via the setObject function.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://github.com/dojo/dojo/blob/4c39c14349408fc8274e19b399ffc660512ed07c/_base/lang.js%23L172"
+        },
+        {
+          "name": "第三方",
+          "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00030.html"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-2313036"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-2313035"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBDOJO-2313034"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2313033"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2021-12-17T20:15:08Z",
+      "modified": "2026-10-08T22:17:08Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 10.407
+    },
+    {
+      "cve_id": "CVE-2026-96207",
+      "title_short": "未標示產品 96207×10.0",
+      "title_full": "未標示產品 CVE-2026-96207 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-j9rc-2948-ff9r",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-295"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 10.0。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Improper certificate validation in Microsoft Partner Center allows an unauthorized attacker to elevate privileges over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96207"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-j9rc-2948-ff9r"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96207"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08T23:17:05Z",
+      "modified": "2026-10-09T00:31:56Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2017-15095",
+      "title_short": "Fasterxml Jackson Databind 15095×9.8",
+      "title_full": "Fasterxml Jackson Databind CVE-2017-15095 · CVSS 9.8",
+      "vendor": "Fasterxml",
+      "product": "Jackson Databind",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.08357,
+        "percentile": 0.9483
+      },
+      "cwe": [
+        "CWE-184",
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Fasterxml Jackson Databind 存在反序列化漏洞，CVSS 9.8，EPSS 0.08。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "A deserialization flaw was discovered in the jackson-databind in versions before 2.8.10 and 2.9.1, which could allow an unauthenticated user to perform code execution by sending the maliciously crafted input to the readValue method of the ObjectMapper. This issue extends the previous flaw CVE-2017-7525 by blacklisting more classes that could be used maliciously.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuapr2018-3678067.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.securityfocus.com/bid/103880"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.securitytracker.com/id/1039769"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2017:3189"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2018-02-06T15:29:00Z",
+      "modified": "2026-10-08T22:16:40Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 12,
+      "generated_by": "template",
+      "risk_score": 9.967
+    },
+    {
+      "cve_id": "CVE-2016-9841",
+      "title_short": "Zlib 9841×9.8",
+      "title_full": "Zlib CVE-2016-9841 · CVSS 9.8",
+      "vendor": "Zlib",
+      "product": "Zlib",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.0755,
+        "percentile": 0.94367
+      },
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Zlib 存在安全漏洞，CVSS 9.8，EPSS 0.08。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "inffast.c in zlib 1.2.8 might allow context-dependent attackers to have unspecified impact by leveraging improper pointer arithmetic.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "http://lists.opensuse.org/opensuse-updates/2016-12/msg00127.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.opensuse.org/opensuse-updates/2017-01/msg00050.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://lists.opensuse.org/opensuse-updates/2017-01/msg00053.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://www.openwall.com/lists/oss-security/2016/12/05/21"
+        },
+        {
+          "name": "參考",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html"
+        },
+        {
+          "name": "參考",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2017-05-23T04:29:01Z",
+      "modified": "2026-10-08T22:16:40Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 13,
+      "generated_by": "template",
+      "risk_score": 9.951
+    },
+    {
+      "cve_id": "CVE-2021-23369",
+      "title_short": "Handlebarsjs 23369×9.8",
+      "title_full": "Handlebarsjs CVE-2021-23369 · CVSS 9.8",
+      "vendor": "Handlebarsjs",
+      "product": "Handlebars",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.07028,
+        "percentile": 0.94023
+      },
+      "cwe": [],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Handlebarsjs 存在RCE漏洞，CVSS 9.8，EPSS 0.07。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "The package handlebars before 4.7.7 are vulnerable to Remote Code Execution (RCE) when selecting certain compiling options to compile templates coming from an untrusted source.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://github.com/handlebars-lang/handlebars.js/commit/b6d3de7123eebba603e321f04afdbae608e8fea8"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/handlebars-lang/handlebars.js/commit/f0589701698268578199be25285b2ebea1c1e427"
+        },
+        {
+          "name": "第三方",
+          "url": "https://security.netapp.com/advisory/ntap-20210604-0008/"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074950"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074951"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074952"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2021-04-12T14:15:14Z",
+      "modified": "2026-10-08T22:17:07Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 14,
+      "generated_by": "template",
+      "risk_score": 9.941
+    },
+    {
+      "cve_id": "CVE-2021-29921",
+      "title_short": "Python 29921×9.8",
+      "title_full": "Python CVE-2021-29921 · CVSS 9.8",
+      "vendor": "Python",
+      "product": "Python",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.06882,
+        "percentile": 0.93905
+      },
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Python 存在安全漏洞，CVSS 9.8，EPSS 0.07。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "In Python before 3,9,5, the ipaddress library mishandles leading zero characters in the octets of an IP address string. This (in some situations) allows attackers to bypass access control that is based on IP addresses.",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://bugs.python.org/issue36384"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://docs.python.org/3/library/ipaddress.html"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/python/cpython/blob/63298930fb531ba2bb4f23bc3b915dbf1e17e9e1/Misc/NEWS.d/3.8.0a4.rst"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/python/cpython/pull/12577"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/python/cpython/pull/25099"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/sickcodes"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2021-05-06T13:15:12Z",
+      "modified": "2026-10-08T22:17:09Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 15,
+      "generated_by": "template",
+      "risk_score": 9.938
+    },
+    {
+      "cve_id": "CVE-2025-62645",
+      "title_short": "Rbi Restaurant Brands International Assistant 62645×9.9",
+      "title_full": "Rbi Restaurant Brands International Assistant CVE-2025-62645 · CVSS 9.9",
+      "vendor": "Rbi",
+      "product": "Restaurant Brands International Assistant",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00716,
+        "percentile": 0.52305
+      },
+      "cwe": [
+        "CWE-266"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Rbi Restaurant Brands International Assistant 存在安全漏洞，CVSS 9.9，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "The Restaurant Brands International (RBI) assistant platform through 2025-09-06 allows a remote authenticated attacker to obtain a token with administrative privileges for the entire platform via the createToken GraphQL mutation.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://archive.today/fMYQp"
+        },
+        {
+          "name": "參考",
+          "url": "https://bobdahacker.com/blog/rbi-hacked-drive-thrus/"
+        },
+        {
+          "name": "參考",
+          "url": "https://web.archive.org/web/20250906134240/https:/bobdahacker.com/blog/rbi-hacked-drive-thrus"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.malwarebytes.com/blog/news/2025/09/popeyes-tim-hortons-burger-king-platforms-have-catastrophic-vulnerabilities-say-hackers"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.yahoo.com/news/articles/burger-king-hacked-attackers-impressed-124154038.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-17T21:15:37Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 16,
+      "generated_by": "template",
+      "risk_score": 9.914
+    },
+    {
+      "cve_id": "CVE-2025-62650",
+      "title_short": "Rbi Restaurant Brands International Assistant 62650×9.9",
+      "title_full": "Rbi Restaurant Brands International Assistant CVE-2025-62650 · CVSS 9.9",
+      "vendor": "Rbi",
+      "product": "Restaurant Brands International Assistant",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:L"
+      },
+      "epss": {
+        "score": 0.00503,
+        "percentile": 0.41085
+      },
+      "cwe": [
+        "CWE-603"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Rbi Restaurant Brands International Assistant 存在安全漏洞，CVSS 9.9，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "The Restaurant Brands International (RBI) assistant platform through 2025-09-06 relies on client-side authentication for use of the diagnostic screen.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://archive.today/fMYQp"
+        },
+        {
+          "name": "參考",
+          "url": "https://bobdahacker.com/blog/rbi-hacked-drive-thrus/"
+        },
+        {
+          "name": "參考",
+          "url": "https://web.archive.org/web/20250906134240/https:/bobdahacker.com/blog/rbi-hacked-drive-thrus"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.malwarebytes.com/blog/news/2025/09/popeyes-tim-hortons-burger-king-platforms-have-catastrophic-vulnerabilities-say-hackers"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.yahoo.com/news/articles/burger-king-hacked-attackers-impressed-124154038.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-17T21:15:38Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 17,
+      "generated_by": "template",
+      "risk_score": 9.91
+    },
+    {
+      "cve_id": "CVE-2026-94510",
+      "title_short": "未標示產品 94510×9.9",
+      "title_full": "未標示產品 CVE-2026-94510 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-cww8-4fq2-2hhj",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:L"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-639"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.9。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Authorization bypass through user-controlled key in Microsoft Bookings allows an unauthorized attacker to elevate privileges over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-94510"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-cww8-4fq2-2hhj"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94510"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08T23:17:05Z",
+      "modified": "2026-10-09T00:31:56Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 18,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2021-23383",
+      "title_short": "Handlebarsjs 23383×9.8",
+      "title_full": "Handlebarsjs CVE-2021-23383 · CVSS 9.8",
+      "vendor": "Handlebarsjs",
+      "product": "Handlebars",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.04506,
+        "percentile": 0.91266
+      },
+      "cwe": [
+        "CWE-1321"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Handlebarsjs 存在安全漏洞，CVSS 9.8，EPSS 0.05。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "The package handlebars before 4.7.7 are vulnerable to Prototype Pollution when selecting certain compiling options to compile templates coming from an untrusted source.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://github.com/handlebars-lang/handlebars.js/commit/f0589701698268578199be25285b2ebea1c1e427"
+        },
+        {
+          "name": "第三方",
+          "url": "https://security.netapp.com/advisory/ntap-20210618-0007/"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1279031"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1279032"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1279030"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JS-HANDLEBARS-1279029"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2021-05-04T09:15:07Z",
+      "modified": "2026-10-08T22:17:07Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 19,
+      "generated_by": "template",
+      "risk_score": 9.89
+    },
+    {
+      "cve_id": "CVE-2019-14893",
+      "title_short": "Fasterxml Jackson Databind 14893×9.8",
+      "title_full": "Fasterxml Jackson Databind CVE-2019-14893 · CVSS 9.8",
+      "vendor": "Fasterxml",
+      "product": "Jackson Databind",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.04091,
+        "percentile": 0.90465
+      },
+      "cwe": [
+        "CWE-200",
+        "CWE-502"
+      ],
+      "tags": [
+        "資訊洩漏",
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Fasterxml Jackson Databind 存在資訊洩漏、反序列化漏洞，CVSS 9.8，EPSS 0.04。",
+      "impact_zh": "敏感資料可能外洩。",
+      "action_zh": "更新至修補版本，並輪替可能受影響的憑證。",
+      "description_en": "A flaw was discovered in FasterXML jackson-databind in all versions before 2.9.10 and 2.10.0, where it would permit polymorphic deserialization of malicious objects using the xalan JNDI gadget when used in conjunction with polymorphic type handling methods such as `enableDefaultTyping()` or when @JsonTypeInfo is using `Id.CLASS` or `Id.MINIMAL_CLASS` or in any other way which ObjectMapper.readValue might instantiate objects from unsafe sources. An attacker could use this flaw to execute arbitrary code.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0729"
+        },
+        {
+          "name": "第三方",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-14893"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/FasterXML/jackson-databind/issues/2469"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r1b103833cb5bc8466e24ff0ecc5e75b45a705334ab6a444e64e840a0%40%3Cissues.bookkeeper.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/rf1bbc0ea4a9f014cf94df9a12a6477d24a27f52741dbc87f2fd52ff2%40%3Cissues.geode.apache.org%3E"
+        },
+        {
+          "name": "第三方",
+          "url": "https://security.netapp.com/advisory/ntap-20200327-0006/"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2020-03-02T21:15:17Z",
+      "modified": "2026-10-08T22:16:50Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 20,
+      "generated_by": "template",
+      "risk_score": 9.882
+    },
+    {
+      "cve_id": "CVE-2020-6072",
+      "title_short": "Videolabs Libmicrodns 6072×9.8",
+      "title_full": "Videolabs Libmicrodns CVE-2020-6072 · CVSS 9.8",
+      "vendor": "Videolabs",
+      "product": "Libmicrodns",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.03799,
+        "percentile": 0.89728
+      },
+      "cwe": [
+        "CWE-415"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Videolabs Libmicrodns 存在安全漏洞，CVSS 9.8，EPSS 0.04。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "An exploitable code execution vulnerability exists in the label-parsing functionality of Videolabs libmicrodns 0.1.0. When parsing compressed labels in mDNS messages, the rr_decode function's return value is not checked, leading to a double free that could be exploited to execute arbitrary code. An attacker can send an mDNS message to trigger this vulnerability.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://security.gentoo.org/glsa/202005-10"
+        },
+        {
+          "name": "第三方",
+          "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2020-0995"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.debian.org/security/2020/dsa-4671"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2020-03-24T21:15:14Z",
+      "modified": "2026-10-08T22:17:01Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 21,
+      "generated_by": "template",
+      "risk_score": 9.876
+    },
+    {
+      "cve_id": "CVE-2019-13962",
+      "title_short": "Videolan Vlc Media Player 13962×9.8",
+      "title_full": "Videolan Vlc Media Player CVE-2019-13962 · CVSS 9.8",
+      "vendor": "Videolan",
+      "product": "Vlc Media Player",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.037,
+        "percentile": 0.8944
+      },
+      "cwe": [
+        "CWE-125"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Videolan Vlc Media Player 存在記憶體破壞漏洞，CVSS 9.8，EPSS 0.04。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "lavc_CopyPicture in modules/codec/avcodec/video.c in VideoLAN VLC media player through 3.0.7 has a heap-based buffer over-read because it does not properly validate the width and height.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "http://git.videolan.org/?p=vlc/vlc-3.0.git%3Ba=commit%3Bh=2b4f9d0b0e0861f262c90e9b9b94e7d53b864509"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00005.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00037.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00040.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00081.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2020-04/msg00036.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2019-07-18T20:15:12Z",
+      "modified": "2026-10-08T22:16:50Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 22,
+      "generated_by": "template",
+      "risk_score": 9.874
+    },
+    {
+      "cve_id": "CVE-2020-7788",
+      "title_short": "Ini Project 7788×9.8",
+      "title_full": "Ini Project CVE-2020-7788 · CVSS 9.8",
+      "vendor": "Ini Project",
+      "product": "Ini",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.03655,
+        "percentile": 0.89314
+      },
+      "cwe": [
+        "CWE-1321"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Ini Project 存在安全漏洞，CVSS 9.8，EPSS 0.04。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "This affects the package ini before 1.3.6. If an attacker submits a malicious INI file to an application that parses it with ini.parse, they will pollute the prototype on the application. This can be exploited further depending on the context.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://github.com/npm/ini/commit/56d2805e07ccd94e2ba0984ac9240ff02d44b6f1"
+        },
+        {
+          "name": "第三方",
+          "url": "https://lists.debian.org/debian-lts-announce/2020/12/msg00032.html"
+        },
+        {
+          "name": "第三方",
+          "url": "https://snyk.io/vuln/SNYK-JS-INI-1048974"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2020-12-11T11:15:11Z",
+      "modified": "2026-10-08T22:17:03Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 23,
+      "generated_by": "template",
+      "risk_score": 9.873
+    },
+    {
+      "cve_id": "CVE-2023-26119",
+      "title_short": "Htmlunit 26119×9.8",
+      "title_full": "Htmlunit CVE-2023-26119 · CVSS 9.8",
+      "vendor": "Htmlunit",
+      "product": "Htmlunit",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.02513,
+        "percentile": 0.84312
+      },
+      "cwe": [
+        "CWE-94"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Htmlunit 存在RCE漏洞，CVSS 9.8，EPSS 0.03。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Versions of the package net.sourceforge.htmlunit:htmlunit from 0 and before 3.0.0 are vulnerable to Remote Code Execution (RCE) via XSTL, when browsing the attacker’s webpage.",
+      "references": [
+        {
+          "name": "修補",
+          "url": "https://github.com/HtmlUnit/htmlunit/commit/641325bbc84702dc9800ec7037aec061ce21956b"
+        },
+        {
+          "name": "第三方",
+          "url": "https://security.snyk.io/vuln/SNYK-JAVA-NETSOURCEFORGEHTMLUNIT-3252500"
+        },
+        {
+          "name": "第三方",
+          "url": "https://siebene.github.io/2022/12/30/HtmlUnit-RCE/"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2023-04-03T05:15:07Z",
+      "modified": "2026-10-08T22:17:23Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 24,
+      "generated_by": "template",
+      "risk_score": 9.85
+    },
+    {
+      "cve_id": "CVE-2022-32511",
+      "title_short": "Jmespath 32511×9.8",
+      "title_full": "Jmespath CVE-2022-32511 · CVSS 9.8",
+      "vendor": "Jmespath",
+      "product": "Jmespath",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.02425,
+        "percentile": 0.83711
+      },
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Jmespath 存在安全漏洞，CVSS 9.8，EPSS 0.02。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "jmespath.rb (aka JMESPath for Ruby) before 1.6.1 uses JSON.load in a situation where JSON.parse is preferable.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://github.com/jmespath/jmespath.rb/compare/v1.6.0...v1.6.1"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/jmespath/jmespath.rb/pull/55"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/376NUPIPTYBWWGS33GO4UOLQRI4D3BTP/"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AGZ2YWONVFFOPACHAT4MM7ZBT4DNHOF5/"
+        },
+        {
+          "name": "第三方",
+          "url": "https://stackoverflow.com/a/30050571/580231"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2022-06-06T22:15:08Z",
+      "modified": "2026-10-08T22:17:21Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 25,
+      "generated_by": "template",
+      "risk_score": 9.849
+    },
+    {
+      "cve_id": "CVE-2025-9209",
+      "title_short": "未標示產品 9209×9.8",
+      "title_full": "未標示產品 CVE-2025-9209 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.02334,
+        "percentile": 0.83049
+      },
+      "cwe": [
+        "CWE-200"
+      ],
+      "tags": [
+        "資訊洩漏",
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在資訊洩漏、認證繞過漏洞，CVSS 9.8，EPSS 0.02。",
+      "impact_zh": "敏感資料可能外洩。",
+      "action_zh": "更新至修補版本，並輪替可能受影響的憑證。",
+      "description_en": "The RestroPress – Online Food Ordering System plugin for WordPress is vulnerable to Authentication Bypass in versions 3.0.0 to 3.1.9.2. This is due to the plugin exposing user private tokens and API data via the /wp-json/wp/v2/users REST API endpoint. This makes it possible for unauthenticated attackers to forge JWT tokens for other users, including administrators, and authenticate as them.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://wordpress.org/plugins/restropress/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/359833dd-de3c-48ea-8eef-06588a590da2?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-03T12:15:47Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 26,
+      "generated_by": "template",
+      "risk_score": 9.847
+    },
+    {
+      "cve_id": "CVE-2023-51714",
+      "title_short": "Debian Linux 51714×9.8",
+      "title_full": "Debian Linux CVE-2023-51714 · CVSS 9.8",
+      "vendor": "Debian",
+      "product": "Debian Linux",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00978,
+        "percentile": 0.61028
+      },
+      "cwe": [
+        "CWE-190"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Debian Linux 存在記憶體破壞漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "An issue was discovered in the HTTP2 implementation in Qt before 5.15.17, 6.x before 6.2.11, 6.3.x through 6.5.x before 6.5.4, and 6.6.x before 6.6.2. network/access/http2/hpacktable.cpp has an incorrect HPack integer overflow check.",
+      "references": [
+        {
+          "name": "修補",
+          "url": "https://codereview.qt-project.org/c/qt/qtbase/+/524864"
+        },
+        {
+          "name": "修補",
+          "url": "https://codereview.qt-project.org/c/qt/qtbase/+/524865/3"
+        },
+        {
+          "name": "第三方",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/04/msg00027.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2023-12-24T21:15:25Z",
+      "modified": "2026-10-08T22:17:25Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 27,
+      "generated_by": "template",
+      "risk_score": 9.82
+    },
+    {
+      "cve_id": "CVE-2025-62515",
+      "title_short": "未標示產品 62515×9.8",
+      "title_full": "未標示產品 CVE-2025-62515 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00835,
+        "percentile": 0.5641
+      },
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化",
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化、RCE漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "pyquokka is a framework for making data lakes work for time series. In versions 0.3.1 and prior, the FlightServer class directly uses pickle.loads() to deserialize action bodies received from Flight clients without any sanitization or validation in the do_action() method. The vulnerable code is located in pyquokka/flight.py at line 283 where arbitrary data from Flight clients is directly passed to pickle.loads(). When FlightServer is configured to listen on 0.0.0.0, this allows attackers across the entire network to perform arbitrary remote code execution by sending malicious pickled payloads through the set_configs action. Additional vulnerability points exist in the cache_garbage_collect, do_put, and do_get functions where pickle.loads is used to deserialize untrusted remote data.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/marsupialtail/quokka/security/advisories/GHSA-f74j-gffq-vm9p"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-17T21:15:36Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 28,
+      "generated_by": "template",
+      "risk_score": 9.817
+    },
+    {
+      "cve_id": "CVE-2025-7721",
+      "title_short": "未標示產品 7721×9.8",
+      "title_full": "未標示產品 CVE-2025-7721 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.0066,
+        "percentile": 0.5001
+      },
+      "cwe": [
+        "CWE-98"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "The JoomSport – for Sports: Team & League, Football, Hockey & more plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 5.7.3 via the task parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/browser/joomsport-sports-league-results-management/trunk/sportleague/base/wordpress/classes/class-jsport-controller.php#L74"
+        },
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/changeset/3371353/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4f3900c7-2acb-4031-9854-b0b13e172e1f?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-03T12:15:44Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 29,
+      "generated_by": "template",
+      "risk_score": 9.813
+    },
+    {
+      "cve_id": "CVE-2025-9485",
+      "title_short": "未標示產品 9485×9.8",
+      "title_full": "未標示產品 CVE-2025-9485 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00599,
+        "percentile": 0.47026
+      },
+      "cwe": [
+        "CWE-347"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "The OAuth Single Sign On – SSO (OAuth Client) plugin for WordPress is vulnerable to Improper Verification of Cryptographic Signature in versions up to, and including, 6.26.12. This is due to the plugin performing unsafe JWT token processing without verification or validation in the `get_resource_owner_from_id_token` function. This makes it possible for unauthenticated attackers to bypass authentication and gain access to any existing user account - including administrators in certain configurations - or to create arbitrary subscriber-level accounts.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/browser/miniorange-login-with-eve-online-google-facebook/tags/6.26.12/class-mooauth-widget.php#L577"
+        },
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/changeset/3360768/miniorange-login-with-eve-online-google-facebook"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/d2448afc-70d1-4dd5-b73b-62d182ee9a8a?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-04T03:15:38Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 30,
+      "generated_by": "template",
+      "risk_score": 9.812
+    },
+    {
+      "cve_id": "CVE-2025-6388",
+      "title_short": "未標示產品 6388×9.8",
+      "title_full": "未標示產品 CVE-2025-6388 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00556,
+        "percentile": 0.44618
+      },
+      "cwe": [
+        "CWE-288"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "The Spirit Framework plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 1.2.14. This is due to the custom_actions() function not properly validating a user's identity prior to authenticating them to the site. This makes it possible for unauthenticated attackers to log in as any user, including administrators, granted they have access to the administrator's username.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://themespirit.com/talemy-changelog/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/a4cbc0e7-4328-451f-a595-1ce17e9d0031?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-03T09:15:38Z",
+      "modified": "2026-10-08T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 31,
+      "generated_by": "template",
+      "risk_score": 9.811
+    },
+    {
+      "cve_id": "CVE-2025-9286",
+      "title_short": "未標示產品 9286×9.8",
+      "title_full": "未標示產品 CVE-2025-9286 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00467,
+        "percentile": 0.38487
+      },
+      "cwe": [
+        "CWE-620"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在權限提升漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "The Appy Pie Connect for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation due to missing authorization within the reset_user_password() REST handler in all versions up to, and including, 1.1.2. This makes it possible for unauthenticated attackers to to reset the password of arbitrary users, including administrators, thereby gaining administrative access.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/browser/appy-pie-connect-for-woocommerce/trunk/connect-woocommerce-rest-api.php"
+        },
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/changeset/3385150/"
+        },
+        {
+          "name": "參考",
+          "url": "https://wordpress.org/plugins/appy-pie-connect-for-woocommerce/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/36fb5b8d-1ea4-45c2-8639-b229efdb57db?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-03T12:15:47Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 32,
+      "generated_by": "template",
+      "risk_score": 9.809
+    },
+    {
+      "cve_id": "CVE-2025-59943",
+      "title_short": "Phpmyfaq 59943×9.8",
+      "title_full": "Phpmyfaq CVE-2025-59943 · CVSS 9.8",
+      "vendor": "Phpmyfaq",
+      "product": "Phpmyfaq",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00416,
+        "percentile": 0.33864
+      },
+      "cwe": [
+        "CWE-284",
+        "CWE-286"
+      ],
+      "tags": [
+        "權限提升",
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Phpmyfaq 存在權限提升、接管漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "phpMyFAQ is an open source FAQ web application. Versions 4.0-nightly-2025-10-03 and below do not enforce uniqueness of email addresses during user registration. This allows multiple distinct accounts to be created with the same email. Because email is often used as an identifier for password resets, notifications, and administrative actions, this flaw can cause account ambiguity and, in certain configurations, may lead to privilege escalation or account takeover. This issue is fixed in version 4.0.13.",
+      "references": [
+        {
+          "name": "修補",
+          "url": "https://github.com/thorsten/phpMyFAQ/commit/44cd20f86eb041f39d1c30a9beefad1cc61dc0ec"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-9wj2-4hcm-r74j"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-03T21:15:34Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 33,
+      "generated_by": "template",
+      "risk_score": 9.808
+    },
+    {
+      "cve_id": "CVE-2025-0603",
+      "title_short": "未標示產品 0603×9.8",
+      "title_full": "未標示產品 CVE-2025-0603 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00354,
+        "percentile": 0.27088
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Callvision Healthcare Callvision Emergency Code allows SQL Injection, Blind SQL Injection.\n\nThis issue affects Callvision Emergency Code: before V3.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0320"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.usom.gov.tr/bildirim/tr-25-0320"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-07T12:15:38Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 34,
+      "generated_by": "template",
+      "risk_score": 9.807
+    },
+    {
+      "cve_id": "CVE-2026-107722",
+      "title_short": "npm fast-jwt 107722×9.8",
+      "title_full": "npm fast-jwt CVE-2026-107722 · CVSS 9.8",
+      "vendor": "npm",
+      "product": "fast-jwt",
+      "vendor_advisory_id": "GHSA-ww5h-9m49-7xx4",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-347"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "npm fast-jwt 存在認證繞過漏洞，CVSS 9.8。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "### Summary\n\nThe fix for CVE-2026-34950 (CVSS 9.1, released in v6.2.0) is **incomplete**. It adds `key.trim()` to the PEM-detection path in `src/crypto.js`, but `String.prototype.trim()` only strips characters classified as whitespace by the ECMAScript specification. The subsequent `^`-anchored regex (`/^-----BEGIN(?: (RSA))? PUBLIC KEY-----/`) still requires the PEM header at position 0 — so **any non-whitespace leading byte** (control chars, zero-width unicode, `#` comments, HTTP-style headers, PGP wrappers) bypasses detection and falls through to the HMAC verification path, using the RSA public key as the HMAC shared secret. Net result: the **exact same RSA→HS256 algorithm-confusion attack** the original CVE addressed is fully re-enabled with a slightly different leading byte.\n\n**Attack prerequisites are identical to CVE-2026-34950**: attacker knows the target's public RSA key (which is public by definition), and the target loads that key from a source whose content may have a non-whitespace prefix (DB column with corrupted encoding, YAML config with inline comment, copy-paste from formatted document, etc.).\n\n**Verified on fast-jwt@6.2.2 (latest as of 2026-04-23) with a 10-line PoC.**\n\n### Details\n\nPost-patch code (`src/crypto.js`, lines ~74-171 in `performDetectPublicKeyAlgorithms`):\n\n```js\nfunction performDetectPublicKeyAlgorithms(key) {\n    const trimmedKey = key.trim()  // <-- CVE-2026-34950 patch added this\n    if (publicKeyPemMatcher.test(trimmedKey)) {\n        // treat as RSA/EC public key\n        ...\n    }\n    // fall-through: treat as HMAC secret  <-- bug: reachable via non-whitespace prefix\n    ...\n}\nconst publicKeyPemMatcher = /^-----BEGIN(?: (RSA))? PUBLIC KEY-----/\n```\n\n**The bug**: `String.prototype.trim()` only strips whitespace (U+0009-U+000D, U+0020, U+00A0, U+1680, U+2000-U+200A, U+2028-U+2029, U+202F, U+205F, U+3000, U+FEFF). Non-whitespace leading bytes keep the PEM header off position 0, the `^`-anchored regex fails, and execution falls through to the HMAC path with `key` being used as the shared secret. The attacker controls the token signature (signed with the same public key) and the verifier accepts.\n\nIdentical root cause as CVE-2026-34950 — the fix was textually narrow (whitespace only) rather than addressing the class (any surrounding content).\n\n### PoC\n\n```js\n'use strict';\nconst { createHmac, generateKeyPairSync } = require('node:crypto');\nconst { createVerifier } = require('fast-jwt');\n\nconst { publicKey } = generateKeyPairSync('rsa', { modulusLength: 2048 });\nconst pem = publicKey.export({ type: 'pkcs1', format: 'pem' }).toString();\n\n// Attacker-controlled \"key\" content as loaded by the verifier\n// (models a realistic deployment: key with a leading metadata comment)\nconst key = '# some comment\\n' + pem;\n\nconst header = Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url');\nconst payload = Buffer.from(JSON.stringify({ admin: true, sub: 'attacker' })).toString('base64url');\nconst sig = createHmac('sha256', key).update(header + '.' + payload).digest('base64url');\nconst forgedToken = header + '.' + payload + '.' + sig;\n\nconst verifier = createVerifier({ key });\nconsole.log('Forged token payload:', verifier(forgedToken));\nconsole.log('Package version:', require('fast-jwt/package.json').version);\n```\n\n**Observed output (2026-04-23, fresh npm install):**\n```\nForged token payload: { admin: true, sub: 'attacker' }\nPackage version: 6.2.2\n```\n\n### Full bypass matrix (all verified accepting a forged admin token)\n\n| Leading content | Accepted as admin? |\n|---|:-:|\n| `# some comment\\n` + PEM | ✅ BYPASS |\n| `U+0000` (NUL) + PEM | ✅ BYPASS |\n| `U+0001` (SOH) + PEM | ✅ BYPASS |\n| `U+0008` (BACKSPACE) + PEM | ✅ BYPASS |\n| `U+001B` (ESC, ANSI-color) + PEM | ✅ BYPASS |\n| `U+007F` (DEL) + PEM | ✅ BYPASS |\n| `U+200B` (ZWSP) + PEM | ✅ BYPASS |\n| `U+200D` (ZWJ) + PEM | ✅ BYPASS |\n| `HTTP/1.1 200 OK\\r\\n\\r\\n` + PEM | ✅ BYPASS |\n| PGP-wrapper text + PEM | ✅ BYPASS |\n| `.` + PEM | ✅ BYPASS |\n| `U+FEFF` (BOM) + PEM | ❌ correctly stripped by trim |\n\n### Defense matrix (which caller configs are vulnerable)\n\n| Caller config | Vulnerable? |\n|---|:-:|\n| `createVerifier({ key })` (no `algorithms` allowlist) | ✗ VULNERABLE |\n| `createVerifier({ key: asyncCallback })` | ✗ VULNERABLE |\n| `createVerifier({ key, algorithms: ['RS256'] })` | ✓ protected |\n| `createVerifier({ key, algorithms: ['HS256'] })` | ✗ VULNERABLE (attacker matches) |\n\n### Impact\n\n1. **Authentication bypass** — attacker forges arbitrary JWT claims (admin, tenant-id, user-id) accepted by any server using fast-jwt 6.2.x without an `algorithms` allowlist AND loading its verification key from a source that may contain non-whitespace prefix bytes.\n2. **Severity-parity with CVE-2026-34950** — attack chain, prerequisites, exploitation ease, and impact are identical; only the trigger byte differs. The fix addressed *one* trigger (whitespace) rather than the class (any surrounding content before `-----BEGIN`).\n3. **Broad fast-jwt deployment** — default JWT backend of `@fastify/jwt`; used by many Fastify-based Node.js APIs.\n\n### Suggested fix\n\n**Option A (minimal)** — locate the PEM block rather than anchoring on position 0:\n\n```js\nconst pemStart = trimmedKey.indexOf('-----BEGIN')\nif (pemStart !== -1 && publicKeyPemMatcher.test(trimmedKey.slice(pemStart))) { ... }\n```\n\n**Option B (strict, recommended)** — require the key to be exactly a PEM block:\n\n```js\nconst pemMatch = /-----BEGIN (RSA )?PUBLIC KEY-----[\\s\\S]+?-----END \\1?PUBLIC KEY-----/.exec(trimmedKey)\nif (pemMatch && pemMatch[0].trim() === trimmedKey.trim()) { /* valid PEM, no surrounding content */ }\n```\n\n**Option C (defense-in-depth, regardless of A/B)** — on the HMAC fallback path, reject any key that *contains* PEM markers:\n\n```js\nif (rawKey.includes('-----BEGIN') || rawKey.includes('-----END')) {\n    throw new Error('Key appears to be a PEM-encoded asymmetric key but did not match expected format; refusing HMAC fallback')\n}\n```\n\n### Test coverage gap\n\n`test/crypto.spec.js` post-CVE-2026-34950 only tests whitespace padding (`['\\n', ' ', ' \\n', '\\n ', '\\t\\t']`). Add coverage for:\n- Control bytes (U+0000-U+001F, U+007F)\n- Zero-width Unicode (U+200B, U+200C, U+200D, U+180E)\n- Comment prefixes (`#`, `//`, `;`, `--`)\n- Mixed-content wrappers (PGP blocks, HTTP headers)\n- Arbitrary binary prefix bytes\n\n### Credit\n\nReporter: DC INFOSEC / n0l3x — source-code review + end-to-end PoC verification.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/nearform/fast-jwt/commit/d96bbc6c5336055a6dbfa318fdbab01197264cfa"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/nearform/fast-jwt/pull/632"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/nearform/fast-jwt/releases/tag/v6.3.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/nearform/fast-jwt/security/advisories/GHSA-ww5h-9m49-7xx4"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-ww5h-9m49-7xx4"
+        }
+      ],
+      "affected_packages": [
+        "npm:fast-jwt (>= 6.2.0, <= 6.2.4)"
+      ],
+      "published": "2026-10-08T22:02:07Z",
+      "modified": "2026-10-08T22:17:28Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 35,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-75875",
+      "title_short": "未標示產品 75875×9.8",
+      "title_full": "未標示產品 CVE-2026-75875 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-qwfw-cq7q-5365",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-22"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在路徑穿越漏洞，CVSS 9.8。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "IBM Guardium Data Protection 12.0, 12.1, and 12.2 could allow a remote attacker to execute arbitrary code due to path traversal.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.ibm.com/support/pages/node/7291674"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-qwfw-cq7q-5365"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75875"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08T22:17:32Z",
+      "modified": "2026-10-09T00:31:55Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 36,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-77900",
+      "title_short": "未標示產品 77900×9.8",
+      "title_full": "未標示產品 CVE-2026-77900 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-9x98-433f-w7ff",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-306"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.8。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Missing authentication for critical function in Azure App Service allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77900"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-9x98-433f-w7ff"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77900"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08T23:17:03Z",
+      "modified": "2026-10-09T00:31:56Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 37,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-80381",
+      "title_short": "未標示產品 80381×9.8",
+      "title_full": "未標示產品 CVE-2026-80381 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-qpj5-hv25-xhp5",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.8。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "IBM Guardium Data Protection 12.0, 12.1, and 12.2 could allow a remote attacker to execute unauthorized SQL statements due to SQL injection.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.ibm.com/support/pages/node/7291674"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-qpj5-hv25-xhp5"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80381"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08T22:17:32Z",
+      "modified": "2026-10-09T00:31:55Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 38,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-84249",
+      "title_short": "未標示產品 84249×9.8",
+      "title_full": "未標示產品 CVE-2026-84249 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-4w6c-4hq9-q3fr",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-306"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.8。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "IBM Guardium Data Protection 12.2, and 12.2.2 could allow a remote attacker to execute arbitrary management operations due to missing authentication for critical function.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.ibm.com/support/pages/node/7288036"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-4w6c-4hq9-q3fr"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84249"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08T22:17:34Z",
+      "modified": "2026-10-09T00:31:56Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 39,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-88131",
+      "title_short": "未標示產品 88131×9.8",
+      "title_full": "未標示產品 CVE-2026-88131 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-hvxr-qwg3-rpr3",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化漏洞，CVSS 9.8。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "Deserialization of untrusted data in Microsoft Dataverse allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-88131"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-hvxr-qwg3-rpr3"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88131"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08T23:17:04Z",
+      "modified": "2026-10-09T00:31:56Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 40,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-69435",
+      "title_short": "未標示產品 69435×9.6",
+      "title_full": "未標示產品 CVE-2026-69435 · CVSS 9.6",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-cqq5-w7g3-vc36",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-918"
+      ],
+      "tags": [
+        "SSRF"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SSRF漏洞，CVSS 9.6。",
+      "impact_zh": "可誘使伺服器發送任意請求，觸及內網。",
+      "action_zh": "更新至修補版本，並限制服務的對外與內網連線。",
+      "description_en": "Missing authorization in Azure SRE Agent allows an authorized attacker to elevate privileges over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69435"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-cqq5-w7g3-vc36"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69435"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08T23:17:02Z",
+      "modified": "2026-10-09T00:31:56Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 41,
+      "generated_by": "template",
+      "risk_score": 9.6
+    },
+    {
+      "cve_id": "CVE-2026-107406",
+      "title_short": "未標示產品 107406×9.5",
+      "title_full": "未標示產品 CVE-2026-107406 · CVSS 9.5",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-x62m-6223-4vq2",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "RCE",
+        "阻斷服務"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE、阻斷服務漏洞，CVSS 9.5。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Memory overflow vulnerability leading to Remote Code Execution or Denial of Service Vulnerability in NetScaler ADC.\n\n\nNetScaler ADC or NetScaler Gateway must be configured as a SAML SP or SAML IdP, subject to the following version-specific requirements:\n\n\n\n \n\n  *  For the following versions: Applicable only when configured as a SAML IdP:\n  *  NetScaler ADC and NetScaler Gateway between 14.1-73.37 and 14.1-73.41, inclusive\n  *  NetScaler ADC 14.1-FIPS between 14.1-73.37 FIPS and 14.1-73.41 FIPS, inclusive\n  *  NetScaler ADC and NetScaler Gateway between 13.1-64.23 and 13.1-64.28, inclusive\n  *  NetScaler ADC 13.1-FIPS between 13.1-NDcPP 13.1-37.279 and 13.1- 37.282, inclusive\n\n\n\n\n \n\n\n\nFor the following versions: Applicable only when configured as a SAML SP or SAML IdP:\n\n  *  NetScaler ADC and NetScaler Gateway before 14.1-73.37 \n  *  NetScaler ADC 14.1-FIPS before 14.1-73.37 FIPS \n  *  NetScaler ADC and NetScaler Gateway before 13.1-64.23\n  *  NetScaler ADC 13.1-FIPS before13.1-NDcPP 13.1-37.279",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697191"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-x62m-6223-4vq2"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107406"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08T22:17:26Z",
+      "modified": "2026-10-09T00:31:55Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 42,
+      "generated_by": "template",
+      "risk_score": 9.5
+    },
+    {
+      "cve_id": "CVE-2025-61603",
+      "title_short": "Wegia 61603×9.4",
+      "title_full": "Wegia CVE-2025-61603 · CVSS 9.4",
+      "vendor": "Wegia",
+      "product": "Wegia",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00425,
+        "percentile": 0.34779
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Wegia 存在SQLi漏洞，CVSS 9.4，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "WeGIA is a Web manager for charitable institutions. Versions 3.4.12 and below include an SQL Injection vulnerability which was identified in the /controle/control.php endpoint, specifically in the descricao parameter. This vulnerability allows attackers to execute arbitrary SQL commands, compromising the confidentiality, integrity, and availability of the database. This issue is fixed in version 3.5.0.",
+      "references": [
+        {
+          "name": "修補",
+          "url": "https://github.com/LabRedesCefetRJ/WeGIA/commit/84958eed73741a544859eea297908db3b83b3833"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/LabRedesCefetRJ/WeGIA/security/advisories/GHSA-v8hm-pq8g-c7j4"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-02T20:15:35Z",
+      "modified": "2026-10-08T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 43,
+      "generated_by": "template",
+      "risk_score": 9.409
+    },
+    {
+      "cve_id": "CVE-2025-61605",
+      "title_short": "Wegia 61605×9.4",
+      "title_full": "Wegia CVE-2025-61605 · CVSS 9.4",
+      "vendor": "Wegia",
+      "product": "Wegia",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00425,
+        "percentile": 0.3478
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Wegia 存在SQLi漏洞，CVSS 9.4，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "WeGIA is an open source web manager with a focus on charitable institutions. Versions 3.4.12 and below contain an SQL Injection vulnerability which was identified in the /pet/profile_pet.php endpoint, specifically in the id_pet parameter. This vulnerability allows attackers to execute arbitrary SQL commands, compromising the confidentiality, integrity, and availability of the database. This issue is fixed in version 3.5.0.",
+      "references": [
+        {
+          "name": "修補",
+          "url": "https://github.com/LabRedesCefetRJ/WeGIA/commit/176733543c9b6762bef5ddec7c9c555f76fafa1d"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/LabRedesCefetRJ/WeGIA/security/advisories/GHSA-8963-9833-gpx7"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-02T21:16:01Z",
+      "modified": "2026-10-08T23:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 44,
+      "generated_by": "template",
+      "risk_score": 9.409
+    },
+    {
+      "cve_id": "CVE-2025-10728",
+      "title_short": "未標示產品 10728×9.4",
+      "title_full": "未標示產品 CVE-2025-10728 · CVSS 9.4",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:X/R:X/V:X/RE:H/U:Red"
+      },
+      "epss": {
+        "score": 0.00218,
+        "percentile": 0.11184
+      },
+      "cwe": [
+        "CWE-674"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.4，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "When the module renders a Svg file that contains a <pattern> element, it might end up rendering it recursively leading to stack overflow DoS",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://codereview.qt-project.org/c/qt/qtsvg/+/654200"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-03T16:16:16Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 45,
+      "generated_by": "template",
+      "risk_score": 9.404
+    },
+    {
+      "cve_id": "CVE-2025-10729",
+      "title_short": "未標示產品 10729×9.4",
+      "title_full": "未標示產品 CVE-2025-10729 · CVSS 9.4",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:X/R:X/V:X/RE:H/U:Red"
+      },
+      "epss": {
+        "score": 0.00219,
+        "percentile": 0.11299
+      },
+      "cwe": [
+        "CWE-416"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.4，EPSS 0.00。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "The module will parse a <pattern> node which is not a child of a structural node. The node will be deleted after creation but might be accessed later leading to a use after free.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://codereview.qt-project.org/c/qt/qtsvg/+/676473"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-03T16:16:16Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 46,
+      "generated_by": "template",
+      "risk_score": 9.404
+    },
+    {
+      "cve_id": "CVE-2019-20445",
+      "title_short": "Netty 20445×9.1",
+      "title_full": "Netty CVE-2019-20445 · CVSS 9.1",
+      "vendor": "Netty",
+      "product": "Netty",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.13474,
+        "percentile": 0.96351
+      },
+      "cwe": [
+        "CWE-444"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Netty 存在安全漏洞，CVSS 9.1，EPSS 0.13。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "HttpObjectDecoder.java in Netty before 4.1.44 allows a Content-Length header to be accompanied by a second Content-Length header, or by a Transfer-Encoding header.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0497"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0567"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0601"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0605"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0606"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0804"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2020-01-29T21:15:11Z",
+      "modified": "2026-10-08T22:16:53Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 47,
+      "generated_by": "template",
+      "risk_score": 9.369
+    },
+    {
+      "cve_id": "CVE-2025-11948",
+      "title_short": "未標示產品 11948×9.3",
+      "title_full": "未標示產品 CVE-2025-11948 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01011,
+        "percentile": 0.62061
+      },
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.3，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Document Management System developed by Excellent Infotek has an Arbitrary File Upload vulnerability, allowing unauthenticated remote attackers to upload and execute web shell backdoors, thereby enabling arbitrary code execution on the server.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.twcert.org.tw/en/cp-139-10453-43e63-2.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.twcert.org.tw/tw/cp-132-10452-72cb6-1.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.chtsecurity.com/news/3575ad9c-31f4-49de-8bc4-de85bb2eed39"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-20T04:15:36Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 48,
+      "generated_by": "template",
+      "risk_score": 9.32
+    },
+    {
+      "cve_id": "CVE-2025-31342",
+      "title_short": "未標示產品 31342×9.3",
+      "title_full": "未標示產品 CVE-2025-31342 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00491,
+        "percentile": 0.40261
+      },
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "An unrestricted upload of file with dangerous type vulnerability in the upload file function of Galaxy Software Services Corporation Vitals ESP Forum Module through 1.3 version allows remote authenticated users to execute arbitrary system commands via a malicious file.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://zuso.ai/advisory/za-2025-15"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-20T08:15:32Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 49,
+      "generated_by": "template",
+      "risk_score": 9.31
+    },
+    {
+      "cve_id": "CVE-2025-41028",
+      "title_short": "未標示產品 41028×9.3",
+      "title_full": "未標示產品 CVE-2025-41028 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00471,
+        "percentile": 0.38753
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi漏洞，CVSS 9.3，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "A SQL Injection vulnerability has been found in Epsilon RH by Grupo Castilla. This vulnerability allows an attacker to retrieve, create, update and delete database via sending a POST request using the parameter ‘sEstadoUsr’ in ‘/epsilonnetws/WSAvisos.asmx’.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/sql-injection-epsilon-rh"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-20T09:15:32Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 50,
+      "generated_by": "template",
+      "risk_score": 9.309
+    },
+    {
+      "cve_id": "CVE-2016-5018",
+      "title_short": "Apache Tomcat 5018×9.1",
+      "title_full": "Apache Tomcat CVE-2016-5018 · CVSS 9.1",
+      "vendor": "Apache",
+      "product": "Tomcat",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.10303,
+        "percentile": 0.95592
+      },
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Apache Tomcat 存在安全漏洞，CVSS 9.1，EPSS 0.10。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "In Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 a malicious web application was able to bypass a configured SecurityManager via a Tomcat utility method that was accessible to web applications.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "http://packetstormsecurity.com/files/155873/Tomcat-9.0.0.M1-Sandbox-Escape.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://rhn.redhat.com/errata/RHSA-2017-0457.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://rhn.redhat.com/errata/RHSA-2017-1551.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.debian.org/security/2016/dsa-3720"
+        },
+        {
+          "name": "參考",
+          "url": "http://www.securityfocus.com/bid/93942"
+        },
+        {
+          "name": "參考",
+          "url": "http://www.securitytracker.com/id/1037142"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2017-08-10T16:29:00Z",
+      "modified": "2026-10-08T22:16:38Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 51,
+      "generated_by": "template",
+      "risk_score": 9.306
+    },
+    {
+      "cve_id": "CVE-2026-107726",
+      "title_short": "maven com.hazelcast:hazelcast 107726×9.3",
+      "title_full": "maven com.hazelcast:hazelcast CVE-2026-107726 · CVSS 9.3",
+      "vendor": "maven",
+      "product": "com.hazelcast:hazelcast",
+      "vendor_advisory_id": "GHSA-6v25-8wq6-xq4j",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-20"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "maven com.hazelcast:hazelcast 存在RCE漏洞，CVSS 9.3。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "### Impact\n\nA flaw has been found in Hazelcast Enterprise Edition and Community Edition, which would allow a low-privileged malicious client to read arbitrary data in memory from any cluster member (including Java heap memory, off-heap data, and JVM process address space). Additionally, such a client may be able to cause one or more cluster members to crash, or in some Enterprise Edition configurations also corrupt memory contents, potentially leading to remote code execution. Both slim and full distributions are affected.\n\n### Patches\n\nEnterprise customers should upgrade to a fixed version of Hazelcast Enterprise Edition:\n * 5.7.0\n * 5.6.1\n * 5.5.10\n * 5.4.5\n \nCustomers with extended support contracts should contact Hazelcast Support for information on patches for older versions.\n\nCommunity Edition users should upgrade to version 5.7.0.\n\nHazelcast also recommends all customers follow the advice in our [Security Hardening guide](https://docs.hazelcast.com/hazelcast/5.7/secure-cluster/hardening-recommendations), including:\n\n * Ensure [Hazelcast Security](https://docs.hazelcast.com/hazelcast/5.7/security/enable-security) is enabled and [client authorization](https://docs.hazelcast.com/hazelcast/5.7/security/client-authorization) is enforced.\n * Define an [explicit allowlist for zero config Compact serialization](https://docs.hazelcast.com/hazelcast/5.7/serialization/compact-serialization#zero-config-filter).\n * Avoid deploying clients on internet-facing non-secure networks or non-secure hosts.\n * Ensure your Hazelcast cluster is appropriately protected by firewall rules.\n * Disable any features you are not using.\n\n### Workarounds\nIf you cannot update to a fixed version immediately, restrict cluster access to trusted clients only and ensure clients are hardened against compromise.\n\n### References\n\n[Security Advisory on the Hazelcast Support Portal](https://support.hazelcast.com/s/article/Security-Advisory-GHSA-6v25-8wq6-xq4j)",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://docs.hazelcast.com/hazelcast/5.7/release-notes/community"
+        },
+        {
+          "name": "參考",
+          "url": "https://docs.hazelcast.com/hazelcast/5.7/release-notes/enterprise"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/hazelcast/hazelcast/commit/361979da12f18950c24719db832ca6c5e7c0534f"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/hazelcast/hazelcast/releases/tag/v5.7.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/hazelcast/hazelcast/security/advisories/GHSA-6v25-8wq6-xq4j"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-6v25-8wq6-xq4j"
+        }
+      ],
+      "affected_packages": [
+        "maven:com.hazelcast:hazelcast (= 5.6.0)",
+        "maven:com.hazelcast:hazelcast (>= 5.5.0, < 5.5.10)",
+        "maven:com.hazelcast:hazelcast (< 5.4.5)"
+      ],
+      "published": "2026-10-08T22:10:29Z",
+      "modified": "2026-10-08T22:17:29Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 52,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2019-20444",
+      "title_short": "Netty 20444×9.1",
+      "title_full": "Netty CVE-2019-20444 · CVSS 9.1",
+      "vendor": "Netty",
+      "product": "Netty",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.08914,
+        "percentile": 0.95116
+      },
+      "cwe": [
+        "CWE-444"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Netty 存在安全漏洞，CVSS 9.1，EPSS 0.09。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "HttpObjectDecoder.java in Netty before 4.1.44 allows an HTTP header that lacks a colon, which might be interpreted as a separate header with an incorrect syntax, or might be interpreted as an \"invalid fold.\"",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0497"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0567"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0601"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0605"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0606"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2020:0804"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2020-01-29T21:15:11Z",
+      "modified": "2026-10-08T22:16:53Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 53,
+      "generated_by": "template",
+      "risk_score": 9.278
+    },
+    {
+      "cve_id": "CVE-2020-5398",
+      "title_short": "VMware Spring Framework 5398×7.5",
+      "title_full": "VMware Spring Framework CVE-2020-5398 · CVSS 7.5",
+      "vendor": "VMware",
+      "product": "Spring Framework",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.88768,
+        "percentile": 0.99775
+      },
+      "cwe": [
+        "CWE-79",
+        "CWE-494"
+      ],
+      "tags": [
+        "XSS",
+        "供應鏈"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "VMware Spring Framework 存在XSS、供應鏈漏洞，CVSS 7.5，EPSS 0.89。",
+      "impact_zh": "可於受害者瀏覽器執行惡意腳本。",
+      "action_zh": "更新至修補版本，並確認輸入輸出過濾機制。",
+      "description_en": "In Spring Framework, versions 5.2.x prior to 5.2.3, versions 5.1.x prior to 5.1.13, and versions 5.0.x prior to 5.0.16, an application is vulnerable to a reflected file download (RFD) attack when it sets a \"Content-Disposition\" header in the response where the filename attribute is derived from user supplied input.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r028977b9b9d44a89823639aa3296fb0f0cfdd76b4450df89d3c4fbbf%40%3Cissues.karaf.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r0f2d0ae1bad2edb3d4a863d77f3097b5e88cfbdae7b809f4f42d6aad%40%3Cissues.karaf.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r0f3530f7cb510036e497532ffc4e0bd0b882940448cf4e233994b08b%40%3Ccommits.karaf.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r1accbd4f31ad2f40e1661d70a4510a584eb3efd1e32e8660ccf46676%40%3Ccommits.karaf.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r1bc5d673c01cfbb8e4a91914e9748ead3e5f56b61bca54d314c0419b%40%3Cissues.karaf.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/r1c679c43fa4f7846d748a937955c7921436d1b315445978254442163%40%3Ccommits.ambari.apache.org%3E"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2020-01-17T00:15:12Z",
+      "modified": "2026-10-08T22:17:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 54,
+      "generated_by": "template",
+      "risk_score": 9.275
+    },
+    {
+      "cve_id": "CVE-2018-1115",
+      "title_short": "Postgresql 1115×9.1",
+      "title_full": "Postgresql CVE-2018-1115 · CVSS 9.1",
+      "vendor": "Postgresql",
+      "product": "Postgresql",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.03898,
+        "percentile": 0.89991
+      },
+      "cwe": [
+        "CWE-732"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Postgresql 存在權限提升漏洞，CVSS 9.1，EPSS 0.04。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "postgresql before versions 10.4, 9.6.9 is vulnerable in the adminpack extension, the pg_catalog.pg_logfile_rotate() function doesn't follow the same ACLs than pg_rorate_logfile. If the adminpack is added to a database, an attacker able to connect to it could exploit this to force log rotation.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2020-08/msg00043.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.securityfocus.com/bid/104285"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2018:2565"
+        },
+        {
+          "name": "第三方",
+          "url": "https://access.redhat.com/errata/RHSA-2018:2566"
+        },
+        {
+          "name": "第三方",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2018-1115"
+        },
+        {
+          "name": "參考",
+          "url": "https://git.postgresql.org/gitweb/?p=postgresql.git%3Ba=commitdiff%3Bh=7b34740"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2018-05-10T19:29:00Z",
+      "modified": "2026-10-08T22:16:46Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 55,
+      "generated_by": "template",
+      "risk_score": 9.178
+    },
+    {
+      "cve_id": "CVE-2025-10726",
+      "title_short": "未標示產品 10726×9.1",
+      "title_full": "未標示產品 CVE-2025-10726 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00424,
+        "percentile": 0.34674
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi",
+        "資訊洩漏"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在SQLi、資訊洩漏漏洞，CVSS 9.1，EPSS 0.00。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "The WPRecovery plugin for WordPress is vulnerable to SQL Injection via the 'data[id]' parameter in all versions up to, and including, 2.0. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Additionally, the result of this SQL injection is passed directly to PHP's unlink() function, allowing attackers to delete arbitrary files on the server by injecting file paths through the SQL query.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://plugins.svn.wordpress.org/wprecovery/trunk/delete_backup.php"
+        },
+        {
+          "name": "參考",
+          "url": "https://plugins.svn.wordpress.org/wprecovery/trunk/index.php"
+        },
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/browser/wprecovery/tags/2.0/delete_backup.php#L5"
+        },
+        {
+          "name": "參考",
+          "url": "https://plugins.trac.wordpress.org/browser/wprecovery/tags/2.0/index.php#L166"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/15880d3b-87de-4b59-878c-e36e73c45e8a?source=cve"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-03T12:15:43Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 56,
+      "generated_by": "template",
+      "risk_score": 9.108
+    },
+    {
+      "cve_id": "CVE-2025-10916",
+      "title_short": "未標示產品 10916×9.1",
+      "title_full": "未標示產品 CVE-2025-10916 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00339,
+        "percentile": 0.25308
+      },
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "The FormGent  WordPress plugin before 1.0.4 is vulnerable to arbitrary file deletion due to insufficient file path validation. This makes it possible for unauthenticated attackers to delete arbitrary files on the server.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://wpscan.com/vulnerability/81c23998-1abb-495f-890a-79624a4cab9a/"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2025-10-21T06:15:43Z",
+      "modified": "2026-10-08T22:10:00Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 57,
+      "generated_by": "template",
+      "risk_score": 9.107
+    },
+    {
+      "cve_id": "CVE-2022-29885",
+      "title_short": "Apache Tomcat 29885×7.5",
+      "title_full": "Apache Tomcat CVE-2022-29885 · CVSS 7.5",
+      "vendor": "Apache",
+      "product": "Tomcat",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "epss": {
+        "score": 0.73474,
+        "percentile": 0.99457
+      },
+      "cwe": [
+        "CWE-400"
+      ],
+      "tags": [
+        "阻斷服務"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Apache Tomcat 存在阻斷服務漏洞，CVSS 7.5，EPSS 0.73。",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "The documentation of Apache Tomcat 10.1.0-M1 to 10.1.0-M14, 10.0.0-M1 to 10.0.20, 9.0.13 to 9.0.62 and 8.5.38 to 8.5.78 for the EncryptInterceptor incorrectly stated it enabled Tomcat clustering to run over an untrusted network. This was not correct. While the EncryptInterceptor does provide confidentiality and integrity protection, it does not protect against all risks associated with running over any untrusted network, particularly DoS risks.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "http://packetstormsecurity.com/files/171728/Apache-Tomcat-10.1-Denial-Of-Service.html"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://lists.apache.org/thread/2b4qmhbcyqvc7dyfpjyx54c03x65vhcv"
+        },
+        {
+          "name": "第三方",
+          "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00029.html"
+        },
+        {
+          "name": "第三方",
+          "url": "https://security.netapp.com/advisory/ntap-20220629-0002/"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.debian.org/security/2022/dsa-5265"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2022-05-12T08:15:07Z",
+      "modified": "2026-10-08T22:17:20Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 58,
+      "generated_by": "template",
+      "risk_score": 8.969
+    },
+    {
+      "cve_id": "CVE-2020-13934",
+      "title_short": "Apache Tomcat 13934×7.5",
+      "title_full": "Apache Tomcat CVE-2020-13934 · CVSS 7.5",
+      "vendor": "Apache",
+      "product": "Tomcat",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "epss": {
+        "score": 0.64124,
+        "percentile": 0.99211
+      },
+      "cwe": [
+        "CWE-401",
+        "CWE-476"
+      ],
+      "tags": [
+        "阻斷服務"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Apache Tomcat 存在阻斷服務漏洞，CVSS 7.5，EPSS 0.64。",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "An h2c direct connection to Apache Tomcat 10.0.0-M1 to 10.0.0-M6, 9.0.0.M5 to 9.0.36 and 8.5.1 to 8.5.56 did not release the HTTP/1.1 processor after the upgrade to HTTP/2. If a sufficient number of such requests were made, an OutOfMemoryException could occur leading to a denial of service.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00084.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00088.html"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://lists.apache.org/thread.html/r61f411cf82488d6ec213063fc15feeeb88e31b0ca9c29652ee4f962e%40%3Cannounce.tomcat.apache.org%3E"
+        },
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/ra072b1f786e7d139e86f1d1145572e0ff71cef38a96d9c6f5362aac8%40%3Cdev.tomcat.apache.org%3E"
+        },
+        {
+          "name": "第三方",
+          "url": "https://lists.debian.org/debian-lts-announce/2020/07/msg00017.html"
+        },
+        {
+          "name": "第三方",
+          "url": "https://security.netapp.com/advisory/ntap-20200724-0003/"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2020-07-14T15:15:11Z",
+      "modified": "2026-10-08T22:16:56Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 59,
+      "generated_by": "template",
+      "risk_score": 8.782
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-751: Microsoft Windows dxgkrnl Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-751/",
+      "date": "Thu, 01 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-50375"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-750: WatchGuard FireWare OS spamd statushdlr Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-750/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-18145"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-749: WatchGuard FireWare OS samld SAMLSession Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-749/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-13046"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    }
+  ]
+}
