@@ -1,0 +1,805 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-10",
+  "generated_at": "2026-10-10T01:36:49Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-09T22:00:00Z",
+    "to": "2026-10-10T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 55,
+    "kept": 11,
+    "kev": 5,
+    "critical": 8,
+    "in_the_wild": 5,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 5,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 21,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 25,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2015-3306",
+      "title_short": "ProFTPD 3306×10.0 在野",
+      "title_full": "ProFTPD CVE-2015-3306 · CVSS 10.0 · 在野利用",
+      "vendor": "ProFTPD",
+      "product": "ProFTPD",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.98033,
+        "percentile": 0.9991
+      },
+      "cwe": [
+        "CWE-284"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-08",
+        "due_date": "2026-10-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "ProFTPD Improper Access Control Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "ProFTPD 存在權限提升漏洞，CVSS 10.0，已列入 CISA KEV 已知在野利用清單，EPSS 0.98。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157053.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157054.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157581.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-updates/2015-06/msg00020.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://packetstormsecurity.com/files/131505/ProFTPd-1.3.5-File-Copy.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://packetstormsecurity.com/files/131555/ProFTPd-1.3.5-Remote-Command-Execution.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08",
+      "modified": "2026-10-08",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 14.961
+    },
+    {
+      "cve_id": "CVE-2021-3199",
+      "title_short": "ONLYOFFICE Docs 3199×9.8 在野",
+      "title_full": "ONLYOFFICE Docs CVE-2021-3199 · CVSS 9.8 · 在野利用",
+      "vendor": "ONLYOFFICE",
+      "product": "Docs",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.14548,
+        "percentile": 0.96569
+      },
+      "cwe": [
+        "CWE-22"
+      ],
+      "tags": [
+        "RCE",
+        "路徑穿越"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-08",
+        "due_date": "2026-10-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "ONLYOFFICE Docs Server Path Traversal Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "ONLYOFFICE Docs 存在RCE、路徑穿越漏洞，CVSS 9.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.15。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3199"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/ONLYOFFICE/DocumentServer/blob/903fe5ab7a275bd69c3c3346af2d21cf87ebeabf/CHANGELOG.md#563"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/moehw/poc_exploits/tree/master/CVE-2021-3199/poc_uploadImageFile.py"
+        },
+        {
+          "name": "第三方",
+          "url": "https://github.com/nola-milkin/poc_exploits/blob/master/CVE-2021-3199/poc_uploadImageFile.py"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-3199"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08",
+      "modified": "2026-10-08",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 13.091
+    },
+    {
+      "cve_id": "CVE-2016-3081",
+      "title_short": "Apache Struts 3081×8.1 在野",
+      "title_full": "Apache Struts CVE-2016-3081 · CVSS 8.1 · 在野利用",
+      "vendor": "Apache",
+      "product": "Struts",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.1,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.94506,
+        "percentile": 0.99853
+      },
+      "cwe": [
+        "CWE-77"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-08",
+        "due_date": "2026-10-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Apache Struts Command Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Apache Struts 存在RCE漏洞，CVSS 8.1，已列入 CISA KEV 已知在野利用清單，EPSS 0.95。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3081"
+        },
+        {
+          "name": "第三方",
+          "url": "http://packetstormsecurity.com/files/136856/Apache-Struts-2.3.28-Dynamic-Method-Invocation-Remote-Code-Execution.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.huawei.com/en/psirt/security-advisories/huawei-sa-20160527-01-struts2-en"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.rapid7.com/db/modules/exploit/linux/http/struts_dmi_exec"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.rapid7.com/db/modules/exploit/multi/http/struts_dmi_exec"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08",
+      "modified": "2026-10-08",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 12.99
+    },
+    {
+      "cve_id": "CVE-2015-5477",
+      "title_short": "ISC BIND 5477×7.5 在野",
+      "title_full": "ISC BIND CVE-2015-5477 · CVSS 7.5 · 在野利用",
+      "vendor": "ISC",
+      "product": "BIND",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "epss": {
+        "score": 0.91807,
+        "percentile": 0.99816
+      },
+      "cwe": [
+        "CWE-19",
+        "CWE-617"
+      ],
+      "tags": [
+        "阻斷服務"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-08",
+        "due_date": "2026-10-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": " ISC BIND Data Processing Errors Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "ISC BIND 存在阻斷服務漏洞，CVSS 7.5，已列入 CISA KEV 已知在野利用清單，EPSS 0.92。",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477"
+        },
+        {
+          "name": "第三方",
+          "url": "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10718"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163006.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163007.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163015.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00043.html"
+        },
+        {
+          "name": "第三方",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00044.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08",
+      "modified": "2026-10-08",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 12.336
+    },
+    {
+      "cve_id": "CVE-2023-22894",
+      "title_short": "Strapi 22894×4.9 在野",
+      "title_full": "Strapi CVE-2023-22894 · CVSS 4.9 · 在野利用",
+      "vendor": "Strapi",
+      "product": "Strapi",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "3.1",
+        "score": 4.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+      },
+      "epss": {
+        "score": 0.03432,
+        "percentile": 0.88629
+      },
+      "cwe": [
+        "CWE-312"
+      ],
+      "tags": [
+        "RCE",
+        "資訊洩漏"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-08",
+        "due_date": "2026-10-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Strapi Cleartext Storage of Sensitive Information Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Strapi 存在RCE、資訊洩漏漏洞，CVSS 4.9，已列入 CISA KEV 已知在野利用清單，EPSS 0.03。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with CVE-2023-22621 to achieve remote code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22894"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/strapi/strapi/releases"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://strapi.io/blog/security-disclosure-of-vulnerabilities-cve"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.ghostccamm.com/blog/multi_strapi_vulns/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-22894"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-08",
+      "modified": "2026-10-08",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 7.969
+    },
+    {
+      "cve_id": "CVE-2026-106237",
+      "title_short": "Google Chrome 106237×9.6",
+      "title_full": "Google Chrome CVE-2026-106237 · CVSS 9.6",
+      "vendor": "Google",
+      "product": "Chrome",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L"
+      },
+      "epss": {
+        "score": 0.00246,
+        "percentile": 0.14605
+      },
+      "cwe": [
+        "CWE-200"
+      ],
+      "tags": [
+        "資訊洩漏"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Google Chrome 存在資訊洩漏漏洞，CVSS 9.6，EPSS 0.00。",
+      "impact_zh": "敏感資料可能外洩。",
+      "action_zh": "更新至修補版本，並輪替可能受影響的憑證。",
+      "description_en": "Information leak in Permissions in Google Chrome prior to 155.0.8059.39 allowed a remote attacker to bypass site isolation via a crafted HTML page. (Chromium security severity: Low)",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_086471744.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://issues.chromium.org/issues/553255283"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-06T19:17:50Z",
+      "modified": "2026-10-09T22:16:56Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 9.605
+    },
+    {
+      "cve_id": "CVE-2026-106195",
+      "title_short": "Google Chrome 106195×9.1",
+      "title_full": "Google Chrome CVE-2026-106195 · CVSS 9.1",
+      "vendor": "Google",
+      "product": "Chrome",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.00309,
+        "percentile": 0.2184
+      },
+      "cwe": [
+        "CWE-863"
+      ],
+      "tags": [
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Google Chrome 存在權限提升漏洞，CVSS 9.1，EPSS 0.00。",
+      "impact_zh": "攻擊者可將權限提升至更高層級。",
+      "action_zh": "套用廠商修補，並檢查本機是否出現異常提權行為。",
+      "description_en": "Incorrect authorization in Chromoting in Google Chrome on on Mac prior to 155.0.8059.39 allowed a remote attacker to bypass system access restrictions via crafted network traffic. (Chromium security severity: Low)",
+      "references": [
+        {
+          "name": "廠商公告",
+          "url": "https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_086471744.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://issues.chromium.org/issues/553930843"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-06T19:17:45Z",
+      "modified": "2026-10-09T22:16:56Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 9.106
+    },
+    {
+      "cve_id": "CVE-2026-106294",
+      "title_short": "未標示產品 106294×9.1",
+      "title_full": "未標示產品 CVE-2026-106294 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+      },
+      "epss": {
+        "score": 0.00171,
+        "percentile": 0.05937
+      },
+      "cwe": [
+        "CWE-459"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 155.0.8059.39 allowed a remote attacker to bypass system access restrictions via crafted network traffic. (Chromium security severity: Low)",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_086471744.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://issues.chromium.org/issues/556215048"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-06T19:17:57Z",
+      "modified": "2026-10-09T22:16:57Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 9.103
+    },
+    {
+      "cve_id": "CVE-2026-108267",
+      "title_short": "未標示產品 108267×9.1",
+      "title_full": "未標示產品 CVE-2026-108267 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.1,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-346"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Privasys Go is a maintained fork of the Go programming language that adds RA-TLS support to crypto/tls. Prior to privasys-v0.5.1-go1.26.5, challenge-mode RA-TLS certificates bound quote ReportData to the certificate public key and client nonce but not to the active TLS session. An attacker who obtained an enclave TLS private key could relay a genuine quote onto another connection, causing a relying party to accept a handshake terminated by the attacker as an attested enclave connection. This issue is fixed in privasys-v0.5.1-go1.26.5.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/Privasys/go/commit/00a7d21ba53bba0ea09ac7a67eb2c6714e651700"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/Privasys/go/releases/tag/privasys-v0.5.1-go1.26.5"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/Privasys/go/security/advisories/GHSA-7jfw-53rm-phh2"
+        },
+        {
+          "name": "參考",
+          "url": "https://privasys.org/blog/binding-attestation-to-the-tls-session"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-09T22:16:59Z",
+      "modified": "2026-10-09T22:16:59Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-108268",
+      "title_short": "未標示產品 108268×9.1",
+      "title_full": "未標示產品 CVE-2026-108268 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.1,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-346"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Enclave OS Virtual runs container workloads inside confidential virtual machines with end-to-end attestation. Prior to tdx-v0.2.43 and tdx-gpu-v0.6.27, the TDX/GPU RA-TLS certificate issuer placed the certificate public-key hash and client nonce in quote ReportData but omitted a value bound to the active TLS session. An attacker who obtained an enclave TLS private key could relay a genuine quote onto another connection, causing a relying party to accept an attacker-terminated connection as the attested enclave. This issue is fixed in tdx-v0.2.43 and tdx-gpu-v0.6.27.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/Privasys/enclave-os-virtual/commit/9a6be91e29f2b6738d0b77c33cd1ad5cd3d8a347"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/Privasys/enclave-os-virtual/releases/tag/tdx-gpu-v0.6.27"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/Privasys/enclave-os-virtual/releases/tag/tdx-v0.2.43"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/Privasys/enclave-os-virtual/security/advisories/GHSA-p5fp-g94g-g9m9"
+        },
+        {
+          "name": "參考",
+          "url": "https://privasys.org/blog/binding-attestation-to-the-tls-session"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-09T22:16:59Z",
+      "modified": "2026-10-09T22:16:59Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-108269",
+      "title_short": "未標示產品 108269×9.1",
+      "title_full": "未標示產品 CVE-2026-108269 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.1,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-346"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Remote Attestation TLS Clients provides multi-language utilities for verifying attested TLS connections. Prior to 0.5.0, the Rust and Go RA-TLS challenge verifiers accepted quote ReportData that was bound to the certificate public key and client nonce but not to the active TLS session before permitting application traffic. An attacker who obtained an enclave TLS private key could relay a genuine quote onto another connection, causing the clients to accept an attacker-terminated connection as the attested enclave. This issue is fixed in 0.5.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/Privasys/ra-tls-clients/commit/b8de9bcadd0f81ca8882d15095fc0d9c50e40148"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/Privasys/ra-tls-clients/releases/tag/v0.5.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/Privasys/ra-tls-clients/security/advisories/GHSA-5qrc-v874-mxvx"
+        },
+        {
+          "name": "參考",
+          "url": "https://privasys.org/blog/binding-attestation-to-the-tls-session"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-09T22:16:59Z",
+      "modified": "2026-10-09T22:16:59Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 9.1
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-751: Microsoft Windows dxgkrnl Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-751/",
+      "date": "Thu, 01 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-50375"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-750: WatchGuard FireWare OS spamd statushdlr Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-750/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-18145"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-749: WatchGuard FireWare OS samld SAMLSession Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-749/",
+      "date": "Wed, 30 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-13046"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-748: Luxion KeyShot BIP File Parsing Uncontrolled Search Path Element Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-748/",
+      "date": "Wed, 23 Sep 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-92202"
+      ]
+    }
+  ]
+}
