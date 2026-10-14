@@ -1,0 +1,1381 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T00:59:24Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-13T22:00:00Z",
+    "to": "2026-10-14T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 983,
+    "kept": 29,
+    "kev": 2,
+    "critical": 27,
+    "in_the_wild": 2,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 2,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 555,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 425,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 1,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-96951",
+      "title_short": "Microsoft Windows 96951×8.8 在野",
+      "title_full": "Microsoft Windows CVE-2026-96951 · CVSS 8.8 · 在野利用",
+      "vendor": "Microsoft",
+      "product": "Windows",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-77"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-13",
+        "due_date": "2026-10-16",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Microsoft Windows Command Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Microsoft Windows 存在RCE漏洞，CVSS 8.8，已列入 CISA KEV 已知在野利用清單。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-96951"
+        },
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96951"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13",
+      "modified": "2026-10-13",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 11.8
+    },
+    {
+      "cve_id": "CVE-2026-104935",
+      "title_short": "Ivanti Connect Secure 104935×8.6 在野",
+      "title_full": "Ivanti Connect Secure CVE-2026-104935 · CVSS 8.6 · 在野利用",
+      "vendor": "Ivanti",
+      "product": "Connect Secure",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-290"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-13",
+        "due_date": "2026-10-16",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Ivanti Connect Secure 存在認證繞過漏洞，CVSS 8.6，已列入 CISA KEV 已知在野利用清單。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https:/forums.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104935"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13",
+      "modified": "2026-10-13",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 11.6
+    },
+    {
+      "cve_id": "CVE-2026-97381",
+      "title_short": "未標示產品 97381×9.9",
+      "title_full": "未標示產品 CVE-2026-97381 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-346",
+        "CWE-393"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.9。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Legacy Update is a tool for activating and installing updates on legacy Windows PCs. Legacy Update 1.12.0 through 1.13.1 contains an origin validation error in the IsPermitted method of its ActiveX control. After successfully reading the hosting document's hostname, a hostname that is not on the permitted list falls through without setting E_ACCESSDENIED, causing IsPermitted to return S_OK. An attacker who induces a user to visit a malicious webpage in Internet Explorer can invoke the control to enumerate update and system information, install updates without consent, display dialogs, or restart the computer when a reboot is pending. This issue was fixed in Legacy Update 1.13.2.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/LegacyUpdate/LegacyUpdate/commit/7d62f0bfaa770d74cd6e2cb0bac9c1907df48033"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/LegacyUpdate/LegacyUpdate/commit/ae1c46c97f39a55a1937784d9f9beb30aa9147fd"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/LegacyUpdate/LegacyUpdate/releases/tag/v1.13.2.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/LegacyUpdate/LegacyUpdate/security/advisories/GHSA-f4g7-4gmx-jfgf"
+        },
+        {
+          "name": "參考",
+          "url": "https://legacyupdate.net/news/2026/07/21/legacy-update-1-13-2"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T22:19:45Z",
+      "modified": "2026-10-13T22:19:45Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-21413",
+      "title_short": "Libraw 21413×9.8",
+      "title_full": "Libraw CVE-2026-21413 · CVSS 9.8",
+      "vendor": "Libraw",
+      "product": "Libraw",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00932,
+        "percentile": 0.5967
+      },
+      "cwe": [
+        "CWE-129",
+        "CWE-787"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Libraw 存在記憶體破壞漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "A heap-based buffer overflow vulnerability exists in the lossless_jpeg_load_raw functionality of LibRaw Commit 0b56545 and Commit d20315b. A specially crafted malicious file can lead to a heap buffer overflow. An attacker can provide a malicious file to trigger this vulnerability.",
+      "references": [
+        {
+          "name": "第三方",
+          "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2026-2331"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.talosintelligence.com/vulnerability_reports/TALOS-2026-2331"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:11360"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:13284"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:13854"
+        },
+        {
+          "name": "參考",
+          "url": "https://access.redhat.com/errata/RHSA-2026:13860"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-04-07T15:17:35Z",
+      "modified": "2026-10-13T22:17:37Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 9.819
+    },
+    {
+      "cve_id": "CVE-2026-100202",
+      "title_short": "未標示產品 100202×9.8",
+      "title_full": "未標示產品 CVE-2026-100202 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-416"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Use after free in Windows Message Queuing Queue Manager allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-100202"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:17:40Z",
+      "modified": "2026-10-13T22:17:12Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-100219",
+      "title_short": "未標示產品 100219×9.8",
+      "title_full": "未標示產品 CVE-2026-100219 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-416"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Use after free in Microsoft QUIC allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-100219"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:17:42Z",
+      "modified": "2026-10-13T22:17:14Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-100222",
+      "title_short": "未標示產品 100222×9.8",
+      "title_full": "未標示產品 CVE-2026-100222 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122",
+        "CWE-191"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Network Policy Server (NPS) allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-100222"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:17:42Z",
+      "modified": "2026-10-13T22:17:14Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-102210",
+      "title_short": "未標示產品 102210×9.8",
+      "title_full": "未標示產品 CVE-2026-102210 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Windows Text Shaping allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-102210"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:17:46Z",
+      "modified": "2026-10-13T22:17:18Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-105010",
+      "title_short": "未標示產品 105010×9.8",
+      "title_full": "未標示產品 CVE-2026-105010 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-416"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Use after free in Microsoft Windows Search Component allows an unauthorized attacker to elevate privileges over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105010"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:17:57Z",
+      "modified": "2026-10-13T22:17:27Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-105016",
+      "title_short": "未標示產品 105016×9.8",
+      "title_full": "未標示產品 CVE-2026-105016 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Microsoft QUIC allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105016"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:17:57Z",
+      "modified": "2026-10-13T23:17:26Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-69634",
+      "title_short": "未標示產品 69634×9.8",
+      "title_full": "未標示產品 CVE-2026-69634 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Windows iSCSI allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69634"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:18:56Z",
+      "modified": "2026-10-13T22:17:41Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-69639",
+      "title_short": "未標示產品 69639×9.8",
+      "title_full": "未標示產品 CVE-2026-69639 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Windows Libarchive allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69639"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:18:56Z",
+      "modified": "2026-10-13T22:17:42Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 12,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-69705",
+      "title_short": "未標示產品 69705×9.8",
+      "title_full": "未標示產品 CVE-2026-69705 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-787"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Out-of-bounds write in Windows iSCSI allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69705"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:18:57Z",
+      "modified": "2026-10-13T22:17:43Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 13,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-69883",
+      "title_short": "未標示產品 69883×9.8",
+      "title_full": "未標示產品 CVE-2026-69883 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-416"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Use after free in Windows iSCSI allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69883"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:19:01Z",
+      "modified": "2026-10-13T22:17:46Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 14,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-69886",
+      "title_short": "未標示產品 69886×9.8",
+      "title_full": "未標示產品 CVE-2026-69886 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Windows Imaging Component allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69886"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:19:01Z",
+      "modified": "2026-10-13T22:17:46Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 15,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-70024",
+      "title_short": "未標示產品 70024×9.8",
+      "title_full": "未標示產品 CVE-2026-70024 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-20",
+        "CWE-121"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Stack-based buffer overflow in Windows Internet Information Services allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70024"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:19:13Z",
+      "modified": "2026-10-13T22:17:58Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 16,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-70096",
+      "title_short": "未標示產品 70096×9.8",
+      "title_full": "未標示產品 CVE-2026-70096 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Windows Rich Text Edit Control allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70096"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:19:21Z",
+      "modified": "2026-10-13T22:18:05Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 17,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-70147",
+      "title_short": "未標示產品 70147×9.8",
+      "title_full": "未標示產品 CVE-2026-70147 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Microsoft PostScript Printer Driver allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70147"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:19:27Z",
+      "modified": "2026-10-13T22:18:10Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 18,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-70153",
+      "title_short": "未標示產品 70153×9.8",
+      "title_full": "未標示產品 CVE-2026-70153 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Microsoft PostScript Printer Driver allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70153"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:19:28Z",
+      "modified": "2026-10-13T22:18:11Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 19,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-70157",
+      "title_short": "未標示產品 70157×9.8",
+      "title_full": "未標示產品 CVE-2026-70157 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Windows System Information Console allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70157"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:19:29Z",
+      "modified": "2026-10-13T22:18:11Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 20,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-96113",
+      "title_short": "未標示產品 96113×9.8",
+      "title_full": "未標示產品 CVE-2026-96113 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122",
+        "CWE-197"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in DNS Server allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96113"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:21:45Z",
+      "modified": "2026-10-13T23:19:14Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 21,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-97016",
+      "title_short": "未標示產品 97016×9.8",
+      "title_full": "未標示產品 CVE-2026-97016 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Microsoft Office Outlook allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-97016"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:22:10Z",
+      "modified": "2026-10-13T23:19:29Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 22,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-97805",
+      "title_short": "未標示產品 97805×9.8",
+      "title_full": "未標示產品 CVE-2026-97805 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-20",
+        "CWE-125"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Out-of-bounds read in Windows Partition Management Driver allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-97805"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:22:18Z",
+      "modified": "2026-10-13T23:19:34Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 23,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-97814",
+      "title_short": "未標示產品 97814×9.8",
+      "title_full": "未標示產品 CVE-2026-97814 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Windows Text Shaping allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-97814"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:22:19Z",
+      "modified": "2026-10-13T23:19:35Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 24,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-97815",
+      "title_short": "未標示產品 97815×9.8",
+      "title_full": "未標示產品 CVE-2026-97815 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-122"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Heap-based buffer overflow in Windows Error Reporting allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-97815"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:22:19Z",
+      "modified": "2026-10-13T23:19:35Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 25,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-97816",
+      "title_short": "未標示產品 97816×9.8",
+      "title_full": "未標示產品 CVE-2026-97816 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-416"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.8。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Use after free in OpenSSH for Windows allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-97816"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:22:20Z",
+      "modified": "2026-10-13T23:19:35Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 26,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-102238",
+      "title_short": "未標示產品 102238×9.6",
+      "title_full": "未標示產品 CVE-2026-102238 · CVSS 9.6",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-22"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在路徑穿越漏洞，CVSS 9.6。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "Improper limitation of a pathname to a restricted directory ('path traversal') in Visual Studio Code allows an unauthorized attacker to execute code over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-102238"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T20:17:06Z",
+      "modified": "2026-10-13T22:17:21Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 27,
+      "generated_by": "template",
+      "risk_score": 9.6
+    },
+    {
+      "cve_id": "CVE-2026-70279",
+      "title_short": "未標示產品 70279×9.3",
+      "title_full": "未標示產品 CVE-2026-70279 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-79"
+      ],
+      "tags": [
+        "XSS"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在XSS漏洞，CVSS 9.3。",
+      "impact_zh": "可於受害者瀏覽器執行惡意腳本。",
+      "action_zh": "更新至修補版本，並確認輸入輸出過濾機制。",
+      "description_en": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Exchange Server allows an unauthorized attacker to perform spoofing over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70279"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:19:47Z",
+      "modified": "2026-10-13T23:18:06Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 28,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-85818",
+      "title_short": "未標示產品 85818×9.0",
+      "title_full": "未標示產品 CVE-2026-85818 · CVSS 9.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.0,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-347"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.0。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Improper verification of cryptographic signature in Windows Schannel allows an unauthorized attacker to perform spoofing over a network.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85818"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13T19:21:06Z",
+      "modified": "2026-10-13T23:18:50Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 29,
+      "generated_by": "template",
+      "risk_score": 9.0
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco UCS and UCS-Based Appliances UEFI Shell Secure Boot Bypass Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ucs-uefi-sb-bypass-eb6xC5GW?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20UCS%20and%20UCS-Based%20Appliances%20UEFI%20Shell%20Secure%20Boot%20Bypass%20Vulnerability%26vs_k=1",
+      "date": "2026-10-13T21:05:13Z",
+      "cves": [
+        "CVE-2026-20293"
+      ]
+    }
+  ]
+}
