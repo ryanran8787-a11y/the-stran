@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T00:59:24Z",
-  "total": 18,
+  "updated_at": "2026-10-15T00:22:12Z",
+  "total": 19,
   "reports": [
+    {
+      "date": "2026-10-15",
+      "kept": 8,
+      "kev": 6,
+      "critical": 4,
+      "in_the_wild": 6,
+      "generated_at": "2026-10-15T00:22:12Z",
+      "generated_by": "template",
+      "top": [
+        "Cisco Secure Email Gateway 76519×9.8 在野",
+        "AhsayCBS 105134×9.3 在野",
+        "Ivanti Connect Secure 104935×8.6 在野"
+      ]
+    },
     {
       "date": "2026-10-14",
       "kept": 29,

@@ -1,0 +1,630 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T00:22:12Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-14T22:00:00Z",
+    "to": "2026-10-15T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 11,
+    "kept": 8,
+    "kev": 6,
+    "critical": 4,
+    "in_the_wild": 6,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 6,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 5,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-76519",
+      "title_short": "Cisco Secure Email Gateway 76519×9.8 在野",
+      "title_full": "Cisco Secure Email Gateway CVE-2026-76519 · CVSS 9.8 · 在野利用",
+      "vendor": "Cisco",
+      "product": "Secure Email Gateway",
+      "vendor_advisory_id": "cisco-sa-esa-afw-zqYJkjxp",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-23"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-14",
+        "due_date": "2026-10-17",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Cisco Secure Email Gateway 存在路徑穿越漏洞，CVSS 9.8，已列入 CISA KEV 已知在野利用清單。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp"
+        },
+        {
+          "name": "Cisco",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Secure%20Email%20Gateway%20Arbitrary%20File%20Write%20Vulnerability%26vs_k=1"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76519"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-14",
+      "modified": "2026-10-14T16:00:00Z",
+      "sources": [
+        "cisa_kev",
+        "cisco",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 12.8
+    },
+    {
+      "cve_id": "CVE-2026-105134",
+      "title_short": "AhsayCBS 105134×9.3 在野",
+      "title_full": "AhsayCBS CVE-2026-105134 · CVSS 9.3 · 在野利用",
+      "vendor": "Ahsay",
+      "product": "AhsayCBS",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01843,
+        "percentile": 0.78594
+      },
+      "cwe": [
+        "CWE-77",
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-14",
+        "due_date": "2026-10-17",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Ahsay AhsayCBS Command Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "AhsayCBS 存在RCE漏洞，CVSS 9.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.02。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/cve/CVE-2026-105134"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/submit/942743"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/413351"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/413351/cti"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-14",
+      "modified": "2026-10-14",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.337
+    },
+    {
+      "cve_id": "CVE-2026-104935",
+      "title_short": "Ivanti Connect Secure 104935×8.6 在野",
+      "title_full": "Ivanti Connect Secure CVE-2026-104935 · CVSS 8.6 · 在野利用",
+      "vendor": "Ivanti",
+      "product": "Connect Secure",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L"
+      },
+      "epss": {
+        "score": 0.25982,
+        "percentile": 0.97961
+      },
+      "cwe": [
+        "CWE-290"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-13",
+        "due_date": "2026-10-16",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Ivanti Connect Secure 存在認證繞過漏洞，CVSS 8.6，已列入 CISA KEV 已知在野利用清單，EPSS 0.26。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https:/forums.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104935"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13",
+      "modified": "2026-10-13",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 12.12
+    },
+    {
+      "cve_id": "CVE-2026-96951",
+      "title_short": "Microsoft Windows 96951×8.8 在野",
+      "title_full": "Microsoft Windows CVE-2026-96951 · CVSS 8.8 · 在野利用",
+      "vendor": "Microsoft",
+      "product": "Windows",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.01506,
+        "percentile": 0.73847
+      },
+      "cwe": [
+        "CWE-77"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-13",
+        "due_date": "2026-10-16",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Microsoft Windows Command Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Microsoft Windows 存在RCE漏洞，CVSS 8.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.02。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-96951"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96951"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-13",
+      "modified": "2026-10-13",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 11.83
+    },
+    {
+      "cve_id": "CVE-2026-0322",
+      "title_short": "Palo Alto Networks PAN-OS 0322×8.6 在野",
+      "title_full": "Palo Alto Networks PAN-OS CVE-2026-0322 · CVSS 8.6 · 在野利用",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "4.0",
+        "score": 8.6,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Red"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-94"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-14",
+        "due_date": "2026-10-17",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Palo Alto Networks PAN-OS Code Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Palo Alto Networks PAN-OS 存在RCE漏洞，CVSS 8.6，已列入 CISA KEV 已知在野利用清單。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://security.paloaltonetworks.com/CVE-2026-0322"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0322"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-14",
+      "modified": "2026-10-14",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 11.6
+    },
+    {
+      "cve_id": "CVE-2026-105133",
+      "title_short": "AhsayCBS 105133×5.5 在野",
+      "title_full": "AhsayCBS CVE-2026-105133 · CVSS 5.5 · 在野利用",
+      "vendor": "Ahsay",
+      "product": "AhsayCBS",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "4.0",
+        "score": 5.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00383,
+        "percentile": 0.30672
+      },
+      "cwe": [
+        "CWE-287"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-14",
+        "due_date": "2026-10-17",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Ahsay AhsayCBS Improper Authentication Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "AhsayCBS 存在認證繞過漏洞，CVSS 5.5，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105133"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/cve/CVE-2026-105133"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/submit/942688"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/413350"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/413350/cti"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-14",
+      "modified": "2026-10-14",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 8.508
+    },
+    {
+      "cve_id": "CVE-2026-76440",
+      "title_short": "Cisco 76440×9.8",
+      "title_full": "Cisco CVE-2026-76440 · CVSS 9.8",
+      "vendor": "Cisco",
+      "product": "",
+      "vendor_advisory_id": "cisco-sa-hardening-esa-dfCrfXkm",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00623,
+        "percentile": 0.4866
+      },
+      "cwe": [
+        "CWE-23"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Cisco 存在路徑穿越漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "Cisco Secure Email Gateway and Secure Email and Web Manager Security Hardening Release: September 2026",
+      "references": [
+        {
+          "name": "Cisco",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-esa-dfCrfXkm?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Secure%20Email%20Gateway%20and%20Secure%20Email%20and%20Web%20Manager%20Security%20Hardening%20Release:%20September%202026%26vs_k=1"
+        },
+        {
+          "name": "參考",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-esa-dfCrfXkm"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cve.org/Media/News/item/blog/2026/06/16/Preserving-Vulnerability-Level-Identification"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-14T16:00:43Z",
+      "modified": "2026-10-14T16:00:43Z",
+      "sources": [
+        "cisco",
+        "nvd"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 9.812
+    },
+    {
+      "cve_id": "CVE-2026-20353",
+      "title_short": "Cisco 20353×9.8",
+      "title_full": "Cisco CVE-2026-20353 · CVSS 9.8",
+      "vendor": "Cisco",
+      "product": "",
+      "vendor_advisory_id": "cisco-sa-hardening-esa-dfCrfXkm",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.00396,
+        "percentile": 0.32123
+      },
+      "cwe": [
+        "CWE-664"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Cisco 存在安全漏洞，CVSS 9.8，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Cisco Secure Email Gateway and Secure Email and Web Manager Security Hardening Release: September 2026",
+      "references": [
+        {
+          "name": "Cisco",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-esa-dfCrfXkm?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Secure%20Email%20Gateway%20and%20Secure%20Email%20and%20Web%20Manager%20Security%20Hardening%20Release:%20September%202026%26vs_k=1"
+        },
+        {
+          "name": "參考",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-esa-dfCrfXkm"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cve.org/Media/News/item/blog/2026/06/16/Preserving-Vulnerability-Level-Identification"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-14T16:00:43Z",
+      "modified": "2026-10-14T16:00:43Z",
+      "sources": [
+        "cisco",
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 9.808
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Secure Email Gateway and Secure Email and Web Manager Security Hardening Release: September 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-esa-dfCrfXkm?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Secure%20Email%20Gateway%20and%20Secure%20Email%20and%20Web%20Manager%20Security%20Hardening%20Release:%20September%202026%26vs_k=1",
+      "date": "2026-10-14T16:00:43Z",
+      "cves": [
+        "CVE-2026-20353",
+        "CVE-2026-76440",
+        "CVE-2026-76441",
+        "CVE-2026-76442",
+        "CVE-2026-76443"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Advance Notification for Publication of October 21, 2026, Security Advisories",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-QGwHnJ6k?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Advance%20Notification%20for%20Publication%20of%20October%2021,%202026,%20Security%20Advisories%26vs_k=1",
+      "date": "2026-10-14T16:00:00Z",
+      "cves": []
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Secure Email Gateway Arbitrary File Write Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Secure%20Email%20Gateway%20Arbitrary%20File%20Write%20Vulnerability%26vs_k=1",
+      "date": "2026-10-14T16:00:00Z",
+      "cves": [
+        "CVE-2026-76519"
+      ]
+    }
+  ]
+}
