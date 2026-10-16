@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-15T00:22:12Z",
-  "total": 19,
+  "updated_at": "2026-10-16T00:12:23Z",
+  "total": 20,
   "reports": [
+    {
+      "date": "2026-10-16",
+      "kept": 7,
+      "kev": 7,
+      "critical": 3,
+      "in_the_wild": 7,
+      "generated_at": "2026-10-16T00:12:23Z",
+      "generated_by": "template",
+      "top": [
+        "Cisco Secure Email Gateway 76519×9.8 在野",
+        "AhsayCBS 105134×9.3 在野",
+        "Atlassian Multiple Products 21589×9.3 在野"
+      ]
+    },
     {
       "date": "2026-10-15",
       "kept": 8,
