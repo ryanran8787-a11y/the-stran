@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-17T00:14:54Z",
-  "total": 21,
+  "updated_at": "2026-10-17T23:52:31Z",
+  "total": 22,
   "reports": [
+    {
+      "date": "2026-10-18",
+      "kept": 3,
+      "kev": 3,
+      "critical": 1,
+      "in_the_wild": 3,
+      "generated_at": "2026-10-17T23:52:31Z",
+      "generated_by": "template",
+      "top": [
+        "BeyondTrust Remote Support 102764×9.3 在野",
+        "Fortinet Multiple Products 61624×6.5 在野",
+        "Atlassian Multiple Products 21589 在野"
+      ]
+    },
     {
       "date": "2026-10-17",
       "kept": 7,
