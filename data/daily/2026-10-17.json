@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T00:14:54Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-16T22:00:00Z",
+    "to": "2026-10-17T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 11,
+    "kept": 7,
+    "kev": 7,
+    "critical": 3,
+    "in_the_wild": 7,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 7,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-76519",
+      "title_short": "Cisco Secure Email Gateway 76519×9.8 在野",
+      "title_full": "Cisco Secure Email Gateway CVE-2026-76519 · CVSS 9.8 · 在野利用",
+      "vendor": "Cisco",
+      "product": "Secure Email Gateway",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.01573,
+        "percentile": 0.74982
+      },
+      "cwe": [
+        "CWE-23"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-14",
+        "due_date": "2026-10-17",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Cisco Secure Email Gateway 存在路徑穿越漏洞，CVSS 9.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.02。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76519"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-14",
+      "modified": "2026-10-14",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 12.831
+    },
+    {
+      "cve_id": "CVE-2026-105134",
+      "title_short": "AhsayCBS 105134×9.3 在野",
+      "title_full": "AhsayCBS CVE-2026-105134 · CVSS 9.3 · 在野利用",
+      "vendor": "Ahsay",
+      "product": "AhsayCBS",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.04782,
+        "percentile": 0.91809
+      },
+      "cwe": [
+        "CWE-77",
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-14",
+        "due_date": "2026-10-17",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Ahsay AhsayCBS Command Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "AhsayCBS 存在RCE漏洞，CVSS 9.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.05。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update"
+        },
+        {
+          "name": "第三方",
+          "url": "https://vuldb.com/cve/CVE-2026-105134"
+        },
+        {
+          "name": "第三方",
+          "url": "https://vuldb.com/submit/942743"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/413351"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/413351/cti"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-14",
+      "modified": "2026-10-14",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.396
+    },
+    {
+      "cve_id": "CVE-2026-102764",
+      "title_short": "BeyondTrust Remote Support 102764×9.3 在野",
+      "title_full": "BeyondTrust Remote Support CVE-2026-102764 · CVSS 9.3 · 在野利用",
+      "vendor": "BeyondTrust",
+      "product": "Remote Support",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00601,
+        "percentile": 0.47647
+      },
+      "cwe": [
+        "CWE-290"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-16",
+        "due_date": "2026-10-19",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "BeyondTrust Remote Support 存在認證繞過漏洞，CVSS 9.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05"
+        },
+        {
+          "name": "參考",
+          "url": "https://beyondtrustcorp.service-now.com/csm?id=csm_kb_article&sysparm_article=KB0024066"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.beyondtrust.com/blog/entry/bt26-05"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102764"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-16",
+      "modified": "2026-10-16",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 12.312
+    },
+    {
+      "cve_id": "CVE-2026-0322",
+      "title_short": "Palo Alto Networks PAN-OS 0322×8.6 在野",
+      "title_full": "Palo Alto Networks PAN-OS CVE-2026-0322 · CVSS 8.6 · 在野利用",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "4.0",
+        "score": 8.6,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Red"
+      },
+      "epss": {
+        "score": 0.01215,
+        "percentile": 0.68064
+      },
+      "cwe": [
+        "CWE-94"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-14",
+        "due_date": "2026-10-17",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Palo Alto Networks PAN-OS Code Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Palo Alto Networks PAN-OS 存在RCE漏洞，CVSS 8.6，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://security.paloaltonetworks.com/CVE-2026-0322"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0322"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-14",
+      "modified": "2026-10-14",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 11.624
+    },
+    {
+      "cve_id": "CVE-2025-61624",
+      "title_short": "Fortinet Multiple Products 61624×6.5 在野",
+      "title_full": "Fortinet Multiple Products CVE-2025-61624 · CVSS 6.5 · 在野利用",
+      "vendor": "Fortinet",
+      "product": "Multiple Products",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.0058,
+        "percentile": 0.46551
+      },
+      "cwe": [
+        "CWE-22"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-16",
+        "due_date": "2026-10-19",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Fortinet Multiple Products Path Traversal Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Fortinet Multiple Products 存在路徑穿越漏洞，CVSS 6.5，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122"
+        },
+        {
+          "name": "第三方",
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-975644.html"
+        },
+        {
+          "name": "第三方",
+          "url": "https://unit42.paloaltonetworks.com/fortimanager-cve-2024-47575-peerstitch-malware/#post-188095-_guyq53ar8k05"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61624"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-16",
+      "modified": "2026-10-16",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 9.512
+    },
+    {
+      "cve_id": "CVE-2026-105133",
+      "title_short": "AhsayCBS 105133×5.5 在野",
+      "title_full": "AhsayCBS CVE-2026-105133 · CVSS 5.5 · 在野利用",
+      "vendor": "Ahsay",
+      "product": "AhsayCBS",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "4.0",
+        "score": 5.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00854,
+        "percentile": 0.57542
+      },
+      "cwe": [
+        "CWE-287"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-14",
+        "due_date": "2026-10-17",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Ahsay AhsayCBS Improper Authentication Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "AhsayCBS 存在認證繞過漏洞，CVSS 5.5，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105133"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update"
+        },
+        {
+          "name": "第三方",
+          "url": "https://vuldb.com/cve/CVE-2026-105133"
+        },
+        {
+          "name": "第三方",
+          "url": "https://vuldb.com/submit/942688"
+        },
+        {
+          "name": "第三方",
+          "url": "https://vuldb.com/vuln/413350"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/413350/cti"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-14",
+      "modified": "2026-10-14",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 8.517
+    },
+    {
+      "cve_id": "CVE-2026-21589",
+      "title_short": "Atlassian Multiple Products 21589 在野",
+      "title_full": "Atlassian Multiple Products CVE-2026-21589 · 在野利用",
+      "vendor": "Atlassian",
+      "product": "Multiple Products",
+      "vendor_advisory_id": null,
+      "severity": "UNKNOWN",
+      "cvss": {
+        "version": null,
+        "score": null,
+        "vector": null
+      },
+      "epss": {
+        "score": 0.12711,
+        "percentile": 0.96225
+      },
+      "cwe": [
+        "CWE-552"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-15",
+        "due_date": "2026-10-18",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Atlassian Multiple Products 存在安全漏洞，已列入 CISA KEV 已知在野利用清單，EPSS 0.13。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessible to external parties vulnerability which could allow an unauthenticated attacker to access specific files within the web application root directory in affected versions.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html?ref=labs.watchtowr.com"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-15",
+      "modified": "2026-10-15",
+      "sources": [
+        "cisa_kev"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 3.254
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-785: FreeBSD Kernel Shared Memory Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-785/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-58094"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-784: FreeBSD Kernel kqueue Use-After-Free Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-784/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-58093"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-783: LibreOffice PDF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-783/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-63273"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-782: LibreOffice PDF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-782/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-63274"
+      ]
+    }
+  ]
+}

@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-16T00:12:23Z",
-  "total": 20,
+  "updated_at": "2026-10-17T00:14:54Z",
+  "total": 21,
   "reports": [
+    {
+      "date": "2026-10-17",
+      "kept": 7,
+      "kev": 7,
+      "critical": 3,
+      "in_the_wild": 7,
+      "generated_at": "2026-10-17T00:14:54Z",
+      "generated_by": "template",
+      "top": [
+        "Cisco Secure Email Gateway 76519×9.8 在野",
+        "AhsayCBS 105134×9.3 在野",
+        "BeyondTrust Remote Support 102764×9.3 在野"
+      ]
+    },
     {
       "date": "2026-10-16",
       "kept": 7,
