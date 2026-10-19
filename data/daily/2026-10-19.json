@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T00:00:19Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-18T22:00:00Z",
+    "to": "2026-10-19T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 6,
+    "kept": 2,
+    "kev": 2,
+    "critical": 1,
+    "in_the_wild": 2,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 2,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-102764",
+      "title_short": "BeyondTrust Remote Support 102764×9.3 在野",
+      "title_full": "BeyondTrust Remote Support CVE-2026-102764 · CVSS 9.3 · 在野利用",
+      "vendor": "BeyondTrust",
+      "product": "Remote Support",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.0118,
+        "percentile": 0.6718
+      },
+      "cwe": [
+        "CWE-290"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-16",
+        "due_date": "2026-10-19",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "BeyondTrust Remote Support 存在認證繞過漏洞，CVSS 9.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05"
+        },
+        {
+          "name": "參考",
+          "url": "https://beyondtrustcorp.service-now.com/csm?id=csm_kb_article&sysparm_article=KB0024066"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.beyondtrust.com/blog/entry/bt26-05"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102764"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-16",
+      "modified": "2026-10-16",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 12.324
+    },
+    {
+      "cve_id": "CVE-2025-61624",
+      "title_short": "Fortinet Multiple Products 61624×6.5 在野",
+      "title_full": "Fortinet Multiple Products CVE-2025-61624 · CVSS 6.5 · 在野利用",
+      "vendor": "Fortinet",
+      "product": "Multiple Products",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.01081,
+        "percentile": 0.64559
+      },
+      "cwe": [
+        "CWE-22"
+      ],
+      "tags": [
+        "路徑穿越"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-16",
+        "due_date": "2026-10-19",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Fortinet Multiple Products Path Traversal Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Fortinet Multiple Products 存在路徑穿越漏洞，CVSS 6.5，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "可讀取權限範圍外的檔案。",
+      "action_zh": "更新至修補版本，並檢查檔案存取權限設定。",
+      "description_en": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122"
+        },
+        {
+          "name": "第三方",
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-975644.html"
+        },
+        {
+          "name": "第三方",
+          "url": "https://unit42.paloaltonetworks.com/fortimanager-cve-2024-47575-peerstitch-malware/#post-188095-_guyq53ar8k05"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61624"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-16",
+      "modified": "2026-10-16",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 9.522
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-785: FreeBSD Kernel Shared Memory Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-785/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-58094"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-784: FreeBSD Kernel kqueue Use-After-Free Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-784/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-58093"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-783: LibreOffice PDF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-783/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-63273"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-782: LibreOffice PDF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-782/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-63274"
+      ]
+    }
+  ]
+}
