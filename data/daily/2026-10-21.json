@@ -1,0 +1,3210 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T00:28:55Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-20T22:00:00Z",
+    "to": "2026-10-21T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 1497,
+    "kept": 72,
+    "kev": 6,
+    "critical": 66,
+    "in_the_wild": 6,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 6,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 1487,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 4,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-96656",
+      "title_short": "Plex Media Server 96656×8.6 在野",
+      "title_full": "Plex Media Server CVE-2026-96656 · CVSS 8.6 · 在野利用",
+      "vendor": "Plex",
+      "product": "Media Server",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "4.0",
+        "score": 8.6,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00396,
+        "percentile": 0.32349
+      },
+      "cwe": [
+        "CWE-73"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-10-23",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Plex Media Server External Control of File Name or Path Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Plex Media Server 存在安全漏洞，CVSS 8.6，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96656"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://forums.plex.tv/t/important-security-update-for-plex-media-server-v1-43-2-and-earlier/942319"
+        },
+        {
+          "name": "參考",
+          "url": "https://forums.plex.tv/t/plex-media-server/30447/711"
+        },
+        {
+          "name": "第三方",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-96656"
+        },
+        {
+          "name": "第三方",
+          "url": "https://zmain.info/blog/plex2shell"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.boredhackerblog.info/2026/10/plex-vulnerabilities-being-exploited-in.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 11.608
+    },
+    {
+      "cve_id": "CVE-2026-106931",
+      "title_short": "EG Secure Solutions SiteGuard Server Edition 106931×8.5 在野",
+      "title_full": "EG Secure Solutions SiteGuard Server Edition CVE-2026-106931 · CVSS 8.5 · 在野利用",
+      "vendor": "EG Secure Solutions",
+      "product": "SiteGuard Server Edition",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "4.0",
+        "score": 8.5,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00662,
+        "percentile": 0.50774
+      },
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-10-23",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "EG Secure Solutions SiteGuard Server Edition 存在RCE漏洞，CVSS 8.5，已列入 CISA KEV 已知在野利用清單，EPS…",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106931"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1"
+        },
+        {
+          "name": "參考",
+          "url": "https://jvn.jp/en/jp/JVN88474777/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-106931"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 11.513
+    },
+    {
+      "cve_id": "CVE-2026-110936",
+      "title_short": "Siemens Software Center 110936×8.4 在野",
+      "title_full": "Siemens Software Center CVE-2026-110936 · CVSS 8.4 · 在野利用",
+      "vendor": "Siemens",
+      "product": "Software Center",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "4.0",
+        "score": 8.4,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00135,
+        "percentile": 0.02673
+      },
+      "cwe": [
+        "CWE-427"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-11-03",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Siemens Software Center Uncontrolled Search Path Element Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Siemens Software Center 存在RCE漏洞，CVSS 8.4，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110936"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://productcert.siemens.com/productcert/html/ssa-580366.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-580366.html"
+        },
+        {
+          "name": "參考",
+          "url": "https://productcert.siemens.com/news/2026/10/19/active-exploitation-of-cve-2026-110936-in-siemens-software-center/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-110936"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 11.403
+    },
+    {
+      "cve_id": "CVE-2026-96654",
+      "title_short": "Plex Media Server 96654×6.9 在野",
+      "title_full": "Plex Media Server CVE-2026-96654 · CVSS 6.9 · 在野利用",
+      "vendor": "Plex",
+      "product": "Media Server",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "4.0",
+        "score": 6.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00227,
+        "percentile": 0.12576
+      },
+      "cwe": [
+        "CWE-84"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-10-23",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Plex Media Server 存在安全漏洞，CVSS 6.9，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins' functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96654"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://forums.plex.tv/t/important-security-update-for-plex-media-server-v1-43-2-and-earlier/942319"
+        },
+        {
+          "name": "參考",
+          "url": "https://forums.plex.tv/t/plex-media-server/30447/711"
+        },
+        {
+          "name": "第三方",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-96654"
+        },
+        {
+          "name": "第三方",
+          "url": "https://zmain.info/blog/plex2shell"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96654"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 9.905
+    },
+    {
+      "cve_id": "CVE-2026-96652",
+      "title_short": "Plex Media Server 96652×5.3 在野",
+      "title_full": "Plex Media Server CVE-2026-96652 · CVSS 5.3 · 在野利用",
+      "vendor": "Plex",
+      "product": "Media Server",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "4.0",
+        "score": 5.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00222,
+        "percentile": 0.11974
+      },
+      "cwe": [
+        "CWE-918"
+      ],
+      "tags": [
+        "SSRF"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-11-03",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Plex Media Server 存在SSRF漏洞，CVSS 5.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "可誘使伺服器發送任意請求，觸及內網。",
+      "action_zh": "更新至修補版本，並限制服務的對外與內網連線。",
+      "description_en": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the 'protocol' parameter and force the Plex server to POST to the attacker's chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96652"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://forums.plex.tv/t/important-security-update-for-plex-media-server-v1-43-2-and-earlier/942319"
+        },
+        {
+          "name": "參考",
+          "url": "https://forums.plex.tv/t/plex-media-server/30447/711"
+        },
+        {
+          "name": "第三方",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-96652"
+        },
+        {
+          "name": "第三方",
+          "url": "https://zmain.info/blog/plex2shell"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96652"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 8.304
+    },
+    {
+      "cve_id": "CVE-2026-96655",
+      "title_short": "Plex Media Server 96655×5.3 在野",
+      "title_full": "Plex Media Server CVE-2026-96655 · CVSS 5.3 · 在野利用",
+      "vendor": "Plex",
+      "product": "Media Server",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "4.0",
+        "score": 5.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00222,
+        "percentile": 0.11974
+      },
+      "cwe": [
+        "CWE-918"
+      ],
+      "tags": [
+        "SSRF"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-11-03",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Plex Media Server 存在SSRF漏洞，CVSS 5.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "可誘使伺服器發送任意請求，觸及內網。",
+      "action_zh": "更新至修補版本，並限制服務的對外與內網連線。",
+      "description_en": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96655"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://forums.plex.tv/t/important-security-update-for-plex-media-server-v1-43-2-and-earlier/942319"
+        },
+        {
+          "name": "參考",
+          "url": "https://forums.plex.tv/t/plex-media-server/30447/711"
+        },
+        {
+          "name": "第三方",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-96655"
+        },
+        {
+          "name": "第三方",
+          "url": "https://zmain.info/blog/plex2shell"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96655"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 8.304
+    },
+    {
+      "cve_id": "CVE-2026-101809",
+      "title_short": "未標示產品 101809×10.0",
+      "title_full": "未標示產品 CVE-2026-101809 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 10.0。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Workflow product of Oracle E-Business Suite (component: Workflow Notification Mailer).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Workflow.  While the vulnerability is in Workflow, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Workflow. CVSS 3.1 Base Score 10.0 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:36Z",
+      "modified": "2026-10-20T22:18:36Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-81212",
+      "title_short": "未標示產品 81212×10.0",
+      "title_full": "未標示產品 CVE-2026-81212 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-285"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 10.0。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "IBM DataStage on Cloud Pak for Data 5.4.0.0 allows an unauthenticated user to perform an arbitrary write into shared Redis under any tenant's key. This collapses the platform's credential-encryption boundary and lets an anonymous caller poison any tenant's cached flow parameters.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.ibm.com/support/pages/node/7289603"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:19:51Z",
+      "modified": "2026-10-20T22:19:51Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-87337",
+      "title_short": "未標示產品 87337×10.0",
+      "title_full": "未標示產品 CVE-2026-87337 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 10.0。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle Access Manager product of Oracle Fusion Middleware (component: Authentication Engine).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Access Manager.  While the vulnerability is in Oracle Access Manager, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Access Manager accessible data as well as  unauthorized access to critical data or complete access to all Oracle Access Manager accessible data. CVSS 3.1 Base Score 10.0 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:11Z",
+      "modified": "2026-10-20T22:20:11Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-91216",
+      "title_short": "未標示產品 91216×10.0",
+      "title_full": "未標示產品 CVE-2026-91216 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 10.0。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via T3, IIOP to compromise Oracle SOA Suite.  While the vulnerability is in Oracle SOA Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 10.0 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:22Z",
+      "modified": "2026-10-20T22:20:22Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-91221",
+      "title_short": "未標示產品 91221×10.0",
+      "title_full": "未標示產品 CVE-2026-91221 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 10.0。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via T3, IIOP to compromise Oracle SOA Suite.  While the vulnerability is in Oracle SOA Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 10.0 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:22Z",
+      "modified": "2026-10-20T22:20:22Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-91231",
+      "title_short": "未標示產品 91231×10.0",
+      "title_full": "未標示產品 CVE-2026-91231 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 10.0。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Adapters).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle SOA Suite.  While the vulnerability is in Oracle SOA Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 10.0 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:23Z",
+      "modified": "2026-10-20T22:20:23Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 12,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-91299",
+      "title_short": "未標示產品 91299×10.0",
+      "title_full": "未標示產品 CVE-2026-91299 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 10.0。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the JD Edwards EnterpriseOne Orchestrator product of Oracle JD Edwards (component: E1 IOT Orchestrator Security).  Supported versions that are affected are 9.2.0.0-9.2.26.5. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise JD Edwards EnterpriseOne Orchestrator.  While the vulnerability is in JD Edwards EnterpriseOne Orchestrator, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of JD Edwards EnterpriseOne Orchestrator. CVSS 3.1 Base Score 10.0 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:31Z",
+      "modified": "2026-10-20T22:20:31Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 13,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-101446",
+      "title_short": "未標示產品 101446×9.9",
+      "title_full": "未標示產品 CVE-2026-101446 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Siebel CRM Cloud Applications product of Oracle Siebel CRM (component: Siebel Cloud Manager).  Supported versions that are affected are 17.0-26.9. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Siebel CRM Cloud Applications.  While the vulnerability is in Siebel CRM Cloud Applications, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Siebel CRM Cloud Applications. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:17:53Z",
+      "modified": "2026-10-20T22:17:53Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 14,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-101501",
+      "title_short": "未標示產品 101501×9.9",
+      "title_full": "未標示產品 CVE-2026-101501 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.9。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in Oracle Trusted Answer Search (component: PLSQL package).   The supported version that is affected is 26.1. Easily exploitable vulnerability allows low privileged attacker with network access via Oracle Net to compromise Oracle Trusted Answer Search.  While the vulnerability is in Oracle Trusted Answer Search, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Trusted Answer Search accessible data as well as  unauthorized read access to a subset of Oracle Trusted Answer Search accessible data and unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle Trusted Answer Search. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:17:59Z",
+      "modified": "2026-10-20T22:17:59Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 15,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-101503",
+      "title_short": "未標示產品 101503×9.9",
+      "title_full": "未標示產品 CVE-2026-101503 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in Oracle Trusted Answer Search (component: PLSQL package).   The supported version that is affected is 26.1. Easily exploitable vulnerability allows low privileged attacker with network access via Oracle Net to compromise Oracle Trusted Answer Search.  While the vulnerability is in Oracle Trusted Answer Search, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Trusted Answer Search. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:17:59Z",
+      "modified": "2026-10-20T22:17:59Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 16,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-101528",
+      "title_short": "未標示產品 101528×9.9",
+      "title_full": "未標示產品 CVE-2026-101528 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Enterprise Manager for Oracle Database product of Oracle Enterprise Manager (component: Data Guard Management).  Supported versions that are affected are 13.5 and  24.1. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Enterprise Manager for Oracle Database.  While the vulnerability is in Oracle Enterprise Manager for Oracle Database, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Enterprise Manager for Oracle Database. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:02Z",
+      "modified": "2026-10-20T22:18:02Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 17,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-101529",
+      "title_short": "未標示產品 101529×9.9",
+      "title_full": "未標示產品 CVE-2026-101529 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Enterprise Manager for Oracle Database product of Oracle Enterprise Manager (component: Data Guard Management).  Supported versions that are affected are 13.5 and  24.1. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Enterprise Manager for Oracle Database.  While the vulnerability is in Oracle Enterprise Manager for Oracle Database, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Enterprise Manager for Oracle Database. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:02Z",
+      "modified": "2026-10-20T22:18:02Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 18,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-91222",
+      "title_short": "未標示產品 91222×9.9",
+      "title_full": "未標示產品 CVE-2026-91222 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Business Process Management Suite product of Oracle Fusion Middleware (component: Human Workflow (11g+)).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via SOAP to compromise Oracle Business Process Management Suite.  While the vulnerability is in Oracle Business Process Management Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Business Process Management Suite. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:22Z",
+      "modified": "2026-10-20T22:20:22Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 19,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-91224",
+      "title_short": "未標示產品 91224×9.9",
+      "title_full": "未標示產品 CVE-2026-91224 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle SOA Suite.  While the vulnerability is in Oracle SOA Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:22Z",
+      "modified": "2026-10-20T22:20:22Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 20,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-91232",
+      "title_short": "未標示產品 91232×9.9",
+      "title_full": "未標示產品 CVE-2026-91232 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle SOA Suite.  While the vulnerability is in Oracle SOA Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:23Z",
+      "modified": "2026-10-20T22:20:23Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 21,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-91250",
+      "title_short": "未標示產品 91250×9.9",
+      "title_full": "未標示產品 CVE-2026-91250 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Adapters).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via multiple protocols to compromise Oracle SOA Suite.  While the vulnerability is in Oracle SOA Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:25Z",
+      "modified": "2026-10-20T22:20:25Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 22,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-91251",
+      "title_short": "未標示產品 91251×9.9",
+      "title_full": "未標示產品 CVE-2026-91251 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Adapters).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle SOA Suite.  While the vulnerability is in Oracle SOA Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:26Z",
+      "modified": "2026-10-20T22:20:26Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 23,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-91354",
+      "title_short": "未標示產品 91354×9.9",
+      "title_full": "未標示產品 CVE-2026-91354 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Outside In Technology product of Oracle Fusion Middleware (component: Outside In Clean Content SDK).   The supported version that is affected is 8.5.8. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Outside In Technology.  While the vulnerability is in Oracle Outside In Technology, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Outside In Technology. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:38Z",
+      "modified": "2026-10-20T22:20:38Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 24,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-91637",
+      "title_short": "未標示產品 91637×9.9",
+      "title_full": "未標示產品 CVE-2026-91637 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in Oracle Essbase (component: Security).   The supported version that is affected is 21.8.3.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Essbase.  While the vulnerability is in Oracle Essbase, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Essbase. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:03Z",
+      "modified": "2026-10-20T22:21:03Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 25,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-91638",
+      "title_short": "未標示產品 91638×9.9",
+      "title_full": "未標示產品 CVE-2026-91638 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in Oracle Essbase (component: Security).   The supported version that is affected is 21.8.3.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Essbase.  While the vulnerability is in Oracle Essbase, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Essbase. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:03Z",
+      "modified": "2026-10-20T22:21:03Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 26,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-91658",
+      "title_short": "未標示產品 91658×9.9",
+      "title_full": "未標示產品 CVE-2026-91658 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in Oracle Essbase (component: Security).   The supported version that is affected is 21.8.3.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Essbase.  While the vulnerability is in Oracle Essbase, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Essbase. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:06Z",
+      "modified": "2026-10-20T22:21:06Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 27,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-91663",
+      "title_short": "未標示產品 91663×9.9",
+      "title_full": "未標示產品 CVE-2026-91663 · CVSS 9.9",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.9。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in Oracle Essbase (component: Security).   The supported version that is affected is 21.8.3.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via T3, IIOP to compromise Oracle Essbase.  While the vulnerability is in Oracle Essbase, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Essbase. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:06Z",
+      "modified": "2026-10-20T22:21:06Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 28,
+      "generated_by": "template",
+      "risk_score": 9.9
+    },
+    {
+      "cve_id": "CVE-2026-101484",
+      "title_short": "未標示產品 101484×9.8",
+      "title_full": "未標示產品 CVE-2026-101484 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in Oracle Secure Backup (component: Backup and Restore).  Supported versions that are affected are 19.1.0.0.0 and   19.1.0.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via TCP to compromise Oracle Secure Backup.  Successful attacks of this vulnerability can result in takeover of Oracle Secure Backup. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:17:57Z",
+      "modified": "2026-10-20T22:17:57Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 29,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-101499",
+      "title_short": "未標示產品 101499×9.8",
+      "title_full": "未標示產品 CVE-2026-101499 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle WebCenter Sites product of Oracle Fusion Middleware (component: WebCenter Sites).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebCenter Sites.  Successful attacks of this vulnerability can result in takeover of Oracle WebCenter Sites. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:17:59Z",
+      "modified": "2026-10-20T22:17:59Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 30,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-101521",
+      "title_short": "未標示產品 101521×9.8",
+      "title_full": "未標示產品 CVE-2026-101521 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in Oracle APEX (component: General).  Supported versions that are affected are 24.1.0-24.1.21, 24.2.0-24.2.20 and  26.1.0-26.1.4. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTPS to compromise Oracle APEX.  Successful attacks of this vulnerability can result in takeover of Oracle APEX. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:01Z",
+      "modified": "2026-10-20T22:18:01Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 31,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-101537",
+      "title_short": "未標示產品 101537×9.8",
+      "title_full": "未標示產品 CVE-2026-101537 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Solaris product of Oracle Systems (component: Utility).   The supported version that is affected is 11.4. Easily exploitable vulnerability allows unauthenticated attacker with network access via TCP to compromise Oracle Solaris.  Successful attacks of this vulnerability can result in takeover of Oracle Solaris. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:03Z",
+      "modified": "2026-10-20T22:18:03Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 32,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-101763",
+      "title_short": "未標示產品 101763×9.8",
+      "title_full": "未標示產品 CVE-2026-101763 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Communications BRM - Elastic Charging Engine product of Oracle Communications (component: Cloud native deployment).  Supported versions that are affected are 15.0.0.0.0, 15.0.1.0.0, 15.1.0.0.0 and  15.2.0.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via RMI to compromise Oracle Communications BRM - Elastic Charging Engine.  Successful attacks of this vulnerability can result in takeover of Oracle Communications BRM - Elastic Charging Engine. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:31Z",
+      "modified": "2026-10-20T22:18:31Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 33,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-101767",
+      "title_short": "未標示產品 101767×9.8",
+      "title_full": "未標示產品 CVE-2026-101767 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Application Object Library product of Oracle E-Business Suite (component: Core).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Application Object Library.  Successful attacks of this vulnerability can result in takeover of Oracle Application Object Library. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:32Z",
+      "modified": "2026-10-20T22:18:32Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 34,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-60432",
+      "title_short": "未標示產品 60432×9.8",
+      "title_full": "未標示產品 CVE-2026-60432 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Solaris product of Oracle Systems (component: Image Packaging System).  Supported versions that are affected are 11.3 and  11.4. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Solaris.  Successful attacks of this vulnerability can result in takeover of Oracle Solaris. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:19:31Z",
+      "modified": "2026-10-20T22:19:31Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 35,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-83396",
+      "title_short": "未標示產品 83396×9.8",
+      "title_full": "未標示產品 CVE-2026-83396 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Data Integrator product of Oracle Fusion Middleware (component: Console / Repository Explorer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via RMI to compromise Oracle Data Integrator.  Successful attacks of this vulnerability can result in takeover of Oracle Data Integrator. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:19:56Z",
+      "modified": "2026-10-20T22:19:56Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 36,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-83397",
+      "title_short": "未標示產品 83397×9.8",
+      "title_full": "未標示產品 CVE-2026-83397 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Data Integrator product of Oracle Fusion Middleware (component: Console / Repository Explorer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Data Integrator.  Successful attacks of this vulnerability can result in takeover of Oracle Data Integrator. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:19:56Z",
+      "modified": "2026-10-20T22:19:56Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 37,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-83399",
+      "title_short": "未標示產品 83399×9.8",
+      "title_full": "未標示產品 CVE-2026-83399 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: Core).  Supported versions that are affected are 12.2.1.4.0, 14.1.1.0.0, 14.1.2.0.0 and  15.1.1.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via T3, IIOP to compromise Oracle WebLogic Server.  Successful attacks of this vulnerability can result in takeover of Oracle WebLogic Server. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:19:56Z",
+      "modified": "2026-10-20T22:19:56Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 38,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-87251",
+      "title_short": "未標示產品 87251×9.8",
+      "title_full": "未標示產品 CVE-2026-87251 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Access Manager product of Oracle Fusion Middleware (component: Authentication Engine).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via SAML to compromise Oracle Access Manager.  Successful attacks of this vulnerability can result in takeover of Oracle Access Manager. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:05Z",
+      "modified": "2026-10-20T22:20:05Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 39,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91214",
+      "title_short": "未標示產品 91214×9.8",
+      "title_full": "未標示產品 CVE-2026-91214 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle SOA Suite.  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:21Z",
+      "modified": "2026-10-20T22:20:21Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 40,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91220",
+      "title_short": "未標示產品 91220×9.8",
+      "title_full": "未標示產品 CVE-2026-91220 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Business Process Management Suite product of Oracle Fusion Middleware (component: Human Workflow).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Business Process Management Suite.  Successful attacks of this vulnerability can result in takeover of Oracle Business Process Management Suite. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:22Z",
+      "modified": "2026-10-20T22:20:22Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 41,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91233",
+      "title_short": "未標示產品 91233×9.8",
+      "title_full": "未標示產品 CVE-2026-91233 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Enterprise Scheduling System).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via SOAP to compromise Oracle SOA Suite.  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:24Z",
+      "modified": "2026-10-20T22:20:24Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 42,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91234",
+      "title_short": "未標示產品 91234×9.8",
+      "title_full": "未標示產品 CVE-2026-91234 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle SOA Suite.  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:24Z",
+      "modified": "2026-10-20T22:20:24Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 43,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91235",
+      "title_short": "未標示產品 91235×9.8",
+      "title_full": "未標示產品 CVE-2026-91235 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle SOA Suite.  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:24Z",
+      "modified": "2026-10-20T22:20:24Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 44,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91236",
+      "title_short": "未標示產品 91236×9.8",
+      "title_full": "未標示產品 CVE-2026-91236 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle SOA Suite.  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:24Z",
+      "modified": "2026-10-20T22:20:24Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 45,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91323",
+      "title_short": "未標示產品 91323×9.8",
+      "title_full": "未標示產品 CVE-2026-91323 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: Core).  Supported versions that are affected are 12.2.1.4.0, 14.1.1.0.0, 14.1.2.0.0 and  15.1.1.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebLogic Server.  Successful attacks of this vulnerability can result in takeover of Oracle WebLogic Server. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:34Z",
+      "modified": "2026-10-20T22:20:34Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 46,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91408",
+      "title_short": "未標示產品 91408×9.8",
+      "title_full": "未標示產品 CVE-2026-91408 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Identity Manager product of Oracle Fusion Middleware (component: End User Self Service).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via T3, IIOP to compromise Oracle Identity Manager.  Successful attacks of this vulnerability can result in takeover of Oracle Identity Manager. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:44Z",
+      "modified": "2026-10-20T22:20:44Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 47,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91491",
+      "title_short": "未標示產品 91491×9.8",
+      "title_full": "未標示產品 CVE-2026-91491 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Identity Manager Connector product of Oracle Fusion Middleware (component: LDAP Gateway).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via LDAP to compromise Oracle Identity Manager Connector.  Successful attacks of this vulnerability can result in takeover of Oracle Identity Manager Connector. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:53Z",
+      "modified": "2026-10-20T22:20:53Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 48,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91495",
+      "title_short": "未標示產品 91495×9.8",
+      "title_full": "未標示產品 CVE-2026-91495 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle WebCenter Content product of Oracle Fusion Middleware (component: Content Server).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebCenter Content.  Successful attacks of this vulnerability can result in takeover of Oracle WebCenter Content. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:54Z",
+      "modified": "2026-10-20T22:20:54Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 49,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-91665",
+      "title_short": "未標示產品 91665×9.8",
+      "title_full": "未標示產品 CVE-2026-91665 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.8。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in Oracle Essbase (component: Security).   The supported version that is affected is 21.8.3.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via TCP to compromise Oracle Essbase.  Successful attacks of this vulnerability can result in takeover of Oracle Essbase. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:06Z",
+      "modified": "2026-10-20T22:21:06Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 50,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-92559",
+      "title_short": "未標示產品 92559×9.8",
+      "title_full": "未標示產品 CVE-2026-92559 · CVSS 9.8",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-1327"
+      ],
+      "tags": [
+        "資訊洩漏"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在資訊洩漏漏洞，CVSS 9.8。",
+      "impact_zh": "敏感資料可能外洩。",
+      "action_zh": "更新至修補版本，並輪替可能受影響的憑證。",
+      "description_en": "IBM App Connect Enterprise 13.0.1.0 through 13.0.8.2 could allow a remote attacker to obtain sensitive information due to binding to an unrestricted IP address.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.ibm.com/support/pages/node/7291781"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:07Z",
+      "modified": "2026-10-20T22:21:07Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 51,
+      "generated_by": "template",
+      "risk_score": 9.8
+    },
+    {
+      "cve_id": "CVE-2026-101420",
+      "title_short": "未標示產品 101420×9.6",
+      "title_full": "未標示產品 CVE-2026-101420 · CVSS 9.6",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.6。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the PeopleSoft Enterprise PeopleTools product of Oracle PeopleSoft (component: SQR).  Supported versions that are affected are 8.61-8.63. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise PeopleSoft Enterprise PeopleTools.  While the vulnerability is in PeopleSoft Enterprise PeopleTools, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all PeopleSoft Enterprise PeopleTools accessible data as well as  unauthorized access to critical data or complete access to all PeopleSoft Enterprise PeopleTools accessible data. CVSS 3.1 Base Score 9.6 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:17:50Z",
+      "modified": "2026-10-20T22:17:50Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 52,
+      "generated_by": "template",
+      "risk_score": 9.6
+    },
+    {
+      "cve_id": "CVE-2026-87347",
+      "title_short": "未標示產品 87347×9.6",
+      "title_full": "未標示產品 CVE-2026-87347 · CVSS 9.6",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.6。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle HTTP Server product of Oracle Fusion Middleware (component: OSSL Module).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle HTTP Server.  While the vulnerability is in Oracle HTTP Server, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle HTTP Server accessible data as well as  unauthorized access to critical data or complete access to all Oracle HTTP Server accessible data. CVSS 3.1 Base Score 9.6 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:12Z",
+      "modified": "2026-10-20T22:20:12Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 53,
+      "generated_by": "template",
+      "risk_score": 9.6
+    },
+    {
+      "cve_id": "CVE-2026-91218",
+      "title_short": "未標示產品 91218×9.6",
+      "title_full": "未標示產品 CVE-2026-91218 · CVSS 9.6",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.6。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle SOA Suite.  While the vulnerability is in Oracle SOA Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle SOA Suite accessible data as well as  unauthorized access to critical data or complete access to all Oracle SOA Suite accessible data. CVSS 3.1 Base Score 9.6 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:22Z",
+      "modified": "2026-10-20T22:20:22Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 54,
+      "generated_by": "template",
+      "risk_score": 9.6
+    },
+    {
+      "cve_id": "CVE-2026-91243",
+      "title_short": "未標示產品 91243×9.6",
+      "title_full": "未標示產品 CVE-2026-91243 · CVSS 9.6",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.6。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle Business Process Management Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Business Process Management Suite.  While the vulnerability is in Oracle Business Process Management Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Business Process Management Suite accessible data as well as  unauthorized access to critical data or complete access to all Oracle Business Process Management Suite accessible data. CVSS 3.1 Base Score 9.6 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:25Z",
+      "modified": "2026-10-20T22:20:25Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 55,
+      "generated_by": "template",
+      "risk_score": 9.6
+    },
+    {
+      "cve_id": "CVE-2026-91230",
+      "title_short": "未標示產品 91230×9.3",
+      "title_full": "未標示產品 CVE-2026-91230 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle SOA Suite.  While the vulnerability is in Oracle SOA Suite, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle SOA Suite accessible data as well as  unauthorized update, insert or delete access to some of Oracle SOA Suite accessible data. CVSS 3.1 Base Score 9.3 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:23Z",
+      "modified": "2026-10-20T22:20:23Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 56,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-91622",
+      "title_short": "未標示產品 91622×9.3",
+      "title_full": "未標示產品 CVE-2026-91622 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle Agile Product Lifecycle Management for Process product of Oracle Supply Chain (component: Product Quality Management).   The supported version that is affected is 6.2.4. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Agile Product Lifecycle Management for Process.  Successful attacks require human interaction from a person other than the attacker and while the vulnerability is in Oracle Agile Product Lifecycle Management for Process, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Agile Product Lifecycle Management for Process accessible data as well as  unauthorized access to critical data or complete access to all Oracle Agile Product Lifecycle Management for Process accessible data. CVSS 3.1 Base Score 9.3 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:02Z",
+      "modified": "2026-10-20T22:21:02Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 57,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-91644",
+      "title_short": "未標示產品 91644×9.3",
+      "title_full": "未標示產品 CVE-2026-91644 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.3。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in Oracle Essbase (component: Security).   The supported version that is affected is 21.8.3.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Essbase.  While the vulnerability is in Oracle Essbase, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Essbase accessible data as well as  unauthorized update, insert or delete access to some of Oracle Essbase accessible data. CVSS 3.1 Base Score 9.3 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:04Z",
+      "modified": "2026-10-20T22:21:04Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 58,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-101590",
+      "title_short": "未標示產品 101590×9.1",
+      "title_full": "未標示產品 CVE-2026-101590 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Helidon product of Oracle Fusion Middleware (component: helidon-microprofile-security).  Supported versions that are affected are 4.0.0-4.5.5. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Helidon.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Helidon accessible data as well as  unauthorized access to critical data or complete access to all Helidon accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:12Z",
+      "modified": "2026-10-20T22:18:12Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 59,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-101634",
+      "title_short": "未標示產品 101634×9.1",
+      "title_full": "未標示產品 CVE-2026-101634 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle Mobile Field Service product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Mobile Field Service.  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Mobile Field Service accessible data and unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle Mobile Field Service. CVSS 3.1 Base Score 9.1 (Confidentiality and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:17Z",
+      "modified": "2026-10-20T22:18:17Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 60,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-101765",
+      "title_short": "未標示產品 101765×9.1",
+      "title_full": "未標示產品 CVE-2026-101765 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle Communications Billing and Revenue Management product of Oracle Communications (component: BRM Server).  Supported versions that are affected are 15.0.0.0.0, 15.0.1.0.0, 15.1.0.0.0 and  15.2.0.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Communications Billing and Revenue Management.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Communications Billing and Revenue Management accessible data as well as  unauthorized access to critical data or complete access to all Oracle Communications Billing and Revenue Management accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:31Z",
+      "modified": "2026-10-20T22:18:31Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 61,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-101808",
+      "title_short": "未標示產品 101808×9.1",
+      "title_full": "未標示產品 CVE-2026-101808 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle Product Workbench product of Oracle E-Business Suite (component: WebUI).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Product Workbench.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Product Workbench accessible data as well as  unauthorized access to critical data or complete access to all Oracle Product Workbench accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:18:36Z",
+      "modified": "2026-10-20T22:18:36Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 62,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-87302",
+      "title_short": "未標示產品 87302×9.1",
+      "title_full": "未標示產品 CVE-2026-87302 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: Core).  Supported versions that are affected are 12.2.1.4.0, 14.1.1.0.0, 14.1.2.0.0 and  15.1.1.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebLogic Server.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle WebLogic Server accessible data as well as  unauthorized access to critical data or complete access to all Oracle WebLogic Server accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:07Z",
+      "modified": "2026-10-20T22:20:07Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 63,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-91225",
+      "title_short": "未標示產品 91225×9.1",
+      "title_full": "未標示產品 CVE-2026-91225 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Adapters).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle SOA Suite.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle SOA Suite accessible data and unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle SOA Suite. CVSS 3.1 Base Score 9.1 (Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:23Z",
+      "modified": "2026-10-20T22:20:23Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 64,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-91241",
+      "title_short": "未標示產品 91241×9.1",
+      "title_full": "未標示產品 CVE-2026-91241 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "接管"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在接管漏洞，CVSS 9.1。",
+      "impact_zh": "服務或帳號可能被完全接管。",
+      "action_zh": "立即更新並檢查是否已有異常登入或帳號變更紀錄。",
+      "description_en": "Vulnerability in the Oracle Business Intelligence Enterprise Edition product of Oracle Analytics (component: Analytics Web Administration).  Supported versions that are affected are 8.2.0.0.0, 12.2.1.4.0 and  26.01.0.0.0. Easily exploitable vulnerability allows high privileged attacker with network access via HTTP to compromise Oracle Business Intelligence Enterprise Edition.  While the vulnerability is in Oracle Business Intelligence Enterprise Edition, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Business Intelligence Enterprise Edition. CVSS 3.1 Base Score 9.1 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:24Z",
+      "modified": "2026-10-20T22:20:24Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 65,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-91265",
+      "title_short": "未標示產品 91265×9.1",
+      "title_full": "未標示產品 CVE-2026-91265 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the JD Edwards EnterpriseOne Tools product of Oracle JD Edwards (component: Enterprise Infrastructure SEC).  Supported versions that are affected are 9.2.0.0-9.2.26.5. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise JD Edwards EnterpriseOne Tools.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all JD Edwards EnterpriseOne Tools accessible data as well as  unauthorized access to critical data or complete access to all JD Edwards EnterpriseOne Tools accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:27Z",
+      "modified": "2026-10-20T22:20:27Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 66,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-91305",
+      "title_short": "未標示產品 91305×9.1",
+      "title_full": "未標示產品 CVE-2026-91305 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the JD Edwards EnterpriseOne Tools product of Oracle JD Edwards (component: Installation Security).  Supported versions that are affected are 9.2.0.0-9.2.26.5. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTPS to compromise JD Edwards EnterpriseOne Tools.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all JD Edwards EnterpriseOne Tools accessible data as well as  unauthorized access to critical data or complete access to all JD Edwards EnterpriseOne Tools accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:32Z",
+      "modified": "2026-10-20T22:20:32Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 67,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-91341",
+      "title_short": "未標示產品 91341×9.1",
+      "title_full": "未標示產品 CVE-2026-91341 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle Outside In Technology product of Oracle Fusion Middleware (component: Outside In Clean Content SDK).   The supported version that is affected is 8.5.8. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Outside In Technology.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Outside In Technology accessible data and unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle Outside In Technology. CVSS 3.1 Base Score 9.1 (Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:36Z",
+      "modified": "2026-10-20T22:20:36Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 68,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-91490",
+      "title_short": "未標示產品 91490×9.1",
+      "title_full": "未標示產品 CVE-2026-91490 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle Identity Manager Connector product of Oracle Fusion Middleware (component: LDAP Gateway).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via LDAP to compromise Oracle Identity Manager Connector.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Identity Manager Connector accessible data as well as  unauthorized access to critical data or complete access to all Oracle Identity Manager Connector accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:20:53Z",
+      "modified": "2026-10-20T22:20:53Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 69,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-91624",
+      "title_short": "未標示產品 91624×9.1",
+      "title_full": "未標示產品 CVE-2026-91624 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle Agile Product Lifecycle Management for Process product of Oracle Supply Chain (component: Product Quality Management).   The supported version that is affected is 6.2.4. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Agile Product Lifecycle Management for Process.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Agile Product Lifecycle Management for Process accessible data as well as  unauthorized access to critical data or complete access to all Oracle Agile Product Lifecycle Management for Process accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:02Z",
+      "modified": "2026-10-20T22:21:02Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 70,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-91655",
+      "title_short": "未標示產品 91655×9.1",
+      "title_full": "未標示產品 CVE-2026-91655 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "阻斷服務"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在阻斷服務漏洞，CVSS 9.1。",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "Vulnerability in Oracle Essbase (component: Security).   The supported version that is affected is 21.8.3.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Essbase.  While the vulnerability is in Oracle Essbase, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Essbase accessible data as well as  unauthorized update, insert or delete access to some of Oracle Essbase accessible data and unauthorized ability to cause a partial denial of service (partial DOS) of Oracle Essbase. CVSS 3.1 Base Score 9.1 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:05Z",
+      "modified": "2026-10-20T22:21:05Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 71,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-91656",
+      "title_short": "未標示產品 91656×9.1",
+      "title_full": "未標示產品 CVE-2026-91656 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "阻斷服務"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在阻斷服務漏洞，CVSS 9.1。",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "Vulnerability in Oracle Essbase (component: Federated Partitions).   The supported version that is affected is 21.8.3.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Essbase.  While the vulnerability is in Oracle Essbase, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Essbase accessible data as well as  unauthorized update, insert or delete access to some of Oracle Essbase accessible data and unauthorized ability to cause a partial denial of service (partial DOS) of Oracle Essbase. CVSS 3.1 Base Score 9.1 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2026.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20T22:21:05Z",
+      "modified": "2026-10-20T22:21:05Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 72,
+      "generated_by": "template",
+      "risk_score": 9.1
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-785: FreeBSD Kernel Shared Memory Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-785/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-58094"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-784: FreeBSD Kernel kqueue Use-After-Free Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-784/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-58093"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-783: LibreOffice PDF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-783/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-63273"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-782: LibreOffice PDF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-782/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-63274"
+      ]
+    }
+  ]
+}
