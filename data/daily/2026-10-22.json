@@ -1,0 +1,1118 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T00:30:25Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-21T22:00:00Z",
+    "to": "2026-10-22T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 114,
+    "kept": 13,
+    "kev": 6,
+    "critical": 7,
+    "in_the_wild": 6,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 6,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 70,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 38,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-96656",
+      "title_short": "Plex Media Server 96656×8.6 在野",
+      "title_full": "Plex Media Server CVE-2026-96656 · CVSS 8.6 · 在野利用",
+      "vendor": "Plex",
+      "product": "Media Server",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "4.0",
+        "score": 8.6,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00758,
+        "percentile": 0.54661
+      },
+      "cwe": [
+        "CWE-73"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-10-23",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Plex Media Server External Control of File Name or Path Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Plex Media Server 存在安全漏洞，CVSS 8.6，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96656"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://forums.plex.tv/t/important-security-update-for-plex-media-server-v1-43-2-and-earlier/942319"
+        },
+        {
+          "name": "參考",
+          "url": "https://forums.plex.tv/t/plex-media-server/30447/711"
+        },
+        {
+          "name": "第三方",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-96656"
+        },
+        {
+          "name": "第三方",
+          "url": "https://zmain.info/blog/plex2shell"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.boredhackerblog.info/2026/10/plex-vulnerabilities-being-exploited-in.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 11.615
+    },
+    {
+      "cve_id": "CVE-2026-106931",
+      "title_short": "EG Secure Solutions SiteGuard Server Edition 106931×8.5 在野",
+      "title_full": "EG Secure Solutions SiteGuard Server Edition CVE-2026-106931 · CVSS 8.5 · 在野利用",
+      "vendor": "EG Secure Solutions",
+      "product": "SiteGuard Server Edition",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "4.0",
+        "score": 8.5,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01367,
+        "percentile": 0.71599
+      },
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-10-23",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "EG Secure Solutions SiteGuard Server Edition 存在RCE漏洞，CVSS 8.5，已列入 CISA KEV 已知在野利用清單，EPS…",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106931"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1"
+        },
+        {
+          "name": "第三方",
+          "url": "https://jvn.jp/en/jp/JVN88474777/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-106931"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 11.527
+    },
+    {
+      "cve_id": "CVE-2026-110936",
+      "title_short": "Siemens Software Center 110936×8.4 在野",
+      "title_full": "Siemens Software Center CVE-2026-110936 · CVSS 8.4 · 在野利用",
+      "vendor": "Siemens",
+      "product": "Software Center",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "4.0",
+        "score": 8.4,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00262,
+        "percentile": 0.17062
+      },
+      "cwe": [
+        "CWE-427"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-11-03",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Siemens Software Center Uncontrolled Search Path Element Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Siemens Software Center 存在RCE漏洞，CVSS 8.4，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110936"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://productcert.siemens.com/productcert/html/ssa-580366.html"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-580366.html"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://productcert.siemens.com/news/2026/10/19/active-exploitation-of-cve-2026-110936-in-siemens-software-center/"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-110936"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 11.405
+    },
+    {
+      "cve_id": "CVE-2026-96654",
+      "title_short": "Plex Media Server 96654×6.9 在野",
+      "title_full": "Plex Media Server CVE-2026-96654 · CVSS 6.9 · 在野利用",
+      "vendor": "Plex",
+      "product": "Media Server",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "4.0",
+        "score": 6.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00432,
+        "percentile": 0.36449
+      },
+      "cwe": [
+        "CWE-84"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-10-23",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Plex Media Server 存在安全漏洞，CVSS 6.9，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins' functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96654"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://forums.plex.tv/t/important-security-update-for-plex-media-server-v1-43-2-and-earlier/942319"
+        },
+        {
+          "name": "參考",
+          "url": "https://forums.plex.tv/t/plex-media-server/30447/711"
+        },
+        {
+          "name": "第三方",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-96654"
+        },
+        {
+          "name": "第三方",
+          "url": "https://zmain.info/blog/plex2shell"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96654"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 9.909
+    },
+    {
+      "cve_id": "CVE-2026-96652",
+      "title_short": "Plex Media Server 96652×5.3 在野",
+      "title_full": "Plex Media Server CVE-2026-96652 · CVSS 5.3 · 在野利用",
+      "vendor": "Plex",
+      "product": "Media Server",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "4.0",
+        "score": 5.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00423,
+        "percentile": 0.35486
+      },
+      "cwe": [
+        "CWE-918"
+      ],
+      "tags": [
+        "SSRF"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-11-03",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Plex Media Server 存在SSRF漏洞，CVSS 5.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "可誘使伺服器發送任意請求，觸及內網。",
+      "action_zh": "更新至修補版本，並限制服務的對外與內網連線。",
+      "description_en": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the 'protocol' parameter and force the Plex server to POST to the attacker's chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96652"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://forums.plex.tv/t/important-security-update-for-plex-media-server-v1-43-2-and-earlier/942319"
+        },
+        {
+          "name": "參考",
+          "url": "https://forums.plex.tv/t/plex-media-server/30447/711"
+        },
+        {
+          "name": "第三方",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-96652"
+        },
+        {
+          "name": "第三方",
+          "url": "https://zmain.info/blog/plex2shell"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96652"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 8.308
+    },
+    {
+      "cve_id": "CVE-2026-96655",
+      "title_short": "Plex Media Server 96655×5.3 在野",
+      "title_full": "Plex Media Server CVE-2026-96655 · CVSS 5.3 · 在野利用",
+      "vendor": "Plex",
+      "product": "Media Server",
+      "vendor_advisory_id": null,
+      "severity": "MEDIUM",
+      "cvss": {
+        "version": "4.0",
+        "score": 5.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00423,
+        "percentile": 0.35486
+      },
+      "cwe": [
+        "CWE-918"
+      ],
+      "tags": [
+        "SSRF"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-20",
+        "due_date": "2026-11-03",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Plex Media Server 存在SSRF漏洞，CVSS 5.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "可誘使伺服器發送任意請求，觸及內網。",
+      "action_zh": "更新至修補版本，並限制服務的對外與內網連線。",
+      "description_en": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96655"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://forums.plex.tv/t/important-security-update-for-plex-media-server-v1-43-2-and-earlier/942319"
+        },
+        {
+          "name": "參考",
+          "url": "https://forums.plex.tv/t/plex-media-server/30447/711"
+        },
+        {
+          "name": "第三方",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-96655"
+        },
+        {
+          "name": "第三方",
+          "url": "https://zmain.info/blog/plex2shell"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96655"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-20",
+      "modified": "2026-10-20",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 8.308
+    },
+    {
+      "cve_id": "CVE-2026-105944",
+      "title_short": "未標示產品 105944×10.0",
+      "title_full": "未標示產品 CVE-2026-105944 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 10.0,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-306"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 10.0。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Apache Pulsar Manager is a web console for administering Apache Pulsar clusters. It has its own user accounts and login, and it can be configured with an HTTP authentication credential, such as a token, that it uses to call the Pulsar admin API on behalf of its users. Pulsar Manager has the following security issues:\n\n- The operation for creating the initial administrator (superuser) account is available without authentication, and it remains available after the instance has been initialized. Anyone who can reach Pulsar Manager can create an additional administrator account at any time and log in with it. This issue affects versions 0.3.0 and later.\n- Requests to the Pulsar admin API that Pulsar Manager proxies to the configured Pulsar cluster are not subject to Pulsar Manager's authentication. Version 0.2.0 checks the caller's permissions for some of these requests, but not for all of them. An unauthenticated user can therefore use Pulsar Manager to send requests to the Pulsar admin API, which the cluster processes with the credential configured in Pulsar Manager.\n- The destination of a proxied request can be chosen by the requester, and Pulsar Manager attaches its configured Pulsar admin credential to the request. An unauthenticated user can make Pulsar Manager send this credential to a host of the user's choosing, and the credential can then be used directly against the Pulsar cluster.\n- In versions 0.3.0 and later, Pulsar Manager does not distinguish between privilege levels of its accounts. Every account, including one created through the first issue, effectively has full administrative privileges in Pulsar Manager.\n\nThe impact depends on the version and the deployment. In versions 0.3.0 and later, any user who can reach Pulsar Manager over the network can take full control of Pulsar Manager. In all versions, when Pulsar Manager is configured with an HTTP authentication credential for a Pulsar cluster, any user who can reach Pulsar Manager can perform the Pulsar admin operations that this credential permits and can obtain the credential itself. When Pulsar Manager is configured with the token signing key of a Pulsar cluster, an administrator of Pulsar Manager can create tokens for the cluster.\n\nApache Pulsar Manager is no longer maintained and is completely unsupported. The Apache Pulsar PMC has retired it. There are no supported versions, and no further releases, fixes or security updates will be made for any version. These issues will not be fixed.\n\nUsing Pulsar Manager is not recommended. Users should stop using Pulsar Manager, remove existing deployments, and move to one of the alternatives described in the Administration UI documentation (https://pulsar.apache.org/docs/administration-ui). Users who have exposed Pulsar Manager configured with a Pulsar credential or token signing key should also consider replacing that credential or key.\n\nUntil a deployment is removed, users should not expose Pulsar Manager to untrusted networks, and should restrict network access to it to trusted administrators.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://lists.apache.org/thread.html/hol3z7fzhjntwvrv8xqqwx4l4d2jx796"
+        },
+        {
+          "name": "參考",
+          "url": "https://pulsar.apache.org/docs/administration-ui"
+        },
+        {
+          "name": "參考",
+          "url": "https://pulsar.apache.org/security/CVE-2026-105944/"
+        },
+        {
+          "name": "參考",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/21/26"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-21T19:16:57Z",
+      "modified": "2026-10-21T22:16:46Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-111704",
+      "title_short": "未標示產品 111704×9.3",
+      "title_full": "未標示產品 CVE-2026-111704 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00508,
+        "percentile": 0.42464
+      },
+      "cwe": [
+        "CWE-306"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.3，EPSS 0.01。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "LangChat through commit 2a6285a contains a missing authentication vulnerability that allows unauthenticated remote attackers to access REST controllers because no Sa-Token interceptor is registered. Attackers can query /api/v1/auth/users to read plaintext passwords, retrieve LLM provider API keys, create super-admin accounts, and modify or delete data.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/LangChat/langchat/blob/2a6285a6b8c51d51cdc599771bb667a30bc03f5c/langchat-auth/src/main/java/cn/langchat/auth/controller/AigcUserController.java#L25-L60"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/LangChat/langchat/blob/2a6285a6b8c51d51cdc599771bb667a30bc03f5c/langchat-auth/src/main/java/cn/langchat/auth/service/impl/AuthServiceImpl.java#L51-L58"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/LangChat/langchat/blob/2a6285a6b8c51d51cdc599771bb667a30bc03f5c/langchat-server/src/main/java/cn/langchat/server/config/WebAsyncConfig.java#L17-L33"
+        },
+        {
+          "name": "參考",
+          "url": "https://hackmd.io/@hieuPenguinnn/langchat-missing-global-auth-credential-exposure"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/langchat-through-commit-2a6285a-missing-authentication-on-rest-api-controllers"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-16T18:17:54Z",
+      "modified": "2026-10-21T22:16:46Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 9.31
+    },
+    {
+      "cve_id": "CVE-2026-114382",
+      "title_short": "未標示產品 114382×9.3",
+      "title_full": "未標示產品 CVE-2026-114382 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.3。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "A security flaw has been discovered in TOTOLINK EX200 5.2.3c.7200. This affects the function setStaticDhcpConfig of the file /cgi-bin/cstecgi.cgi of the component lan.so. The manipulation of the argument Comment results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/qwq-nm/CVE/blob/f5d61361eb7d846479f6d76c0aa4273e9af46d27/CVE1/report.md"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/cve/CVE-2026-114382"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/submit/1019881"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/424741"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/424741/cti"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.totolink.net/"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-21T22:16:48Z",
+      "modified": "2026-10-21T22:16:48Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-114383",
+      "title_short": "未標示產品 114383×9.3",
+      "title_full": "未標示產品 CVE-2026-114383 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在記憶體破壞漏洞，CVSS 9.3。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "A weakness has been identified in TOTOLINK EX200 5.2.3c.7200. This impacts the function setWiFiAclAddConfig of the file /cgi-bin/cstecgi.cgi of the component wireless.so. This manipulation of the argument macAddress causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/qwq-nm/CVE/blob/f5d61361eb7d846479f6d76c0aa4273e9af46d27/CVE2/report.md"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/cve/CVE-2026-114383"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/submit/1019883"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/424742"
+        },
+        {
+          "name": "參考",
+          "url": "https://vuldb.com/vuln/424742/cti"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.totolink.net/"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-21T22:16:49Z",
+      "modified": "2026-10-21T22:16:49Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-96620",
+      "title_short": "未標示產品 96620×9.2",
+      "title_full": "未標示產品 CVE-2026-96620 · CVSS 9.2",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.00578,
+        "percentile": 0.46781
+      },
+      "cwe": [
+        "CWE-20",
+        "CWE-78",
+        "CWE-88"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 9.2，EPSS 0.01。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Claude Agent SDK is a Python SDK for Claude Code. Prior to 0.2.121, the resume option is passed to the Claude CLI as a separate token without validation, so a dash-leading value is parsed as an independent CLI flag. An attacker can inject the --mcp-config flag to define a stdio MCP server, causing arbitrary command execution at CLI startup outside the SDK permission controls. The issue is exploitable when an application passes untrusted input as the session ID to resume. This issue is fixed in version 0.2.121.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/anthropics/claude-agent-sdk-python/commit/347a1cb88d7652199399db1b7f914e0a459a6662"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/anthropics/claude-agent-sdk-python/pull/1123"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.121"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/anthropics/claude-agent-sdk-python/security/advisories/GHSA-h4mw-j7qp-8mwm"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-16T20:18:28Z",
+      "modified": "2026-10-21T22:16:50Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 9.212
+    },
+    {
+      "cve_id": "CVE-2026-114509",
+      "title_short": "未標示產品 114509×9.2",
+      "title_full": "未標示產品 CVE-2026-114509 · CVSS 9.2",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-287",
+        "CWE-1287"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.2。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Laravel is a web application framework. Prior to 12.68.0 and 13.29.0, TokenGuard configured as a standard token-based API guard does not reject a crafted non-string credential. Under affected MySQL or MariaDB configurations, the authentication lookup can match an unintended existing user, allowing an unauthenticated attacker to bypass authentication and take over an account on routes protected by TokenGuard. This issue is fixed in versions 12.68.0 and 13.29.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/laravel/framework/commit/8dbb08bccac1be095dba4a9d259a419620f1e8a5"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/laravel/framework/commit/9b21ce0a9bb2b2599978bc0b0df4abea952ad31c"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/laravel/framework/releases/tag/v12.68.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/laravel/framework/releases/tag/v13.29.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/laravel/framework/security/advisories/GHSA-f9x3-7vq9-cph6"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-21T22:16:49Z",
+      "modified": "2026-10-21T22:16:49Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 12,
+      "generated_by": "template",
+      "risk_score": 9.2
+    },
+    {
+      "cve_id": "CVE-2026-91403",
+      "title_short": "未標示產品 91403×9.1",
+      "title_full": "未標示產品 CVE-2026-91403 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": null,
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在安全漏洞，CVSS 9.1。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component: JSSE).  Supported versions that are affected are Oracle Java SE: 8u511, 8u511-perf, 11.0.33, 17.0.21, 21.0.13, 25.0.5, 27.0.1; Oracle GraalVM for JDK: 17.0.21 and  21.0.13; Oracle GraalVM Enterprise Edition: 21.3.20. Easily exploitable vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition accessible data as well as  unauthorized access to critical data or complete access to all Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition accessible data. Note: This vulnerability can be exploited by using APIs in the specified Component, e.g., through a web service which supplies data to the APIs. This vulnerability also applies to Java deployments, typically in clients running sandboxed Java Web Start applications or sandboxed Java applets, that load and run untrusted code (e.g., code that comes from the internet) and rely on the Java sandbox for security. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.oracle.com/security-alerts/alert-cve-2026-91403.html"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-21T22:16:50Z",
+      "modified": "2026-10-21T22:16:50Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 13,
+      "generated_by": "template",
+      "risk_score": 9.1
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Vulnerabilities in PHP Affecting Cisco Products: October 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Vulnerabilities%20in%20PHP%20Affecting%20Cisco%20Products:%20October%202026%26vs_k=1",
+      "date": "2026-10-21T19:12:00Z",
+      "cves": [
+        "CVE-2026-109618",
+        "CVE-2026-109619"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Advance Notification for Publication of October 21, 2026, Security Advisories",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-QGwHnJ6k?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Advance%20Notification%20for%20Publication%20of%20October%2021,%202026,%20Security%20Advisories%26vs_k=1",
+      "date": "2026-10-21T16:09:19Z",
+      "cves": [
+        "CVE-2026-20011",
+        "CVE-2026-20019",
+        "CVE-2026-20043",
+        "CVE-2026-20179",
+        "CVE-2026-20197",
+        "CVE-2026-20218"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Expressway Series Information Disclosure Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-expressway-inf-disc-vvYqgSTS?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Expressway%20Series%20Information%20Disclosure%20Vulnerability%26vs_k=1",
+      "date": "2026-10-21T16:00:00Z",
+      "cves": [
+        "CVE-2026-76435"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco IOS XR Software for ASR 9000 Series Routers IPv4 Unicast Packets Denial of Service Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asr9k-tUyxcyXN?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20IOS%20XR%20Software%20for%20ASR%209000%20Series%20Routers%20IPv4%20Unicast%20Packets%20Denial%20of%20Service%20Vulnerability%26vs_k=1",
+      "date": "2026-10-21T16:00:00Z",
+      "cves": [
+        "CVE-2026-76505"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Multiple Cisco Products Snort 3 SMTP MIME Denial of Service Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snort3-mime-vulns-bkXjcKkt?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Multiple%20Cisco%20Products%20Snort%203%20SMTP%20MIME%20Denial%20of%20Service%20Vulnerability%26vs_k=1",
+      "date": "2026-10-21T16:00:00Z",
+      "cves": [
+        "CVE-2026-20011"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Multiple Cisco Products Snort 3 Denial of Service Vulnerabilities",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snort3-misc-dos-6mB22qAK?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Multiple%20Cisco%20Products%20Snort%203%20Denial%20of%20Service%20Vulnerabilities%26vs_k=1",
+      "date": "2026-10-21T16:00:00Z",
+      "cves": [
+        "CVE-2026-20019",
+        "CVE-2026-20179",
+        "CVE-2026-20197",
+        "CVE-2026-76489"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Unified Communications Manager Improper Access Control Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-access-PW9e8Jt2?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Unified%20Communications%20Manager%20Improper%20Access%20Control%20Vulnerability%26vs_k=1",
+      "date": "2026-10-21T16:00:00Z",
+      "cves": [
+        "CVE-2026-76487"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Multiple Cisco Products Snort 3 Security Hardening Release: October 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-snort3-ybgmhTQe?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Multiple%20Cisco%20Products%20Snort%203%20Security%20Hardening%20Release:%20October%202026%26vs_k=1",
+      "date": "2026-10-21T16:00:00Z",
+      "cves": [
+        "CVE-2026-20043",
+        "CVE-2026-20236",
+        "CVE-2026-20291",
+        "CVE-2026-20356"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Multiple Cisco Products Snort 3 Visual Basic for Applications Buffer Overflow Denial of Service Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snort3-vba-bufdos-jAuFdvn9?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Multiple%20Cisco%20Products%20Snort%203%20Visual%20Basic%20for%20Applications%20Buffer%20Overflow%20Denial%20of%20Service%20Vulnerability%26vs_k=1",
+      "date": "2026-10-21T16:00:00Z",
+      "cves": [
+        "CVE-2026-20218"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Expressway Series Security Hardening Release: October 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-exwy-hardening-FhcqBVcs?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Expressway%20Series%20Security%20Hardening%20Release:%20October%202026%26vs_k=1",
+      "date": "2026-10-21T16:00:00Z",
+      "cves": [
+        "CVE-2026-76490",
+        "CVE-2026-76491",
+        "CVE-2026-76492",
+        "CVE-2026-76493",
+        "CVE-2026-76494",
+        "CVE-2026-76495"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Expressway Series Remote Code Execution Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-vcs-static-cred-hr7EWZ8t?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Expressway%20Series%20Remote%20Code%20Execution%20Vulnerability%26vs_k=1",
+      "date": "2026-10-21T16:00:00Z",
+      "cves": [
+        "CVE-2026-76466"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Unified Communications Products Security Hardening Release: October 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-voice-hardening-twgbH9e3?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Unified%20Communications%20Products%20Security%20Hardening%20Release:%20October%202026%26vs_k=1",
+      "date": "2026-10-21T16:00:00Z",
+      "cves": [
+        "CVE-2026-76473",
+        "CVE-2026-76474",
+        "CVE-2026-76475",
+        "CVE-2026-76476",
+        "CVE-2026-76477",
+        "CVE-2026-76478"
+      ]
+    },
+    {
+      "source": "fortinet",
+      "label": "Fortinet",
+      "title": "PHP core RCE vulnerability patches (CVE-2026-109618 and CVE-2026-109619)",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-186",
+      "date": "Wed, 21 Oct 2026 00:00:00 -0700",
+      "cves": [
+        "CVE-2026-109618",
+        "CVE-2026-109619"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-785: FreeBSD Kernel Shared Memory Time-Of-Check Time-Of-Use Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-785/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-58094"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-784: FreeBSD Kernel kqueue Use-After-Free Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-784/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-58093"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-783: LibreOffice PDF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-783/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-63273"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-782: LibreOffice PDF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-782/",
+      "date": "Fri, 16 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-63274"
+      ]
+    }
+  ]
+}
