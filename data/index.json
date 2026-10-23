@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-22T00:30:25Z",
-  "total": 25,
+  "updated_at": "2026-10-23T00:32:25Z",
+  "total": 26,
   "reports": [
+    {
+      "date": "2026-10-23",
+      "kept": 118,
+      "kev": 6,
+      "critical": 112,
+      "in_the_wild": 6,
+      "generated_at": "2026-10-23T00:32:25Z",
+      "generated_by": "template",
+      "top": [
+        "Plex Media Server 96656×8.6 在野",
+        "EG Secure Solutions SiteGuard Server Edition 106931×8.5 在野",
+        "Siemens Software Center 110936×8.4 在野"
+      ]
+    },
     {
       "date": "2026-10-22",
       "kept": 13,
