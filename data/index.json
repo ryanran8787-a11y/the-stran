@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-24T00:24:29Z",
-  "total": 27,
+  "updated_at": "2026-10-25T00:06:42Z",
+  "total": 28,
   "reports": [
+    {
+      "date": "2026-10-25",
+      "kept": 6,
+      "kev": 2,
+      "critical": 6,
+      "in_the_wild": 2,
+      "generated_at": "2026-10-25T00:06:42Z",
+      "generated_by": "template",
+      "top": [
+        "Arista VeloCloud Orchestrator 114625×9.4 在野",
+        "Collabora Online – Built-in CODE Server 110447×9.2 在野",
+        "Zero Day Initiative Openssl 63073×9.8"
+      ]
+    },
     {
       "date": "2026-10-24",
       "kept": 6,
