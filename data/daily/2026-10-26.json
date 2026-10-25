@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-26",
+  "generated_at": "2026-10-25T23:58:00Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-25T22:00:00Z",
+    "to": "2026-10-26T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 8,
+    "kept": 6,
+    "kev": 2,
+    "critical": 6,
+    "in_the_wild": 2,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 2,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 0,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 6,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-110447",
+      "title_short": "Collabora Online – Built-in CODE Server 110447×9.2 在野",
+      "title_full": "Collabora Online – Built-in CODE Server CVE-2026-110447 · CVSS 9.2 · 在野利用",
+      "vendor": "Collabora",
+      "product": "Collabora Online – Built-in CODE Server",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.12328,
+        "percentile": 0.96163
+      },
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-23",
+        "due_date": "2026-10-26",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Collabora Online – Built-in CODE Server 存在RCE漏洞，CVSS 9.2，已列入 CISA KEV 已知在野利用清單，EPSS 0.1…",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/CollaboraOnline/richdocumentscode/issues/354"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-110447"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-23",
+      "modified": "2026-10-23",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 12.447
+    },
+    {
+      "cve_id": "CVE-2026-114625",
+      "title_short": "Arista VeloCloud Orchestrator 114625×9.4 在野",
+      "title_full": "Arista VeloCloud Orchestrator CVE-2026-114625 · CVSS 9.4 · 在野利用",
+      "vendor": "Arista",
+      "product": "VeloCloud Orchestrator",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.01025,
+        "percentile": 0.63324
+      },
+      "cwe": [
+        "CWE-89"
+      ],
+      "tags": [
+        "SQLi"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-23",
+        "due_date": "2026-10-26",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Arista VeloCloud Orchestrator 存在SQLi漏洞，CVSS 9.4，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "可讀寫後端資料庫內容。",
+      "action_zh": "更新至修補版本，並檢查資料庫是否有異常查詢。",
+      "description_en": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/24838-security-advisory-0199"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-114625"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-23",
+      "modified": "2026-10-23",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 12.421
+    },
+    {
+      "cve_id": "CVE-2026-109618",
+      "title_short": "Fortinet Php 109618×9.2",
+      "title_full": "Fortinet Php CVE-2026-109618 · CVSS 9.2",
+      "vendor": "Fortinet",
+      "product": "Php",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.99981,
+        "percentile": 0.99981
+      },
+      "cwe": [
+        "CWE-416",
+        "CWE-755",
+        "CWE-824",
+        "CWE-1325"
+      ],
+      "tags": [
+        "記憶體破壞",
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Fortinet Php 存在記憶體破壞、RCE漏洞，CVSS 9.2，EPSS 1.00。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "PHP core RCE vulnerability patches (CVE-2026-109618 and CVE-2026-109619)",
+      "references": [
+        {
+          "name": "Fortinet",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/21/6"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/23/5"
+        },
+        {
+          "name": "第三方",
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html"
+        },
+        {
+          "name": "第三方",
+          "url": "https://www.wiz.io/blog/php2shell-php-rce"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-21T14:17:09Z",
+      "modified": "2026-10-23T16:26:54Z",
+      "sources": [
+        "fortinet",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 11.2
+    },
+    {
+      "cve_id": "CVE-2026-109619",
+      "title_short": "Fortinet Php 109619×9.2",
+      "title_full": "Fortinet Php CVE-2026-109619 · CVSS 9.2",
+      "vendor": "Fortinet",
+      "product": "Php",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.99997,
+        "percentile": 0.99989
+      },
+      "cwe": [
+        "CWE-416",
+        "CWE-755",
+        "CWE-824",
+        "CWE-1325"
+      ],
+      "tags": [
+        "記憶體破壞",
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Fortinet Php 存在記憶體破壞、RCE漏洞，CVSS 9.2，EPSS 1.00。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "PHP core RCE vulnerability patches (CVE-2026-109618 and CVE-2026-109619)",
+      "references": [
+        {
+          "name": "Fortinet",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/21/16"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/21/17"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/21/23"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/21/7"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/22/14"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-21T14:17:09Z",
+      "modified": "2026-10-23T16:06:48Z",
+      "sources": [
+        "fortinet",
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 11.2
+    },
+    {
+      "cve_id": "CVE-2026-63073",
+      "title_short": "Zero Day Initiative Openssl 63073×9.8",
+      "title_full": "Zero Day Initiative Openssl CVE-2026-63073 · CVSS 9.8",
+      "vendor": "Zero Day Initiative",
+      "product": "Openssl",
+      "vendor_advisory_id": "ZDI-26-789",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.01159,
+        "percentile": 0.66885
+      },
+      "cwe": [
+        "CWE-134"
+      ],
+      "tags": [
+        "資訊洩漏",
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Zero Day Initiative Openssl 存在資訊洩漏、RCE漏洞，CVSS 9.8，EPSS 0.01。",
+      "impact_zh": "敏感資料可能外洩。",
+      "action_zh": "更新至修補版本，並輪替可能受影響的憑證。",
+      "description_en": "ZDI-26-789: OpenSSL CMP Use of Externally-Controlled Format String Information Disclosure Vulnerability",
+      "references": [
+        {
+          "name": "Zero Day Initiative",
+          "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-789/"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/openssl/openssl/commit/0cc20b322639919aa423e90799d9a57c3b4b76ca"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/openssl/openssl/commit/6a0acc072b4d37a7cac1252a29c1ce1f00c5ec29"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/openssl/openssl/commit/7eb2e3ec9d1d4f35c8022fccd4b03398b3f33e21"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/openssl/openssl/commit/a7e5a6eea8fd3ccca6b6fbba031a5fbf8a3d93b4"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://openssl-library.org/news/secadv/20260825.txt"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-08-25T13:19:26Z",
+      "modified": "2026-09-11T21:16:45Z",
+      "sources": [
+        "zdi",
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 9.823
+    },
+    {
+      "cve_id": "CVE-2026-34182",
+      "title_short": "Zero Day Initiative Openssl 34182×9.1",
+      "title_full": "Zero Day Initiative Openssl CVE-2026-34182 · CVSS 9.1",
+      "vendor": "Zero Day Initiative",
+      "product": "Openssl",
+      "vendor_advisory_id": "ZDI-26-790",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.01057,
+        "percentile": 0.64215
+      },
+      "cwe": [
+        "CWE-354"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "Zero Day Initiative Openssl 存在安全漏洞，CVSS 9.1，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "ZDI-26-790: OpenSSL CMS AuthEnvelopedData Improper Validation of Integrity Check Value Vulnerability",
+      "references": [
+        {
+          "name": "Zero Day Initiative",
+          "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-790/"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/openssl/openssl/commit/03c1f4d45fb963aee7d5833390c507cd290182bc"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/openssl/openssl/commit/439ed7d2c0962ce964482727264668bf277c333f"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/openssl/openssl/commit/7947e6a81eb8776802f159fb6762cb7fcf7e34c7"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/openssl/openssl/commit/9fd97f8cfdc2c0be214998de3b2b55c8edf6c7ac"
+        },
+        {
+          "name": "修補",
+          "url": "https://github.com/openssl/openssl/commit/d2ca86bcd43e4f17d899f347101766b6107676e0"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://openssl-library.org/news/secadv/20260609.txt"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-06-09T17:17:04Z",
+      "modified": "2026-07-23T08:10:00Z",
+      "sources": [
+        "zdi",
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 9.121
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "fortinet",
+      "label": "Fortinet",
+      "title": "PHP core RCE vulnerability patches (CVE-2026-109618 and CVE-2026-109619)",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-186",
+      "date": "Wed, 21 Oct 2026 00:00:00 -0700",
+      "cves": [
+        "CVE-2026-109618",
+        "CVE-2026-109619"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-790: OpenSSL CMS AuthEnvelopedData Improper Validation of Integrity Check Value Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-790/",
+      "date": "Thu, 22 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-34182"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-789: OpenSSL CMP Use of Externally-Controlled Format String Information Disclosure Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-789/",
+      "date": "Thu, 22 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-63073"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-788: Cisco Snort OLE VBA Decompression Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-788/",
+      "date": "Thu, 22 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-20218"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-787: NVIDIA Megatron Bridge YAML File Parsing Code Injection Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-787/",
+      "date": "Thu, 22 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-24250"
+      ]
+    }
+  ]
+}

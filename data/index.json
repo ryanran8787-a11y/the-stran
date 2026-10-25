@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-25T00:06:42Z",
-  "total": 28,
+  "updated_at": "2026-10-25T23:58:00Z",
+  "total": 29,
   "reports": [
+    {
+      "date": "2026-10-26",
+      "kept": 6,
+      "kev": 2,
+      "critical": 6,
+      "in_the_wild": 2,
+      "generated_at": "2026-10-25T23:58:00Z",
+      "generated_by": "template",
+      "top": [
+        "Collabora Online – Built-in CODE Server 110447×9.2 在野",
+        "Arista VeloCloud Orchestrator 114625×9.4 在野",
+        "Fortinet Php 109618×9.2"
+      ]
+    },
     {
       "date": "2026-10-25",
       "kept": 6,
