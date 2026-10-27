@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-25T23:58:00Z",
-  "total": 29,
+  "updated_at": "2026-10-27T01:21:32Z",
+  "total": 30,
   "reports": [
+    {
+      "date": "2026-10-27",
+      "kept": 98,
+      "kev": 5,
+      "critical": 95,
+      "in_the_wild": 5,
+      "generated_at": "2026-10-27T01:21:32Z",
+      "generated_by": "template",
+      "top": [
+        "PHP Group 109618×9.2 在野",
+        "PHP Group 109619×9.2 在野",
+        "Apache Activemq 34197×8.8 在野"
+      ]
+    },
     {
       "date": "2026-10-26",
       "kept": 6,
