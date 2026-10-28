@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-27T01:21:32Z",
-  "total": 30,
+  "updated_at": "2026-10-28T01:03:42Z",
+  "total": 31,
   "reports": [
+    {
+      "date": "2026-10-28",
+      "kept": 10,
+      "kev": 4,
+      "critical": 10,
+      "in_the_wild": 4,
+      "generated_at": "2026-10-28T01:03:42Z",
+      "generated_by": "template",
+      "top": [
+        "PHP Group 109618×9.2 在野",
+        "PHP Group 109619×9.2 在野",
+        "Google Brotli 111497×9.2 在野"
+      ]
+    },
     {
       "date": "2026-10-27",
       "kept": 98,
