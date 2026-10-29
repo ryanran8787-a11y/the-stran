@@ -1,0 +1,883 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T01:40:26Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-28T22:00:00Z",
+    "to": "2026-10-29T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 237,
+    "kept": 10,
+    "kev": 7,
+    "critical": 7,
+    "in_the_wild": 7,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 6,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 44,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 170,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 17,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-109618",
+      "title_short": "PHP Group 109618×9.2 在野",
+      "title_full": "PHP Group CVE-2026-109618 · CVSS 9.2 · 在野利用",
+      "vendor": "PHP Group",
+      "product": "PHP",
+      "vendor_advisory_id": "cisco-sa-php-october26-Jj384Daq",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.99999,
+        "percentile": 0.99998
+      },
+      "cwe": [
+        "CWE-416",
+        "CWE-755",
+        "CWE-824",
+        "CWE-1325",
+        "CWE-1419"
+      ],
+      "tags": [
+        "RCE",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-26",
+        "due_date": "2026-10-29",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "PHP Memory Corruption Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "PHP Group 存在RCE、記憶體破壞漏洞，CVSS 9.2，已列入 CISA KEV 已知在野利用清單，EPSS 1.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
+        },
+        {
+          "name": "Cisco",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Vulnerabilities%20in%20PHP%20Affecting%20Cisco%20Products:%20October%202026%26vs_k=1"
+        },
+        {
+          "name": "Fortinet",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/21/6"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/23/5"
+        },
+        {
+          "name": "第三方",
+          "url": "https://arcticwolf.com/resources/blog/php2shell-critical-php-vulnerabilities-enable-unauthenticated-remote-code-execution/"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-26",
+      "modified": "2026-10-28T16:48:16Z",
+      "sources": [
+        "cisa_kev",
+        "cisco",
+        "fortinet",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 14.2
+    },
+    {
+      "cve_id": "CVE-2026-109619",
+      "title_short": "PHP Group 109619×9.2 在野",
+      "title_full": "PHP Group CVE-2026-109619 · CVSS 9.2 · 在野利用",
+      "vendor": "PHP Group",
+      "product": "PHP",
+      "vendor_advisory_id": "cisco-sa-php-october26-Jj384Daq",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.99999,
+        "percentile": 0.99999
+      },
+      "cwe": [
+        "CWE-416",
+        "CWE-755",
+        "CWE-824",
+        "CWE-1325",
+        "CWE-1419"
+      ],
+      "tags": [
+        "RCE",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-26",
+        "due_date": "2026-10-29",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "PHP Stale Internal Request-State Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "PHP Group 存在RCE、記憶體破壞漏洞，CVSS 9.2，已列入 CISA KEV 已知在野利用清單，EPSS 1.00。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619"
+        },
+        {
+          "name": "Cisco",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Vulnerabilities%20in%20PHP%20Affecting%20Cisco%20Products:%20October%202026%26vs_k=1"
+        },
+        {
+          "name": "Fortinet",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/21/16"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/21/17"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/21/23"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-26",
+      "modified": "2026-10-28T16:48:16Z",
+      "sources": [
+        "cisa_kev",
+        "cisco",
+        "fortinet",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 14.2
+    },
+    {
+      "cve_id": "CVE-2026-111497",
+      "title_short": "Google Brotli 111497×9.2 在野",
+      "title_full": "Google Brotli CVE-2026-111497 · CVSS 9.2 · 在野利用",
+      "vendor": "Google",
+      "product": "Brotli",
+      "vendor_advisory_id": "cisco-sa-oct2026-node-js-Jj3SQ19u",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.87988,
+        "percentile": 0.99763
+      },
+      "cwe": [
+        "CWE-252",
+        "CWE-787"
+      ],
+      "tags": [
+        "阻斷服務",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-27",
+        "due_date": "2026-11-10",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Google Brotli Unchecked Return Value Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Google Brotli 存在阻斷服務、記憶體破壞漏洞，CVSS 9.2，已列入 CISA KEV 已知在野利用清單，EPSS 0.88。",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
+        },
+        {
+          "name": "Cisco",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Vulnerabilities%20in%20Node.js%20Affecting%20Cisco%20Products:%20October%202026%26vs_k=1"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/andybalholm/brotli/releases/tag/v1.2.7"
+        },
+        {
+          "name": "第三方",
+          "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/23/25"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/24/6"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/26/12"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-27",
+      "modified": "2026-10-28T20:36:45Z",
+      "sources": [
+        "cisa_kev",
+        "cisco",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 13.96
+    },
+    {
+      "cve_id": "CVE-2026-48356",
+      "title_short": "Adobe Commerce and Magento 48356×9.3 在野",
+      "title_full": "Adobe Commerce and Magento CVE-2026-48356 · CVSS 9.3 · 在野利用",
+      "vendor": "Adobe",
+      "product": "Commerce and Magento",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.59078,
+        "percentile": 0.9911
+      },
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-27",
+        "due_date": "2026-11-10",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Adobe Commerce and Magento 存在RCE漏洞，CVSS 9.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.59。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.adobe.com/trust/security/products/commerce/apsb26-73.html"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://helpx.adobe.com/security/products/magento/apsb26-73.html"
+        },
+        {
+          "name": "第三方",
+          "url": "https://sansec.io/research/magento-cms-block-loader-deepveindrilling#indicators-of-compromise"
+        },
+        {
+          "name": "第三方",
+          "url": "https://sansec.io/research/polyshell-mass-attack-wave"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-48356"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-27",
+      "modified": "2026-10-27",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 13.482
+    },
+    {
+      "cve_id": "CVE-2026-46300",
+      "title_short": "Linux Kernel 46300×7.8 在野",
+      "title_full": "Linux Kernel CVE-2026-46300 · CVSS 7.8 · 在野利用",
+      "vendor": "Linux",
+      "product": "Kernel",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.8,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.10192,
+        "percentile": 0.95651
+      },
+      "cwe": [
+        "CWE-456",
+        "CWE-787",
+        "CWE-123"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-28",
+        "due_date": "2026-10-31",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Linux Kernel Missing Initialization of a Variable Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Linux Kernel 存在記憶體破壞漏洞，CVSS 7.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.10。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing ESP input processing to decrypt shared fragments in place. This vulnerability can be chained with CVE-2026-109618 and CVE-2026-109619 to implant PHP webshells and run commands as root.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46300"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/2f2b16022a2e10ca7bccfb98db5ed2ec0f72641c"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/3599e6b3cc1ada96883d496a50a210d3afbb6987"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/3884358a9286b17f389a72b1426fc4547c23c111"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/3bd9e113d50034db99d7ef69fd8e5242d15e414a"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/760e1addc27ba1a7beb4a0a7e8b3e9ec49e7a34e"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/78bf6b6bb19541d19fbda6242e7cfe2c682763c0"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-28",
+      "modified": "2026-10-28",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 11.004
+    },
+    {
+      "cve_id": "CVE-2026-41709",
+      "title_short": "Broadcom VMware ESX 41709×2.7 在野",
+      "title_full": "Broadcom VMware ESX CVE-2026-41709 · CVSS 2.7 · 在野利用",
+      "vendor": "Broadcom",
+      "product": "VMware ESX",
+      "vendor_advisory_id": null,
+      "severity": "LOW",
+      "cvss": {
+        "version": "3.1",
+        "score": 2.7,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N"
+      },
+      "epss": {
+        "score": 0.00297,
+        "percentile": 0.22291
+      },
+      "cwe": [
+        "CWE-778"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-28",
+        "due_date": "2026-11-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Broadcom VMWare ESX Insufficient Logging Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Broadcom VMware ESX 存在安全漏洞，CVSS 2.7，已列入 CISA KEV 已知在野利用清單，EPSS 0.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41709"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41709"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-28",
+      "modified": "2026-10-28",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 5.706
+    },
+    {
+      "cve_id": "CVE-2026-20127",
+      "title_short": "Cisco Catalyst SD-WAN Controller and Manager 20127 在野",
+      "title_full": "Cisco Catalyst SD-WAN Controller and Manager CVE-2026-20127 · 在野利用",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Controller and Manager",
+      "vendor_advisory_id": "cisco-sa-sdwan-rpa-EHchtZk",
+      "severity": "UNKNOWN",
+      "cvss": {
+        "version": null,
+        "score": null,
+        "vector": null
+      },
+      "epss": {
+        "score": 0.89294,
+        "percentile": 0.99781
+      },
+      "cwe": [],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-02-25",
+        "due_date": "2026-02-27",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Cisco Catalyst SD-WAN Controller and Manager Authentication Bypass Vulnerability",
+        "required_action_en": "Please adhere to CISA’s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlines in CISA’s Emergency Directive 26-03 (URL listed below in Notes) and CISA’s “Hunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available."
+      },
+      "summary_zh": "Cisco Catalyst SD-WAN Controller and Manager 存在認證繞過漏洞，已列入 CISA KEV 已知在野利用清單，EPSS 0.89。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
+      "references": [
+        {
+          "name": "Cisco",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Catalyst%20SD-WAN%20Controller%20Authentication%20Bypass%20Vulnerability%26vs_k=1"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-28T21:54:35Z",
+      "modified": "2026-10-28T21:54:35Z",
+      "sources": [
+        "cisco",
+        "cisa_kev"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 4.786
+    },
+    {
+      "cve_id": "CVE-2026-61564",
+      "title_short": "未標示產品 61564×10.0",
+      "title_full": "未標示產品 CVE-2026-61564 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-94"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 10.0。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "AVideo is a video-sharing Platform. Prior to 8.1.0, the unauthenticated installer endpoint `install/checkConfiguration.php` assembles `videos/configuration.php` by interpolating request parameters, including `webSiteRootURL`, into single-quoted PHP string literals without escaping. An attacker can terminate a literal and inject PHP that executes as the web-server user when the generated, directly requestable file is loaded. Exploitation requires `videos/configuration.php` to be absent, as on every fresh deployment or after the file is removed or moved; an existing file blocks this endpoint. The supplied `systemRootPath` must contain index.php and a connection using `databaseHost`, `databaseUser`, and `databasePass` must succeed, but the attacker can point those parameters to their own database server and needs no target credentials. The write location is also derived from `systemRootPath` without a base-directory constraint. This permits arbitrary command execution, reading and overwriting files owned by the web-server user, persistent PHP code, and control over stored database connection settings. The endpoint additionally interpolates request values into streamer and configuration INSERT statements, creating a secondary SQL-injection sink. This issue is fixed in version 8.1.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/WWBN/AVideo-Encoder/commit/0faaddebd11c087885d25a7e0513745465cad411"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/WWBN/AVideo-Encoder/releases/tag/v8.1.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/WWBN/AVideo-Encoder/security/advisories/GHSA-xrj3-cqm8-r992"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-28T22:17:15Z",
+      "modified": "2026-10-28T22:17:15Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-61567",
+      "title_short": "未標示產品 61567×10.0",
+      "title_full": "未標示產品 CVE-2026-61567 · CVSS 10.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-78"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE漏洞，CVSS 10.0。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "AVideo is a video-sharing Platform. Prior to 8.1.0, the live-streaming endpoint `view/videosListToLive.php` accepts an attacker-named streamer in `webSiteRootURL`, calls `Login::run` in `objects/Login.php`, and trusts the returned JSON as session state. An unauthenticated remote attacker who can host an HTTP service reachable by the encoder can self-grant `isLogged` and `canStream` without legitimate credentials. The endpoint requires only nonempty `playlists_id` and `APISecret` values; `APISecret` is forwarded rather than checked against a stored secret. This path never calls `Streamer::isURLAllowed` and therefore works regardless of the operator's streamer allowlist. It fetches a second attacker-controlled video-list response and interpolates `videos[].path` without shell argument escaping into `ffprobe` and `ffmpeg` commands passed to `exec`; `isAudio` calls `isVideo` to reach the `ffprobe` command. Paths containing shell delimiters execute arbitrary operating-system commands as the web-server user. The request filter does not inspect the video-list JSON. This can disclose database and stored streamer credentials, compromise the upstream platform using those credentials, modify files owned by the web-server user, establish persistence, and deny encoder service. This issue is fixed in version 8.1.0.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/WWBN/AVideo-Encoder/commit/99b8ad9b66fe5726cababbe29dce9d9695131caa"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/WWBN/AVideo-Encoder/releases/tag/v8.1.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/WWBN/AVideo-Encoder/security/advisories/GHSA-rf63-6vwm-wv8p"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-28T22:17:15Z",
+      "modified": "2026-10-28T22:17:15Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 10.0
+    },
+    {
+      "cve_id": "CVE-2026-118690",
+      "title_short": "未標示產品 118690×9.3",
+      "title_full": "未標示產品 CVE-2026-118690 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-4r6j-f6gv-fqcx",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-306"
+      ],
+      "tags": [
+        "認證繞過"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在認證繞過漏洞，CVSS 9.3。",
+      "impact_zh": "可繞過身分驗證直接存取系統。",
+      "action_zh": "更新至修補版本，並檢視存取日誌是否有異常請求。",
+      "description_en": "Signal K Server before 2.33.0 contains a missing authentication vulnerability that allows unauthenticated remote attackers to download log archives via the /skServer/ziplogs endpoint. Attackers can extract the JWT secretKey from security.json in the ZIP, forge administrator tokens, and create persistent admin accounts for full server control.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/SignalK/signalk-server"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/SignalK/signalk-server/blob/v2.32.0/src/interfaces/logfiles.js#L30-L91"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/SignalK/signalk-server/commit/728bab82742d16c54e50525b95dc9b6e32396107"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/SignalK/signalk-server/releases/tag/v2.33.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-4w32-qx5g-cpwv"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.vulncheck.com/advisories/signal-k-server-before-2.33.0-missing-authentication-via-skserver-ziplogs"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-4r6j-f6gv-fqcx"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118690"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-28T22:17:13Z",
+      "modified": "2026-10-29T00:31:32Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 9.3
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Catalyst%20SD-WAN%20Controller%20Authentication%20Bypass%20Vulnerability%26vs_k=1",
+      "date": "2026-10-28T21:54:35Z",
+      "cves": [
+        "CVE-2026-20127"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Vulnerabilities in Node.js Affecting Cisco Products: October 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Vulnerabilities%20in%20Node.js%20Affecting%20Cisco%20Products:%20October%202026%26vs_k=1",
+      "date": "2026-10-28T20:36:45Z",
+      "cves": [
+        "CVE-2026-105482",
+        "CVE-2026-105483",
+        "CVE-2026-106069",
+        "CVE-2026-111497"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Informational for Emergency Distrust of eMudhra Root and Intermediate Certificate Authorities",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-emudhra-info-ScS22A1r?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Informational%20for%20Emergency%20Distrust%20of%20eMudhra%20Root%20and%20Intermediate%20Certificate%20Authorities%26vs_k=1",
+      "date": "2026-10-28T19:39:52Z",
+      "cves": []
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Secure Firewall Adaptive Security Appliance and Secure Firewall Threat Defense Software Remote Access SSL VPN Tunnel Denial of Service Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Secure%20Firewall%20Adaptive%20Security%20Appliance%20and%20Secure%20Firewall%20Threat%20Defense%20Software%20Remote%20Access%20SSL%20VPN%20Tunnel%20Denial%20of%20Service%20Vulnerability%26vs_k=1",
+      "date": "2026-10-28T19:15:00Z",
+      "cves": [
+        "CVE-2026-76418"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Vulnerabilities in PHP Affecting Cisco Products: October 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Vulnerabilities%20in%20PHP%20Affecting%20Cisco%20Products:%20October%202026%26vs_k=1",
+      "date": "2026-10-28T16:48:16Z",
+      "cves": [
+        "CVE-2026-109618",
+        "CVE-2026-109619"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Advance Notification for Publication of November 4, 2026, Security Advisories",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-I8z3n6lK?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Advance%20Notification%20for%20Publication%20of%20November%204,%202026,%20Security%20Advisories%26vs_k=1",
+      "date": "2026-10-28T16:00:00Z",
+      "cves": []
+    },
+    {
+      "source": "fortinet",
+      "label": "Fortinet",
+      "title": "Node2Shell CVEs",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-187",
+      "date": "Mon, 26 Oct 2026 00:00:00 -0700",
+      "cves": [
+        "CVE-2026-105481",
+        "CVE-2026-105482",
+        "CVE-2026-105483",
+        "CVE-2026-106069",
+        "CVE-2026-106070",
+        "CVE-2026-106071"
+      ]
+    },
+    {
+      "source": "fortinet",
+      "label": "Fortinet",
+      "title": "PHP2Shell core RCE vulnerability patches (CVE-2026-109618 and CVE-2026-109619)",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-186",
+      "date": "Wed, 21 Oct 2026 00:00:00 -0700",
+      "cves": [
+        "CVE-2026-109618",
+        "CVE-2026-109619"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-832: AVG Internet Security avgToolsSvc Link Following Local Privilege Escalation Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-832/",
+      "date": "Wed, 28 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-6064"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-831: Apple macOS CoreText GDEF LigCaretList Out-Of-Bounds Read Information Disclosure Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-831/",
+      "date": "Wed, 28 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-112656"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-830: Apple Safari jsToWasm IC Entrypoint Type Confusion Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-830/",
+      "date": "Wed, 28 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-86974"
+      ]
+    }
+  ]
+}
