@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T01:40:26Z",
-  "total": 32,
+  "updated_at": "2026-10-30T01:46:46Z",
+  "total": 33,
   "reports": [
+    {
+      "date": "2026-10-30",
+      "kept": 12,
+      "kev": 9,
+      "critical": 6,
+      "in_the_wild": 9,
+      "generated_at": "2026-10-30T01:46:46Z",
+      "generated_by": "template",
+      "top": [
+        "Google Brotli 111497×9.2 在野",
+        "GitLab Community Edition and Enterprise Edition 97229×10.0 在野",
+        "Adobe Commerce and Magento 48356×9.3 在野"
+      ]
+    },
     {
       "date": "2026-10-29",
       "kept": 10,

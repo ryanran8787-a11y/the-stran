@@ -1,0 +1,914 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T01:46:46Z",
+  "generated_by": "template",
+  "window": {
+    "from": "2026-10-29T22:00:00Z",
+    "to": "2026-10-30T22:00:00Z"
+  },
+  "stats": {
+    "scanned": 92,
+    "kept": 12,
+    "kev": 9,
+    "critical": 6,
+    "in_the_wild": 9,
+    "sources_ok": 5,
+    "sources_failed": 0
+  },
+  "sources": [
+    {
+      "name": "cisa_kev",
+      "label": "CISA KEV",
+      "ok": true,
+      "items": 6,
+      "error": null
+    },
+    {
+      "name": "nvd",
+      "label": "NVD",
+      "ok": true,
+      "items": 36,
+      "error": null
+    },
+    {
+      "name": "ghsa",
+      "label": "GitHub Advisory",
+      "ok": true,
+      "items": 35,
+      "error": null
+    },
+    {
+      "name": "vendors",
+      "label": "廠商公告",
+      "ok": true,
+      "items": 15,
+      "error": null
+    },
+    {
+      "name": "epss",
+      "label": "EPSS",
+      "ok": true,
+      "items": 0,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "cve_id": "CVE-2026-111497",
+      "title_short": "Google Brotli 111497×9.2 在野",
+      "title_full": "Google Brotli CVE-2026-111497 · CVSS 9.2 · 在野利用",
+      "vendor": "Google",
+      "product": "Brotli",
+      "vendor_advisory_id": "cisco-sa-oct2026-node-js-Jj3SQ19u",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": {
+        "score": 0.82641,
+        "percentile": 0.99665
+      },
+      "cwe": [
+        "CWE-252",
+        "CWE-787"
+      ],
+      "tags": [
+        "阻斷服務",
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-27",
+        "due_date": "2026-11-10",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Google Brotli Unchecked Return Value Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Google Brotli 存在阻斷服務、記憶體破壞漏洞，CVSS 9.2，已列入 CISA KEV 已知在野利用清單，EPSS 0.83。",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
+        },
+        {
+          "name": "Cisco",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Vulnerabilities%20in%20Node.js%20Affecting%20Cisco%20Products:%20October%202026%26vs_k=1"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/andybalholm/brotli/releases/tag/v1.2.7"
+        },
+        {
+          "name": "第三方",
+          "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/23/25"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/24/6"
+        },
+        {
+          "name": "第三方",
+          "url": "http://www.openwall.com/lists/oss-security/2026/10/26/12"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-27",
+      "modified": "2026-10-29T20:24:20Z",
+      "sources": [
+        "cisa_kev",
+        "cisco",
+        "nvd"
+      ],
+      "rank": 1,
+      "generated_by": "template",
+      "risk_score": 13.853
+    },
+    {
+      "cve_id": "CVE-2026-97229",
+      "title_short": "GitLab Community Edition and Enterprise Edition 97229×10.0 在野",
+      "title_full": "GitLab Community Edition and Enterprise Edition CVE-2026-97229 · CVSS 10.0 · 在野利用",
+      "vendor": "GitLab",
+      "product": "Community Edition and Enterprise Edition",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.18427,
+        "percentile": 0.97229
+      },
+      "cwe": [
+        "CWE-190"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-29",
+        "due_date": "2026-11-01",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "GitLab Community Edition and Enterprise Edition 存在記憶體破壞漏洞，CVSS 10.0，已列入 CISA KEV 已知在野利用…",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/"
+        },
+        {
+          "name": "參考",
+          "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/630686"
+        },
+        {
+          "name": "參考",
+          "url": "https://hackerone.com/reports/4055749"
+        },
+        {
+          "name": "參考",
+          "url": "https://hackerone.com/reports/4058589"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-97229"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-29",
+      "modified": "2026-10-29",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 2,
+      "generated_by": "template",
+      "risk_score": 13.369
+    },
+    {
+      "cve_id": "CVE-2026-48356",
+      "title_short": "Adobe Commerce and Magento 48356×9.3 在野",
+      "title_full": "Adobe Commerce and Magento CVE-2026-48356 · CVSS 9.3 · 在野利用",
+      "vendor": "Adobe",
+      "product": "Commerce and Magento",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+      },
+      "epss": {
+        "score": 0.44579,
+        "percentile": 0.98765
+      },
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-27",
+        "due_date": "2026-11-10",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Adobe Commerce and Magento 存在RCE漏洞，CVSS 9.3，已列入 CISA KEV 已知在野利用清單，EPSS 0.45。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://www.adobe.com/trust/security/products/commerce/apsb26-73.html"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://helpx.adobe.com/security/products/magento/apsb26-73.html"
+        },
+        {
+          "name": "第三方",
+          "url": "https://sansec.io/research/magento-cms-block-loader-deepveindrilling#indicators-of-compromise"
+        },
+        {
+          "name": "第三方",
+          "url": "https://sansec.io/research/polyshell-mass-attack-wave"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-48356"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-27",
+      "modified": "2026-10-27",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 3,
+      "generated_by": "template",
+      "risk_score": 13.192
+    },
+    {
+      "cve_id": "CVE-2026-76418",
+      "title_short": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software 76418×8.6 在野",
+      "title_full": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software CVE-2026-76418 · CVSS 8.6 · 在野利用",
+      "vendor": "Cisco",
+      "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H"
+      },
+      "epss": {
+        "score": 0.00574,
+        "percentile": 0.47308
+      },
+      "cwe": [
+        "CWE-690"
+      ],
+      "tags": [
+        "阻斷服務"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-29",
+        "due_date": "2026-11-01",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software 存在阻斷服務漏洞，CVSS 8.6，已列入…",
+      "impact_zh": "服務中斷，影響可用性。",
+      "action_zh": "更新至修補版本，並於邊界設備加上流量限制。",
+      "description_en": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76418"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-29",
+      "modified": "2026-10-29",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 4,
+      "generated_by": "template",
+      "risk_score": 11.611
+    },
+    {
+      "cve_id": "CVE-2026-46300",
+      "title_short": "Linux Kernel 46300×7.8 在野",
+      "title_full": "Linux Kernel CVE-2026-46300 · CVSS 7.8 · 在野利用",
+      "vendor": "Linux",
+      "product": "Kernel",
+      "vendor_advisory_id": null,
+      "severity": "HIGH",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.8,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "epss": {
+        "score": 0.15719,
+        "percentile": 0.96854
+      },
+      "cwe": [
+        "CWE-456",
+        "CWE-787",
+        "CWE-123"
+      ],
+      "tags": [
+        "記憶體破壞"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-28",
+        "due_date": "2026-10-31",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "Linux Kernel Missing Initialization of a Variable Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Linux Kernel 存在記憶體破壞漏洞，CVSS 7.8，已列入 CISA KEV 已知在野利用清單，EPSS 0.16。",
+      "impact_zh": "可造成程式崩潰或程式碼執行。",
+      "action_zh": "更新至修補版本，並啟動記憶體防護機制。",
+      "description_en": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing ESP input processing to decrypt shared fragments in place. This vulnerability can be chained with CVE-2026-109618 and CVE-2026-109619 to implant PHP webshells and run commands as root.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46300"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/2f2b16022a2e10ca7bccfb98db5ed2ec0f72641c"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/3599e6b3cc1ada96883d496a50a210d3afbb6987"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/3884358a9286b17f389a72b1426fc4547c23c111"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/3bd9e113d50034db99d7ef69fd8e5242d15e414a"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/760e1addc27ba1a7beb4a0a7e8b3e9ec49e7a34e"
+        },
+        {
+          "name": "修補",
+          "url": "https://git.kernel.org/stable/c/78bf6b6bb19541d19fbda6242e7cfe2c682763c0"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-28",
+      "modified": "2026-10-28",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 5,
+      "generated_by": "template",
+      "risk_score": 11.114
+    },
+    {
+      "cve_id": "CVE-2026-41709",
+      "title_short": "Broadcom VMware ESX 41709×2.7 在野",
+      "title_full": "Broadcom VMware ESX CVE-2026-41709 · CVSS 2.7 · 在野利用",
+      "vendor": "Broadcom",
+      "product": "VMware ESX",
+      "vendor_advisory_id": null,
+      "severity": "LOW",
+      "cvss": {
+        "version": "3.1",
+        "score": 2.7,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N"
+      },
+      "epss": {
+        "score": 0.00764,
+        "percentile": 0.55307
+      },
+      "cwe": [
+        "CWE-778"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-28",
+        "due_date": "2026-11-11",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "Broadcom VMWare ESX Insufficient Logging Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Broadcom VMware ESX 存在安全漏洞，CVSS 2.7，已列入 CISA KEV 已知在野利用清單，EPSS 0.01。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
+      "references": [
+        {
+          "name": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41709"
+        },
+        {
+          "name": "廠商公告",
+          "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017"
+        },
+        {
+          "name": "參考",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41709"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-28",
+      "modified": "2026-10-28",
+      "sources": [
+        "cisa_kev",
+        "nvd"
+      ],
+      "rank": 6,
+      "generated_by": "template",
+      "risk_score": 5.715
+    },
+    {
+      "cve_id": "CVE-2026-109618",
+      "title_short": "Fortinet PHP 109618 在野",
+      "title_full": "Fortinet PHP CVE-2026-109618 · 在野利用",
+      "vendor": "Fortinet",
+      "product": "PHP",
+      "vendor_advisory_id": null,
+      "severity": "UNKNOWN",
+      "cvss": {
+        "version": null,
+        "score": null,
+        "vector": null
+      },
+      "epss": {
+        "score": 0.99999,
+        "percentile": 0.99998
+      },
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-26",
+        "due_date": "2026-10-29",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "PHP Memory Corruption Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Fortinet PHP 存在安全漏洞，已列入 CISA KEV 已知在野利用清單，EPSS 1.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "PHP2Shell core RCE vulnerability patches (CVE-2026-109618 and CVE-2026-109619)",
+      "references": [
+        {
+          "name": "Fortinet",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
+        }
+      ],
+      "affected_packages": [],
+      "published": null,
+      "modified": null,
+      "sources": [
+        "fortinet",
+        "cisa_kev"
+      ],
+      "rank": 7,
+      "generated_by": "template",
+      "risk_score": 5.0
+    },
+    {
+      "cve_id": "CVE-2026-109619",
+      "title_short": "Fortinet PHP 109619 在野",
+      "title_full": "Fortinet PHP CVE-2026-109619 · 在野利用",
+      "vendor": "Fortinet",
+      "product": "PHP",
+      "vendor_advisory_id": null,
+      "severity": "UNKNOWN",
+      "cvss": {
+        "version": null,
+        "score": null,
+        "vector": null
+      },
+      "epss": {
+        "score": 0.99999,
+        "percentile": 0.99999
+      },
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-10-26",
+        "due_date": "2026-10-29",
+        "ransomware": "Unknown",
+        "forensic_triage": "Yes",
+        "name_en": "PHP Stale Internal Request-State Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Fortinet PHP 存在安全漏洞，已列入 CISA KEV 已知在野利用清單，EPSS 1.00。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "PHP2Shell core RCE vulnerability patches (CVE-2026-109618 and CVE-2026-109619)",
+      "references": [
+        {
+          "name": "Fortinet",
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
+        }
+      ],
+      "affected_packages": [],
+      "published": null,
+      "modified": null,
+      "sources": [
+        "fortinet",
+        "cisa_kev"
+      ],
+      "rank": 8,
+      "generated_by": "template",
+      "risk_score": 5.0
+    },
+    {
+      "cve_id": "CVE-2026-64849",
+      "title_short": "Zero Day Initiative MLflow 64849 在野",
+      "title_full": "Zero Day Initiative MLflow CVE-2026-64849 · 在野利用",
+      "vendor": "Zero Day Initiative",
+      "product": "MLflow",
+      "vendor_advisory_id": "ZDI-26-846",
+      "severity": "UNKNOWN",
+      "cvss": {
+        "version": null,
+        "score": null,
+        "vector": null
+      },
+      "epss": {
+        "score": 0.10017,
+        "percentile": 0.95602
+      },
+      "cwe": [],
+      "tags": [
+        "其他"
+      ],
+      "in_the_wild": true,
+      "kev": {
+        "date_added": "2026-08-19",
+        "due_date": "2026-09-02",
+        "ransomware": "Unknown",
+        "forensic_triage": "No",
+        "name_en": "MLflow Server-Side Request Forgery Vulnerability",
+        "required_action_en": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "summary_zh": "Zero Day Initiative MLflow 存在安全漏洞，已列入 CISA KEV 已知在野利用清單，EPSS 0.10。",
+      "impact_zh": "系統可能遭未授權存取或控制。",
+      "action_zh": "依廠商公告更新至最新修補版本；無法更新者請評估隔離或停用該服務。",
+      "description_en": "ZDI-26-846: MLflow Webhook Server-Side Request Forgery Vulnerability",
+      "references": [
+        {
+          "name": "Zero Day Initiative",
+          "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-846/"
+        }
+      ],
+      "affected_packages": [],
+      "published": null,
+      "modified": null,
+      "sources": [
+        "zdi",
+        "cisa_kev"
+      ],
+      "rank": 9,
+      "generated_by": "template",
+      "risk_score": 3.2
+    },
+    {
+      "cve_id": "CVE-2023-22793",
+      "title_short": "未標示產品 22793×9.3",
+      "title_full": "未標示產品 CVE-2023-22793 · CVSS 9.3",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": "GHSA-6762-qxrg-r3x8",
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-502"
+      ],
+      "tags": [
+        "反序列化",
+        "RCE"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在反序列化、RCE漏洞，CVSS 9.3。",
+      "impact_zh": "可導致遠端程式碼執行。",
+      "action_zh": "更新至修補版本，避免處理不可信的序列化資料。",
+      "description_en": "A vulnerability allowing an unauthenticated attacker to perform remote code execution (RCE) on servers running the Veeam Virtualization Extensions service of Veeam Management Pack for Microsoft System Center.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://www.veeam.com/kb4961"
+        },
+        {
+          "name": "GitHub Advisory",
+          "url": "https://github.com/advisories/GHSA-6762-qxrg-r3x8"
+        },
+        {
+          "name": "參考",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22793"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-29T23:16:54Z",
+      "modified": "2026-10-30T00:30:41Z",
+      "sources": [
+        "nvd",
+        "ghsa"
+      ],
+      "rank": 10,
+      "generated_by": "template",
+      "risk_score": 9.3
+    },
+    {
+      "cve_id": "CVE-2026-61645",
+      "title_short": "未標示產品 61645×9.1",
+      "title_full": "未標示產品 CVE-2026-61645 · CVSS 9.1",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:L"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-434"
+      ],
+      "tags": [
+        "RCE",
+        "XSS",
+        "路徑穿越"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE、XSS漏洞，CVSS 9.1。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "Docat is a tool for hosting versioned static documentation. In the affected implementation, an arbitrary file upload vulnerability in the `Upload API` arises because the API does not validate the `uploaded file path or type`. An attacker can overwrite sensitive configuration files or place malicious files on the Docat web server. Depending on deployment context, uploaded content can enable remote code execution or cross-site scripting intended to steal cookies or redirect users to malicious websites. Version 1.6.0 mitigates filename-based path traversal; remediation of unrestricted file types or deployment-dependent malicious-content effects is not established by the verified patch.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/docat-org/docat/commit/85fc40e8348c6328f488395d03c779517a0913fd"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/docat-org/docat/releases/tag/1.6.0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/docat-org/docat/security/advisories/GHSA-jcxj-j5qf-8crw"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-29T22:17:04Z",
+      "modified": "2026-10-29T22:17:04Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 11,
+      "generated_by": "template",
+      "risk_score": 9.1
+    },
+    {
+      "cve_id": "CVE-2026-61707",
+      "title_short": "未標示產品 61707×9.0",
+      "title_full": "未標示產品 CVE-2026-61707 · CVSS 9.0",
+      "vendor": "",
+      "product": "",
+      "vendor_advisory_id": null,
+      "severity": "CRITICAL",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
+      },
+      "epss": null,
+      "cwe": [
+        "CWE-94",
+        "CWE-862",
+        "CWE-1336"
+      ],
+      "tags": [
+        "RCE",
+        "權限提升"
+      ],
+      "in_the_wild": false,
+      "kev": null,
+      "summary_zh": "未標示產品 存在RCE、權限提升漏洞，CVSS 9.0。",
+      "impact_zh": "遠端程式碼執行，攻擊者可完全控制受影響系統。",
+      "action_zh": "優先更新至修補版本；無法更新者請限制邊界存取或停用該介面。",
+      "description_en": "SOCFortress CoPilot focuses on providing a single pane of glass for all your security operations needs. Prior to 0.1.76, in the reported deployment, case-report templates uploaded by `customer_user`, the lowest-privilege portal role, are later executed by non-sandboxed Jinja2 engines when an admin or analyst generates a report. The `/case-report-template/upload` route in `backend/app/incidents/routes/db_operations.py` validates only the filename-derived MIME type, not the template content. Templates share a global store without customer_code scoping, and `customer_user` can also list, download and delete them, allowing an attacker to replace a legitimate default template under the same name. In `backend/app/incidents/services/reports.py`, `render_document_with_context` uses `DocxTemplate` without a sandbox; in `backend/app/incidents/services/reports_pdf.py`, `render_html_template` uses a non-sandboxed `Environment` without autoescaping. Normal privileged requests to `POST /api/incidents/report/generate-report-docx` or `/generate-report-pdf` therefore evaluate attacker-controlled Jinja expressions as Python on the backend. The reported deployment executes commands as root, exposing all tenants' incident and SIEM data and stored connector credentials. The HTML/PDF wkhtmltopdf renderer additionally permits local-file reads and requests to internal services. This issue is fixed in version 0.1.76.",
+      "references": [
+        {
+          "name": "參考",
+          "url": "https://github.com/socfortress/CoPilot/commit/a5ed4a250094d1b6d15ba0ec088dbd773ab1b4e0"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/socfortress/CoPilot/pull/936"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/socfortress/CoPilot/security/advisories/GHSA-7q83-228r-wfh5"
+        },
+        {
+          "name": "參考",
+          "url": "https://github.com/socfortress/CoPilot/tree/v0.1.76"
+        }
+      ],
+      "affected_packages": [],
+      "published": "2026-10-29T22:17:05Z",
+      "modified": "2026-10-29T22:17:05Z",
+      "sources": [
+        "nvd"
+      ],
+      "rank": 12,
+      "generated_by": "template",
+      "risk_score": 9.0
+    }
+  ],
+  "vendor_watch": [
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Cisco Finesse Server-Side Request Forgery Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-finesse-ssrf-mmSuyugS?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Finesse%20Server-Side%20Request%20Forgery%20Vulnerability%26vs_k=1",
+      "date": "2026-10-29T21:22:28Z",
+      "cves": [
+        "CVE-2026-20362"
+      ]
+    },
+    {
+      "source": "cisco",
+      "label": "Cisco",
+      "title": "Vulnerabilities in Node.js Affecting Cisco Products: October 2026",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Vulnerabilities%20in%20Node.js%20Affecting%20Cisco%20Products:%20October%202026%26vs_k=1",
+      "date": "2026-10-29T20:24:20Z",
+      "cves": [
+        "CVE-2026-105482",
+        "CVE-2026-105483",
+        "CVE-2026-106069",
+        "CVE-2026-111497"
+      ]
+    },
+    {
+      "source": "fortinet",
+      "label": "Fortinet",
+      "title": "Node2Shell CVEs",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-187",
+      "date": "Mon, 26 Oct 2026 00:00:00 -0700",
+      "cves": [
+        "CVE-2026-105481",
+        "CVE-2026-105482",
+        "CVE-2026-105483",
+        "CVE-2026-106069",
+        "CVE-2026-106070",
+        "CVE-2026-106071"
+      ]
+    },
+    {
+      "source": "fortinet",
+      "label": "Fortinet",
+      "title": "PHP2Shell core RCE vulnerability patches (CVE-2026-109618 and CVE-2026-109619)",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-186",
+      "date": "Wed, 21 Oct 2026 00:00:00 -0700",
+      "cves": [
+        "CVE-2026-109618",
+        "CVE-2026-109619"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-847: MLflow AI Gateway Server-Side Request Forgery Information Disclosure Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-847/",
+      "date": "Thu, 29 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-71211"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-846: MLflow Webhook Server-Side Request Forgery Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-846/",
+      "date": "Thu, 29 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-64849"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-845: MLflow Statsmodels _load_model Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-845/",
+      "date": "Thu, 29 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2024-37052"
+      ]
+    },
+    {
+      "source": "zdi",
+      "label": "Zero Day Initiative",
+      "title": "ZDI-26-844: MLflow get-artifacts Server-Side Request Forgery Information Disclosure Vulnerability",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-844/",
+      "date": "Thu, 29 Oct 2026 00:00:00 -0500",
+      "cves": [
+        "CVE-2026-118628"
+      ]
+    }
+  ]
+}
