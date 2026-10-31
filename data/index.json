@@ -1,8 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-30T01:46:46Z",
-  "total": 33,
+  "updated_at": "2026-10-31T01:28:16Z",
+  "total": 34,
   "reports": [
+    {
+      "date": "2026-10-31",
+      "kept": 15,
+      "kev": 10,
+      "critical": 6,
+      "in_the_wild": 10,
+      "generated_at": "2026-10-31T01:28:16Z",
+      "generated_by": "template",
+      "top": [
+        "GitLab Community Edition and Enterprise Edition 97229×10.0 在野",
+        "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software 76418×8.6 在野",
+        "Linux Kernel 46300×7.8 在野"
+      ]
+    },
     {
       "date": "2026-10-30",
       "kept": 12,
